@@ -45,4 +45,8 @@ There exist choices of $B$, $E$, and $\lbrace(a_r,c_r)\rbrace_{r\in E}$ satisfyi
 \qquad T^{\,k+p}(n)=T^{\,k}(n).
 ```
 
-Equivalently: some nontrivial relatively-prime residue-affine map with negative geometric-mean drift has every nonnegative integer orbit eventually become periodic. Different orbits may enter different cycles; no particular terminal value or cycle is specified.
+Equivalently: some nontrivial relatively-prime residue-affine map with negative geometric-mean drift has every nonnegative integer orbit eventually become periodic.
+
+## Relevance to Collatz
+
+
