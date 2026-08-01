@@ -3,7 +3,7 @@
 Let $B\ge 2$. For $n\in\mathbb N_0$, write uniquely
 
 ```math
-n=Bq+r,\qquad 0\le r<B,
+n=Bq+r,\qquad 0\le r\lt B,
 ```
 
 and define
@@ -12,20 +12,20 @@ and define
 T_B(n)=
 \begin{cases}
 q, & r=0,\\[2mm]
-(B+1)q+r+1, & 1\le r<B.
+(B+1)q+r+1, & 1\le r\lt B.
 \end{cases}
 ```
 
 Thus a multiple of $B$ undergoes a contracting step, while every other residue class undergoes an expanding step. Indeed, when $r\ne0$,
 
 ```math
-T_B(n)-n=q+1>0.
+T_B(n)-n=q+1\gt 0.
 ```
 
 For $K\ge1$, let
 
 ```math
-D_K(n)=\#\big\lbrace 0\le j<K:T_B^{\,j}(n)\equiv0\pmod B\big\rbrace,
+D_K(n)=\#\big\lbrace 0\le j\lt K:T_B^{\,j}(n)\equiv0\pmod B\big\rbrace,
 ```
 
 the number of contracting steps among the first $K$ iterates of $n$.
@@ -37,7 +37,7 @@ There exists an integer $B\ge2$ such that every nonnegative integer orbit has a 
 ```math
 \exists B\ge2\;\forall n\in\mathbb N_0:
 \qquad
-\liminf_{K\to\infty}\frac{D_K(n)}{K}>0.
+\liminf_{K\to\infty}\frac{D_K(n)}{K}\gt 0.
 ```
 
 The positive lower bound may depend on $n$; no uniform density over all starting values is asserted.
@@ -55,7 +55,7 @@ E=\lbrace1,\ldots,B-1\rbrace,
 Its expanding multipliers are relatively prime to $B$, and it satisfies the negative-product condition
 
 ```math
-(B+1)^{B-1}<B^B.
+(B+1)^{B-1}\lt B^B.
 ```
 
 For $B=2$, the map is the shortcut Collatz map:
