@@ -55,14 +55,6 @@ There exist choices of $B$, $E$, and $\lbrace(a_r,c_r)\rbrace_{r\in E}$ satisfyi
 
 The positive lower bound may depend on $n$; no uniform density over all starting values is asserted.
 
-## Why this is weaker
-
-The conjecture does not say that any orbit is bounded, returns below its starting value, or becomes periodic. An orbit may use the division branches with positive density and still diverge.
-
-No geometric-mean drift condition is imposed. The expanding branches may dominate multiplicatively even when the division branches occur with positive density, so an orbit may diverge exponentially.
-
-The universal quantifier over starting values is essential. Relatively prime branch multipliers permit arbitrarily long finite runs through $E$, so checking bounded starting values or bounded iteration lengths cannot establish the conjecture.
-
 ## Relationship to Collatz
 
 The shortcut Collatz map is the admissible special case
@@ -73,6 +65,11 @@ B=2,\qquad E=\lbrace1\rbrace,
 ```
 
 Thus the Collatz conjecture implies this conjecture: every positive orbit would eventually enter $1\leftrightarrow2$, where the division-branch density is $1/2$, while the orbit of $0$ has density $1$.
+
+## Why this is weaker
+
+* The conjecture allows a much wider range of maps than the specific Collatz map.
+* The conjecture does not say that any orbit is bounded, returns below its starting value, or becomes periodic. An orbit may use the division branches with positive density and still diverge exponentially.
 
 ## Status and related work
 
