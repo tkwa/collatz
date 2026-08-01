@@ -80,7 +80,13 @@ Thus the Collatz conjecture implies this conjecture: every positive orbit would 
 
 ## Status and related work
 
-This repository does not claim a proof or a specific witness. Matthews and Watts study limiting residue frequencies and multiplicative drift for this class of relatively prime generalized Syracuse maps, but their general limiting-frequency statement for divergent trajectories is conjectural.
+Open. No admissible choice of parameters is known to satisfy the universal positive-density statement.
+
+The shortcut Collatz special case does not make the conjecture trivial. It is elementary that a positive shortcut Collatz orbit cannot remain odd forever, so it has infinitely many division-branch steps. That does not imply positive lower asymptotic density: the gaps between such steps could grow quickly enough for the lower density to be zero. It is not known that every shortcut Collatz orbit has positive division-branch density.
+
+For comparison, under the unaccelerated Collatz map every odd step is immediately followed by an even step. But that map is not admissible here: in quotient-remainder form its odd branch has $a_1=6$ for $B=2$, so $\gcd(a_1,B)\ne1$ and the negative-product condition also fails.
+
+Matthews and Watts study limiting residue frequencies and multiplicative drift for this class of relatively prime generalized Syracuse maps, but their general limiting-frequency statement for divergent trajectories is conjectural.
 
 - K. R. Matthews and A. M. Watts, [“A Markov approach to the generalized Syracuse algorithm”](https://doi.org/10.4064/aa-45-1-29-42).
 - Walter Carnielli, [“Some Natural Generalizations of the Collatz Problem”](https://emis.de/ft/8276), studies a natural admissible subfamily.
