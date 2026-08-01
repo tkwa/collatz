@@ -1,9 +1,10 @@
 # An Extremely Weak Collatz-like Conjecture
 
-This repository records a deliberately weak Collatz-like conjecture: there exists at least one nontrivial residue-affine map on the nonnegative integers whose expanding branches satisfy a negative geometric-mean drift condition and whose every orbit eventually becomes periodic.
+This repository records deliberately weak Collatz-like conjectures that retain a universal quantifier over starting values.
 
-The full statement and definitions are in [extremely_weak_collatzlike_conjecture.md](extremely_weak_collatzlike_conjecture.md).
+- [An Extremely Weak Collatz-like Conjecture](extremely_weak_collatzlike_conjecture.md) asks whether some admissible negative-drift residue-affine map has every orbit eventually become periodic.
+- [A Positive Contraction Density Conjecture](positive_contraction_density_conjecture.md) asks whether some map in a natural Collatz family gives every orbit a positive lower density of contracting steps.
 
 ## Status
 
-Open conjecture. The statement allows different orbits to enter different cycles and does not specify a terminal value. This repository currently contains the problem statement; it does not claim a proof or a specific construction.
+Open conjectures. This repository contains problem statements and context; it does not claim a proof or a specific construction.
