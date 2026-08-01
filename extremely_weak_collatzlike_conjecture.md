@@ -2,7 +2,27 @@
 
 ## Positive contraction density
 
-Let $B\ge 2$. For $n\in\mathbb N_0$, write uniquely
+Let $\mathbb N_0=\lbrace 0,1,2,\ldots\rbrace$.
+
+Choose an integer $B\ge 2$, a nonempty set
+
+```math
+E\subseteq\lbrace 1,\ldots,B-1\rbrace,
+```
+
+and, for each $r\in E$, integers $a_r,c_r$ satisfying
+
+```math
+a_r\gt B,\qquad \gcd(a_r,B)=1,\qquad c_r\in\mathbb N_0,
+```
+
+together with the negative-drift condition
+
+```math
+\prod_{r\in E}a_r\lt B^B.
+```
+
+For $n\in\mathbb N_0$, write uniquely
 
 ```math
 n=Bq+r,\qquad 0\le r\lt B,
@@ -11,85 +31,56 @@ n=Bq+r,\qquad 0\le r\lt B,
 and define
 
 ```math
-T_B(n)=
+T(n)=
 \begin{cases}
-q, & r=0,\\[2mm]
-(B+1)q+r+1, & 1\le r\lt B.
+q, & r\notin E,\\[2mm]
+a_rq+c_r, & r\in E.
 \end{cases}
 ```
 
-Thus a multiple of $B$ undergoes a contracting step, while every other residue class undergoes an expanding step. Indeed, when $r\ne0$,
-
-```math
-T_B(n)-n=q+1\gt 0.
-```
+The residue classes outside $E$ are the division branches: on them, the map discards the remainder and divides by $B$.
 
 For $K\ge1$, let
 
 ```math
-D_K(n)=\#\big\lbrace 0\le j\lt K:T_B^{\,j}(n)\equiv0\pmod B\big\rbrace,
+D_K(n)=\#\big\lbrace 0\le j\lt K:
+T^{\,j}(n)\bmod B\notin E\big\rbrace,
 ```
 
-the number of contracting steps among the first $K$ iterates of $n$.
+the number of division-branch steps among the first $K$ iterates of $n$.
 
 ## Conjecture
 
-There exists an integer $B\ge2$ such that every nonnegative integer orbit has a positive lower asymptotic density of contracting steps:
+There exist choices of $B$, $E$, and $\lbrace(a_r,c_r)\rbrace_{r\in E}$ satisfying the conditions above such that every nonnegative integer orbit has a positive lower asymptotic density of division-branch steps:
 
 ```math
-\exists B\ge2\;\forall n\in\mathbb N_0:
+\forall n\in\mathbb N_0:
 \qquad
-\liminf_{K\to\infty}\frac{D_K(n)}{K}\gt 0.
+\liminf_{K\to\infty}\frac{D_K(n)}{K}\gt0.
 ```
 
 The positive lower bound may depend on $n$; no uniform density over all starting values is asserted.
 
-## Status
+## Why this is weaker
 
-Open. No value of $B\ge2$ is currently known for which this universal positive-lower-density statement has been proved. Results for almost all starting values do not establish the quantifier $\forall n$.
+The conjecture does not say that any orbit is bounded, returns below its starting value, or becomes periodic. An orbit may use the division branches with positive density and still diverge.
 
-## Why this is Collatz-like
+The universal quantifier over starting values is essential. Relatively prime branch multipliers permit arbitrarily long finite runs through $E$, so checking bounded starting values or bounded iteration lengths cannot establish the conjecture.
 
-This is the residue-affine family obtained by taking
+## Relationship to Collatz
 
-```math
-E=\lbrace1,\ldots,B-1\rbrace,
-\qquad a_r=B+1,
-\qquad c_r=r+1.
-```
-
-Its expanding multipliers are relatively prime to $B$, and it satisfies the negative-product condition
+The shortcut Collatz map is the admissible special case
 
 ```math
-(B+1)^{B-1}\lt B^B.
+B=2,\qquad E=\lbrace1\rbrace,
+\qquad a_1=3,\qquad c_1=2.
 ```
 
-For $B=2$, the map is the shortcut Collatz map:
+Thus the Collatz conjecture implies this conjecture: every positive orbit would eventually enter $1\leftrightarrow2$, where the division-branch density is $1/2$, while the orbit of $0$ has density $1$.
 
-```math
-T_2(2q)=q,
-\qquad
-T_2(2q+1)=3q+2=\frac{3(2q+1)+1}{2}.
-```
+## Status and related work
 
-Consequently, the Collatz conjecture implies this conjecture: an orbit entering the cycle $1\leftrightarrow2$ has contraction density $1/2$, while the orbit of $0$ has contraction density $1$.
+This repository does not claim a proof or a specific witness. Matthews and Watts study limiting residue frequencies and multiplicative drift for this class of relatively prime generalized Syracuse maps, but their general limiting-frequency statement for divergent trajectories is conjectural.
 
-## Strength of the statement
-
-This conjecture is weaker than eventual periodicity for some $T_B$. Every periodic orbit must contain a multiple of $B$, because $T_B(n)\gt n$ at every nonmultiple of $B$; hence a periodic orbit has positive contraction density. The converse is not asserted: an orbit may have positive contraction density and still diverge.
-
-The density required here may also be too small to offset the expanding branches. The multiplicative drift becomes nonpositive only when the contraction density reaches the critical value
-
-```math
-\delta_B^*
-=1-\frac{\log B}{\log(B+1)}.
-```
-
-This conjecture asks merely for a positive density, not for density at least $\delta_B^*$.
-
-The universal quantifier over starting values is essential. Coprimality permits arbitrarily long finite runs of expanding residue classes, so checking any bounded collection of starting values or iteration lengths cannot establish the conjecture.
-
-## Related work
-
-- Walter Carnielli, [“Some Natural Generalizations of the Collatz Problem”](https://emis.de/ft/8276), studies the family $T_B$ and conjectures eventual periodicity; the paper does not prove a universal case.
-- K. R. Matthews and A. M. Watts, [“A Markov approach to the generalized Syracuse algorithm”](https://doi.org/10.4064/aa-45-1-29-42), study residue frequencies and multiplicative drift for generalized Syracuse maps. Their limiting-frequency statement for divergent trajectories is itself conjectural.
+- K. R. Matthews and A. M. Watts, [“A Markov approach to the generalized Syracuse algorithm”](https://doi.org/10.4064/aa-45-1-29-42).
+- Walter Carnielli, [“Some Natural Generalizations of the Collatz Problem”](https://emis.de/ft/8276), studies a natural admissible subfamily.
