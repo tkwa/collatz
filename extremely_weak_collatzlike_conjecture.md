@@ -16,12 +16,6 @@ and, for each $r\in E$, integers $a_r,c_r$ satisfying
 a_r\gt B,\qquad \gcd(a_r,B)=1,\qquad c_r\in\mathbb N_0,
 ```
 
-together with the negative-drift condition
-
-```math
-\prod_{r\in E}a_r\lt B^B.
-```
-
 For $n\in\mathbb N_0$, write uniquely
 
 ```math
@@ -65,6 +59,8 @@ The positive lower bound may depend on $n$; no uniform density over all starting
 
 The conjecture does not say that any orbit is bounded, returns below its starting value, or becomes periodic. An orbit may use the division branches with positive density and still diverge.
 
+No geometric-mean drift condition is imposed. The expanding branches may dominate multiplicatively even when the division branches occur with positive density, so an orbit may diverge exponentially.
+
 The universal quantifier over starting values is essential. Relatively prime branch multipliers permit arbitrarily long finite runs through $E$, so checking bounded starting values or bounded iteration lengths cannot establish the conjecture.
 
 ## Relationship to Collatz
@@ -80,11 +76,11 @@ Thus the Collatz conjecture implies this conjecture: every positive orbit would 
 
 ## Status and related work
 
-Open. No admissible choice of parameters is known to satisfy the universal positive-density statement.
+Open. No choice of parameters satisfying the conditions above is known to satisfy the universal positive-density statement.
 
 The shortcut Collatz special case does not make the conjecture trivial. It is elementary that a positive shortcut Collatz orbit cannot remain odd forever, so it has infinitely many division-branch steps. That does not imply positive lower asymptotic density: the gaps between such steps could grow quickly enough for the lower density to be zero. It is not known that every shortcut Collatz orbit has positive division-branch density.
 
-For comparison, under the unaccelerated Collatz map every odd step is immediately followed by an even step. But that map is not admissible here: in quotient-remainder form its odd branch has $a_1=6$ for $B=2$, so $\gcd(a_1,B)\ne1$ and the negative-product condition also fails.
+For comparison, under the unaccelerated Collatz map every odd step is immediately followed by an even step. But that map is not admissible here: in quotient-remainder form its odd branch has $a_1=6$ for $B=2$, so $\gcd(a_1,B)\ne1$.
 
 Matthews and Watts study limiting residue frequencies and multiplicative drift for this class of relatively prime generalized Syracuse maps, but their general limiting-frequency statement for divergent trajectories is conjectural.
 
