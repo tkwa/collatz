@@ -1,9 +1,9 @@
-# An Extremely Weak Collatz-like Conjecture
+# Weak Collatz-like Conjectures
 
 This repository records deliberately weak Collatz-like conjectures that retain a universal quantifier over starting values.
 
-- [An Extremely Weak Collatz-like Conjecture](extremely_weak_collatzlike_conjecture.md) asks whether some admissible negative-drift residue-affine map has every orbit eventually become periodic.
-- [A Positive Contraction Density Conjecture](positive_contraction_density_conjecture.md) asks whether some map in a natural Collatz family gives every orbit a positive lower density of contracting steps.
+- [An Extremely Weak Collatz-like Conjecture](extremely_weak_collatzlike_conjecture.md) asks whether some map in a natural Collatz family gives every orbit a positive lower density of contracting steps.
+- [A Very Weak Collatz-like Conjecture](very_weak_collatzlike_conjecture.md) asks whether some admissible negative-drift residue-affine map has every orbit eventually become periodic.
 
 ## Status
 
