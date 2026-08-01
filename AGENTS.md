@@ -1,0 +1,1 @@
+Do not try searching for an explicit set of parameters whose map converges over a bounded range of integers. That cannot prove it converges on all integers, because there could be arbitrarily long runs of expanding residue classes, just as in Collatz.
