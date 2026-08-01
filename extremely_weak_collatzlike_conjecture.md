@@ -41,7 +41,8 @@ a_rq+c_r, & r\in E.
 There exist choices of $B$, $E$, and $\lbrace(a_r,c_r)\rbrace_{r\in E}$ satisfying the conditions above such that
 
 ```math
-\forall n\in\mathbb N_0\;\exists k\ge 0:\qquad T^{\,k}(n)=0.
+\forall n\in\mathbb N_0\;\exists k\ge 0\;\exists p\ge 1:
+\qquad T^{\,k+p}(n)=T^{\,k}(n).
 ```
 
-Equivalently: some nontrivial relatively-prime residue-affine map with negative geometric-mean drift has every nonnegative integer orbit terminate at $0$.
+Equivalently: some nontrivial relatively-prime residue-affine map with negative geometric-mean drift has every nonnegative integer orbit eventually become periodic. Different orbits may enter different cycles; no particular terminal value or cycle is specified.
