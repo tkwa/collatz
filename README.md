@@ -6,8 +6,8 @@ are difficult to control.
 
 - [`collatz/`](collatz/) contains the generalized Collatz conjectures and the
   associated work on division-branch frequency.
-- [`mahler/`](mahler/) contains the universal escape conjecture for fractional
-  parts of powers of subquadratic rational numbers.
+- [`mahler/`](mahler/) contains minimal universal escape conjectures for
+  fractional parts of powers with irrational and subquadratic rational bases.
 
 Both projects retain the difficult universal quantifier over starting values
 while asking for substantially less than the better-known conjectures that

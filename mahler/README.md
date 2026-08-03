@@ -1,10 +1,21 @@
-# A Minimal Universal Escape Conjecture for a Subquadratic Rational Base
+# Universal Escape Problems for Powers
+
+This folder contains two minimal universal escape conjectures:
+
+- [an irrational-base conjecture](irrational_base_universal_escape.md), in
+  which one algebraic irrational base may be chosen and every positive real
+  starting value must reach the upper half of the unit interval; and
+- the rational-base conjecture below, in which one subquadratic rational base
+  may be chosen and every positive real starting value must escape its Mahler
+  interval.
+
+## Rational-base conjecture
 
 We ask whether at least one rational base can be chosen for which every
 positive real starting value must escape. The base is part of the existential
 claim; it is not fixed in advance.
 
-## Conjecture
+### Conjecture
 
 There exist coprime integers $p,q$ satisfying
 
@@ -28,7 +39,7 @@ no $Z_{p/q}$-numbers. Applying the conjecture to each tail $x(p/q)^m$ would
 show that the sequence escapes $[0,1/q)$ infinitely often, so the one-hit and
 infinitely-many-hits versions are equivalent.
 
-## Why this is a minimal universal statement
+### Why this is a minimal universal statement
 
 The conjecture asks only for one base for which one visit to a fixed region is
 unavoidable. It does not identify the base, assert density, equidistribution,
@@ -43,7 +54,7 @@ The original case $(p,q)=(3,2)$ is Mahler's 1968 $Z$-number problem and
 remains open. Mahler's conjecture would imply this one by supplying a specific
 working pair.
 
-## 2026 reference
+### 2026 reference
 
 The stronger assertion that **every** coprime pair in the subquadratic range
 works appears as Conjecture 1.4 in:
