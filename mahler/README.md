@@ -3,9 +3,7 @@
 Let
 
 ```math
-\mathcal A=\left\{(p,q,x):
-p,q\in\mathbb Z,\ x\in\mathbb R_{>0},\
-\gcd(p,q)=1,\ 1<q<p<q^2\right\}.
+\mathcal A=\bigl\{(p,q,x)\in\mathbb Z^2\times\mathbb R_{>0}:\gcd(p,q)=1,\ 1<q<p<q^2\bigr\}.
 ```
 
 ## Conjecture
