@@ -575,6 +575,103 @@ def check_prime_power_macro_general() -> None:
     assert checked_links
 
 
+def check_endpoint_arithmetic_progression() -> None:
+    B = 5
+    expanding = {1: (7, 2), 3: (8, 4)}
+
+    def general_step(value: int) -> int:
+        quotient, residue = divmod(value, B)
+        if residue not in expanding:
+            return quotient
+        multiplier, constant = expanding[residue]
+        return multiplier * quotient + constant
+
+    word = [1, 0, 3, 4, 1, 2]
+    representative = 0
+    modulus = 1
+    for length, desired_residue in enumerate(word):
+        lifts = []
+        for digit in range(B):
+            candidate = representative + digit * modulus
+            value = candidate
+            for _ in range(length):
+                value = general_step(value)
+            if value % B == desired_residue:
+                lifts.append(candidate)
+        assert len(lifts) == 1
+        representative = lifts[0]
+        modulus *= B
+
+    multipliers = [
+        expanding[residue][0] if residue in expanding else 1
+        for residue in word
+    ]
+    prefix_products = [1]
+    for multiplier in multipliers:
+        prefix_products.append(prefix_products[-1] * multiplier)
+
+    base_path = [representative]
+    for _ in word:
+        base_path.append(general_step(base_path[-1]))
+
+    for lift_parameter in [0, 1, 2, 17, 101]:
+        value = representative + B ** len(word) * lift_parameter
+        for index, desired_residue in enumerate(word):
+            assert value % B == desired_residue
+            assert value == (
+                base_path[index]
+                + prefix_products[index]
+                * B ** (len(word) - index)
+                * lift_parameter
+            )
+            value = general_step(value)
+        assert value == (
+            base_path[-1] + prefix_products[-1] * lift_parameter
+        )
+
+    external_modulus = 65
+    assert gcd(prefix_products[-1], external_modulus) == 1
+    endpoint_residues = {
+        (base_path[-1] + prefix_products[-1] * parameter)
+        % external_modulus
+        for parameter in range(external_modulus)
+    }
+    assert endpoint_residues == set(range(external_modulus))
+
+
+def check_nearby_prime_family() -> None:
+    for B, a in [(5, 7), (11, 13), (13, 17), (29, 31)]:
+        e = (-pow(a, -1, B)) % B
+        c = (a * e + 1) // B
+        difference = a - B
+        assert 1 <= e < B
+        assert a * e - B * c == -1
+
+        for n in range(1000):
+            x = difference * n + 1
+            n_next = step(n, B, e, a, c)
+            x_next = difference * n_next + 1
+            assert B * x_next <= a * x
+            if n % B == e:
+                assert B * x_next == a * x
+                run_length = 0
+                value = n
+                while value % B == e:
+                    run_length += 1
+                    value = step(value, B, e, a, c)
+                valuation = 0
+                x_copy = x
+                while x_copy % B == 0:
+                    valuation += 1
+                    x_copy //= B
+                assert run_length == valuation
+            else:
+                residue = n % B
+                correction = difference * residue - (B - 1)
+                assert correction
+                assert B * x_next == x - correction
+
+
 if __name__ == "__main__":
     check_one_expanding_normal_form()
     check_finite_inverse_identity()
@@ -589,4 +686,6 @@ if __name__ == "__main__":
     check_binary_section_root_valuations()
     check_deleted_digit_second_moment()
     check_prime_power_macro_general()
+    check_endpoint_arithmetic_progression()
+    check_nearby_prime_family()
     print("all exact normal-form checks passed")

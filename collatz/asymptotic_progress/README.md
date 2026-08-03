@@ -39,3 +39,10 @@ is proved for the full prime-power family in
 [`prime_power_macro_chains.md`](prime_power_macro_chains.md).
 For the smallest prime-power candidate, the exact residual chain between odd
 endpoint cores is in [`odd_core_chain.md`](odd_core_chain.md).
+The exact arithmetic progression of possible endpoints after any fixed
+itinerary, and the resulting freedom to prescribe all non-multiplier-prime
+valuations locally, is proved in
+[`endpoint_arithmetic_progressions.md`](endpoint_arithmetic_progressions.md).
+The [`nearby_prime_family.md`](nearby_prime_family.md) construction combines
+unbounded logarithmic constants across maps with endpoint cores coprime to
+both a prime base and a prime expansion multiplier.
