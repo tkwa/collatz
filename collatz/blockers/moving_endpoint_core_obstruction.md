@@ -49,7 +49,7 @@ $E$ are called **expansion branches**.  For a starting value $n$, define
 
 $$
 D_K(n)=
-\#\{0\le j\lt K:T^j(n)\bmod B\notin E\}.
+\left|\{0\le j\lt K:T^j(n)\bmod B\notin E\}\right|.
 $$
 
 The current intermediate goal is to find one admissible map for which
@@ -103,7 +103,7 @@ target fails.  Then there are constants $\delta,\eta\gt0$ and arbitrarily large
 $M$ for which
 
 $$
-\#\{m\lt M:\tau_{m+1}\ge(1+\delta)\tau_m\}\ge\eta M.
+\left|\{m\lt M:\tau_{m+1}\ge(1+\delta)\tau_m\}\right|\ge\eta M.
 $$
 
 This is a proved averaging lemma.  To see its source, telescope
