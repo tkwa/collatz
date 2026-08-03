@@ -2,9 +2,9 @@
 
 This folder contains two minimal universal escape conjectures:
 
-- [an irrational-base conjecture](irrational_base_universal_escape.md), in
-  which one algebraic irrational base may be chosen and every positive real
-  starting value must reach the upper half of the unit interval; and
+- [a strict universal limsup conjecture](strict_half_universal_limsup.md), in
+  which one unrestricted real base may be chosen and every positive real
+  starting value must recur a positive distance above one half; and
 - the rational-base conjecture below, in which one subquadratic rational base
   may be chosen and every positive real starting value must escape its Mahler
   interval.
