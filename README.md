@@ -1,10 +1,14 @@
-# Weak Collatz-like Conjectures
+# Universal Orbit Conjectures
 
-This repository records deliberately weak Collatz-like conjectures that retain a universal quantifier over starting values.
+This repository collects very weak universal statements about deterministic
+sequences whose typical behavior appears random but whose exceptional orbits
+are difficult to control.
 
-- [An Extremely Weak Collatz-like Conjecture](extremely_weak_collatzlike_conjecture.md) asks whether some relatively-prime residue-affine map gives every orbit a positive lower density of division-branch steps.
-- [A Very Weak Collatz-like Conjecture](very_weak_collatzlike_conjecture.md) asks whether some admissible negative-drift residue-affine map has every orbit eventually become periodic.
+- [`collatz/`](collatz/) contains the generalized Collatz conjectures and the
+  associated work on division-branch frequency.
+- [`mahler/`](mahler/) contains the universal escape conjecture for fractional
+  parts of powers of subquadratic rational numbers.
 
-## Status
-
-Open conjectures. This repository contains problem statements and context; it does not claim a proof or a specific construction.
+Both projects retain the difficult universal quantifier over starting values
+while asking for substantially less than the better-known conjectures that
+motivate them.
