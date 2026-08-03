@@ -1,26 +1,32 @@
-# A Minimal Universal Escape Conjecture for Rational Powers
+# A Minimal Universal Escape Conjecture for Every Subquadratic Rational Base
 
-Let
+Choose **any** pair of coprime integers $p,q$ satisfying
 
 ```math
-\mathcal A=\bigl\{(p,q,x)\in\mathbb Z^2\times\mathbb R_{>0}:\gcd(p,q)=1,\ 1\lt q\lt p\lt q^2\bigr\}.
+1\lt q\lt p\lt q^2.
 ```
+
+The choice of base $p/q$ is arbitrary within this range. The conjecture is
+not asking whether one favorable pair $p,q$ exists; it makes the assertion
+for every admissible pair.
 
 ## Conjecture
 
-Every admissible sequence eventually escapes the interval
-$[0,1/q)$:
+For every such choice of $p,q$, every positive real starting value eventually
+escapes the interval $[0,1/q)$:
 
 ```math
-\forall (p,q,x)\in\mathcal A\quad
+\forall x\in\mathbb R_{>0}\quad
 \exists n\in\mathbb N_0:\qquad
 \left\{x\left(\frac pq\right)^n\right\}\ge\frac1q.
 ```
 
-Equivalently, there are no $Z_{p/q}$-numbers when $p<q^2$. Applying
-the conjecture to each tail $x(p/q)^m$ would show that the sequence escapes
-$[0,1/q)$ infinitely often, so the one-hit and infinitely-many-hits versions
-are equivalent.
+The quantifiers are universal in $p$, $q$, and $x$, and existential only in
+$n$, subject to the displayed conditions on $p$ and $q$.
+Equivalently, no coprime rational base with $1<q<p<q^2$ has any
+$Z_{p/q}$-numbers. Applying the conjecture to each tail $x(p/q)^m$ would show
+that the sequence escapes $[0,1/q)$ infinitely often, so the one-hit and
+infinitely-many-hits versions are equivalent.
 
 ## Why this is a minimal universal statement
 
