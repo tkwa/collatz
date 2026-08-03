@@ -222,3 +222,47 @@ x_0(1+z)^{\lambda_m}
 
 whose shifts and binomial exponents both move with the orbit.  In particular,
 the proofs do not give constants uniform in the number `m` of moving summands.
+
+## Carelli's 2026 reachability result is qualitative only
+
+Mishel Carelli's
+[“Loop Termination and Generalized Collatz Sequences”](https://arxiv.org/abs/2605.15094)
+introduces a Reachability Conjecture for weak generalized Collatz maps and
+proves its modulus-$2$ case.  The proved input is Proposition 17: an unbounded
+trajectory of a relatively-prime generalized Collatz map visits at least two
+residue classes modulo the base.
+
+For a binary admissible map, applying the proposition to every unbounded tail
+shows that the sole division residue is visited infinitely often.  This is
+qualitative recurrence only.  It gives no bound on the distance to the next
+visit and therefore does not improve
+
+$$
+D_K(n)=\Omega_n(\log K).
+$$
+
+The paper explicitly leaves all reachability cases with modulus greater than
+$2$ open; its example $T(x)=\lfloor4x/3\rfloor$ already has an unresolved
+residue-hitting question.  Thus its loop-termination machinery does not
+provide a terminating admissible map or a superlogarithmic division count.
+
+## Bouhamidi's convergent class is outside the expansion condition
+
+Abderrahman Bouhamidi's 2024 preprint
+[“Weak and strong admissible triplets associated to Collatz like map”](https://hal.science/hal-04552296)
+recalls a Hasse--Allouche subfamily for which all orbits eventually enter
+cycles when its nondivision multiplier $m$ satisfies $1\le m<d$, where $d$ is
+the modulus.  Those branches are contracting, whereas the present project
+requires every nondivision multiplier to satisfy
+
+$$
+a_r>B.
+$$
+
+The preprint's examples with multiplier larger than the modulus are not
+proved universally convergent: they are labelled as conjectures, beliefs, or
+experimental observations, and the paper itself states that proving a given
+expanding triplet weak or strong remains difficult even in the classical
+case.  Consequently the provably convergent Hasse class cannot be used as the
+requested admissible example, and the expanding examples do not close the
+goal.
