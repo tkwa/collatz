@@ -46,3 +46,7 @@ valuations locally, is proved in
 The [`nearby_prime_family.md`](nearby_prime_family.md) construction combines
 unbounded logarithmic constants across maps with endpoint cores coprime to
 both a prime base and a prime expansion multiplier.
+The exact subexponential dependence required from a growing-rank valuation
+theorem, and its staircase-polynomial formulation for the ceiling family, are
+recorded in
+[`uniform_rank_valuation_target.md`](uniform_rank_valuation_target.md).

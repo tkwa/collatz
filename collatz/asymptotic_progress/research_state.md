@@ -178,6 +178,11 @@ The nearby-prime construction in
 logarithmic constants across maps with endpoint cores coprime to both the base
 prime and multiplier prime, but it still leaves the same moving outside-prime
 core.
+For the ceiling family, the remaining fixed-start problem can be written as a
+staircase lacunary-polynomial valuation.  A bound whose rank-dependent loss is
+subexponential already implies the target; the exact statement and proof of
+this threshold are in
+[`uniform_rank_valuation_target.md`](uniform_rank_valuation_target.md).
 
 ## Proved: failure has positive-density proportional gaps
 

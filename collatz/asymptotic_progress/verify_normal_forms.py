@@ -139,6 +139,7 @@ def check_ceiling_gap_certificates() -> None:
                 d_now = division_digits[m]
                 u_now = (division_values[m] + d_now) // B ** (l_now + 1)
                 rhs = a**lambda_m * x0
+                staircase_value = Fraction(x0)
                 for i in range(m + 1):
                     tau_i = division_times[i]
                     lambda_i = tau_i - (i + 1) + 1
@@ -147,7 +148,19 @@ def check_ceiling_gap_certificates() -> None:
                         * B**tau_i
                         * a ** (lambda_m - lambda_i)
                     )
+                    staircase_value += Fraction(
+                        division_digits[i] * B ** (i + lambda_i),
+                        a**lambda_i,
+                    )
                 assert B**tau_next * u_now == rhs
+                assert a**lambda_m * staircase_value == rhs
+                staircase_valuation = 0
+                staircase_numerator = staircase_value.numerator
+                while staircase_numerator % B == 0:
+                    staircase_valuation += 1
+                    staircase_numerator //= B
+                assert staircase_value.denominator % B
+                assert staircase_valuation == tau_next
 
 
 def check_negative_center_family() -> None:
