@@ -169,6 +169,15 @@ whose successive corrections each contain a uniformly bounded number of
 `{2,3}`-unit terms.
 The family-level version for every prime-power expansion multiplier is proved
 in [`prime_power_macro_chains.md`](prime_power_macro_chains.md).
+For every admissible map, fixing a finite itinerary leaves an exact arithmetic
+progression of possible endpoints.  This makes all valuations outside the
+expansion-multiplier primes locally prescribable; see
+[`endpoint_arithmetic_progressions.md`](endpoint_arithmetic_progressions.md).
+The nearby-prime construction in
+[`nearby_prime_family.md`](nearby_prime_family.md) combines unbounded
+logarithmic constants across maps with endpoint cores coprime to both the base
+prime and multiplier prime, but it still leaves the same moving outside-prime
+core.
 
 ## Proved: failure has positive-density proportional gaps
 
