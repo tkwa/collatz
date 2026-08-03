@@ -30,7 +30,8 @@ obstruction are recorded in
 The failure of finite-state coding shortcuts for both the full residue
 itinerary and its binary expansion/division projection is proved in
 [`finite_state_coding_obstruction.md`](finite_state_coding_obstruction.md);
-the projected case uses affine deleted-digit rigidity and Furstenberg's
+the projected case covers variable-output carry transducers as well as
+synchronous ones, using affine deleted-digit rigidity and Furstenberg's
 topological multiplicative-independence theorem.  Meanwhile,
 [`prime_factor_reset.md`](prime_factor_reset.md) records what structured
 prime-power multipliers do and do not remove from the endpoint-unit problem.

@@ -5,7 +5,9 @@ the residue itinerary of every ordinary integer is produced by a finite-state
 base-`B` transducer.  Such a transducer would send an eventually-zero input
 expansion to an eventually periodic output expansion, immediately giving a
 positive asymptotic frequency of division symbols unless the periodic tail
-used only expansion symbols.
+used only expansion symbols.  The proofs below rule out both synchronous
+transducers and the broader deterministic letter-to-word transducers that
+allow a carry state to emit a variable number of symbols.
 
 For the **full residue itinerary**, this shortcut is impossible for every
 admissible map.  The proof below is complete.  It does not rule out a
@@ -447,13 +449,96 @@ The external input used here is the topological rigidity theorem from H.
 Furstenberg, *Disjointness in ergodic theory, minimal sets, and a problem in
 Diophantine approximation*, Math. Systems Theory **1** (1967), 1--49.
 
+## Proved: variable-output finite-state transducers are also impossible
+
+The preceding conclusion is not an artifact of requiring one output symbol
+per input digit.  Consider a deterministic finite-state transducer which
+reads the ordinary base-$B$ digits from least significant to most significant
+and emits a finite binary word on each input transition.  Empty transition
+outputs are allowed, and output lengths may vary.  Suppose that, on the
+eventually-zero digit expansion of every ordinary nonnegative integer, the
+concatenated output is the binary expansion/division itinerary $I(x)$.
+
+Retain the input prefix $p_k$ whose first $k$ itinerary symbols are expansion
+symbols, written $1^k$.  After reading $p_k$, let the transducer have emitted
+the word $o_k$ and reached the state $s_k$.  Every continuation of $p_k$ has
+output prefix $1^k$.  This is the *maximal* common prefix: after the $k$
+prescribed expansion steps the state has the form
+
+$$
+C_k+a^kq,
+$$
+
+and, as $q$ varies modulo $B$, its next residue covers every residue class.
+Both an expansion residue and a division residue therefore occur among the
+continuations.
+
+It follows that
+
+$$
+o_k=1^{\ell_k}
+\qquad\text{with}\qquad
+0\le\ell_k\le k.
+$$
+
+Let $F_s(q)$ denote the infinite residual output produced from state $s$ on
+the eventually-zero input suffix of an ordinary $q\ge0$.  The maximal common
+prefix of the family $\{F_{s_k}(q):q\in\mathbb N_0\}$ has length exactly
+
+$$
+d_k=k-\ell_k
+$$
+
+and consists of expansion symbols.  If $s_k=s_\ell$, the residual functions
+are identical, so their maximal common-prefix lengths are identical:
+
+$$
+d_k=d_\ell.
+$$
+
+After removing that common prefix, the remaining residual function is
+exactly the synchronized section
+
+$$
+S_k(q)=I(C_k+a^kq).
+$$
+
+Consequently, equal transducer states force $S_k(q)=S_\ell(q)$ for every
+ordinary $q\ge0$.  Both sections are continuous on $\mathbb Z_B$, and
+$\mathbb N_0$ is dense there, so in fact $S_k=S_\ell$ on all of
+$\mathbb Z_B$.  Since there are only finitely many states, this happens for
+some $k\ne\ell$.  But equality of these sections gives
+
+$$
+a^{\ell-k}\mathcal C_D+t=\mathcal C_D,
+$$
+
+which is impossible by the affine deleted-digit rigidity theorem above.
+
+Therefore
+
+$$
+\boxed{
+\begin{gathered}
+\text{For every admissible map, the binary itinerary is not produced by any}\\
+\text{deterministic finite-state letter-to-word transducer on the ordinary
+base-}B\text{ digits.}
+\end{gathered}
+}
+$$
+
+This covers the usual finite carry-state constructions, including bounded or
+variable output delay.  It does not rule out an infinite-state carry process,
+an asynchronous representation with unbounded auxiliary memory, or a global
+arithmetic invariant not computed from the digits by a finite transducer.
+
 ## Proved no-go for the most direct projected-digit construction
 
 A tempting higher-base design is to use the same affine map
 
 ```math
 g(q)=aq+c,
-\qquad a>B,quad \gcd(a,B)=1,
+\qquad a>B,\qquad \gcd(a,B)=1,
 ```
 
 on every expanding residue, choose a nonconstant coloring
@@ -484,6 +569,5 @@ position `k` is exactly `s`, so the output digit in that position is
 Since `a>B`, the allowed carries include `s=0,1,\ldots,B-1`; hence `\chi`
 would be constant.  Thus even the coarser projected-itinerary route cannot be
 realized by making an expansion affine map preserve a fixed coloring of each
-ordinary input digit.  More general finite-state projected factors, in which
-the output color depends on a carry state rather than only on the input digit,
-are not excluded.
+ordinary input digit.  The variable-output theorem above also rules out
+replacing the fixed coloring by an arbitrary finite carry state.

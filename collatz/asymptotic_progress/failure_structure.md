@@ -41,7 +41,7 @@ for every sufficiently large `m`.  If the target fails, then there are
 constants `\delta>0` and `\eta>0`, and arbitrarily large `M`, for which
 
 ```math
-\#\{1\le m<M:\tau_{m+1}\ge(1+\delta)\tau_m\}\ge \eta M.
+\left|\{1\le m<M:\tau_{m+1}\ge(1+\delta)\tau_m\}\right|\ge \eta M.
 ```
 
 Thus failure does not merely produce infinitely many proportional gaps.  It

@@ -197,7 +197,7 @@ with fixed `A>1`.  If `\log\tau_m/m` does not tend to zero, a telescoping and
 averaging argument shows that some `\delta,\eta>0` satisfy
 
 ```math
-\#\{m<M:\tau_{m+1}\ge(1+\delta)\tau_m\}\ge\eta M
+\left|\{m<M:\tau_{m+1}\ge(1+\delta)\tau_m\}\right|\ge\eta M
 ```
 
 for arbitrarily large `M`.  In fact the long-gap indices are piecewise
