@@ -8,6 +8,7 @@ prime-power macro-chain approach to the target
 $$
 D_K(n)=\omega(\log K).
 $$
+
 The reduction to macro chains below is **proved**.  The theorem needed to
 exclude arbitrarily long chains along one fixed integer orbit is **open**.
 No proof of the target is claimed.
@@ -30,6 +31,7 @@ q,&r\notin E,\\[1mm]
 a_rq+c_r,&r\in E,
 \end{cases}
 $$
+
 where
 
 $$
@@ -41,6 +43,7 @@ a_r\gt B,
 \qquad
 c_r\ge0.
 $$
+
 The residues outside $E$ are called **division branches** and the residues in
 $E$ are called **expansion branches**.  For a starting value $n$, define
 
@@ -48,6 +51,7 @@ $$
 D_K(n)=
 \#\{0\le j\lt K:T^j(n)\bmod B\notin E\}.
 $$
+
 The current intermediate goal is to find one admissible map for which
 
 $$
@@ -55,6 +59,7 @@ $$
 \qquad
 \frac{D_K(n)}{\log K}\longrightarrow\infty.
 $$
+
 This is much weaker than positive division density and says nothing by itself
 about boundedness, recurrence, or eventual periodicity.
 
@@ -65,6 +70,7 @@ Fix one orbit and let
 $$
 0\le\tau_1\lt\tau_2\lt\cdots
 $$
+
 be its zero-based division times.  If the sequence is infinite, then
 
 $$
@@ -74,6 +80,7 @@ D_K(n)=\omega(\log K)
 \frac{\log\tau_m}{m}\longrightarrow0.
 }
 $$
+
 Indeed, at time $\tau_m$ the division count is $m$, up to an immaterial
 indexing shift, and between successive division times it is constant.  If an
 orbit has only finitely many division steps, the target already fails for that
@@ -85,6 +92,7 @@ gives constants $A\gt1$ and $C$ such that
 $$
 \tau_{m+1}\le A\tau_m+C
 $$
+
 for all sufficiently large $m$.  This proves only
 $D_K(n)=\Omega_n(\log K)$.
 
@@ -97,12 +105,14 @@ $M$ for which
 $$
 \#\{m\lt M:\tau_{m+1}\ge(1+\delta)\tau_m\}\ge\eta M.
 $$
+
 This is a proved averaging lemma.  To see its source, telescope
 
 $$
 \log\tau_M-\log\tau_1
 =\sum_{m\lt M}\log\frac{\tau_{m+1}}{\tau_m}.
 $$
+
 Failure makes the left side linear in $M$ along a subsequence, while the
 affine upper recurrence uniformly bounds each sufficiently late summand.
 Therefore a positive proportion of the summands must be bounded away from
@@ -117,6 +127,7 @@ m_1\lt m_2\lt\cdots\lt m_q,
 \qquad
 m_{i+1}-m_i\le R.
 $$
+
 These chains can be chosen arbitrarily far out.  Thus a bad orbit would not
 merely contain isolated long expansion runs.  It would contain arbitrarily
 long chains of them, separated by a uniformly bounded number of division
@@ -127,11 +138,13 @@ In a one-expanding-residue map, put
 $$
 L_m=\tau_{m+1}-\tau_m-1.
 $$
+
 The proportional-gap condition is
 
 $$
 L_m\ge\delta\tau_m-1,
 $$
+
 so all sufficiently late members of such a chain are very long expansion
 runs.
 
@@ -143,6 +156,7 @@ $a,c$, and
 $$
 a=p^g
 $$
+
 for a prime $p\nmid B$ and an integer $g\ge1$.  Define
 
 $$
@@ -150,11 +164,13 @@ h=ae-Bc,
 \qquad
 X(n)=(a-B)n-h.
 $$
+
 In this centered integer coordinate, every step has one of the forms
 
 $$
 BX'=aX
 $$
+
 on the expansion branch, or
 
 $$
@@ -162,6 +178,7 @@ BX'=X-b_r,
 \qquad
 b_r=(a-B)r+(B-1)h,
 $$
+
 on a division branch $r\ne e$.  The finitely many division corrections
 $b_r$ are nonzero.
 
@@ -172,6 +189,7 @@ $$
 X=B^{L_i}u_i,
 \qquad B\nmid u_i.
 $$
+
 The division step after the preceding block gives the exact recurrence
 
 $$
@@ -181,6 +199,7 @@ B^{r_i}u_i=a^{L_{i-1}}u_{i-1}+d_i,
 r_i=L_i+1,
 }
 $$
+
 where $d_i=-b_r$ belongs to a fixed finite set of nonzero signed integers.
 
 ## 5. Proved reset at the multiplier prime
@@ -194,22 +213,26 @@ d_i=p^{t_i}\varepsilon_i,
 \qquad
 p\nmid\varepsilon_i,
 $$
+
 and let $t_{\max}$ be the largest possible $t_i$.  If
 
 $$
 gL_{i-1}\gt t_i,
 $$
+
 then the two terms on the right side of the block recurrence have unequal
 $p$-adic valuations.  Hence
 
 $$
 \boxed{v_p(u_i)=t_i.}
 $$
+
 Call a block index $j$ **marked** when
 
 $$
 gL_j\gt t_{\max}.
 $$
+
 The endpoint after a marked block therefore has the controlled factorization
 
 $$
@@ -217,6 +240,7 @@ u_{j+1}=p^{t_{j+1}}w_{j+1},
 \qquad
 p\nmid w_{j+1}.
 $$
+
 Because proportional runs become arbitrarily long, every sufficiently late
 proportional-gap index in a hypothetical bad orbit is marked.
 
@@ -231,6 +255,7 @@ B^{R_{j,k}}w_{k+1}
 =p^{S_{j,k}}w_{j+1}+C_{j,k},
 }
 $$
+
 where
 
 $$
@@ -238,9 +263,11 @@ R_{j,k}=\sum_{i=j+2}^{k+1}r_i,
 \qquad
 A_{j,k}=\sum_{h=j+1}^{k}L_h,
 $$
+
 $$
 S_{j,k}=gA_{j,k}+t_{j+1}-t_{k+1},
 $$
+
 and
 
 $$
@@ -250,12 +277,14 @@ C_{j,k}
 p^{g\sum_{h=i}^{k}L_h+t_i-t_{k+1}}
 B^{\sum_{h=j+2}^{i-1}r_h}.
 $$
+
 All displayed exponents of $p$ are nonnegative.  The final summand is a
 $p$-adic unit, so
 
 $$
 v_p(C_{j,k})=0.
 $$
+
 If $k-j\le R$, then $C_{j,k}$ is a sum of at most $R$ monomials from one
 fixed finitely generated multiplicative group: the generators come only from
 $p$, the prime divisors of $B$, and the finite correction alphabet.
@@ -282,6 +311,7 @@ T(3q+1)=4q+2,
 \qquad
 T(3q+2)=q.
 $$
+
 This is only a diagnostic candidate; it is not known to satisfy the target.
 With $X=n+2$, its branches become
 
@@ -293,6 +323,7 @@ X+2,&X\equiv1\pmod3,\\
 X+4,&X\equiv2\pmod3.
 \end{cases}
 $$
+
 The block recurrence is
 
 $$
@@ -300,6 +331,7 @@ $$
 \qquad
 d_i\in\{2,4\}.
 $$
+
 If $L_{i-1}\ge2$, then
 
 $$
@@ -309,12 +341,14 @@ t_i=v_2(d_i)\in\{1,2\},
 \qquad
 \gcd(w_i,6)=1.
 $$
+
 For two marked indices $j\lt k$, the macro link specializes to
 
 $$
 3^{R_{j,k}}w_{k+1}
 =2^{S_{j,k}}w_{j+1}+C_{j,k},
 $$
+
 with
 
 $$
@@ -323,6 +357,7 @@ C_{j,k}
 2^{2\sum_{h=i}^{k}L_h+t_i-t_{k+1}}
 3^{\sum_{h=j+2}^{i-1}(L_h+1)}.
 $$
+
 Thus every bounded-spacing macro correction is a bounded sum of
 $\{2,3\}$-units.  The endpoint cores $w$, however, are arbitrary positive
 integers coprime to $6$.
@@ -332,6 +367,7 @@ When two controlled endpoints are adjacent, the especially simple equation
 $$
 3^r w=2^S v+1
 $$
+
 appears.  It looks like a Pillai or $S$-unit equation, but the moving
 coefficients $v,w$ are exactly what prevent the usual theory from applying.
 
@@ -358,18 +394,21 @@ uniform bound for
 $$
 3^r w-2^S v=1
 $$
+
 when $v,w$ move.  In fact, for every positive pair $r,S$, there are positive
 $v,w$, both coprime to $6$, satisfying this equation.  Start with
 
 $$
 v\equiv-2^{-S}\pmod{3^r},
 $$
+
 choose a lift that is odd and avoids the one residue modulo $3^{r+1}$ which
 would add an extra factor of $3$, and set
 
 $$
 w=\frac{2^Sv+1}{3^r}.
 $$
+
 The same Chinese-remainder flexibility solves the simultaneous local
 congruences imposed on a shared endpoint core.
 
@@ -422,6 +461,7 @@ division times, and put
 $$
 \lambda_i=\tau_i-i+1.
 $$
+
 Iteration gives the exact identity
 
 $$
@@ -432,6 +472,7 @@ $$
 d_i3^{\tau_i}4^{\lambda_m-\lambda_i}.
 }
 $$
+
 This formula remembers the fixed start, unlike an isolated macro link.  But
 after removing the controlled power of $2$, it still does not put $w_m$ in a
 fixed finite-rank multiplicative group.  It identifies the location of the
@@ -451,21 +492,25 @@ exist a bound
 $$
 Q=Q(n,\delta,R)
 $$
+
 such that the orbit of $n$ has no chain of more than $Q$ indices
 
 $$
 j_1\lt j_2\lt\cdots\lt j_q
 $$
+
 satisfying both
 
 $$
 j_{i+1}-j_i\le R
 $$
+
 and
 
 $$
 L_{j_i}\ge\delta\tau_{j_i}-1
 $$
+
 for every $i$, where $q\gt Q$.
 
 Equivalently, for every fixed orbit and every $\delta\gt0$, the proportional-gap
@@ -476,6 +521,7 @@ failure and therefore establish
 $$
 D_K(n)=\omega(\log K).
 $$
+
 The genuinely new arithmetic content would be a bound on the length of an
 **orbit-compatible, fixed-start** system of macro equations.  The same claim
 without the fixed-start condition is false because every finite itinerary is
