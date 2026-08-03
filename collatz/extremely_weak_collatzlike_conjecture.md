@@ -1,6 +1,6 @@
 # An Extremely Weak Collatz-like Conjecture
 
-## Positive contraction density
+## Superlogarithmic contraction count
 
 Let $\mathbb N_0=\lbrace 0,1,2,\ldots\rbrace$.
 
@@ -13,7 +13,7 @@ E\subseteq\lbrace 1,\ldots,B-1\rbrace,
 and, for each $r\in E$, integers $a_r,c_r$ satisfying
 
 ```math
-a_r\gt B,\qquad \gcd(a_r,B)=1,\qquad c_r\in\mathbb N_0,
+a_r\gt B,\qquad \gcd(a_r,B)=1,\qquad c_r\in\mathbb N_0.
 ```
 
 For $n\in\mathbb N_0$, write uniquely
@@ -32,9 +32,8 @@ a_rq+c_r, & r\in E.
 \end{cases}
 ```
 
-The residue classes outside $E$ are the division branches: on them, the map discards the remainder and divides by $B$.
-
-For $K\ge1$, let
+The residue classes outside $E$ are the **division branches**: on them, the
+map discards the remainder and divides by $B$.  For $K\ge1$, let
 
 ```math
 D_K(n)=\left|\big\lbrace 0\le j\lt K:
@@ -45,17 +44,36 @@ the number of division-branch steps among the first $K$ iterates of $n$.
 
 ## Conjecture
 
-There exist choices of $B$, $E$, and $\lbrace(a_r,c_r)\rbrace_{r\in E}$ satisfying the conditions above such that every nonnegative integer orbit has a positive lower asymptotic density of division-branch steps:
+There exist choices of $B$, $E$, and
+$\lbrace(a_r,c_r)\rbrace_{r\in E}$ satisfying the conditions above such that
 
 ```math
 \forall n\in\mathbb N_0:
 \qquad
+D_K(n)=\omega(\log K)
+\quad\text{as }K\to\infty.
+```
+
+Equivalently, for every fixed starting value $n$,
+
+```math
+\lim_{K\to\infty}\frac{D_K(n)}{\log K}=+\infty.
+```
+
+No rate uniform in $n$ is asserted.
+
+## Relationship to the stronger conjectures
+
+The [Very Weak Collatz-like Conjecture](very_weak_collatzlike_conjecture.md)
+asks for positive lower asymptotic density:
+
+```math
 \liminf_{K\to\infty}\frac{D_K(n)}{K}\gt0.
 ```
 
-The positive lower bound may depend on $n$; no uniform density over all starting values is asserted.
-
-## Relationship to Collatz
+That property immediately implies the superlogarithmic bound here.  The
+converse need not hold: $D_K(n)$ may grow faster than every constant multiple
+of $\log K$ while still having density zero.
 
 The shortcut Collatz map is the admissible special case
 
@@ -64,22 +82,26 @@ B=2,\qquad E=\lbrace1\rbrace,
 \qquad a_1=3,\qquad c_1=2.
 ```
 
-Thus the Collatz conjecture implies this conjecture: every positive orbit would eventually enter $1\leftrightarrow2$, where the division-branch density is $1/2$, while the orbit of $0$ has density $1$.
+The Collatz conjecture would imply the present conjecture, since every
+positive orbit would eventually enter $1\leftrightarrow2$ and thereafter use
+the division branch with density $1/2$.  The present conjecture asks for much
+less: the witness may be any admissible map, and its orbits need not be
+bounded, recurrent, or eventually periodic.
 
-## Why this is weaker
+## Why the statement is not trivial
 
-* The conjecture allows a much wider range of maps than the specific Collatz map.
-* The conjecture does not say that any orbit is bounded, returns below its starting value, or becomes periodic. An orbit may use the division branches with positive density and still diverge exponentially.
+Infinitely many division steps do not suffice.  Their occurrence times could
+grow exponentially, giving only $D_K(n)=O(\log K)$.  Elementary size estimates
+prove logarithmic lower bounds for useful families of admissible maps, and
+the logarithmic constant can be made arbitrarily large by changing the map.
+That does not produce one fixed map for which the ratio
+$D_K(n)/\log K$ tends to infinity on every orbit.
 
-## Status and related work
+## Status and ongoing work
 
-Open. No choice of parameters satisfying the conditions above is known to satisfy the universal positive-density statement.
+Open.  No admissible parameter choice is currently known to satisfy the
+universal superlogarithmic statement.
 
-The shortcut Collatz special case does not make the conjecture trivial. It is elementary that a positive shortcut Collatz orbit cannot remain odd forever, so it has infinitely many division-branch steps. That does not imply positive lower asymptotic density: the gaps between such steps could grow quickly enough for the lower density to be zero. It is not known that every shortcut Collatz orbit has positive division-branch density.
-
-For comparison, under the unaccelerated Collatz map every odd step is immediately followed by an even step. But that map is not admissible here: in quotient-remainder form its odd branch has $a_1=6$ for $B=2$, so $\gcd(a_1,B)\ne1$.
-
-Matthews and Watts study limiting residue frequencies and multiplicative drift for this class of relatively prime generalized Syracuse maps, but their general limiting-frequency statement for divergent trajectories is conjectural.
-
-- K. R. Matthews and A. M. Watts, [“A Markov approach to the generalized Syracuse algorithm”](https://doi.org/10.4064/aa-45-1-29-42).
-- Walter Carnielli, [“Some Natural Generalizations of the Collatz Problem”](https://emis.de/ft/8276), studies a natural admissible subfamily.
+Proof attempts, proved partial results, exact checks, and candidate mechanisms
+are collected in [`asymptotic_progress/`](asymptotic_progress/).  The current
+obstructions are summarized separately in [`blockers/`](blockers/).
