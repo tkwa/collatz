@@ -3,7 +3,7 @@
 Let
 
 ```math
-\mathcal A=\bigl\{(p,q,x)\in\mathbb Z^2\times\mathbb R_{>0}:\gcd(p,q)=1,\ 1<q<p<q^2\bigr\}.
+\mathcal A=\bigl\{(p,q,x)\in\mathbb Z^2\times\mathbb R_{>0}:\gcd(p,q)=1,\ 1\lt q\lt p\lt q^2\bigr\}.
 ```
 
 ## Conjecture
