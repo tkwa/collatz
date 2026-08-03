@@ -3,9 +3,9 @@
 This folder contains standalone descriptions of obstacles encountered while
 trying to prove
 
-```math
+$$
 D_K(n)=\omega(\log K)
-```
+$$
 
 for every starting value of one admissible Collatz-like map.  A blocker is not
 a proof that the target is impossible; it identifies the precise point at
