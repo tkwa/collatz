@@ -16,7 +16,7 @@ a_r\ge1,
 Define the sets of contracting and expanding residues by
 
 ```math
-C=\{r:a_r\le B\},
+C=\{r:a_r\lt B\},
 \qquad
 E=\{r:a_r\gt B\},
 ```
