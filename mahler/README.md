@@ -1,10 +1,10 @@
-# Universal Escape Problems for Powers
+# Weak Escape Problems for Powers
 
-This folder contains two minimal universal escape conjectures:
+This folder contains two minimal escape problems:
 
-- [a strict universal limsup conjecture](strict_half_universal_limsup.md), in
-  which one unrestricted real base may be chosen and every positive real
-  starting value must recur a positive distance above one half; and
+- [an algebraic-multiplier conjecture for powers of $e$](algebraic_multiplier_for_powers_of_e.md),
+  which asks whether some positive algebraic $x$ makes $\{xe^n\}$ fail to
+  converge to zero; and
 - the rational-base conjecture below, in which one subquadratic rational base
   may be chosen and every positive real starting value must escape its Mahler
   interval.
