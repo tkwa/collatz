@@ -17,9 +17,9 @@ The parameters are fixed once and for all; they do not depend on the starting
 value.  Define the sets of contracting and expanding residues by
 
 ```math
-C=\{r:a_r<B\},
+C=\{r:a_r\lt B\},
 \qquad
-E=\{r:a_r>B\},
+E=\{r:a_r\gt B\},
 ```
 
 and require both $C$ and $E$ to be nonempty.  Since $a_r$ is coprime to
@@ -29,7 +29,7 @@ For $n\in\mathbb N_0$, write uniquely
 
 ```math
 n=Bq+r,
-\qquad 0\le r<B,
+\qquad 0\le r\lt B,
 ```
 
 and define the coprime residue-affine map
@@ -43,7 +43,7 @@ asymptotic slopes $a_r/B$ are strictly less than one.  For $K\ge1$, let
 
 ```math
 D_K(n)=
-\#\lbrace 0\le j<K:
+\#\lbrace 0\le j\lt K:
 T^{\,j}(n)\bmod B\in C
 \rbrace.
 ```
@@ -53,7 +53,7 @@ the number of contracting-branch steps among the first $K$ iterates of $n$.
 ## Conjecture
 
 There exist fixed choices of $B$ and
-$\lbrace(a_r,c_r)\rbrace_{0\le r<B}$ satisfying the conditions above such
+$\lbrace(a_r,c_r)\rbrace_{0\le r\lt B}$ satisfying the conditions above such
 that
 
 ```math

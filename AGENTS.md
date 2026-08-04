@@ -13,6 +13,8 @@ For Markdown math that will be published on GitHub, checking that the
 `/markdown` API emits a `<math-renderer>` element is not enough: the browser
 can still display a client-side TeX error.  Prefer simple GitHub-compatible
 notation; for cardinalities, use `\#\lbrace\cdots\rbrace` rather than nested
-`\left|\left\{\cdots\right\}\right|`.  Before declaring the work complete,
-inspect the actual rendered GitHub page in a browser and confirm that changed
-formulas show neither a math error nor raw TeX fallback.
+`\left|\left\{\cdots\right\}\right|`, and use `\lt` and `\gt` rather than
+raw `<` and `>` comparison characters inside math.  Before declaring the work
+complete, inspect the actual rendered GitHub page in a browser and confirm
+that changed formulas show neither a math error, missing symbols, nor raw TeX
+fallback.
