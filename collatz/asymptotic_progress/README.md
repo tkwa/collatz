@@ -7,7 +7,9 @@ bound
 D_K(n)=\omega(\log K)
 ```
 
-for an admissible Collatz-like map.
+for a coprime residue-affine Collatz-like map.  The files currently collected
+here mostly study the pure-division subfamily, where each contracting branch
+is `q -> q`; that subfamily remains sufficient for the existential target.
 
 Completed proofs must clearly distinguish proved lemmas from conjectural
 steps, identify the map being studied, and include enough supporting
@@ -22,7 +24,11 @@ The search is not committed to that family.  See
 [`alternative_family_screen.md`](alternative_family_screen.md) for checked
 alternatives and [`failure_structure.md`](failure_structure.md) for a sharpened
 description of what any counterexample to the target would have to do.  The
-resulting fixed-length block identity is in
+general fixed coprime contracting-branch family, its exact itinerary formula,
+and the boundary between unit and residue-collapsing multipliers are recorded
+in
+[`general_coprime_contracting_branches.md`](general_coprime_contracting_branches.md).
+The resulting fixed-length block identity is in
 [`bounded_chain_certificate.md`](bounded_chain_certificate.md).
 The exact fixed-start Archimedean normalization and its remaining adelic
 obstruction are recorded in

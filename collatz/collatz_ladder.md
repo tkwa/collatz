@@ -3,20 +3,22 @@
 This note gives a subjective scale for measuring progress on the universal
 orbit problems in this folder.  It is not a probability scale and it is not
 intended to make adjacent scores equally difficult.  The lower part separates
-the many asymptotic growth rates between a logarithmic division count and
+the many asymptotic growth rates between a logarithmic contraction count and
 positive density; the middle separates positive density, negative drift, and
 recurrence; and the upper part rewards uniformity across broad families of
 maps.
 
-Throughout, `K` is the number of iterates and `D_K(n)` is the number of
-division-branch steps among the first `K` iterates of the starting value `n`.
+Throughout, `K` is the number of iterates and `D_K(n)` counts the relevant
+contracting-branch steps among the first `K` iterates of the starting value
+`n`.  In the pure-division family used by the Very Weak conjecture and the
+drift calculations below, these are precisely the division-branch steps.
 
 ## The scale
 
 | Score | Milestone |
 |---:|---|
 | **0** | **Current rigorous frontier.**  For a useful fixed map, every orbit satisfies `D_K(n) = Omega_n(log K)`.  The logarithmic constant can be made arbitrarily large only by changing maps; this does not give a superlogarithmic bound for one fixed map. |
-| **1.0** | **The Extremely Weak Collatz-like Conjecture.**  One fixed admissible map satisfies `D_K(n) = omega(log K)` for every starting value. |
+| **1.0** | **The Extremely Weak Collatz-like Conjecture.**  One fixed coprime residue-affine map with both contracting and expanding branches satisfies `D_K(n) = omega(log K)` for every starting value. |
 | **1.2** | One fixed map has a universal polylogarithmic lower bound such as `D_K(n) >= (log K)^(1+epsilon)`. |
 | **1.4** | One fixed map has a universal fixed-power lower bound `D_K(n) >= K^epsilon`. |
 | **1.6** | One fixed map has `D_K(n) >= K^(1-epsilon)` for every fixed `epsilon > 0`. |

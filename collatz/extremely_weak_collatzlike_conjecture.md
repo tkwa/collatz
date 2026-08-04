@@ -4,48 +4,57 @@
 
 Let $\mathbb N_0=\lbrace 0,1,2,\ldots\rbrace$.
 
-Choose an integer $B\ge 2$, a nonempty set
+Choose an integer $B\ge 2$.  For every residue
+$r\in\lbrace0,\ldots,B-1\rbrace$, choose fixed integers $a_r,c_r$ satisfying
 
 ```math
-E\subseteq\lbrace 1,\ldots,B-1\rbrace,
+a_r\ge1,
+\qquad \gcd(a_r,B)=1,
+\qquad c_r\in\mathbb N_0.
 ```
 
-and, for each $r\in E$, integers $a_r,c_r$ satisfying
+The parameters are fixed once and for all; they do not depend on the starting
+value.  Define the sets of contracting and expanding residues by
 
 ```math
-a_r\gt B,\qquad \gcd(a_r,B)=1,\qquad c_r\in\mathbb N_0.
+C=\{r:a_r<B\},
+\qquad
+E=\{r:a_r>B\},
 ```
+
+and require both $C$ and $E$ to be nonempty.  Since $a_r$ is coprime to
+$B$, equality $a_r=B$ cannot occur.
 
 For $n\in\mathbb N_0$, write uniquely
 
 ```math
-n=Bq+r,\qquad 0\le r\lt B,
+n=Bq+r,
+\qquad 0\le r<B,
 ```
 
-and define
+and define the coprime residue-affine map
 
 ```math
-T(n)=
-\begin{cases}
-q, & r\notin E,\\[2mm]
-a_rq+c_r, & r\in E.
-\end{cases}
+T(n)=a_rq+c_r.
 ```
 
-The residue classes outside $E$ are the **division branches**: on them, the
-map discards the remainder and divides by $B$.  For $K\ge1$, let
+The branches indexed by $C$ are the **contracting branches**: their
+asymptotic slopes $a_r/B$ are strictly less than one.  For $K\ge1$, let
 
 ```math
-D_K(n)=\left|\big\lbrace 0\le j\lt K:
-T^{\,j}(n)\bmod B\notin E\big\rbrace\right|,
+D_K(n)=
+\left|\left\{0\le j<K:
+T^{\,j}(n)\bmod B\in C
+\right\}\right|,
 ```
 
-the number of division-branch steps among the first $K$ iterates of $n$.
+the number of contracting-branch steps among the first $K$ iterates of $n$.
 
 ## Conjecture
 
-There exist choices of $B$, $E$, and
-$\lbrace(a_r,c_r)\rbrace_{r\in E}$ satisfying the conditions above such that
+There exist fixed choices of $B$ and
+$\lbrace(a_r,c_r)\rbrace_{0\le r<B}$ satisfying the conditions above such
+that
 
 ```math
 \forall n\in\mathbb N_0:
@@ -64,44 +73,62 @@ No rate uniform in $n$ is asserted.
 
 ## Relationship to the stronger conjectures
 
-The [Very Weak Collatz-like Conjecture](very_weak_collatzlike_conjecture.md)
-asks for positive lower asymptotic density:
+The earlier pure-division family is the special case in which every
+contracting branch has
 
 ```math
-\liminf_{K\to\infty}\frac{D_K(n)}{K}\gt0.
+a_r=1,
+\qquad c_r=0.
 ```
 
-That property immediately implies the superlogarithmic bound here.  The
-converse need not hold: $D_K(n)$ may grow faster than every constant multiple
-of $\log K$ while still having density zero.
+Consequently, the
+[Very Weak Collatz-like Conjecture](very_weak_collatzlike_conjecture.md),
+which asks for positive lower density in that subfamily, implies the present
+existential conjecture.  Positive lower density is much stronger than the
+superlogarithmic conclusion: $D_K(n)$ may grow faster than every constant
+multiple of $\log K$ while still having density zero.
 
-The shortcut Collatz map is the admissible special case
+The shortcut Collatz map is the special case
 
 ```math
-B=2,\qquad E=\lbrace1\rbrace,
-\qquad a_1=3,\qquad c_1=2.
+B=2,
+\qquad
+(a_0,c_0)=(1,0),
+\qquad
+(a_1,c_1)=(3,2).
 ```
 
-The Collatz conjecture would imply the present conjecture, since every
-positive orbit would eventually enter $1\leftrightarrow2$ and thereafter use
-the division branch with density $1/2$.  The present conjecture asks for much
-less: the witness may be any admissible map, and its orbits need not be
-bounded, recurrent, or eventually periodic.
+Thus the Collatz conjecture implies the present conjecture: every positive
+orbit would eventually enter $1\leftrightarrow2$ and thereafter use the
+contracting branch with density $1/2$.  The present conjecture asks for much
+less.  Its witness may be any map in the larger coprime residue-affine family,
+and its orbits need not be bounded, recurrent, or eventually periodic.
 
-## Why the statement is not trivial
+## Why the formulation excludes easy collapses
 
-Infinitely many division steps do not suffice.  Their occurrence times could
-grow exponentially, giving only $D_K(n)=O(\log K)$.  Elementary size estimates
-prove logarithmic lower bounds for useful families of admissible maps, and
-the logarithmic constant can be made arbitrarily large by changing the map.
-That does not produce one fixed map for which the ratio
-$D_K(n)/\log K$ tends to infinity on every orbit.
+Allowing the coefficients to depend on $n$ makes the assertion elementary:
+an offset can be chosen to make a contracting-branch state fixed.  Allowing a
+contracting multiplier that is zero or not coprime to $B$ also permits a fixed
+map to collapse whole residue classes into an absorbing contracting
+subsystem.
+
+The present formulation excludes both mechanisms.  Every multiplier is a
+positive unit modulo $B$, and every coefficient is fixed before the starting
+value is chosen.  In particular, each finite residue itinerary remains
+locally realizable by an ordinary congruence class.  A proof must therefore
+use a genuinely infinite, fixed-start obstruction rather than a finite-state
+forbidden pattern.
+
+Infinitely many contracting steps still do not suffice.  Their occurrence
+times could grow exponentially, giving only $D_K(n)=O(\log K)$.
 
 ## Status and ongoing work
 
-Open.  No admissible parameter choice is currently known to satisfy the
-universal superlogarithmic statement.
+Open.  No fixed parameter choice is currently known to satisfy the universal
+superlogarithmic statement.
 
-Proof attempts, proved partial results, exact checks, and candidate mechanisms
-are collected in [`asymptotic_progress/`](asymptotic_progress/).  The current
-obstructions are summarized separately in [`blockers/`](blockers/).
+The work in [`asymptotic_progress/`](asymptotic_progress/) studies the
+pure-division subfamily, which remains a valid route to the revised
+existential target.  The broader contracting-branch family introduced here
+may offer additional arithmetic structure, but it does not remove the local
+finite-itinerary obstruction.
