@@ -13,11 +13,10 @@ a_r\ge1,
 \qquad c_r\in\mathbb N_0.
 ```
 
-The parameters are fixed once and for all; they do not depend on the starting
-value.  Define the sets of contracting and expanding residues by
+Define the sets of contracting and expanding residues by
 
 ```math
-C=\{r:a_r\lt B\},
+C=\{r:a_r\le B\},
 \qquad
 E=\{r:a_r\gt B\},
 ```
@@ -73,7 +72,7 @@ No rate uniform in $n$ is asserted.
 
 ## Relationship to the stronger conjectures
 
-The earlier pure-division family is the special case in which every
+The pure-division family is a special case in which every
 contracting branch has
 
 ```math
@@ -107,20 +106,12 @@ and its orbits need not be bounded, recurrent, or eventually periodic.
 ## Why the formulation excludes easy collapses
 
 Allowing the coefficients to depend on $n$ makes the assertion elementary:
-an offset can be chosen to make a contracting-branch state fixed.  Allowing a
-contracting multiplier that is zero or not coprime to $B$ also permits a fixed
-map to collapse whole residue classes into an absorbing contracting
-subsystem.
+an offset or multiplier can be chosen to make a contracting-branch state fixed.
 
 The present formulation excludes both mechanisms.  Every multiplier is a
 positive unit modulo $B$, and every coefficient is fixed before the starting
 value is chosen.  In particular, each finite residue itinerary remains
-locally realizable by an ordinary congruence class.  A proof must therefore
-use a genuinely infinite, fixed-start obstruction rather than a finite-state
-forbidden pattern.
-
-Infinitely many contracting steps still do not suffice.  Their occurrence
-times could grow exponentially, giving only $D_K(n)=O(\log K)$.
+locally realizable by an ordinary congruence class.
 
 ## Status and ongoing work
 
