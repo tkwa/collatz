@@ -14,3 +14,12 @@ The Collatz and rational-base problems retain difficult universal quantifiers
 over starting values. The explicit-transcendental conjecture fixes the base
 $e$ but permits one existentially chosen positive algebraic starting value,
 asking only that the fractional parts not converge to zero.
+
+## Criteria
+
+We want statements which are
+- probably open
+- egregiously weaker than what is "probviously" true; that is, what a heuristic argument would imply
+
+Conjectures should be the weakest reasonable open version of their type, and may be weakened from well-known versions by
+- introducing existential quantifiers
