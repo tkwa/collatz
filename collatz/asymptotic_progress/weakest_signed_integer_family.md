@@ -145,6 +145,29 @@ Thus a negative excursion is not an automatic absorbing reset.  Far down the
 negative half-line, positive multipliers produce another residue-affine system
 with the same multiplier magnitudes and permuted residues.
 
+## Proved: positive-multiplier sign changes use a finite gateway
+
+Assume temporarily that every $a_r$ is positive.  Since there are only
+finitely many branches, there is an $M$ such that
+
+```math
+x\ge M\Longrightarrow T(x)\ge0,
+\qquad
+x\le-M\Longrightarrow T(x)\lt0.
+```
+
+Every transition across zero must therefore begin in the finite interval
+$[-M,M]$.  If an orbit changes sign infinitely often, it visits that interval
+infinitely often.  Determinism and the pigeonhole principle then make the
+orbit eventually periodic.  Hence every nonperiodic orbit for the
+positive-multiplier signed-offset family eventually stays on one side of
+zero.
+
+This reduces the apparent freedom of negative offsets, but does not prove the
+target.  A positive tail is the original kind of problem, while reflection
+turns a negative tail into another residue-affine problem with the same
+multiplier magnitudes.
+
 ## Immediate hazards for candidate maps
 
 Any proposed witness must survive the following exact checks.
@@ -162,6 +185,24 @@ Any proposed witness must survive the following exact checks.
 4. **Finite experiments.**  Arbitrarily long expansion-heavy finite words are
    realized by nonnegative integers.  Termination or high contraction density
    over a bounded range cannot establish the universal statement.
+
+For a constant expansion residue $e$, the fixed-point test is especially
+simple.  A fixed point in that branch exists exactly when
+
+```math
+(B-a_e)\mid(c_e-e),
+```
+
+in which case
+
+```math
+q=\frac{c_e-e}{B-a_e},
+\qquad
+x=Bq+e.
+```
+
+If this $x$ is nonnegative, the candidate immediately fails.  For example,
+$B=2$, $a_1=3$, and $c_1=-1$ give the expansion-only fixed point $x=5$.
 
 ## Routes checked without a proof
 
@@ -215,3 +256,8 @@ For that reason the signed-multiplier version is retained provisionally as the
 Weakest conjecture.  This is a research judgment, not a literature-certified
 open-status claim.  A future explicit witness, expansion-only ordinary orbit,
 or reduction to the positive family should trigger another revision.
+
+Quantifying only nonnegative starts while allowing integer-valued orbits is
+deliberately asymmetric and is not invariant under translation.  Requiring
+the conclusion for every start in $\mathbb Z$ would be more natural, but it
+would not be the requested weakest relaxation.

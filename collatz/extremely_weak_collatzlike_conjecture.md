@@ -72,6 +72,11 @@ No rate uniform in $n$ is asserted.
 
 ## Relationship to the stronger conjectures
 
+Allowing signed unit multipliers, integer offsets, and integer-valued orbits
+gives the provisional
+[Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md).  The
+present conjecture implies that relaxation.
+
 The pure-division family is a special case in which every
 contracting branch has
 
