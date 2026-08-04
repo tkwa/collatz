@@ -11,6 +11,12 @@ for a coprime residue-affine Collatz-like map.  The files currently collected
 here mostly study the pure-division subfamily, where each contracting branch
 is `q -> q`; that subfamily remains sufficient for the existential target.
 
+The provisional relaxation to signed unit multipliers, integer offsets, and
+integer-valued orbits is defined in
+[`../weakest_collatzlike_conjecture.md`](../weakest_collatzlike_conjecture.md).
+Its definition audit and attempted trivializations are recorded in
+[`weakest_signed_integer_family.md`](weakest_signed_integer_family.md).
+
 Completed proofs must clearly distinguish proved lemmas from conjectural
 steps, identify the map being studied, and include enough supporting
 calculations or formal checks to audit every transition.

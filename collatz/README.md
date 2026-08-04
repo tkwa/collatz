@@ -5,6 +5,7 @@ This repository records deliberately weak Collatz-like conjectures that retain a
 - [A Weak Collatz-like Conjecture](weak_collatzlike_conjecture.md) asks whether some admissible negative-drift residue-affine map has every orbit eventually become periodic.
 - [A Very Weak Collatz-like Conjecture](very_weak_collatzlike_conjecture.md) asks whether some relatively-prime residue-affine map gives every orbit a positive lower density of division-branch steps.
 - [An Extremely Weak Collatz-like Conjecture](extremely_weak_collatzlike_conjecture.md) asks whether some fixed coprime residue-affine map with both contracting and expanding branches gives every orbit a contraction-branch count satisfying $D_K(n)=\omega(\log K)$.
+- [A Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md) provisionally allows signed unit multipliers, integer offsets, and integer-valued orbits while retaining the same universal superlogarithmic contraction-count target for every nonnegative start.
 
 The [Collatz-like impressiveness ladder](collatz_ladder.md) places these
 conjectures, the classical Collatz conjecture, and broader universal

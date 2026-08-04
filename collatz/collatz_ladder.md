@@ -18,6 +18,7 @@ drift calculations below, these are precisely the division-branch steps.
 | Score | Milestone |
 |---:|---|
 | **0** | **Current rigorous frontier.**  For a useful fixed map, every orbit satisfies `D_K(n) = Omega_n(log K)`.  The logarithmic constant can be made arbitrarily large only by changing maps; this does not give a superlogarithmic bound for one fixed map. |
+| **0.7** | **The provisional Weakest Collatz-like Conjecture.**  One fixed signed residue-affine map on the integers, with unit multipliers of both contracting and expanding absolute slope, satisfies `D_K(n) = omega(log K)` for every nonnegative starting value. |
 | **1.0** | **The Extremely Weak Collatz-like Conjecture.**  One fixed coprime residue-affine map with both contracting and expanding branches satisfies `D_K(n) = omega(log K)` for every starting value. |
 | **1.2** | One fixed map has a universal polylogarithmic lower bound such as `D_K(n) >= (log K)^(1+epsilon)`. |
 | **1.4** | One fixed map has a universal fixed-power lower bound `D_K(n) >= K^epsilon`. |
