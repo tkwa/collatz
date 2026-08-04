@@ -8,3 +8,11 @@ checks needed to verify it.
 The search is not committed to the original admissible map.  A proof for any
 admissible parameter choice is in scope; compare alternative families when
 their arithmetic structure is more tractable.
+
+For Markdown math that will be published on GitHub, checking that the
+`/markdown` API emits a `<math-renderer>` element is not enough: the browser
+can still display a client-side TeX error.  Prefer simple GitHub-compatible
+notation; for cardinalities, use `\#\lbrace\cdots\rbrace` rather than nested
+`\left|\left\{\cdots\right\}\right|`.  Before declaring the work complete,
+inspect the actual rendered GitHub page in a browser and confirm that changed
+formulas show neither a math error nor raw TeX fallback.

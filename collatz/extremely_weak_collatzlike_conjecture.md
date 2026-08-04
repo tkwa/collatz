@@ -43,9 +43,9 @@ asymptotic slopes $a_r/B$ are strictly less than one.  For $K\ge1$, let
 
 ```math
 D_K(n)=
-\left|\left\{0\le j<K:
+\#\lbrace 0\le j<K:
 T^{\,j}(n)\bmod B\in C
-\right\}\right|,
+\rbrace.
 ```
 
 the number of contracting-branch steps among the first $K$ iterates of $n$.
