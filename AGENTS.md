@@ -18,3 +18,5 @@ raw `<` and `>` comparison characters inside math.  Before declaring the work
 complete, inspect the actual rendered GitHub page in a browser and confirm
 that changed formulas show neither a math error, missing symbols, nor raw TeX
 fallback.
+
+Commit frequently.
