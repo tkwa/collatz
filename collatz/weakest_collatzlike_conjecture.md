@@ -183,6 +183,4 @@ comparably natural thinner family should trigger another revision.
 
 Provisional and not literature-certified as open.  No admissible witness is
 known to satisfy the coprime-ray conclusion, and no reduction proves that a
-witness cannot exist.  Exact collapses, structural obstructions, attempted
-constructions, and the final no-weakening audit are recorded in the red-team
-note linked above.
+witness cannot exist.

@@ -104,7 +104,11 @@ $\lvert a_r\rvert$.
 The counted set also cannot be chosen independently of contraction.  If it
 could include expanding branches, a simple potential argument can force the
 chosen label to have positive density without proving frequent contraction.
-That elementary collapse is recorded in the red-team note linked below.
+For example, take `B=2`, set `T(2q)=3q+1` and `T(2q+1)=q`, and count the
+expanding even residue.  The potential `V(n)=log_2(n+1)` decreases by one on
+odd inputs and increases by at most one on even inputs.  Summing along the
+orbit gives `D_K(n) >= (K-V(n))/2`, so the arbitrary-label version becomes
+elementary without measuring contraction.
 
 ## Status
 
