@@ -15,14 +15,22 @@ maximum over many coordinates, a maximum over complete proof routes, or a
 portfolio aggregate?
 
 The historical cases below support a scalar public score, but not a scalar
-mathematical state.  The most robust simple design is:
+mathematical state.  They do **not** determine which scalar should be public,
+because theorem strength, work already banked, and probability of timely
+solution are different estimands.  The most robust common substrate is:
 
 1. retain a versioned portfolio of proved artifacts and implications;
 2. define complete, complement-aware production functions for credible proof
    routes;
-3. publish the maximum route score as the conservative official score; and
-4. use a prior-weighted route portfolio, including an unseen-route reserve,
-   only as a predictive diagnostic.
+3. compute a route-level maximum when the objective is conservative theorem
+   reach or leading-route replacement work; and
+4. compute a prior-weighted route portfolio, including an unseen-route
+   reserve, when the objective is prediction.
+
+The actionable recommendation is therefore a small objective-labeled
+dashboard before choosing one headline number.  If the repository later
+chooses banked leading-route work as its primary meaning, the route-level
+maximum is the best current scalar candidate.
 
 This is a conditional conclusion about problems that admit ladder-like
 structure.  The selected history cannot establish how common such problems
@@ -179,7 +187,7 @@ identifies the majorant property and restriction theorem for primes.  The
 three ingredients: Szemeredi's theorem, a new transference principle, and the
 Goldston--Yildirim input that places the primes inside a pseudorandom set of
 almost primes.  Szemeredi's original paper is available from
-[EuDML](https://eudml.org/doc/205365).
+[*Acta Arithmetica*](https://doi.org/10.4064/aa-27-1-199-245).
 
 **Replay judgment.**  The route is compressed in calendar time after 2003 but
 not logically atomic.  Coordinate-wise max would alternately overvalue dense
@@ -237,3 +245,317 @@ smooth calibration set.
 The consistent failure is not one-dimensionality itself.  It is taking a
 maximum over **ingredients** rather than over **complete production routes**.
 
+## Four estimands that should not be collapsed silently
+
+### 1. Mathematical impressiveness or theorem reach
+
+This asks how strong, general, and structurally informative the proved
+artifact is.  It is principally an ex post property of
+$\operatorname{cl}(P_t)$.  The extended Collatz ladder is close to this
+meaning.  A maximum over complete theorem routes is natural because the
+strongest proved consequence can dominate reach, although incomparable
+theorems should remain visible underneath.
+
+An impressive theorem need not materially increase the near-term probability
+of the benchmark target.  Conversely, a technically narrow estimate may be
+the last missing input to a proof and have high predictive value without
+great standalone reach.
+
+### 2. Probability of reaching level $Y$ within effort multiple $X$
+
+This is the forecasting quantity
+
+```math
+F_{X,Y}(t)
+=
+\Pr\!\left(
+\text{level }Y\text{ is reached before an additional }X E_t
+\text{ human-equivalent effort}
+\mid \mathcal I_t
+\right),
+```
+
+where $E_t$ is a stated current-effort baseline and $\mathcal I_t$ contains
+only information public at time $t$.  It depends on route priors, complements,
+research activity, failed approaches, and the chance of an unforeseen route.
+A softmax or explicit Bayesian route portfolio is better suited to it than a
+hard maximum.  This quantity may legitimately fall after a newly discovered
+obstruction even though the theorem portfolio has only grown.
+
+### 3. Cumulative replacement work already banked
+
+This asks how much target-relevant work a capable community would need to
+reproduce the proved assets from the baseline.  It is a property of the
+artifact portfolio, not a forecast.  Two meanings must be distinguished:
+
+- **leading-route replacement work** counts the work embodied in the strongest
+  complete route state; a route-level maximum is appropriate;
+- **portfolio replacement work** counts all nonredundant target-relevant
+  assets across routes; it requires an overlap-adjusted union cost, not a
+  maximum.
+
+Neither is the actual historical effort expended.  Two communities can reach
+the same theorem state after radically different amounts of failed work, so
+no function of the mathematical state alone can equal cumulative hours
+actually spent.
+
+### 4. Smoothness and diagnostic usefulness
+
+Smoothness is a property of a time series, not a mathematical achievement.
+It is useful for detecting an uninformative ladder and for giving research
+systems intermediate feedback.  Optimizing it directly is dangerous: a
+softmax can manufacture a smooth curve by crediting many speculative routes,
+even if those credits do not predict success or represent banked theorems.
+
+The estimands can therefore rank the same portfolio differently.  Parallel
+half-developed routes can raise a solution forecast while leaving the
+leading-route maximum unchanged.  A broad theorem can raise impressiveness
+more than forecast probability.  A duplicated proof can be impressive but
+add little replacement work after overlap is removed.
+
+### Recommended minimal dashboard
+
+Until one objective is explicitly selected, store the full artifact graph and
+publish three labeled outputs:
+
+1. **Reach** $R$: conservative theorem-strength contour, usually a
+   route-level maximum.
+2. **Banked work** $B$: logarithm of leading-route or overlap-adjusted
+   portfolio replacement work, with the choice printed beside the number.
+3. **Forecast** $F_{X,Y}$: probabilities for a small fixed grid of effort
+   multiples and target levels.
+
+Report skip and smoothness diagnostics beside these outputs, not as a fourth
+achievement score.  If a single benchmark number is mandatory, choose its
+estimand first and put that noun in the score's name.
+
+## Q1: are ladders predictive, or merely smooth in hindsight?
+
+The four positive histories show that recognizable milestones *can* survive
+a contemporaneous replay.  They do not show that the existence of such
+milestones predicts solution.  Conditioning on solved, retrospectively smooth
+cases makes that causal-sounding inference impossible.
+
+A defensible predictive study would use the following protocol.
+
+1. **Build a cutoff registry.**  At several historical dates, apply the scope
+   rule to problems using documents available by the cutoff.  Include later
+   solutions, substantial advances, and still-unsolved right-censored cases.
+2. **Blind route construction.**  Give one panel sources truncated at date
+   $t$ and ask it to define artifacts, complements, routes, and scores.  A
+   separate panel records what happened after $t$.
+3. **Use an effort clock.**  Reconstruct broad distributions over
+   human-equivalent effort from author-years, project size, explicit
+   computational expenditure, and field activity.  Calendar time is a
+   secondary sensitivity check, not the primary clock.
+4. **Forecast fixed outcomes.**  At each snapshot predict the next genuine
+   milestone, attainment of level $Y$ within additional effort $X E_t$, and
+   remaining log effort to the target.
+5. **Evaluate out of sample.**  Fit any calibration on all but one problem and
+   score the held-out problem.  Repeat as leave-one-problem-out validation;
+   never tune rung placement on the held-out future.
+6. **Keep versions frozen.**  New routes become eligible on the date their
+   target relevance was publicly established.  Later route knowledge may be
+   studied as a separate hindsight oracle, not inserted into the
+   contemporaneous series.
+
+For event forecasts, use log score or Brier score for calibration and a
+time-dependent concordance statistic for discrimination.  For remaining
+effort, use interval coverage and continuous ranked probability score on
+$\log E$.  Compare against simple base rates and against an idealized
+contemporaneous superforecaster using all public information.  The latter is
+one comparator, not the definition of progress.
+
+The decisive Q1 tests are:
+
+- Does crossing a ladder contour increase the out-of-sample hazard of the next
+  contour or solution after controlling for total field effort?
+- Does the score reduce error in remaining-effort forecasts relative to the
+  problem's age, publication rate, and base rate alone?
+- Do improvements replicate across held-out problems, or arise only because
+  each ladder was tailored to its own future?
+
+If these tests fail, the ladder may still be a useful theorem-reach benchmark;
+it should simply not be advertised as a predictor.
+
+## Q2: comparison of state and aggregation designs
+
+### Two independent dimensions
+
+A pair such as $(H,D)$ is transparent and preserves information.  It is a good
+display state when the coordinates correspond to real mathematical
+observables.  It does not itself rank states, and any weighted average imports
+exchange rates between possibly complementary ingredients.  Ternary Goldbach
+shows that even two excellent coordinates may need a conjunctive production
+function rather than an average.
+
+### Maximum over raw dimensions
+
+This is simple but usually has the wrong algebra.  It assumes dimensions are
+substitutes.  It can declare a route nearly complete when one indispensable
+ingredient is absent, and it is unstable under adding another weakly relevant
+dimension.  A maximum over many raw dimensions is even more susceptible to
+this problem.
+
+### Maximum over complete routes
+
+This preserves scalar simplicity while allowing arbitrary complementarity
+inside a route.  It ignores secondary-route option value until another route
+overtakes the leader, which is conservative for theorem reach and
+leading-route replacement work.  It is less appropriate for solution
+forecasting, where two independent plausible routes should usually raise the
+aggregate probability.
+
+### Soft maximum over routes
+
+For route scores $s_r$ and declared weights $\pi_r$ with
+$\sum_r\pi_r=1$, a diagnostic is
+
+```math
+S_{\tau}(P)
+=
+\tau\log\sum_r \pi_r
+\exp\!\left(s_r(P)/\tau\right).
+```
+
+The temperature $\tau$ controls how much secondary routes matter.  This is
+smoother than a hard maximum, but the result changes if one route is split
+into two correlated descriptions.  It needs route priors and overlap
+corrections.  Once the target is proved, implication closure should set every
+route's outcome state to `10`, so the endpoint remains `10`.
+
+### Overlap-adjusted artifact portfolio
+
+An artifact ledger can assign replacement costs to proved assets and count
+shared lemmas once.  This is the right family for total banked portfolio work.
+It can nevertheless reward a large body of target-relevant work on routes that
+never solve the target.  That is correct for a work-stock measure and wrong if
+misread as solution probability.
+
+### Explicit predictive route ensemble
+
+For forecasting, model route-specific transition hazards and dependencies,
+then integrate over known routes plus an unseen-route component.  This is not
+generally reducible to a stable progress score.  It can use the hard-max or
+banked-work scores as features without identifying either with probability.
+
+### Optional forecast-comparator illustration
+
+This subsection is deliberately subordinate to the objective-first comparison
+above.  An ideal forecaster is one useful comparator, not the benchmark's
+purpose.  The following broad ranges are **author judgments with no empirical
+validation**, included only to state a falsifiable prior ordering.  They should
+not be copied into a benchmark specification.  “Forecast skill captured”
+means the fraction of improvement in a proper prediction score between a
+simple base-rate model and an ideal all-public-information superforecaster,
+conditional on the retrospectively ladder-like problem class used here.
+
+| Design | Theorem-reach fidelity | Banked-work fidelity | Forecast skill captured |
+|---|---|---|---:|
+| Two raw dimensions, shown without scalarization | Medium to high when the route is stable | Medium | 40--65% |
+| Maximum over raw dimensions | Low; prerequisites look like substitutes | Low to medium | 20--40% |
+| Maximum over many raw dimensions | Low to medium and definition-sensitive | Low | 25--45% |
+| Maximum over complete route functions | High | High for leading-route work | 55--75% |
+| Prior-weighted softmax over routes | Medium; priors contaminate theorem reach | Medium | 65--85% |
+| Dependency-aware route ensemble with unseen-route mass | Medium unless a separate reach score is retained | High if coupled to an artifact ledger | 70--90% |
+
+The ranges would be lower on an unrestricted conjecture universe, especially
+for abrupt imported-method solutions.  The small historical sample cannot
+resolve differences of ten percentage points; the main robust ordering is
+that complete route models should beat raw-coordinate maxima, while
+prior-weighted portfolios should beat a hard maximum for forecasting if their
+extra parameters are estimated out of sample.
+
+## Quantitative smoothness audit
+
+Let $A_j$ be the cumulative actual human-equivalent effort at historical event
+$j$, and let $S_j$ be the contemporaneously assigned score after that event.
+Because $A_j$ is uncertain, every statistic below should be computed over an
+elicited distribution, not a single invented hour count.
+
+### Integer-boundary skipping
+
+Let $A(i)$ be the first cumulative effort at which $S_j\ge i$.  Boundary $i$
+is skipped under the repository's proposed rule when
+
+```math
+A(i+1)\lt1.05A(i).
+```
+
+Report the posterior probability of a skip, the expected number of skipped
+integer boundaries, and the longest run of consecutive skips.  Treat several
+results in one paper or tightly coupled project as one event unless there is
+evidence that the intermediate theorem was available substantially earlier.
+
+### Additional diagnostics
+
+- **Largest jump:** $\max_j(S_j-S_{j-1})$.
+- **Tail concentration:** the fraction of the final score first awarded in
+  the last ten percent of cumulative effort.
+- **Log-effort fit:** cross-validated error in
+  $\log A_j=\alpha+\lambda S_j+\varepsilon_j$; do not fit and assess on the
+  same case.
+- **Credit lag:** the target-route effort completed before the score first
+  recognized the corresponding asset.
+- **Route-revision jump:** score change caused by redefining routes rather
+  than by a new theorem.
+- **Partition sensitivity:** variation when a reasonable route is split,
+  merged, or assigned a different overlap correction.
+- **False-progress rate:** high-scoring transitions that fail to improve
+  held-out milestone hazard or remaining-effort forecasts.  This is relevant
+  only when predictive validity is claimed.
+
+Smoothness should be reported against both actual reconstructed effort and
+replacement effort.  The first measures the historical research process; the
+second measures the mathematical stock.  They answer different questions.
+
+## The semantics of $\exp(S)$
+
+The equation
+
+```math
+W(P)\approx C\exp(S(P))
+```
+
+is coherent only after $W$ is named.
+
+- Under a hard maximum over complete routes, $W$ is approximately the
+  **replacement work embodied in the leading route**, not all work performed
+  and not all useful work across routes.
+- Under an overlap-adjusted artifact portfolio, $W$ can mean **total banked
+  portfolio replacement work**, but secondary routes increase it even when
+  the best theorem consequence does not move.
+- If $W$ means **actual cumulative historical effort**, then $S$ must depend on
+  the path and research process, not only on the theorem state.  Failed work
+  must be counted, so it is unsuitable as a pure achievement score.
+- If the desired output is **probability of reaching $Y$ within $X$ times
+  current effort**, exponential work calibration is at most a model feature;
+  it is not the probability itself.
+
+Thus a multiplicative work interpretation is not an argument for one
+aggregator.  It is a constraint on the semantics after the objective is
+chosen.
+
+## Recommendation for this repository
+
+1. Replace “the mathematical state is two-dimensional” with “the benchmark
+   stores a theorem portfolio and exposes a small number of views.”  Retain
+   $(H,D)$ as a useful twin-prime display, not as the canonical ontology.
+2. Define route functions over implication closure.  Complements live inside
+   each route; alternatives are aggregated across routes.
+3. Do not take the maximum of raw dimensions.  If a single conservative
+   achievement score is needed now, take the maximum of complete route
+   functions.
+4. Do not call that score an all-things-considered forecast.  Publish
+   $F_{X,Y}$ separately using a dependency-aware portfolio with explicit
+   unseen-route mass.
+5. Decide whether the repository's $e^S$ language means leading-route or
+   total-portfolio replacement work.  It cannot mean actual cumulative hours
+   while remaining a state-only score.
+6. Preserve the four historical cases in a versioned replay dataset and add
+   eligible censored cases.  Fit no numerical contour until blind,
+   leave-one-problem-out tests are possible.
+
+This architecture is only slightly more complex than a collapsed ladder.  It
+prevents one scalar from being asked simultaneously to measure impressive
+mathematics, accumulated work, smoothness, and probability of timely success.
