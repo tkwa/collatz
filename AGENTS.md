@@ -20,3 +20,5 @@ that changed formulas show neither a math error, missing symbols, nor raw TeX
 fallback.
 
 Commit frequently.
+
+There should be at most one "Weakest" conjecture in each folder which should be continually revised to reflect the frontier. All others should be named descriptively.
