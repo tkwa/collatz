@@ -1,5 +1,7 @@
 ## Development
 
+Development guide is specified [here](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtEFuKxjmN6TaZq8CFxeidI_Xw/edit?tab=t.0).
+
 For Markdown math that will be published on GitHub, checking that the
 `/markdown` API emits a `<math-renderer>` element is not enough: the browser
 can still display a client-side TeX error.  Prefer simple GitHub-compatible
