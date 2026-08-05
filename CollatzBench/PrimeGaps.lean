@@ -28,8 +28,8 @@ structure ElliottHalberstamSchema where
   modulusCutoff : ℝ → ℕ → ℕ
   isStandardPrimeDiscrepancy : Prop
   cutoff_is_power : ∀ θ : ℝ, ∀ X : ℕ,
-    (modulusCutoff θ X : ℝ) ≤ (X : ℝ) ^ θ ∧
-      (X : ℝ) ^ θ < modulusCutoff θ X + 1
+    (modulusCutoff θ X : ℝ) ≤ Real.rpow (X : ℝ) θ ∧
+      Real.rpow (X : ℝ) θ < modulusCutoff θ X + 1
 
 def ElliottHalberstamAt (S : ElliottHalberstamSchema) (θ : ℝ) : Prop :=
   S.isStandardPrimeDiscrepancy ∧
@@ -61,10 +61,13 @@ structure PolynomialFamily where
     ∀ i, ¬ (p : ℤ) ∣ (poly i).eval n
 
 def PolynomialFamily.SimultaneouslyPrime (F : PolynomialFamily) (n : ℕ) : Prop :=
-  ∀ i, 0 < (F.poly i).eval n ∧ Nat.Prime ((F.poly i).eval n).natAbs
+  ∀ i, 0 < (F.poly i).eval (n : ℤ) ∧
+    Nat.Prime ((F.poly i).eval (n : ℤ)).natAbs
 
 def PolynomialFamily.primeValueCount (F : PolynomialFamily) (X : ℕ) : ℕ :=
-  ((Finset.Icc 1 X).filter F.SimultaneouslyPrime).card
+  by
+    classical
+    exact ((Finset.Icc 1 X).filter F.SimultaneouslyPrime).card
 
 /--
 Analytic data for the canonical Bateman--Horn main term. A future foundational
