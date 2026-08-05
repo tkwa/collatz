@@ -16,10 +16,8 @@ distinguish those cases.
 - [`collatz/`](collatz/) studies contraction frequency, recurrence, classical
   Collatz, sharp classical stopping-time asymptotics, and a restricted
   one-expander family near the possible universality boundary.
-- [`twin-prime/`](twin-prime/) tracks the best unconditional prime-gap bound
-  together with progress in the distribution of primes.  Its notes also
-  explain why the parity obstruction may make generalized
-  Elliott--Halberstam progress non-decisive.
+- [`twin-prime/`](twin-prime/) is a scalar disjunctive ladder from the best
+  unconditional prime-gap bound through twin primes to Bateman--Horn.
 - [`mahler/`](mahler/) contains weak escape problems for fractional parts of
   powers.  A calibrated ladder for this folder has not yet been developed.
 - [`abc/`](abc/) tracks the size of a coprime triple against its radical, from
@@ -41,21 +39,11 @@ natural statement is shown to remain nontrivial.
 
 ## What a benchmark state records
 
-The natural mathematical state is usually multidimensional.  A benchmark
-should retain the smallest number of dimensions that still separates the
-main proof routes.  The twin-prime benchmark, for example, uses only:
-
-1. the best unconditional gap bound; and
-2. the strongest applicable theorem on the distribution of primes.
-
-Other developments may be scientifically important without immediately
-moving either coordinate.  They should be recorded as route evidence, not
-converted into target progress merely because they are impressive.
-
-Known implications are applied automatically.  If a distribution theorem
-implies a better unconditional gap bound, the state moves in both coordinates
-at no additional credited cost.  This prevents double-counting the theorem
-and its routine corollary.
+The natural mathematical state may be multidimensional, but the displayed
+score should be one-dimensional.  Incomparable proof routes can be combined
+in a logical disjunction when doing so materially improves path tracking.
+Known implications are applied automatically, without double-counting a
+theorem and its routine corollaries.
 
 ## Difficulty scores
 

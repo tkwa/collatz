@@ -1,159 +1,169 @@
-# A Two-Dimensional Difficulty Ladder for Twin Primes
+# A Disjunctive Difficulty Ladder for Prime Patterns
 
-## Purpose
+## Definitions
 
-This benchmark measures proved progress toward the twin prime conjecture while
-allowing very different proof routes to jump between milestones.  It uses two
-formal coordinates:
+Let $p_n$ be the $n$-th prime and
 
 ```math
-x=(H,D).
+H_1=\liminf_{n\to\infty}(p_{n+1}-p_n).
 ```
 
-- $H$ is the best unconditional upper bound for
-  $H_1=\liminf_{n\to\infty}(p_{n+1}-p_n)$.
-- $D$ is the strongest proved state on the
-  [prime-distribution subladder](distribution_subladder.md).
+For $\vartheta\in(1/2,1)$, $\mathrm{GEH}[\vartheta]$ means the standard
+generalized Elliott--Halberstam conjecture at exponent $\vartheta$ for the
+full convolution class in the bounded-gap framework.  It does **not** mean a
+restricted-modulus or restricted-coefficient theorem.  Write
+$\mathrm{GEH}[1]$ for $\mathrm{GEH}[\vartheta]$ for every fixed
+$\vartheta\lt1$.
 
-The baseline is $(246,D_0)$.  The target is any state with $H=2$.
+For $X\ge2$, let
 
-The coordinate pair is deliberately not reduced to a weighted average.  A
-score is assigned from the human-equivalent replacement work represented by
-the complete state, after applying every known implication.
+```math
+\pi_2(X)=\#\lbrace p\le X:\ p\text{ and }p+2\text{ are prime}\rbrace.
+```
 
-## Outcome coordinate
+The upper rungs use these standard conjectures:
 
-The following are useful landmarks for the unconditional coordinate.  They
-are not asserted to require equal effort.
+- **de Polignac:** every positive even $d$ occurs infinitely often as a gap
+  between consecutive primes;
+- **Dickson:** every fixed admissible finite family of affine-linear forms
+  with positive leading coefficients is simultaneously prime infinitely
+  often;
+- **Hardy--Littlewood:** the predicted singular-series asymptotic holds for
+  every fixed admissible affine-linear family;
+- **Schinzel H:** every fixed admissible finite family of distinct
+  irreducible integer polynomials with positive leading coefficients takes
+  simultaneous prime values infinitely often; and
+- **Bateman--Horn:** the corresponding singular-series asymptotic holds for
+  every such polynomial family.
 
-| Level | Unconditional theorem |
+“Admissible” includes the absence of a fixed prime divisor of the product.
+The exact endpoint statement is given in
+[`sources_and_implications.md`](sources_and_implications.md).
+
+## The ladder
+
+Every row above score `0` is open as of the August 2026 audit.  The word “or”
+is logical disjunction, not a second coordinate.
+
+| Score | Rung |
 |---:|---|
-| $O_0$ | $H_1\le246$, the current benchmark baseline. |
-| $O_1$ | $H_1\le100$. |
-| $O_2$ | $H_1\le50$. |
-| $O_3$ | $H_1\le12$. |
-| $O_4$ | $H_1\le6$. |
-| $O_5$ | $H_1\le4$. |
-| $O_6$ | $H_1=2$, the twin prime conjecture. |
+| **0** | **Current theorem:** $H_1\le246$. |
+| 0.3 | **The Weakest open rung:** $H_1\le244$ **or** $\mathrm{GEH}[1/2+\delta]$ for some fixed $\delta\gt0$. |
+| **1** | $H_1\le200$ **or** $\mathrm{GEH}[3/5]$. |
+| **2** | $H_1\le100$ **or** $\mathrm{GEH}[2/3]$. |
+| **3** | $H_1\le50$ **or** $\mathrm{GEH}[3/4]$. |
+| **4** | $H_1\le12$ **or** full $\mathrm{GEH}[1]$. |
+| **5** | $H_1\le6$. |
+| **6** | $H_1\le4$. |
+| **7** | **Twin primes:** $H_1=2$. |
+| **8** | $\pi_2(X)\gg X/(\log X)^2$ for all sufficiently large $X$ **or** de Polignac's conjecture. |
+| **9** | The Hardy--Littlewood asymptotic for twin primes **or** Dickson's conjecture for every fixed admissible affine-linear family. |
+| 9.5 | The Hardy--Littlewood asymptotic for every fixed admissible affine-linear family **or** Schinzel's hypothesis H. |
+| **10** | **Bateman--Horn** for every fixed admissible finite family of distinct irreducible integer polynomials with positive leading coefficients. |
 
-Round-number intermediate bounds are calibration markers, not predictions
-about the next theorem.  A proof of GEH, for example, can move directly from
-$O_0$ to $O_4$ through its standard sieve consequence.
+The decimal rung at `0.3` is deliberately the only conjecture called
+“Weakest” in this folder.  Since gaps between sufficiently large consecutive
+primes are even, $H_1\lt246$ is equivalent to $H_1\le244$.
 
-## Target-normalized score
+## Why this is one chain
 
-Let $W(H,D)$ be the estimated target-relevant human-equivalent work needed to
-reproduce a proof portfolio establishing at least state $(H,D)$ from the
-baseline.  Use the cheapest credible route and do not count abandoned or
-unrelated work.  The intended score is
-
-```math
-S(H,D)=\log\frac{W(H,D)}{W(246,D_0)},
-```
-
-with the baseline calibrated to `0` and twin primes to `10`.  Consequently,
+Write $R_s$ for the statement at score $s$.  The claimed direction is always
 
 ```math
-W(H,D)\approx W(246,D_0)e^{S(H,D)}.
+R_{10}\Longrightarrow R_{9.5}\Longrightarrow R_9
+\Longrightarrow\cdots\Longrightarrow R_{0.3}\Longrightarrow R_0.
 ```
 
-This endpoint normalization asserts an effective work ratio of about
-$e^{10}\approx22{,}000$.  The ratio should be revisited rather than hidden if
-future elicitation makes it implausible.
-
-## Provisional calibration contours
-
-The following table is a first set of contour anchors.  Ranges are used
-because no consensus estimate of human-equivalent effort exists.
-
-| Closed state | Provisional target score | Work represented relative to baseline | Interpretation |
-|---|---:|---:|---|
-| $(246,D_0)$ | **0** | $1$ | Current rigorous state. |
-| $(100,D_0)$ | **1--2** | $3\text{--}7$ | A material unconditional improvement without a new general distribution theorem. |
-| $(50,D_0)$ | **2.5--4** | $12\text{--}55$ | Roughly an order-of-magnitude narrowing of the bounded-gap interval. |
-| First full $\mathrm{GEH}[1/2+\delta]$, with its best unconditional consequence | **4--5.5** | $55\text{--}245$ | The full convolution class crosses the classical one-half barrier. |
-| Full EH and $H_1\le12$ | **5.5--7** | $245\text{--}1{,}097$ | Near-maximal distribution for primes, but not generalized convolutions or parity breaking. |
-| Full GEH and $H_1\le6$ | **7.5--8.5** | $1{,}808\text{--}4{,}915$ | The standard distribution route is essentially exhausted; the specific-pair obstruction remains. |
-| $H_1\le4$ | **8.5--9.5** | $4{,}915\text{--}13{,}360$ | A new idea has gone below the GEH-based three-point barrier. |
-| $H_1=2$ | **10** | $22{,}026$ | Twin primes. |
-
-The full-EH and full-GEH rows use the optimized conditional gap consequences
-recorded in the Polymath bounded-gap work.  Once the hypothesis is proved,
-those consequences become unconditional and cost no extra score.
-
-These contours should eventually be fitted by structured expert elicitation:
-estimate conditional transition costs, impose monotonicity only where a true
-implication exists, and report sensitivity to alternative proof-route priors.
-
-## Implication closure and shortcuts
-
-A benchmark state always includes routine consequences.  Formally, let
-$\mathrm{cl}(x)$ be the strongest pair obtained from $x$ using already
-proved reductions.  Scores are assigned to $\mathrm{cl}(x)$.
-
-This has three important effects:
-
-1. GEH receives credit for the resulting $H_1\le6$ theorem without counting
-   that corollary twice.
-2. A direct proof of $H_1\le6$ need not receive GEH credit.
-3. A parity-breaking theorem can jump from $H_1\le246$ to $H_1=2$ without
-   traversing the distribution subladder.
-
-The third possibility is why GEH is not declared a prerequisite.
-
-## What the two coordinates omit
-
-The proof used to reach a state may contain information not visible in
-$(H,D)$.  In particular, a proof of $H_1\le6$ using a genuinely
-parity-breaking correlation estimate may be more suggestive of twin primes
-than a proof obtained from GEH, even though the formal coordinates can rank
-the latter higher in distribution strength.
-
-This loss of information is the cost of restricting the benchmark to two
-dimensions.  The benchmark responds conservatively: method-transfer claims
-are discussed in
-[`parity_and_alternative_routes.md`](parity_and_alternative_routes.md), but
-formal credit waits for a proved movement in $H$ or $D$.
-
-## Integer-boundary skipping
-
-Let $T_i$ be the cumulative future human-equivalent effort until the first
-state with score at least $i$.  Boundary $i$ is skipped when
+The lower OR branch is nested because stronger GEH exponents imply weaker
+ones and smaller gap bounds imply larger ones.  At the join:
 
 ```math
-T_{i+1}\lt1.05T_i.
+\mathrm{GEH}[1]\Longrightarrow H_1\le6,
 ```
 
-Skip probabilities should be estimated by simulating research paths through
-the two-dimensional transition graph.  They should not be assigned from the
-visual distance between prime-gap bounds.  GEH creates substantial skip risk
-below score `8`, while a successful parity-breaking theorem could skip almost
-the entire ladder.
+by the Polymath sieve theorem.  No partial GEH rung is claimed to imply the
+gap alternative on the same row.
 
-## Extended theorem-reach ladder
+Above twin primes:
 
-The target score above ends at twin primes.  For comparison with the extended
-Collatz ladder, the following separate scale continues to stronger statements.
-It measures theorem reach, not $e^S$ work toward twin primes.
+- either alternative at score `8` implies infinitely many twin primes;
+- the twin-pair Hardy--Littlewood asymptotic implies the quantitative
+  alternative at score `8`;
+- Dickson implies de Polignac (including consecutiveness, by a CRT
+  construction recorded in the source audit);
+- the general affine Hardy--Littlewood conjecture contains the twin-pair
+  asymptotic, while Schinzel H contains Dickson; and
+- Bateman--Horn contains the affine Hardy--Littlewood asymptotics and its
+  positivity gives Schinzel H.
 
-| Reach score | Milestone |
-|---:|---|
-| **0** | Current state: $H_1\le246$. |
-| **2** | A major unconditional bounded-gap improvement such as $H_1\le50$. |
-| **4** | $H_1\le6$. |
-| **5** | $H_1\le4$. |
-| **6** | Twin primes: infinitely many prime pairs at distance $2$. |
-| **7** | De Polignac's conjecture: every positive even integer occurs infinitely often as a gap between consecutive primes. |
-| **8** | The qualitative prime-tuples or Dickson conjecture for every fixed admissible system of affine-linear forms. |
-| **9** | The Hardy--Littlewood asymptotic for every fixed admissible prime tuple, with substantial uniformity in the system. |
-| **10** | A full Bateman--Horn-type asymptotic for every fixed admissible finite family of irreducible integer polynomials. |
+These are implication claims, not claims of equivalence.  In particular,
+full GEH is not asserted to imply twin primes, twin primes do not imply their
+Hardy--Littlewood asymptotic, and Dickson does not imply the quantitative
+Hardy--Littlewood formulas.
 
-The two scales answer different questions.  Twin primes is `10` on its own
-target benchmark and `6` on the extended reach ladder.
+## Subjective difficulty calibration
 
-## Status
+Let $Y_s$ be the human-expert-years required by a non-automated research
+community, starting from the August 2026 frontier, to first prove rung $s$.
+The estimates are conditional on the rung being true and provable in the
+accepted foundational framework.  The quantity calibrated is
+$\mathbb E[\log_{10}Y_s]$, not $\log_{10}\mathbb E[Y_s]$.
 
-All numerical effort ranges and scores are provisional judgments.  The
-theorem statements and implication directions should be checked separately
-from those judgments.  No row asserts that the corresponding open theorem is
-true or that its score is literature consensus.
+| Score | $\mathbb E[\log_{10}Y_s]$ | 80% interval | Geometric-central effort |
+|---:|---:|---:|---:|
+| 0.3 | 1.6 | 0.5--3.0 | 40 expert-years |
+| 1 | 1.9 | 0.7--3.3 | 80 expert-years |
+| 2 | 2.2 | 0.9--3.6 | 160 expert-years |
+| 3 | 2.5 | 1.1--3.9 | 320 expert-years |
+| 4 | 2.8 | 1.3--4.2 | 630 expert-years |
+| 5 | 3.1 | 1.5--4.5 | 1,300 expert-years |
+| 6 | 3.4 | 1.7--4.8 | 2,500 expert-years |
+| 7 | 3.7 | 1.9--5.1 | 5,000 expert-years |
+| 8 | 4.0 | 2.1--5.4 | 10,000 expert-years |
+| 9 | 4.3 | 2.3--5.7 | 20,000 expert-years |
+| 9.5 | 4.45 | 2.4--5.9 | 28,000 expert-years |
+| 10 | 4.6 | 2.5--6.1 | 40,000 expert-years |
+
+The point estimates rise by about `0.3` log-ten units per integer rung: a
+factor of about two in central effort.  The intervals are intentionally much
+wider than the spacing.  They represent disagreement about future methods,
+not measurement error.
+
+The apparent precision is bookkeeping.  These are provisional subjective
+judgments, not a literature consensus and not a probability that a statement
+is true.
+
+## Integer-skip audit
+
+For integer $n\ge1$, an $n$-skip occurs when the realized effort to reach
+score $n+1$ is less than `1.1` times the effort to reach score $n$.  The table
+estimates this prospectively, allowing one proof to discharge both rungs.
+
+| Boundary | Estimated $p(n\text{-skip})$ | Principal reason |
+|---:|---:|---|
+| 1 to 2 | 35% | A distribution estimate or sieve optimization may overshoot a round-number landmark. |
+| 2 to 3 | 35% | The same theorem may improve both the exponent and the optimized gap. |
+| 3 to 4 | 40% | A near-full distribution theorem could jump directly to the endpoint branch. |
+| 4 to 5 | 45% | Proving the full-GEH alternative automatically gives $H_1\le6$. |
+| 5 to 6 | 30% | A new parity-sensitive idea may improve `6` directly to `4`. |
+| 6 to 7 | 45% | A method strong enough to beat the three-point barrier may solve the specified pair. |
+| 7 to 8 | 35% | A first twin-prime proof may already be quantitative or uniform in the even shift. |
+| 8 to 9 | 40% | A correlation method may yield an asymptotic, not merely infinitude. |
+| 9 to 10 | 35% | A polynomial-prime framework may establish Schinzel H or Bateman--Horn in one step. |
+
+No estimate exceeds `50%`.  The largest risks occur at genuine implication
+shortcuts; adding more gap cutoffs would make those risks worse rather than
+smoother.  If expert elicitation pushes a boundary above `50%`, adjacent
+rungs should be merged instead of inventing a cosmetic intermediate theorem.
+
+## Scoring rule
+
+The score of a proof is the greatest rung whose complete displayed statement
+it establishes, after applying already proved implications.  A restricted
+case, average over polynomial families, almost-prime analogue, or theorem
+with an extra hypothesis does not receive the unrestricted rung unless a
+written reduction proves it.
+
+Proofs of impressive off-ladder results receive no automatic fractional
+credit.  The ladder may be revised when such a result yields a new natural
+open statement that fits between two rungs.
