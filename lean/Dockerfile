@@ -17,5 +17,6 @@ COPY CollatzBench.lean ./
 COPY CollatzBench ./CollatzBench
 
 RUN lake update \
-    && lake exe cache get CollatzBench.lean \
-    && lake build
+    && lake exe cache get CollatzBench.lean
+
+RUN --network=none lake build

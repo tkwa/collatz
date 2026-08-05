@@ -6,12 +6,6 @@ objects are implemented directly. “Typed schema” means the quantifier shape
 is formalized over an explicit interface whose foundational objects must be
 instantiated by a future domain library.
 
-The Collatz entries were synchronized to the exact scaled-ray wording on
-`codex/issue-2-collatz` at `75721f5ca581cfea77d396a870040980df7705fd`.
-The prime-pattern entries were synchronized to the disjunctive ladder on
-`codex/issue-3-twin-prime` at
-`228ece25d124d5172ef6449c606cdc65758b9585b`.
-
 | Task | Source statement | Lean declaration | Coverage |
 |---|---|---|---|
 | abc | `abc/difficulty_ladder.md`, score 0.2: fixed `δ > 0` improving `1/3` for every positive coprime `a+b=c` | `ABC.WeakestAbcLike` | Exact, including the global implied constant. |
