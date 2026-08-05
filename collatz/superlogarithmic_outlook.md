@@ -1,9 +1,10 @@
-# Outlook for the superlogarithmic target
+# Outlook for the all-start superlogarithmic target
 
 ## The target
 
-The project asks whether there is an admissible Collatz-like map for which,
-for every fixed starting value $n$,
+This note assesses the **All-Start Nonnegative Superlogarithmic Contraction
+Conjecture**: whether there is an admissible Collatz-like map for which, for
+every fixed starting value $n$,
 
 ```math
 D_K(n)=\omega(\log K).
@@ -14,6 +15,14 @@ iterates.  This is an existential statement about the choice of map, followed
 by a universal statement about all of its ordinary nonnegative-integer
 orbits.  The target is not tied to the initial $4/3$-type diagnostic map or to
 any other particular candidate family.
+
+It does not assess the repository's moving
+[Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md), which now
+requires the same asymptotic only along one existentially chosen coprime power
+ray.  On the [impressiveness ladder](collatz_ladder.md), the all-start target
+here is score `1.0` and the sparse-ray target is score `0.2`.  The probability
+and proof-difficulty judgments below should not be transferred to the latter
+without a separate recalibration.
 
 ## Classical Collatz and the target
 
