@@ -4,14 +4,13 @@ The Lean project formalizes the quantifier structure and mathematical objects
 in the repository's conjecture statements.  A declaration such as
 `ClassicalCollatz : Prop` is a statement, not an axiom or a proof.
 
-Run:
+The checked verification route is Docker, because native downloaded Lean
+executables are blocked by Santa on the development Mac:
 
 ```sh
-lake exe cache get
-lake build
+docker build --file lean/Dockerfile --tag collatzbench-lean .
 ```
 
 The project is pinned by `lean-toolchain` and `lakefile.toml`.  The coverage
-manifest will track each Markdown source to its Lean declaration and will
-distinguish exact executable definitions from intentionally abstract schemas
-for conjectures whose Markdown statement is itself schematic.
+manifest tracks each in-scope statement to its Lean declaration and
+distinguishes exact definitions from intentionally typed schemas.

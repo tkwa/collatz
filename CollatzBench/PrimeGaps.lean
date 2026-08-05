@@ -1,73 +1,86 @@
 import CollatzBench.Foundations
 import Mathlib.Data.Nat.Prime.Basic
+import Mathlib.RingTheory.Polynomial.Basic
+import Mathlib.RingTheory.PrincipalIdealDomain
 
 /-!
-# Prime-gap and prime-pattern statements
-
-Concrete outcome rungs use only primality and quantifiers.  Analytic
-distribution hypotheses and asymptotic master conjectures are exposed through
-typed schema parameters rather than silently omitting their technical data.
+# The prime-pattern frontier and anchors
 -/
 
 namespace CollatzBench.PrimeGaps
 
-/-- `p < q` are consecutive primes. -/
 def ConsecutivePrimes (p q : ℕ) : Prop :=
   Nat.Prime p ∧ Nat.Prime q ∧ p < q ∧
-  ∀ r : ℕ, p < r → r < q → ¬ Nat.Prime r
+    ∀ r : ℕ, p < r → r < q → ¬ Nat.Prime r
 
-/-- The liminf prime gap is at most `H`, in an equivalent quantifier form. -/
+/-- Equivalent quantifier form of `H₁ ≤ H`. -/
 def PrimeGapAtMost (H : ℕ) : Prop :=
   ∀ N : ℕ, ∃ p q : ℕ,
     N ≤ p ∧ ConsecutivePrimes p q ∧ q - p ≤ H
 
-/-- Infinitely many prime pairs at the fixed distance `h`. -/
-def InfinitelyManyPrimePairs (h : ℕ) : Prop :=
+/--
+Technical data suppressed by the Markdown's use of the standard abbreviation
+`EH[θ]`. An instantiation must identify the standard prime discrepancy and
+the `X^θ` modulus cutoff; the displayed bound is formalized below.
+-/
+structure ElliottHalberstamSchema where
+  maxPrimeDiscrepancy : ℕ → ℕ → ℝ
+  modulusCutoff : ℝ → ℕ → ℕ
+  isStandardPrimeDiscrepancy : Prop
+  cutoff_is_power : ∀ θ : ℝ, ∀ X : ℕ,
+    (modulusCutoff θ X : ℝ) ≤ (X : ℝ) ^ θ ∧
+      (X : ℝ) ^ θ < modulusCutoff θ X + 1
+
+def ElliottHalberstamAt (S : ElliottHalberstamSchema) (θ : ℝ) : Prop :=
+  S.isStandardPrimeDiscrepancy ∧
+  ∀ A : ℕ, ∃ C : ℝ, 0 < C ∧ ∀ᶠ X : ℕ in Filter.atTop,
+    (∑ q ∈ Finset.Icc 1 (S.modulusCutoff θ X), S.maxPrimeDiscrepancy X q) ≤
+      C * X / (Real.log X) ^ A
+
+/-- Current Weakest twin-prime rung: `H₁ ≤ 244` or some EH exponent above `1/2`. -/
+def WeakestPrimePattern (S : ElliottHalberstamSchema) : Prop :=
+  PrimeGapAtMost 244 ∨
+    ∃ δ : ℝ, 0 < δ ∧ ElliottHalberstamAt S ((1 : ℝ) / 2 + δ)
+
+/-- Infinitely many pairs `p,p+2` are prime. -/
+def TwinPrimeConjecture : Prop :=
   ∀ N : ℕ, ∃ p : ℕ,
-    N ≤ p ∧ Nat.Prime p ∧ Nat.Prime (p + h)
+    N ≤ p ∧ Nat.Prime p ∧ Nat.Prime (p + 2)
 
-def TwinPrimeConjecture : Prop := InfinitelyManyPrimePairs 2
+/-- A finite polynomial family with the algebraic/local hypotheses of Bateman--Horn. -/
+structure PolynomialFamily where
+  arity : ℕ
+  arity_pos : 0 < arity
+  poly : Fin arity → Polynomial ℤ
+  distinct : Function.Injective poly
+  nonconstant : ∀ i, 0 < (poly i).natDegree
+  irreducible : ∀ i, Irreducible (poly i)
+  positiveLeading : ∀ i, 0 < (poly i).leadingCoeff
+  noFixedPrimeDivisor : ∀ p : ℕ, Nat.Prime p → ∃ n : ℤ,
+    ∀ i, ¬ (p : ℤ) ∣ (poly i).eval n
 
-/-- Every positive even gap occurs infinitely often between consecutive primes. -/
-def DePolignacConjecture : Prop :=
-  ∀ h : ℕ, 0 < h → Even h → ∀ N : ℕ,
-    ∃ p q : ℕ, N ≤ p ∧ ConsecutivePrimes p q ∧ q - p = h
+def PolynomialFamily.SimultaneouslyPrime (F : PolynomialFamily) (n : ℕ) : Prop :=
+  ∀ i, 0 < (F.poly i).eval n ∧ Nat.Prime ((F.poly i).eval n).natAbs
 
-/-- An affine form `a*n+b` used in the qualitative Dickson statement. -/
-structure AffineForm where
-  slope : ℕ
-  intercept : ℕ
-  slope_pos : 0 < slope
+def PolynomialFamily.primeValueCount (F : PolynomialFamily) (X : ℕ) : ℕ :=
+  ((Finset.Icc 1 X).filter F.SimultaneouslyPrime).card
 
-def AffineForm.eval (L : AffineForm) (n : ℕ) : ℕ := L.slope * n + L.intercept
+/--
+Analytic data for the canonical Bateman--Horn main term. A future foundational
+library can replace `isCanonicalPrediction` by the explicit singular-series
+product and logarithmic integral without changing `BatemanHorn`'s quantifiers.
+-/
+structure BatemanHornSchema where
+  predictedMainTerm : PolynomialFamily → ℕ → ℝ
+  isCanonicalPrediction : Prop
+  eventuallyPositive : ∀ F : PolynomialFamily,
+    ∀ᶠ X : ℕ in Filter.atTop, 0 < predictedMainTerm F X
 
-/-- No prime divides every value of the product of the listed affine forms. -/
-def LocallyAdmissible (forms : List AffineForm) : Prop :=
-  ∀ p : ℕ, Nat.Prime p → ∃ n : ℕ,
-    ∀ L ∈ forms, ¬ p ∣ L.eval n
-
-/-- Qualitative prime-tuples / Dickson for every fixed admissible system. -/
-def DicksonConjecture : Prop :=
-  ∀ forms : List AffineForm, forms ≠ [] → LocallyAdmissible forms →
-    ∀ N : ℕ, ∃ n : ℕ, N ≤ n ∧ ∀ L ∈ forms, Nat.Prime (L.eval n)
-
-/-- A named analytic statement plus the implication it is intended to carry. -/
-structure AnalyticSchema where
-  statement : Prop
-
-/-- Ordinary Elliott--Halberstam at a chosen level (exact estimates supplied by schema). -/
-def ElliottHalberstamAt (S : AnalyticSchema) : Prop := S.statement
-
-/-- Generalized Elliott--Halberstam at a chosen level and convolution class. -/
-def GeneralizedElliottHalberstamAt (S : AnalyticSchema) : Prop := S.statement
-
-/-- A Hardy--Littlewood tuple asymptotic with all analytic data made explicit upstream. -/
-def HardyLittlewoodPrimeTuples (S : AnalyticSchema) : Prop := S.statement
-
-/-- A Bateman--Horn asymptotic with polynomial hypotheses and constants upstream. -/
-def BatemanHorn (S : AnalyticSchema) : Prop := S.statement
-
-/-- A scalar ladder rung can be reached by any listed route. -/
-def AnyRoute (routes : List Prop) : Prop := routes.Any id
+/-- Bateman--Horn for every admissible finite family in the exact endpoint class. -/
+def BatemanHorn (S : BatemanHornSchema) : Prop :=
+  S.isCanonicalPrediction ∧ ∀ F : PolynomialFamily,
+    Filter.Tendsto
+      (fun X : ℕ => (F.primeValueCount X : ℝ) / S.predictedMainTerm F X)
+      Filter.atTop (nhds 1)
 
 end CollatzBench.PrimeGaps

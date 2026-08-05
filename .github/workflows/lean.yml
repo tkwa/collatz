@@ -8,10 +8,9 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  docker-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: leanprover/lean-action@v1
-        with:
-          use-mathlib-cache: true
+      - name: Build the pinned Lean project in Docker
+        run: docker build --progress=plain --file lean/Dockerfile --tag collatzbench-lean .

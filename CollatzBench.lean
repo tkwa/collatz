@@ -9,4 +9,4 @@ import CollatzBench.Collatz
 import CollatzBench.ABC
 import CollatzBench.Mahler
 import CollatzBench.PrimeGaps
-import CollatzBench.ProgressTargets
+import CollatzBench.Checks
