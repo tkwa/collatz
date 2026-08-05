@@ -7,7 +7,7 @@ is formalized over an explicit interface whose foundational objects must be
 instantiated by a future domain library.
 
 The Collatz entries were synchronized to the exact scaled-ray wording on
-`codex/issue-2-collatz` at `26c2a36192ae0cab95f77e639f3712f657c89c12`.
+`codex/issue-2-collatz` at `75721f5ca581cfea77d396a870040980df7705fd`.
 The prime-pattern entries were synchronized to the disjunctive ladder on
 `codex/issue-3-twin-prime` at
 `228ece25d124d5172ef6449c606cdc65758b9585b`.
@@ -22,7 +22,7 @@ The prime-pattern entries were synchronized to the disjunctive ladder on
 | Mahler | `mahler/algebraic_multiplier_for_powers_of_e.md`: some positive real algebraic `x` has `{x e^n}` recurrently bounded below by one fixed `ε>0` | `Mahler.AlgebraicMultiplierEscape` | Exact, using the equivalent `∀N ∃n≥N` form from the Markdown. |
 | Twin prime | `twin-prime/difficulty_ladder.md`, score 0.3: `H₁≤244` or `EH[1/2+δ]` for some fixed `δ>0`, with exponent below `1` | `PrimeGaps.WeakestPrimePattern` | Gap branch exact. EH branch is a typed analytic schema retaining the range `1/2 < θ < 1`, standard-discrepancy obligation, `X^θ` cutoff, all-log-power error bounds, and OR quantifier. |
 | Twin prime | `twin-prime/difficulty_ladder.md`, score 6: infinitely many prime pairs at distance 2 | `PrimeGaps.TwinPrimeConjecture` | Exact. |
-| Twin prime | `twin-prime/difficulty_ladder.md`, score 8: Bateman–Horn for every fixed admissible finite family of distinct irreducible integer polynomials with positive leading coefficients | `PrimeGaps.PolynomialFamily`, `PrimeGaps.BatemanHornSchema`, `PrimeGaps.BatemanHorn` | Algebraic family and local condition exact; canonical singular-series/log-integral main term is an explicitly marked typed analytic schema. |
+| Twin prime | `twin-prime/difficulty_ladder.md`, score 8: Bateman–Horn for every fixed admissible finite family of distinct irreducible integer polynomials with positive leading coefficients | `PrimeGaps.PolynomialFamily`, `PrimeGaps.BatemanHornSchema`, `PrimeGaps.BatemanHorn` | Algebraic family and local condition exact; singular series and logarithmic integral are separate fields with explicit canonical-definition obligations in the typed analytic schema. |
 
 ## Intentionally out of scope
 

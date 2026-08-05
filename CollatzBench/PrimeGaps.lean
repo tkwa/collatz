@@ -72,16 +72,21 @@ library can replace `isCanonicalPrediction` by the explicit singular-series
 product and logarithmic integral without changing `BatemanHorn`'s quantifiers.
 -/
 structure BatemanHornSchema where
-  predictedMainTerm : PolynomialFamily → ℕ → ℝ
-  isCanonicalPrediction : Prop
+  singularSeries : PolynomialFamily → ℝ
+  logarithmicIntegral : PolynomialFamily → ℕ → ℝ
+  isCanonicalSingularSeries : Prop
+  isCanonicalLogarithmicIntegral : Prop
   eventuallyPositive : ∀ F : PolynomialFamily,
-    ∀ᶠ X : ℕ in Filter.atTop, 0 < predictedMainTerm F X
+    ∀ᶠ X : ℕ in Filter.atTop,
+      0 < singularSeries F * logarithmicIntegral F X
 
 /-- Bateman--Horn for every admissible finite family in the exact endpoint class. -/
 def BatemanHorn (S : BatemanHornSchema) : Prop :=
-  S.isCanonicalPrediction ∧ ∀ F : PolynomialFamily,
+  S.isCanonicalSingularSeries ∧ S.isCanonicalLogarithmicIntegral ∧
+  ∀ F : PolynomialFamily,
     Filter.Tendsto
-      (fun X : ℕ => (F.primeValueCount X : ℝ) / S.predictedMainTerm F X)
+      (fun X : ℕ => (F.primeValueCount X : ℝ) /
+        (S.singularSeries F * S.logarithmicIntegral F X))
       Filter.atTop (nhds 1)
 
 end CollatzBench.PrimeGaps
