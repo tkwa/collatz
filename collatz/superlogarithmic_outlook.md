@@ -173,7 +173,7 @@ Each obstruction should be classified by the kind of evidence it supplies.
   Therefore no fixed finite bad pattern or finite list of local valuations
   can be forbidden.
 - Finite-state carry transducers cannot compute either the full itinerary or
-  its binary expansion/division projection from ordinary base-$B$ digits; see
+  its binary expansion/division projection from ordinary base $B$ digits; see
   the [finite-state obstruction](asymptotic_progress/finite_state_coding_obstruction.md).
 - Existing fixed-rank sparse-polynomial, $S$-unit, Subspace-Theorem, height,
   LTE, and rational-base results lose too much when the number of blocks
