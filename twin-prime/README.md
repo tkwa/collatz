@@ -22,13 +22,12 @@ Elliott--Halberstam gives $H_1\le6$.
   defines every disjunction, and gives the difficulty and skip estimates.
 - [`sources_and_implications.md`](sources_and_implications.md) records the
   source audit, exact implication directions, non-implications, and openness
-  caveats.  This file is being added during the draft-PR research pass.
+  caveats.
 
-The former two-coordinate outcome/distribution state is not part of this
-benchmark.  Distribution conjectures appear only as alternatives inside
-logical disjunctions.  A theorem earns a rung exactly when it proves the
-displayed statement; no credit is assigned for method prestige or a forecast
-of future usefulness.
+The benchmark is a scalar chain.  Distribution conjectures appear as
+alternatives inside logical disjunctions.  A theorem earns a rung exactly when
+it proves the displayed statement; no credit is assigned for method prestige
+or a forecast of future usefulness.
 
 ## Reading the OR rungs
 

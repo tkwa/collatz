@@ -15,21 +15,37 @@ The paper proves $H_1\le246$ unconditionally.  Its abstract states the
 conditional consequences used by the ladder:
 
 ```math
-\mathrm{EH}[1]\Longrightarrow H_1\le12,
+\text{full EH}\Longrightarrow H_1\le12,
 \qquad
-\mathrm{GEH}[1]\Longrightarrow H_1\le6.
+\text{full GEH}\Longrightarrow H_1\le6.
 ```
 
 It also proves, under GEH, that every admissible triple contains at least two
-primes infinitely often, and describes this as the limit of the purely
-sieve-theoretic setup.  The ladder therefore does not assert
-$\mathrm{GEH}[1]\Longrightarrow H_1\le4$ or twin primes.
+primes infinitely often.  Its parity section gives a partly informal,
+heuristic obstruction showing why the same purely sieve-theoretic information
+should not beat the gap `6`.  This is a route warning, not an impossibility
+theorem covering every future method.  The ladder therefore does not assert
+$\text{full GEH}\Longrightarrow H_1\le4$ or twin primes.
+
+The paper's discussion following the GPY theorem says that the only standard
+$\mathrm{EH}[\vartheta]$ results then known were for
+$\vartheta\lt1/2$.  Its generalized Bombieri--Vinogradov theorem similarly
+proves $\mathrm{GEH}[\vartheta]$ for every fixed
+$\vartheta\lt1/2$.  Results beyond one half with special moduli, fixed residue
+classes, or restricted convolution types do not establish the unrestricted
+EH or GEH alternatives in this ladder.
 
 For the intermediate rows, monotonicity is definitional: a standard
-$\mathrm{GEH}[\vartheta_2]$ estimate with $\vartheta_2\gt\vartheta_1$
-contains the same estimate after restricting the modulus range to
-$x^{\vartheta_1}$.  “Full GEH” means every fixed exponent below one, not the
-literal endpoint modulus $x$.
+$\mathrm{EH}[\vartheta_2]$ estimate with
+$\vartheta_2\gt\vartheta_1$ contains the same estimate after restricting the
+modulus range to $x^{\vartheta_1}$.  Proposition 1.7 of the paper proves
+
+```math
+\mathrm{GEH}[\vartheta]\Longrightarrow\mathrm{EH}[\vartheta].
+```
+
+“Full GEH” means every fixed exponent below one, not the literal endpoint
+modulus $x$.
 
 Restricted-modulus results beyond one half do not establish these rungs.  The
 row requires the full coefficient/convolution class and unrestricted moduli
@@ -37,7 +53,10 @@ in the source formulation.
 
 ## Polynomial prime conjectures
 
-The endpoint formulation follows Stephan Ramon Garcia,
+The endpoint formulation follows Paul T. Bateman and Roger A. Horn,
+[“A heuristic asymptotic formula concerning the distribution of prime
+numbers”](https://doi.org/10.1090/S0025-5718-1962-0148632-7), and the modern
+overview by Stephan Ramon Garcia,
 [“What is the Bateman--Horn Conjecture?”](https://www.ams.org/journals/notices/202410/noti3046/noti3046.html),
 *Notices of the AMS* **71** (2024), 1382--1385, and the survey by Aletheia-Zomlefer,
 Fukshansky, and Garcia,
@@ -58,7 +77,10 @@ When all $f_i$ are affine linear, the same formula is the prime-tuples
 Hardy--Littlewood asymptotic.  Thus both alternatives at score `9.5` are
 genuine consequences of Bateman--Horn.
 
-Schinzel H is qualitative.  It implies Dickson by specialization to affine
+Schinzel H is the conjecture of Schinzel and Sierpiński,
+[“Sur certaines hypothèses concernant les nombres
+premiers”](https://eudml.org/doc/207321).  It is qualitative.  It implies
+Dickson by specialization to affine
 linear polynomials, but it does not supply the Hardy--Littlewood asymptotic.
 Conversely, the affine Hardy--Littlewood conjecture says nothing by itself
 about an irreducible nonlinear polynomial such as $t^2+1$.
@@ -105,10 +127,15 @@ in this benchmark.
 
 ## Open-status and non-implication checklist
 
-As of the August 2026 audit, the source search found no improvement of the
-published unconditional $H_1\le246$ record and no proof of any positive rung.
-This is a literature-status statement, not a theorem that no unpublished
-argument exists.
+As of the August 2026 live audit, the source search found no validated
+improvement of the published unconditional $H_1\le246$ record and no proof of
+any positive rung.  A
+[2024 expository chapter](http://www.lolathompson.com/uploads/1/1/0/6/110629329/chapter_12_2024.pdf)
+still states the `246` theorem.  The search also surfaced a 2025 student
+preprint whose title advertises a new bound, but the indexed description
+repeats $H_1\le246$ and no refereed publication or independent validation was
+found.  It is not treated as a new record.  This remains a literature-status
+judgment, not a theorem that no unpublished argument exists.
 
 The ladder deliberately does **not** use any of these invalid or unsupported
 arrows:

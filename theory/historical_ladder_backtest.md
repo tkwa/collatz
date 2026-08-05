@@ -9,28 +9,27 @@ plausible sequence of intermediate theorems, does movement on that sequence
 predict a higher subsequent hazard of genuine progress or solution, or does
 the sequence merely make the history look smooth after the fact?
 
-**Q2. Given that a ladder is used, how should its state be collapsed?**  In
-particular, should the score be a function of two independent coordinates, a
-maximum over many coordinates, a maximum over complete proof routes, or a
-portfolio aggregate?
+**Q2. Given that a ladder is used, how should incomparable routes be exposed
+on one scale?**  In particular, should the score use logical disjunctions, a
+maximum over complete proof routes, or a portfolio aggregate?
 
-The historical cases below support a scalar public score, but not a scalar
-mathematical state.  They do **not** determine which scalar should be public,
-because theorem strength, work already banked, and probability of timely
-solution are different estimands.  The most robust common substrate is:
+The historical cases below support a scalar public score with explicit
+implication closure.  They do **not** show that the score forecasts timely
+solution, because theorem strength and forecast probability are different
+estimands.  The most robust common substrate is:
 
 1. retain a versioned portfolio of proved artifacts and implications;
 2. define complete, complement-aware production functions for credible proof
    routes;
-3. compute a route-level maximum when the objective is conservative theorem
-   reach or leading-route replacement work; and
-4. compute a prior-weighted route portfolio, including an unseen-route
-   reserve, when the objective is prediction.
+3. use a logical disjunction when incomparable complete routes can occupy a
+   genuinely similar difficulty contour; and
+4. calibrate the resulting scalar by expected log human-expert-years and
+   boundary-skip risk.
 
-The actionable recommendation is therefore a small objective-labeled
-dashboard before choosing one headline number.  If the repository later
-chooses banked leading-route work as its primary meaning, the route-level
-maximum is the best current scalar candidate.
+The actionable recommendation is therefore a one-dimensional implication
+ladder, with disjunctions used only when they materially improve path
+tracking.  Forecasting may be studied separately but is not part of the live
+benchmark score.
 
 This is a conditional conclusion about problems that admit ladder-like
 structure.  The selected history cannot establish how common such problems
@@ -538,24 +537,19 @@ chosen.
 
 ## Recommendation for this repository
 
-1. Replace “the mathematical state is two-dimensional” with “the benchmark
-   stores a theorem portfolio and exposes a small number of views.”  Retain
-   $(H,D)$ as a useful twin-prime display, not as the canonical ontology.
-2. Define route functions over implication closure.  Complements live inside
-   each route; alternatives are aggregated across routes.
-3. Do not take the maximum of raw dimensions.  If a single conservative
-   achievement score is needed now, take the maximum of complete route
-   functions.
-4. Do not call that score an all-things-considered forecast.  Publish
-   $F_{X,Y}$ separately using a dependency-aware portfolio with explicit
-   unseen-route mass.
-5. Decide whether the repository's $e^S$ language means leading-route or
-   total-portfolio replacement work.  It cannot mean actual cumulative hours
-   while remaining a state-only score.
-6. Preserve the four historical cases in a versioned replay dataset and add
-   eligible censored cases.  Fit no numerical contour until blind,
-   leave-one-problem-out tests are possible.
+1. Publish a scalar implication ladder rather than a multidimensional state.
+2. Put complementary prerequisites inside a complete route; do not take the
+   maximum of raw ingredients.
+3. When two complete, incomparable statements have similar difficulty, a
+   rung may be their logical disjunction.  Every alternative on a higher rung
+   must imply an alternative below it.
+4. Annotate each rung with expected log human-expert-years and each integer
+   boundary with skip probability.  Merge or replace rungs whose skip risk is
+   above `50%`.
+5. Treat forecast probability as a separate research question, not as the
+   meaning of the benchmark score.
+6. Preserve the four historical cases as a backtest against hindsight and
+   add eligible censored cases before drawing predictive conclusions.
 
-This architecture is only slightly more complex than a collapsed ladder.  It
-prevents one scalar from being asked simultaneously to measure impressive
-mathematics, accumulated work, smoothness, and probability of timely success.
+This architecture keeps one public scale without pretending that methods are
+linearly ordered or that theorem reach is a deadline forecast.

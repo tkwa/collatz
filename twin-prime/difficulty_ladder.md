@@ -8,12 +8,12 @@ Let $p_n$ be the $n$-th prime and
 H_1=\liminf_{n\to\infty}(p_{n+1}-p_n).
 ```
 
-For $\vartheta\in(1/2,1)$, $\mathrm{GEH}[\vartheta]$ means the standard
-generalized Elliott--Halberstam conjecture at exponent $\vartheta$ for the
-full convolution class in the bounded-gap framework.  It does **not** mean a
-restricted-modulus or restricted-coefficient theorem.  Write
-$\mathrm{GEH}[1]$ for $\mathrm{GEH}[\vartheta]$ for every fixed
-$\vartheta\lt1$.
+For $\vartheta\in(1/2,1)$, $\mathrm{EH}[\vartheta]$ and
+$\mathrm{GEH}[\vartheta]$ mean the standard Elliott--Halberstam and
+generalized Elliott--Halberstam conjectures at exponent $\vartheta$ in the
+bounded-gap framework.  GEH uses the full convolution class.  Neither symbol
+means a restricted-modulus or restricted-coefficient theorem.  “Full GEH”
+means $\mathrm{GEH}[\vartheta]$ for every fixed $\vartheta\lt1$.
 
 For $X\ge2$, let
 
@@ -43,18 +43,18 @@ The exact endpoint statement is given in
 ## The ladder
 
 Every row above score `0` is open as of the August 2026 audit.  The word “or”
-is logical disjunction, not a second coordinate.
+denotes logical disjunction.
 
 | Score | Rung |
 |---:|---|
 | **0** | **Current theorem:** $H_1\le246$. |
-| 0.3 | **The Weakest open rung:** $H_1\le244$ **or** $\mathrm{GEH}[1/2+\delta]$ for some fixed $\delta\gt0$. |
-| **1** | $H_1\le200$ **or** $\mathrm{GEH}[3/5]$. |
-| **2** | $H_1\le100$ **or** $\mathrm{GEH}[2/3]$. |
-| **3** | $H_1\le50$ **or** $\mathrm{GEH}[3/4]$. |
-| **4** | $H_1\le12$ **or** full $\mathrm{GEH}[1]$. |
-| **5** | $H_1\le6$. |
-| **6** | $H_1\le4$. |
+| 0.3 | **The Weakest open rung:** $H_1\le244$ **or** $\mathrm{EH}[1/2+\delta]$ for some fixed $\delta\gt0$. |
+| **1** | $H_1\le200$ **or** $\mathrm{EH}[11/20]$. |
+| **2** | $H_1\le100$ **or** $\mathrm{EH}[3/5]$. |
+| **3** | $H_1\le50$ **or** $\mathrm{EH}[2/3]$. |
+| **4** | $H_1\le12$ **or** $\mathrm{EH}[3/4]$. |
+| **5** | $H_1\le6$ **or** $\mathrm{GEH}[3/4]$. |
+| **6** | $H_1\le4$ **or** full GEH. |
 | **7** | **Twin primes:** $H_1=2$. |
 | **8** | $\pi_2(X)\gg X/(\log X)^2$ for all sufficiently large $X$ **or** de Polignac's conjecture. |
 | **9** | The Hardy--Littlewood asymptotic for twin primes **or** Dickson's conjecture for every fixed admissible affine-linear family. |
@@ -74,15 +74,22 @@ R_{10}\Longrightarrow R_{9.5}\Longrightarrow R_9
 \Longrightarrow\cdots\Longrightarrow R_{0.3}\Longrightarrow R_0.
 ```
 
-The lower OR branch is nested because stronger GEH exponents imply weaker
-ones and smaller gap bounds imply larger ones.  At the join:
+The lower OR branches are nested because stronger EH exponents imply weaker
+ones, GEH implies EH at the same exponent, and smaller gap bounds imply larger
+ones.  At the two joins:
 
 ```math
-\mathrm{GEH}[1]\Longrightarrow H_1\le6,
+\mathrm{GEH}[3/4]\Longrightarrow\mathrm{EH}[3/4],
+\qquad
+\text{full GEH}\Longrightarrow\mathrm{GEH}[3/4].
 ```
 
-by the Polymath sieve theorem.  No partial GEH rung is claimed to imply the
-gap alternative on the same row.
+The first arrow is Proposition 1.7 of the Polymath paper; the second is
+restriction of the exponent.  The same paper also proves that full GEH gives
+$H_1\le6$, but it does not give $H_1\le4$.  Thus “full GEH” is a genuine
+alternative at score `6`, not a restatement of that row's gap alternative.
+No partial EH or GEH rung is claimed to imply the gap alternative on its own
+row.
 
 Above twin primes:
 
@@ -129,6 +136,22 @@ factor of about two in central effort.  The intervals are intentionally much
 wider than the spacing.  They represent disagreement about future methods,
 not measurement error.
 
+Pairing two alternatives does not assert that their proofs would look alike.
+The calibration makes the following more limited judgments:
+
+- incremental EH exponents and the accompanying round-number gap cutoffs are
+  of comparable theorem reach below score `4`;
+- a genuine GEH exponent beyond one half is comparable to reaching the
+  sieve-theoretic $6$-gap frontier;
+- full GEH and a direct $4$-gap theorem are both major ways of going beyond
+  that frontier, while neither is known to imply the other; and
+- quantitative depth for one pair and qualitative breadth over all even
+  gaps are comparable ways of strengthening twin-prime infinitude.
+
+These pairings are the most judgment-sensitive part of the ladder.  If expert
+elicitation places the alternatives more than about `0.6` log-ten units apart,
+the corresponding OR rung should be split or one branch should be dropped.
+
 The apparent precision is bookkeeping.  These are provisional subjective
 judgments, not a literature consensus and not a probability that a statement
 is true.
@@ -141,11 +164,11 @@ estimates this prospectively, allowing one proof to discharge both rungs.
 
 | Boundary | Estimated $p(n\text{-skip})$ | Principal reason |
 |---:|---:|---|
-| 1 to 2 | 35% | A distribution estimate or sieve optimization may overshoot a round-number landmark. |
+| 1 to 2 | 35% | An EH estimate or sieve optimization may overshoot a round-number landmark. |
 | 2 to 3 | 35% | The same theorem may improve both the exponent and the optimized gap. |
-| 3 to 4 | 40% | A near-full distribution theorem could jump directly to the endpoint branch. |
-| 4 to 5 | 45% | Proving the full-GEH alternative automatically gives $H_1\le6$. |
-| 5 to 6 | 30% | A new parity-sensitive idea may improve `6` directly to `4`. |
+| 3 to 4 | 40% | A strong EH theorem could overshoot the exponent landmark. |
+| 4 to 5 | 40% | A convolution estimate may prove GEH and EH at once. |
+| 5 to 6 | 35% | Full GEH may arrive at the same time as its first exponent beyond one half. |
 | 6 to 7 | 45% | A method strong enough to beat the three-point barrier may solve the specified pair. |
 | 7 to 8 | 35% | A first twin-prime proof may already be quantitative or uniform in the even shift. |
 | 8 to 9 | 40% | A correlation method may yield an asymptotic, not merely infinitude. |

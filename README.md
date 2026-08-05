@@ -47,50 +47,30 @@ theorem and its routine corollaries.
 
 ## Difficulty scores
 
-For a target-normalized ladder, score `0` is the current rigorous state and
-score `10` is the target conjecture.  Let $W(x)$ denote the target-relevant
-human-equivalent **replacement work** represented by state $x$: roughly, the
-work a capable human research community would have needed to reproduce the
-proved portfolio from the baseline, using the cheapest credible route.
-Abandoned work and unrelated difficult theorems do not increase $W$.
+Score `0` is the current rigorous state, and the first positive score must be
+an open problem.  Scores are chosen so the expected logarithm of
+human-expert-years rises as smoothly as the mathematics permits.  Each rung
+reports that estimate explicitly; a one-point interval is not assumed to have
+the same exchange rate in every folder unless the annotations support it.
 
-The intended calibration is
+One theorem may jump several contours.  At integer $n$, the ladder therefore
+also estimates the probability of an $n$-skip: reaching $n+1$ with less than
+`1.1` times the human-equivalent effort needed to reach $n$.  A skip
+probability above `50%` is a warning to merge, reorder, or replace rungs.
 
-```math
-W(x)\approx C e^{S(x)}.
-```
-
-Thus one score point represents about a factor of $e$ in cumulative credited
-work.  Anchoring the baseline at `0` and the solution at `10` asserts that the
-solution represents about $e^{10}\approx 22{,}000$ times the baseline work.
-If that ratio is judged implausible for a problem, the honest generalization
-is $W(x)\approx C e^{\lambda S(x)}$ with a stated $\lambda$; a multiplicative
-constant alone cannot change the endpoint ratio.
-
-Numerical scores are value contours through the multidimensional state, not a
-claim that proofs must traverse a linear list of lemmas.  One theorem may jump
-several contours.  Transition costs should generally increase near the target,
-but they need not increase exponentially as a function of the underlying
-mathematical milestones.
-
-## Target score and extended reach
-
-The target-normalized score answers: **how much target-relevant work has been
-banked toward this conjecture?**  Some folders also include an extended reach
-ladder above the target.  That second scale measures theorem strength and
-generality; it should not be confused with the target-normalized work score.
-
-For example, the twin-prime target has score `10` on its own benchmark, while
-an extended number-theory ladder can place twin primes below de Polignac,
-prime-tuples, Hardy--Littlewood, and Bateman--Horn statements.
+The score measures theorem reach and smooth trackable progress, not the
+probability of a solution by a date.  A headline conjecture may occur below
+the endpoint when stronger natural statements provide useful headroom.  In
+the prime-pattern ladder, twin primes is score `7` and Bateman--Horn is score
+`10`.
 
 ## Evaluation rules
 
 - Score the proved mathematical artifact, not the solver's reputation or the
   historical fame of the theorem.
-- A theorem outside the recorded coordinates receives no formal target score
-  until a proved consequence moves a coordinate.  Possible method transfer
-  may be reported separately.
+- A theorem outside the displayed rungs receives no formal score until a
+  proved consequence establishes a rung.  Possible method transfer may be
+  reported separately.
 - Prefer a range or sensitivity analysis when human-equivalent costs are
   uncertain.
 - Freeze a scoring model for a benchmark evaluation.  New mathematical
