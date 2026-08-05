@@ -1,4 +1,5 @@
 import CollatzBench.Foundations
+import Mathlib.Analysis.SpecialFunctions.Pow.Real
 import Mathlib.Data.Nat.Prime.Basic
 import Mathlib.RingTheory.Polynomial.Basic
 import Mathlib.RingTheory.PrincipalIdealDomain
@@ -64,15 +65,16 @@ def PolynomialFamily.SimultaneouslyPrime (F : PolynomialFamily) (n : ℕ) : Prop
   ∀ i, 0 < (F.poly i).eval (n : ℤ) ∧
     Nat.Prime ((F.poly i).eval (n : ℤ)).natAbs
 
-def PolynomialFamily.primeValueCount (F : PolynomialFamily) (X : ℕ) : ℕ :=
+noncomputable def PolynomialFamily.primeValueCount (F : PolynomialFamily) (X : ℕ) : ℕ :=
   by
     classical
     exact ((Finset.Icc 1 X).filter F.SimultaneouslyPrime).card
 
 /--
 Analytic data for the canonical Bateman--Horn main term. A future foundational
-library can replace `isCanonicalPrediction` by the explicit singular-series
-product and logarithmic integral without changing `BatemanHorn`'s quantifiers.
+library can replace the two canonical-definition obligations by the explicit
+singular-series product and logarithmic integral without changing
+`BatemanHorn`'s quantifiers.
 -/
 structure BatemanHornSchema where
   singularSeries : PolynomialFamily → ℝ
