@@ -57,10 +57,12 @@ T^{\,j}(n)\bmod B\in C
 ## Conjecture
 
 There are fixed choices of $B$, the map parameters
-$\lbrace(a_r,c_r)\rbrace_{0\le r\lt B}$, an integer $u\ge2$ with
+$\lbrace(a_r,c_r)\rbrace_{0\le r\lt B}$, integers $d\ge1$ and $u\ge2$ such
+that $u$ and $B$ are multiplicatively independent,
 
 ```math
-\gcd(u,B)=1,
+u^s\ne B^t
+\qquad\text{for all integers }s,t\ge1,
 ```
 
 and an exponent $k_0\ge0$ such that
@@ -68,14 +70,14 @@ and an exponent $k_0\ge0$ such that
 ```math
 \forall k\ge k_0:
 \qquad
-D_K(u^k)=\omega(\log K)
+D_K(d u^k)=\omega(\log K)
 \quad\text{as }K\to\infty.
 ```
 
 Equivalently, for every fixed $k\ge k_0$,
 
 ```math
-\lim_{K\to\infty}\frac{D_K(u^k)}{\log K}=+\infty.
+\lim_{K\to\infty}\frac{D_K(d u^k)}{\log K}=+\infty.
 ```
 
 The exponent $k$ is fixed before the orbit-time limit is taken.  No rate
@@ -83,12 +85,12 @@ uniform in $k$ is asserted.  Allowing finitely many exceptional exponents
 prevents the statement from depending on accidental behavior at a few small
 states.
 
-## Why the ray base is coprime to the map base
+## Why multiplicative independence is retained
 
-Without a separation between $u$ and $B$, one power ray is elementary.  Take
-$B=u$, use pure division on residue zero, put an expanding unit multiplier
-with offset zero on residue one, and use contracting branches on the other
-residues.  Then
+Without a separation between $u$ and $B$, a scaled power ray can be
+elementary.  For example, take $B=u$, $d=1$, use pure division on residue
+zero, put an expanding unit multiplier with offset zero on residue one, and
+use contracting branches on the other residues.  Then
 
 ```math
 u^k\longmapsto u^{k-1}\longmapsto\cdots\longmapsto1\longmapsto0,
@@ -97,28 +99,53 @@ u^k\longmapsto u^{k-1}\longmapsto\cdots\longmapsto1\longmapsto0,
 after which the orbit stays on the contracting residue zero.  Thus
 $D_K(u^k)=K-O_k(1)$.
 
-Coprimality is a clean way to exclude every such base-alignment mechanism.
-The formally sharp obstruction to a fixed-word exponent decrement is only
-that $u$ and $B$ be multiplicatively independent.  Coprimality is retained
-because it also gives the power ray a strong local-fullness property: its
-powers are dense in an open subgroup of the $B$-adic units.
+Multiplicative independence excludes this exact base-alignment mechanism and
+is weaker than coprimality.  More generally, a fixed residue word of length
+$L$ acts affinely as
 
-## Why one coprime ray is retained
+```math
+x\longmapsto \frac{A x+C}{B^L},
+\qquad \gcd(A,B)=1.
+```
+
+If that word sent $d u^{k+s}$ to $d u^k$ for infinitely many $k$, then the
+resulting identity in $u^k$ would force $C=0$ and
+
+```math
+A u^s=B^L.
+```
+
+Prime valuations, together with $\gcd(A,B)=1$, would then force $A=1$ and
+$u^s=B^L$, contrary to multiplicative independence.  This argument allows
+$u$ and $B$ to share primes; it does not assert that shared-prime rays have
+the same local behavior as unit rays.
+
+Indeed, local fullness holds in the form used below only when
+$\gcd(u,B)=1$.  When primes are shared, initial forced divisions can consume
+the shared part of $d u^k$, but there are only $O_k(1)$ such steps for each
+fixed exponent.  For example, under a base-$2$ map whose zero branch is pure
+division, a start $6^k$ reduces after $k$ steps to the still-open start $3^k$.
+In cases such as $u=2$, $B=6$, the ray is not locally full at all.
+Multiplicative independence still rules out an exact repeated exponent
+decrement, but no comparable finite-itinerary no-go certificate is claimed
+for these shared-prime cases.
+
+## Why one exact scaled ray is retained
 
 Requiring two multiplicatively independent bases $u,v$, both coprime to
-$B$, is a natural stronger variant.  It is not needed to prevent a finite-state
-or missing-digit trivialization.  For any single $u$ coprime to $B$, there is
-a fixed itinerary prefix after which the starts $u^k$ realize **every** finite
-residue continuation, for arbitrarily large exponents $k$.  In particular,
-one ray already contains arbitrarily long expansion-only finite blocks among
-its members.
+$B$, is a natural stronger variant.  In the coprime subcase, it is not needed
+to prevent a finite-state or missing-digit trivialization.  For any single
+$u$ coprime to $B$, there is a fixed itinerary prefix after which the starts
+$u^k$ realize **every** finite residue continuation, for arbitrarily large
+exponents $k$.  In particular, one such ray already contains arbitrarily long
+expansion-only finite blocks among its members.
 
 This local fullness does not refute the conjecture: the exponent producing a
 long bad prefix may change with the requested prefix length, whereas the
 conclusion is pointwise in each fixed exponent.  It does show that the second
 ray does not repair a local weakness of the first.  Under the repository's
 instruction to keep weakening the moving candidate until an elementary
-collapse appears, the one-coprime-ray statement is therefore preferred.
+collapse appears, one exact scaled ray is therefore preferred.
 
 The openness and itinerary arguments, together with the two-ray comparison,
 are proved in
@@ -133,9 +160,10 @@ friendlier rays but restricts the map base.  The two statements are therefore
 not logically comparable unless the fixed-$2,3$ witness also satisfies
 $\gcd(B,6)=1$.
 
-The present one-ray conjecture is weaker than the existential two-coprime-ray
-variant.  It is also implied by either all-start conjecture in this folder:
-after a witness map is fixed, choose any integer $u\ge2$ coprime to its base.
+The present scaled one-ray conjecture is weaker than the existential
+two-coprime-ray variant: take $d=1$ and retain either ray.  It is also implied
+by either all-start conjecture in this folder: after a witness map is fixed,
+choose any $u\ge2$ multiplicatively independent of its base and take $d=1$.
 
 ## Relationship to classical Collatz
 
@@ -147,7 +175,7 @@ T(2q)=q,
 T(2q+1)=3q+2.
 ```
 
-Taking the coprime ray base $u=3$, classical Collatz would make every $3^k$
+Taking $d=1$ and the ray base $u=3$, classical Collatz would make every $3^k$
 eventually enter its usual cycle, where contracting steps have positive
 density.  Hence the classical Collatz conjecture implies the present
 statement.  No converse is claimed.
@@ -156,7 +184,7 @@ Natural-density-one and logarithmic-density-almost-all theorems do not settle
 the restriction to one power ray.  The set
 
 ```math
-\lbrace u^k:k\ge0\rbrace
+\lbrace d u^k:k\ge0\rbrace
 ```
 
 has only $O(\log X)$ elements below $X$ and has finite reciprocal sum, so it
@@ -170,19 +198,22 @@ following working convention:
 
 1. the map is fixed and belongs to the signed unit family above;
 2. the orbit target remains $D_K(n)=\omega(\log K)$;
-3. every sufficiently large member of a complete geometric ray is required
+3. every sufficiently large member of an exact scaled geometric ray is required
    to be good; and
 4. arbitrary subsequences, starting-dependent maps, and existentially chosen
    isolated good starts are not counted as meaningful further weakenings.
 
-Under that convention, one complete power ray not aligned with the map base
-is the current weakest candidate.  A future proof, trivialization, or
-comparably natural thinner family should trigger another revision.
+Under that convention, one exact scaled power ray not multiplicatively
+aligned with the map base is the current weakest candidate.  A future proof,
+trivialization, or comparably natural thinner family should trigger another
+revision.
 
 ## Status
 
 Provisional and not literature-certified as open.  No admissible witness is
-known to satisfy the coprime-ray conclusion, and no reduction proves that a
-witness cannot exist.  Exact collapses, structural obstructions, attempted
-constructions, and the final no-weakening audit are recorded in the red-team
-note linked above.
+known to satisfy the scaled-ray conclusion, and no reduction proves that a
+witness cannot exist.  The coprime subcase has a local-fullness obstruction;
+the shared-prime subcase is retained because no elementary mechanism is
+known, not because that obstruction extends to it.  Exact collapses,
+structural obstructions, attempted constructions, and the final no-weakening
+audit are recorded in the red-team note linked above.
