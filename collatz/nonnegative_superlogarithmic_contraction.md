@@ -1,4 +1,4 @@
-# An Extremely Weak Collatz-like Conjecture
+# An All-Start Nonnegative Superlogarithmic Contraction Conjecture
 
 ## Superlogarithmic contraction count
 
@@ -70,12 +70,12 @@ Equivalently, for every fixed starting value $n$,
 
 No rate uniform in $n$ is asserted.
 
-## Relationship to the stronger conjectures
+## Relationship to adjacent conjectures
 
 Allowing signed unit multipliers, integer offsets, and integer-valued orbits
 gives the provisional
-[Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md).  The
-present conjecture implies that relaxation.
+[All-Start Signed Superlogarithmic Contraction Conjecture](signed_superlogarithmic_contraction.md).
+The present conjecture implies that relaxation.
 
 The pure-division family is a special case in which every
 contracting branch has
@@ -86,7 +86,7 @@ a_r=1,
 ```
 
 Consequently, the
-[Very Weak Collatz-like Conjecture](very_weak_collatzlike_conjecture.md),
+[Positive Division-Density Conjecture](positive_division_density.md),
 which asks for positive lower density in that subfamily, implies the present
 existential conjecture.  Positive lower density is much stronger than the
 superlogarithmic conclusion: $D_K(n)$ may grow faster than every constant

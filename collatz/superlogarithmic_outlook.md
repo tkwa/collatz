@@ -359,7 +359,7 @@ Evidence that would settle or strongly support $S$ includes:
   blocks;
 - a global invariant for one admissible map that rules out bounded-spacing
   chains of proportional gaps; or
-- any proof of the Very Weak positive-density conjecture or of classical
+- any proof of the Positive Division-Density Conjecture or of classical
   Collatz.
 
 ## Token expenditure

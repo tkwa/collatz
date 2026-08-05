@@ -10,27 +10,29 @@ maps.
 
 Throughout, `K` is the number of iterates and `D_K(n)` counts the relevant
 contracting-branch steps among the first `K` iterates of the starting value
-`n`.  In the pure-division family used by the Very Weak conjecture and the
-drift calculations below, these are precisely the division-branch steps.
+`n`.  In the pure-division family used by the Positive Division-Density
+Conjecture and the drift calculations below, these are precisely the
+division-branch steps.
 
 ## The scale
 
 | Score | Milestone |
 |---:|---|
 | **0** | **Current rigorous frontier.**  For a useful fixed map, every orbit satisfies `D_K(n) = Omega_n(log K)`.  The logarithmic constant can be made arbitrarily large only by changing maps; this does not give a superlogarithmic bound for one fixed map. |
-| **0.7** | **The provisional Weakest Collatz-like Conjecture.**  One fixed signed residue-affine map on the integers, with unit multipliers of both contracting and expanding absolute slope, satisfies `D_K(n) = omega(log K)` for every nonnegative starting value. |
-| **1.0** | **The Extremely Weak Collatz-like Conjecture.**  One fixed coprime residue-affine map with both contracting and expanding branches satisfies `D_K(n) = omega(log K)` for every starting value. |
+| **0.4** | **The Profinite Signed Superlogarithmic Contraction Conjecture.**  For one fixed signed residue-affine map, the nonnegative starts satisfying `D_K(n) = omega(log K)` are profinitely dense. |
+| **0.7** | **The All-Start Signed Superlogarithmic Contraction Conjecture.**  One fixed signed residue-affine map on the integers, with unit multipliers of both contracting and expanding absolute slope, satisfies `D_K(n) = omega(log K)` for every nonnegative starting value. |
+| **1.0** | **The All-Start Nonnegative Superlogarithmic Contraction Conjecture.**  One fixed coprime self-map of the nonnegative integers, with both contracting and expanding branches, satisfies `D_K(n) = omega(log K)` for every starting value. |
 | **1.2** | One fixed map has a universal polylogarithmic lower bound such as `D_K(n) >= (log K)^(1+epsilon)`. |
 | **1.4** | One fixed map has a universal fixed-power lower bound `D_K(n) >= K^epsilon`. |
 | **1.6** | One fixed map has `D_K(n) >= K^(1-epsilon)` for every fixed `epsilon > 0`. |
 | **1.8** | One fixed map has a near-linear but zero-density bound such as `D_K(n) >= K/(log K)^A`. |
-| **2.0** | **The Very Weak Collatz-like Conjecture.**  Every orbit of one fixed admissible map has positive lower division density, with the positive constant allowed to depend on the starting value. |
+| **2.0** | **The Positive Division-Density Conjecture.**  Every orbit of one fixed admissible map has positive lower division density, with the positive constant allowed to depend on the starting value. |
 | **2.4** | One fixed map has a positive division-density lower bound uniform over all starting values. |
 | **2.8** | The uniform density is explicit and quantitatively substantial, but remains below the map's negative-drift threshold. |
 | **3.2** | Universal density or branch-frequency bounds can be pushed arbitrarily close to the negative-drift threshold. |
 | **3.7** | Every orbit crosses the relevant negative-drift threshold. |
 | **4.2** | Full expanding-branch frequency control gives every orbit uniformly negative multiplicative drift, rather than merely many division steps. |
-| **4.8** | **The Weak Collatz-like Conjecture.**  Every orbit of one chosen admissible negative-drift map is eventually periodic. |
+| **4.8** | **The Negative-Drift Periodicity Conjecture.**  Every orbit of one chosen admissible negative-drift map is eventually periodic. |
 | **6.0** | **The classical Collatz conjecture.**  Every positive integer reaches the cycle `1 <-> 2` under the shortcut map. |
 | **7.0** | A common mechanism proves Collatz and a substantial nontrivial family of generalized Collatz maps. |
 | **8.0** | A broad theorem controls all maps in major structural classes of negative-drift residue-affine systems. |
@@ -89,10 +91,10 @@ need not control which expanding branches occur.
 
 ## Existential and universal meanings
 
-The Weak Collatz-like Conjecture in this repository is existential in the
-choice of map and universal only in the starting value.  Classical Collatz
-would prove it by supplying the shortcut Collatz map as a witness.  It is
-therefore placed below classical Collatz on this scale.
+The Negative-Drift Periodicity Conjecture in this repository is existential
+in the choice of map and universal only in the starting value.  Classical
+Collatz would prove it by supplying the shortcut Collatz map as a witness.  It
+is therefore placed below classical Collatz on this scale.
 
 The score-10 endpoint means something genuinely stronger: a theorem uniform
 across all admissible parameter choices satisfying the `B^B` condition.  If

@@ -1,4 +1,4 @@
-# A Weakest Collatz-like Conjecture
+# An All-Start Signed Superlogarithmic Contraction Conjecture
 
 ## Provisional signed-integer formulation
 
@@ -76,13 +76,18 @@ Equivalently, for every fixed $n\in\mathbb N_0$,
 Only the starting value is required to be nonnegative.  The orbit itself is
 an orbit in $\mathbb Z$, and no rate uniform in $n$ is asserted.
 
-## Relationship to the Extremely Weak conjecture
+## Relationship to adjacent conjectures
 
 The
-[Extremely Weak Collatz-like Conjecture](extremely_weak_collatzlike_conjecture.md)
+[All-Start Nonnegative Superlogarithmic Contraction Conjecture](nonnegative_superlogarithmic_contraction.md)
 requires positive multipliers and nonnegative offsets.  Its maps preserve
 $\mathbb N_0$, so that formulation is a special case of the present one.
-Consequently, the Extremely Weak conjecture implies this conjecture.
+Consequently, the nonnegative all-start conjecture implies this conjecture.
+
+Requiring the same conclusion only on a profinitely dense set of nonnegative
+starts gives the
+[Profinite Signed Superlogarithmic Contraction Conjecture](profinite_signed_superlogarithmic_contraction.md),
+which is implied by the present all-start statement.
 
 The converse is not known.  Integer offsets may let an orbit cross zero, and
 negative multipliers may reverse its direction.  These extra freedoms could
@@ -110,4 +115,4 @@ in the literature.
 
 The definition audit, proved structural observations, and attempted
 trivializations are recorded in
-[`asymptotic_progress/weakest_signed_integer_family.md`](asymptotic_progress/weakest_signed_integer_family.md).
+[`asymptotic_progress/signed_integer_family_redteam.md`](asymptotic_progress/signed_integer_family_redteam.md).

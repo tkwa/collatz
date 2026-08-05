@@ -2,9 +2,11 @@
 
 ## Status
 
-This note studies the enlarged parameter family in the revised Extremely Weak
-Collatz-like Conjecture.  Everything labelled **Proved** below is complete.
-No superlogarithmic lower bound is claimed.
+This note studies the enlarged parameter family in the revised
+[All-Start Nonnegative Superlogarithmic Contraction
+Conjecture](../nonnegative_superlogarithmic_contraction.md).  Everything
+labelled **Proved** below is complete.  No superlogarithmic lower bound is
+claimed.
 
 The main conclusion so far is negative but useful: allowing fixed contracting
 multipliers between `1` and `B-1` does not create a finite-state reset.  Unit

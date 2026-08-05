@@ -1,6 +1,6 @@
 # Weak Orbit Problems
 
-This repository collects very weak statements about deterministic sequences
+This repository collects deliberately modest statements about deterministic sequences
 whose typical behavior appears random but whose explicit or exceptional
 orbits are difficult to control.
 

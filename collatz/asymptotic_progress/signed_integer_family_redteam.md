@@ -3,7 +3,7 @@
 ## Status
 
 This note audits the provisional
-[Weakest Collatz-like Conjecture](../weakest_collatzlike_conjecture.md).
+[All-Start Signed Superlogarithmic Contraction Conjecture](../signed_superlogarithmic_contraction.md).
 It distinguishes proved structural facts from unsuccessful proof ideas.  No
 superlogarithmic lower bound is claimed.
 
@@ -233,8 +233,8 @@ c_r'=c_r+(a_r-B)M.
 
 A large $M$ moves contracting and expanding offsets in opposite directions.
 There is generally no single translation that makes every offset nonnegative,
-so the signed-offset formulation is not reduced to the Extremely Weak one by
-this elementary conjugacy.
+so the signed-offset formulation is not reduced to the nonnegative all-start
+one by this elementary conjugacy.
 
 ### Size comparison
 
@@ -253,7 +253,7 @@ integer.  The extra freedoms may nevertheless alter the global arithmetic of
 the unique ordinary starts that realize longer and longer prefixes.
 
 For that reason the signed-multiplier version is retained provisionally as the
-Weakest conjecture.  This is a research judgment, not a literature-certified
+all-start signed conjecture.  This is a research judgment, not a literature-certified
 open-status claim.  A future explicit witness, expansion-only ordinary orbit,
 or reduction to the positive family should trigger another revision.
 

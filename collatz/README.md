@@ -1,11 +1,19 @@
-# Weak Collatz-like Conjectures
+# Collatz-like Conjectures
 
-This repository records deliberately weak Collatz-like conjectures that retain a universal quantifier over starting values.
+This repository records deliberately modest Collatz-like conjectures with
+explicitly distinguished starting-set quantifiers, map families, and orbit
+conclusions.
 
-- [A Weak Collatz-like Conjecture](weak_collatzlike_conjecture.md) asks whether some admissible negative-drift residue-affine map has every orbit eventually become periodic.
-- [A Very Weak Collatz-like Conjecture](very_weak_collatzlike_conjecture.md) asks whether some relatively-prime residue-affine map gives every orbit a positive lower density of division-branch steps.
-- [An Extremely Weak Collatz-like Conjecture](extremely_weak_collatzlike_conjecture.md) asks whether some fixed coprime residue-affine map with both contracting and expanding branches gives every orbit a contraction-branch count satisfying $D_K(n)=\omega(\log K)$.
-- [A Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md) provisionally allows signed unit multipliers, integer offsets, and integer-valued orbits while retaining the same universal superlogarithmic contraction-count target for every nonnegative start.
+- [The Negative-Drift Periodicity Conjecture](negative_drift_periodicity.md) asks whether some admissible negative-drift residue-affine map has every orbit eventually become periodic.
+- [The Positive Division-Density Conjecture](positive_division_density.md) asks whether some relatively-prime residue-affine map gives every orbit a positive lower density of division-branch steps.
+- [The All-Start Nonnegative Superlogarithmic Contraction Conjecture](nonnegative_superlogarithmic_contraction.md) asks whether some fixed coprime self-map of $\mathbb N_0$ gives every orbit a contraction count satisfying $D_K(n)=\omega(\log K)$.
+- [The All-Start Signed Superlogarithmic Contraction Conjecture](signed_superlogarithmic_contraction.md) provisionally allows signed unit multipliers, integer offsets, and integer-valued orbits while retaining the same target for every nonnegative start.
+- [The Profinite Signed Superlogarithmic Contraction Conjecture](profinite_signed_superlogarithmic_contraction.md) asks only that the good nonnegative starting values be profinitely dense.
+
+In these names, **all-start** means every starting value in $\mathbb N_0$.
+The descriptive names expose the starting-set quantifier, map family, and
+required orbit property without relying on an extensible sequence of
+“weak,” “very weak,” and “weakest.”
 
 The [Collatz-like impressiveness ladder](collatz_ladder.md) places these
 conjectures, the classical Collatz conjecture, and broader universal
@@ -19,4 +27,6 @@ obstacles encountered by the current approaches are recorded in
 
 ## Status
 
-Open conjectures. This repository contains problem statements and context; it does not claim a proof or a specific construction.
+Provisional open problems. This repository contains problem statements and
+context; it does not claim a proof or a specific construction, or that every
+formulation has been certified as open in the literature.

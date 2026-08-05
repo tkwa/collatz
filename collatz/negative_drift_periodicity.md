@@ -1,4 +1,4 @@
-# A Weak Collatz-like Conjecture
+# A Negative-Drift Periodicity Conjecture
 
 Let $\mathbb N_0=\lbrace 0,1,2,\ldots\rbrace$.
 

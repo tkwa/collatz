@@ -1,4 +1,4 @@
-# A Very Weak Collatz-like Conjecture
+# A Positive Division-Density Conjecture
 
 ## Positive contraction density
 

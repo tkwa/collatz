@@ -13,9 +13,11 @@ is `q -> q`; that subfamily remains sufficient for the existential target.
 
 The provisional relaxation to signed unit multipliers, integer offsets, and
 integer-valued orbits is defined in
-[`../weakest_collatzlike_conjecture.md`](../weakest_collatzlike_conjecture.md).
+[`../signed_superlogarithmic_contraction.md`](../signed_superlogarithmic_contraction.md).
 Its definition audit and attempted trivializations are recorded in
-[`weakest_signed_integer_family.md`](weakest_signed_integer_family.md).
+[`signed_integer_family_redteam.md`](signed_integer_family_redteam.md).
+The further relaxation to a profinitely dense good-start set is defined in
+[`../profinite_signed_superlogarithmic_contraction.md`](../profinite_signed_superlogarithmic_contraction.md).
 
 Completed proofs must clearly distinguish proved lemmas from conjectural
 steps, identify the map being studied, and include enough supporting
