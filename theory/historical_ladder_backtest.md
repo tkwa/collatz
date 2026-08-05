@@ -82,12 +82,12 @@ unsolved.
 
 At historical date $t$, let $P_t$ be the public portfolio of proved theorems,
 computations, reductions, and explicit conditional implications.  Let
-$\operatorname{cl}(P_t)$ be its implication closure using reductions known by
+$\mathrm{cl}(P_t)$ be its implication closure using reductions known by
 that date.  A replay must not use later implications, later estimates of a
 method's promise, or the knowledge that a route eventually succeeded.
 
 For each route $r$, a complete route-production function
-$s_r(\operatorname{cl}(P_t))$ maps all complementary ingredients of that route
+$s_r(\mathrm{cl}(P_t))$ maps all complementary ingredients of that route
 to a score in $[0,10]$.  It may behave like a minimum across indispensable
 components, a calibrated nonlinear bottleneck function, or an implication
 graph with replacement costs.  It is not the maximum of its ingredients.
@@ -95,7 +95,7 @@ graph with replacement costs.  It is not the maximum of its ingredients.
 The conservative scalar is
 
 ```math
-S_{\max}(P_t)=\max_r s_r(\operatorname{cl}(P_t)).
+S_{\max}(P_t)=\max_r s_r(\mathrm{cl}(P_t)).
 ```
 
 A route may be added to a live benchmark once its target relevance is publicly
@@ -251,7 +251,7 @@ maximum over **ingredients** rather than over **complete production routes**.
 
 This asks how strong, general, and structurally informative the proved
 artifact is.  It is principally an ex post property of
-$\operatorname{cl}(P_t)$.  The extended Collatz ladder is close to this
+$\mathrm{cl}(P_t)$.  The extended Collatz ladder is close to this
 meaning.  A maximum over complete theorem routes is natural because the
 strongest proved consequence can dominate reach, although incomparable
 theorems should remain visible underneath.
