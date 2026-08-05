@@ -22,6 +22,11 @@ distinguish those cases.
 - [`mahler/`](mahler/) contains weak escape problems for fractional parts of
   powers.  A calibrated ladder for this folder has not yet been developed.
 
+Cross-problem design questions are developed in [`theory/`](theory/).  The
+[historical ladder backtest](theory/historical_ladder_backtest.md) compares
+scalar aggregation rules against bounded gaps, ternary Goldbach, prime
+progressions, and the Ricci-flow route to Poincare.
+
 Each folder should distinguish proved theorems, conditional implications,
 finite computation, heuristics, and subjective difficulty judgments.  There
 should be at most one conjecture called **Weakest** in a folder; that name is
