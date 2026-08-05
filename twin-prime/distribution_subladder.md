@@ -44,8 +44,8 @@ $x^\vartheta$.  A generalized Elliott--Halberstam statement gives analogous
 control for the admissible convolutions $\alpha*\beta$ needed by generalized
 sieve arguments.
 
-“Full GEH,” often written $\operatorname{GEH}[1]$, conventionally means
-$\operatorname{GEH}[\vartheta]$ for every fixed $\vartheta\lt1$.  It does not
+“Full GEH,” often written $\mathrm{GEH}[1]$, conventionally means
+$\mathrm{GEH}[\vartheta]$ for every fixed $\vartheta\lt1$.  It does not
 mean a uniform estimate including all moduli at the literal endpoint
 $\vartheta=1$.
 
@@ -56,11 +56,11 @@ $\vartheta=1$.
 | $D_0$ | Current Bombieri--Vinogradov-type level-$1/2$ control for the standard relevant classes, together with known beyond-$1/2$ results under restrictions such as special modulus factorization. |
 | $D_1$ | Arbitrary-modulus $1/2+\delta$ control for one genuine balanced convolution regime, for some fixed $\delta\gt0$. |
 | $D_2$ | One common exponent $1/2+\delta$ across the Type I and Type II regimes used in modern decompositions of prime weights. |
-| $D_3$ | The remaining Type III, highly unbalanced, endpoint, and uniformity regimes are controlled, giving the first full $\operatorname{GEH}[1/2+\delta]$. |
-| $D_4$ | Full $\operatorname{GEH}[2/3]$. |
-| $D_5$ | Full $\operatorname{GEH}[3/4]$. |
-| $D_6$ | Full $\operatorname{GEH}[1-\delta_0]$ for a small fixed $\delta_0$, provisionally represented by $\delta_0=0.1$. |
-| $D_7$ | $\operatorname{GEH}[\vartheta]$ for every fixed $\vartheta\lt1$ on a broad core class, with only clearly identified coefficient, endpoint, or uniformity restrictions remaining. |
+| $D_3$ | The remaining Type III, highly unbalanced, endpoint, and uniformity regimes are controlled, giving the first full $\mathrm{GEH}[1/2+\delta]$. |
+| $D_4$ | Full $\mathrm{GEH}[2/3]$. |
+| $D_5$ | Full $\mathrm{GEH}[3/4]$. |
+| $D_6$ | Full $\mathrm{GEH}[1-\delta_0]$ for a small fixed $\delta_0$, provisionally represented by $\delta_0=0.1$. |
+| $D_7$ | $\mathrm{GEH}[\vartheta]$ for every fixed $\vartheta\lt1$ on a broad core class, with only clearly identified coefficient, endpoint, or uniformity restrictions remaining. |
 | $D_8$ | Full standard GEH for all admissible convolution classes and every fixed $\vartheta\lt1$. |
 
 The values $2/3$, $3/4$, and $0.9$ are calibration landmarks, not claims that
@@ -70,8 +70,8 @@ later numerical increments combined.
 
 ## Ordinary EH is a side branch
 
-Ordinary $\operatorname{EH}[\vartheta]$ and
-$\operatorname{GEH}[\vartheta']$ with different exponents need not be
+Ordinary $\mathrm{EH}[\vartheta]$ and
+$\mathrm{GEH}[\vartheta']$ with different exponents need not be
 linearly comparable.  The clean way to score an EH theorem is to locate it at
 high $\vartheta$ but narrower $\mathcal C$, then use estimated replacement
 work and its proved gap consequence to determine the scalar $D$ credit.
