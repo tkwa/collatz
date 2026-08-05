@@ -53,7 +53,7 @@ $\vartheta=1$.
 
 | Level | Distribution milestone |
 |---:|---|
-| $D_0$ | Current Bombieri--Vinogradov-type level-$1/2$ control for the standard relevant classes, together with known beyond-$1/2$ results under restrictions such as special modulus factorization. |
+| $D_0$ | Current Bombieri--Vinogradov-type control at level $1/2$ for the standard relevant classes, together with known results beyond $1/2$ under restrictions such as special modulus factorization. |
 | $D_1$ | Arbitrary-modulus $1/2+\delta$ control for one genuine balanced convolution regime, for some fixed $\delta\gt0$. |
 | $D_2$ | One common exponent $1/2+\delta$ across the Type I and Type II regimes used in modern decompositions of prime weights. |
 | $D_3$ | The remaining Type III, highly unbalanced, endpoint, and uniformity regimes are controlled, giving the first full $\mathrm{GEH}[1/2+\delta]$. |
