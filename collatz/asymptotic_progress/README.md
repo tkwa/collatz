@@ -16,8 +16,12 @@ integer-valued orbits is defined in
 [`../signed_superlogarithmic_contraction.md`](../signed_superlogarithmic_contraction.md).
 Its definition audit and attempted trivializations are recorded in
 [`signed_integer_family_redteam.md`](signed_integer_family_redteam.md).
-The further relaxation to a profinitely dense good-start set is defined in
-[`../profinite_signed_superlogarithmic_contraction.md`](../profinite_signed_superlogarithmic_contraction.md).
+The current moving weakest relaxation, restricted to one coprime power ray, is
+defined in
+[`../weakest_collatzlike_conjecture.md`](../weakest_collatzlike_conjecture.md).
+Its red-team audit, including the proof that the discarded profinite
+relaxation is elementary, is in
+[`weakest_coprime_ray_redteam.md`](weakest_coprime_ray_redteam.md).
 
 Completed proofs must clearly distinguish proved lemmas from conjectural
 steps, identify the map being studied, and include enough supporting

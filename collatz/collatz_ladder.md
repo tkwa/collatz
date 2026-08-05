@@ -19,7 +19,7 @@ division-branch steps.
 | Score | Milestone |
 |---:|---|
 | **0** | **Current rigorous frontier.**  For a useful fixed map, every orbit satisfies `D_K(n) = Omega_n(log K)`.  The logarithmic constant can be made arbitrarily large only by changing maps; this does not give a superlogarithmic bound for one fixed map. |
-| **0.4** | **The Profinite Signed Superlogarithmic Contraction Conjecture.**  For one fixed signed residue-affine map, the nonnegative starts satisfying `D_K(n) = omega(log K)` are profinitely dense. |
+| **0.4** | **The Weakest Collatz-like Conjecture.**  One fixed signed unit residue-affine map satisfies `D_K(n) = omega(log K)` on every sufficiently large member of one existentially chosen power ray whose base is coprime to the map base. |
 | **0.7** | **The All-Start Signed Superlogarithmic Contraction Conjecture.**  One fixed signed residue-affine map on the integers, with unit multipliers of both contracting and expanding absolute slope, satisfies `D_K(n) = omega(log K)` for every nonnegative starting value. |
 | **1.0** | **The All-Start Nonnegative Superlogarithmic Contraction Conjecture.**  One fixed coprime self-map of the nonnegative integers, with both contracting and expanding branches, satisfies `D_K(n) = omega(log K)` for every starting value. |
 | **1.2** | One fixed map has a universal polylogarithmic lower bound such as `D_K(n) >= (log K)^(1+epsilon)`. |

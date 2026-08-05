@@ -10,10 +10,12 @@ orbits are difficult to control.
   of powers with an explicit transcendental base and with an existentially
   chosen subquadratic rational base.
 
-The Collatz and rational-base problems retain difficult universal quantifiers
-over starting values. The explicit-transcendental conjecture fixes the base
-$e$ but permits one existentially chosen positive algebraic starting value,
-asking only that the fractional parts not converge to zero.
+The main Collatz and rational-base problems retain difficult universal
+quantifiers over starting values.  The Collatz folder also maintains a moving
+weakest candidate on a fixed sparse starting family, with the trivial
+relaxations recorded explicitly.  The explicit-transcendental conjecture
+fixes the base $e$ but permits one existentially chosen positive algebraic
+starting value, asking only that the fractional parts not converge to zero.
 
 ## Criteria
 
