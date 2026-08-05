@@ -314,21 +314,23 @@ leading-route maximum unchanged.  A broad theorem can raise impressiveness
 more than forecast probability.  A duplicated proof can be impressive but
 add little replacement work after overlap is removed.
 
-### Recommended minimal dashboard
+### Selected score and optional diagnostics
 
-Until one objective is explicitly selected, store the full artifact graph and
-publish three labeled outputs:
+This repository has selected **reach** as its common scalar: a conservative
+theorem-strength contour, usually obtained from implication closure and
+complete route states.  Store the full artifact graph beneath that score.
+When useful, publish two separately labeled diagnostics rather than folding
+them into reach:
 
-1. **Reach** $R$: conservative theorem-strength contour, usually a
-   route-level maximum.
-2. **Banked work** $B$: logarithm of leading-route or overlap-adjusted
+1. **Banked work** $W$: the logarithm of leading-route or overlap-adjusted
    portfolio replacement work, with the choice printed beside the number.
-3. **Forecast** $F_{X,Y}$: probabilities for a small fixed grid of effort
+2. **Forecast** $F_{X,Y}$: probabilities for a small fixed grid of effort
    multiples and target levels.
 
-Report skip and smoothness diagnostics beside these outputs, not as a fourth
-achievement score.  If a single benchmark number is mandatory, choose its
-estimand first and put that noun in the score's name.
+Report skip and smoothness diagnostics beside these outputs, not as another
+achievement score.  This preserves the information needed for forecasting
+without creating a second scalar ladder or colliding with the notation $B_A$
+for an area's 2026 stock.
 
 ## Q1: are ladders predictive, or merely smooth in hindsight?
 
@@ -472,20 +474,27 @@ extra parameters are estimated out of sample.
 
 Let $A_j$ be the cumulative actual human-equivalent effort at historical event
 $j$, and let $S_j$ be the contemporaneously assigned score after that event.
-For a prospective 2026 ladder in a predeclared area $A$, the corresponding
-clock is $C_A(s)=B_A+F_A(s)$: the directed-equivalent 2026 stock plus future
-directed effort.  Because either clock is uncertain, every statistic below
-should be computed over an elicited distribution, not a single invented hour
-count.
+For a prospective 2026 ladder in a predeclared area $A$, let $B_A$ be the
+directed-equivalent 2026 stock and $F_A(s)$ the future directed effort from
+that baseline.  The score-`5` anchor compares
+$C_A(s)=B_A+F_A(s)$ with $B_A$, while prospective integer skips compare the
+future clock $F_A$.  Because either quantity is uncertain, every statistic
+below should be computed over an elicited distribution, not a single invented
+hour count.
 
 ### Integer-boundary skipping
 
-Let $A(i)$ be the first cumulative effort at which $S_j\ge i$.  Boundary $i$
-is skipped under the repository's proposed rule when
+For a historical replay, let $A(i)$ be the first cumulative effort at which
+$S_j\ge i$.  Boundary $i$ is skipped when
 
 ```math
 A(i+1)\lt1.1A(i).
 ```
+
+For a prospective 2026 ladder, use $F_A(i)$ in the same inequality for every
+integer $i\ge1$.  The ratio is undefined at the July-2026 baseline
+$F_A(0)=0$; whether the first score-`1` result overshoots the first positive
+rung is a separate baseline diagnostic, not a `0`-skip under the ratio rule.
 
 Report the posterior probability of a skip, the expected number of skipped
 integer boundaries, and the longest run of consecutive skips.  Treat several

@@ -58,7 +58,7 @@ that each folder's headline conjecture has the same endpoint.  Score `0` is the
 current rigorous frontier in a folder, and its first positive rung must be
 open.  The cross-problem anchors are:
 
-- score `5` represents, very roughly, one to two doublings of cumulative
+- score `5` represents, very roughly, two to four doublings of cumulative
   human-equivalent effort in the relevant area beyond its 2026 frontier;
 - score `10` is roughly the median difficulty of the three individual
   problems BB(6), Schanuel's conjecture, and the general Vojta conjecture; and
@@ -79,7 +79,7 @@ strategically directed at first reaching score $s$.  The cumulative clock is
 C_A(s)=B_A+F_A(s).
 ```
 
-A central estimate at score `5` should have $C_A(5)/B_A$ between `2` and `4`.
+A central estimate at score `5` should have $C_A(5)/B_A$ between `4` and `16`.
 Declaring the area first prevents moving its boundary merely to preserve a
 favored rung.
 
@@ -90,10 +90,10 @@ log effort increase smoothly.  Prefer lattice points that preserve several
 natural implication paths.  A rung may be a disjunction of independently
 ordered statements only when that makes progress significantly smoother.
 
-At integer $n$, an $n$-skip occurs when reaching $n+1$ takes less than `1.1`
-times the cumulative human-equivalent effort needed to reach $n$.  Prospective
-audits therefore compare $C_A(n+1)$ with $C_A(n)$, including the 2026 stock in
-both quantities, rather than comparing future effort alone.
+Measure future effort from the July 2026 baseline.  For integer $n\ge1$, an
+$n$-skip occurs when $F_A(n+1)\lt1.1F_A(n)$.  The `0`-to-`1` audit instead asks
+whether the first post-baseline theorem that reaches score `1` overshoots the
+first positive rung; the ratio rule would be undefined at $F_A(0)=0$.
 If any estimated integer-skip probability exceeds `50%`, replace or reorder
 the relevant rungs.  If no arrangement brings the maximum below `50%`, use
 fewer integer levels rather than inventing cosmetic milestones.
