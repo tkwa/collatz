@@ -69,18 +69,31 @@ current rigorous frontier in a folder.  The cross-problem anchors are:
   problems BB(6), Schanuel's conjecture, and the general Vojta conjecture; and
 - score `20` is roughly the difficulty of BB(7).
 
-For the score-`5` anchor, first declare the relevant area and estimate its 2026
-stock of directed-equivalent effort.  General historical effort in that area
-counts as about half as useful as effort strategically directed at the
-benchmark.  This is not a count of all effort in mathematics.  A central
-estimate at score `5` should therefore represent about two to four times that
-area-specific 2026 stock after adding future directed effort.
+For the score-`5` anchor, declare the relevant area before selecting its
+rungs.  Let $B_A$ be that area's 2026 stock of directed-equivalent effort and
+let $F_A(s)$ be future effort strategically directed at first reaching score
+$s$.  General historical effort in the declared area counts as about half as
+useful as directed strategic effort; effort outside the area is not included.
+The cumulative clock is
+
+```math
+C_A(s)=B_A+F_A(s).
+```
+
+A central estimate at score `5` should have $C_A(5)/B_A$ between `2` and `4`.
+Declaring the area first prevents moving its boundary merely to preserve a
+favored rung.
 
 Numerical scores are contours through a multidimensional theorem state, not a
 claim that proofs must traverse a linear list of lemmas.  One theorem may jump
 several contours.  Milestones should be chosen or replaced to make expected
 log effort increase smoothly; a rung may be a disjunction of independently
 ordered statements when that materially reduces skip risk.
+
+At integer $n$, an $n$-skip occurs when reaching $n+1$ takes less than `1.1`
+times the cumulative human-equivalent effort needed to reach $n$.  Prospective
+audits therefore compare $C_A(n+1)$ with $C_A(n)$, including the 2026 stock in
+both quantities, rather than comparing future effort alone.
 
 ## Headline targets and extended reach
 

@@ -88,9 +88,10 @@ method's promise, or the knowledge that a route eventually succeeded.
 
 For each route $r$, a complete route-production function
 $s_r(\mathrm{cl}(P_t))$ maps all complementary ingredients of that route
-to a score in $[0,10]$.  It may behave like a minimum across indispensable
-components, a calibrated nonlinear bottleneck function, or an implication
-graph with replacement costs.  It is not the maximum of its ingredients.
+to the repository's common nonnegative difficulty scale.  It may behave like
+a minimum across indispensable components, a calibrated nonlinear bottleneck
+function, or an implication graph with replacement costs.  It is not the
+maximum of its ingredients, and a folder's target need not have score `10`.
 
 The conservative scalar is
 
@@ -422,7 +423,8 @@ The temperature $\tau$ controls how much secondary routes matter.  This is
 smoother than a hard maximum, but the result changes if one route is split
 into two correlated descriptions.  It needs route priors and overlap
 corrections.  Once the target is proved, implication closure should set every
-route's outcome state to `10`, so the endpoint remains `10`.
+route's outcome state to the target's score on the common scale; it should not
+reset the target to `10`.
 
 ### Overlap-adjusted artifact portfolio
 
@@ -470,8 +472,11 @@ extra parameters are estimated out of sample.
 
 Let $A_j$ be the cumulative actual human-equivalent effort at historical event
 $j$, and let $S_j$ be the contemporaneously assigned score after that event.
-Because $A_j$ is uncertain, every statistic below should be computed over an
-elicited distribution, not a single invented hour count.
+For a prospective 2026 ladder in a predeclared area $A$, the corresponding
+clock is $C_A(s)=B_A+F_A(s)$: the directed-equivalent 2026 stock plus future
+directed effort.  Because either clock is uncertain, every statistic below
+should be computed over an elicited distribution, not a single invented hour
+count.
 
 ### Integer-boundary skipping
 
@@ -479,7 +484,7 @@ Let $A(i)$ be the first cumulative effort at which $S_j\ge i$.  Boundary $i$
 is skipped under the repository's proposed rule when
 
 ```math
-A(i+1)\lt1.05A(i).
+A(i+1)\lt1.1A(i).
 ```
 
 Report the posterior probability of a skip, the expected number of skipped
@@ -509,15 +514,17 @@ Smoothness should be reported against both actual reconstructed effort and
 replacement effort.  The first measures the historical research process; the
 second measures the mathematical stock.  They answer different questions.
 
-## The semantics of $\exp(S)$
+## The semantics of an exponential local fit
 
-The equation
+An equation such as
 
 ```math
-W(P)\approx C\exp(S(P))
+W(P)\approx C\exp(\lambda S(P))
 ```
 
-is coherent only after $W$ is named.
+is coherent only after $W$ is named and $\lambda$ is fitted for the declared
+area and range.  The repository's cross-problem anchors do not imply one
+global exchange rate between a score point and effort.
 
 - Under a hard maximum over complete routes, $W$ is approximately the
   **replacement work embodied in the leading route**, not all work performed
@@ -533,8 +540,8 @@ is coherent only after $W$ is named.
   it is not the probability itself.
 
 Thus a multiplicative work interpretation is not an argument for one
-aggregator.  It is a constraint on the semantics after the objective is
-chosen.
+aggregator or for endpoint normalization.  It is a constraint on the
+semantics after the objective is chosen.
 
 ## Recommendation for this repository
 
@@ -549,9 +556,10 @@ chosen.
 4. Do not call that score an all-things-considered forecast.  Publish
    $F_{X,Y}$ separately using a dependency-aware portfolio with explicit
    unseen-route mass.
-5. Decide whether the repository's $e^S$ language means leading-route or
-   total-portfolio replacement work.  It cannot mean actual cumulative hours
-   while remaining a state-only score.
+5. Name the work quantity and fit any local score-to-effort exchange rate
+   explicitly.  It cannot mean actual cumulative hours while remaining a
+   state-only score, and it must not override the shared `5`, `10`, and `20`
+   anchors.
 6. Preserve the four historical cases in a versioned replay dataset and add
    eligible censored cases.  Fit no numerical contour until blind,
    leave-one-problem-out tests are possible.
