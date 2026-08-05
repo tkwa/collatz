@@ -77,7 +77,7 @@ c=2.
 Consequently, the universal one-expander conjecture implies classical
 Collatz's eventual-periodicity half, but it does not identify the classical
 cycle.  The ladder places the full classical Collatz conjecture lower because
-score `5` also identifies `1 <-> 2` as the destination of every positive
+score `5` also identifies $1\leftrightarrow2$ as the destination of every positive
 start.
 
 ## Why the family stops here

@@ -38,7 +38,7 @@ inputs among the first $K$ iterates of $n$.
 | **2.0** | **Classical positive division density.**  Every positive shortcut-Collatz orbit has positive lower even-step density. |
 | **2.3** | **Classical drift-threshold frequency.**  Every positive shortcut-Collatz orbit satisfies $\liminf_{K\to\infty}D_K^{\rm Col}(n)/K\ge\theta_{\rm Col}$, where $\theta_{\rm Col}=1-\frac{\log 2}{\log 3}$. |
 | **3.0** | **Classical bounded-orbit conjecture.**  Every positive shortcut-Collatz orbit is bounded, equivalently eventually periodic in some positive cycle. |
-| **4.0** | **Finite-attractor Collatz conjecture.**  Every positive orbit eventually enters one of finitely many positive cycles. |
+| **4.0** | **Finite-attractor Collatz conjecture.**  There exists a finite set of positive cycles such that every positive orbit eventually enters one of them. |
 | **5.0** | **Classical Collatz conjecture.**  Every positive integer reaches $1$, equivalently the cycle $1\leftrightarrow2$. |
 | **6.0** | **Polynomial uniform stopping bound.**  There is an $A\gt0$ such that $M(X)=O(X^A)$. |
 | **7.0** | **Polylogarithmic uniform stopping bound.**  There is an $A\gt0$ such that $M(X)=O((\log X)^A)$. |
@@ -180,9 +180,9 @@ directed-equivalent expert-years, with an 80% range of `750--4,500`.  This is
 an elicitation prior, not a bibliometric measurement.  The following ratios
 are calibration targets used to place statements, not estimates inferred
 from their scores.  The final column reports future effort from the July 2026
-baseline, the clock used by the skip rule.  Ratios for unchanged statements
-retain the prior elicitation; the new score-`4` contour and the endpoint use
-fresh overlap-aware central judgments.
+baseline, the clock used by the skip rule.  The endpoint estimate separately
+prices both conjuncts and allows for uncertain overlap between their proof
+machinery.
 
 | Score | $C_{Col}(s)/B_{Col}$ | $F_{Col}(s)/B_{Col}$ | $\log_{10}F_{Col}(s)$ at the central stock |
 |---:|---:|---:|---:|

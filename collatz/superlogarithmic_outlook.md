@@ -13,11 +13,11 @@ D_K(n)=\omega(\log K).
 Here $D_K(n)$ is the number of division-branch steps among the first $K$
 iterates.  This is an existential statement about the choice of map, followed
 by a universal statement about all of its ordinary nonnegative-integer
-orbits.  The target is not tied to the initial $4/3$-type diagnostic map or to
-any other particular candidate family.
+orbits.  The target is not tied to any particular diagnostic map or candidate
+family.
 
 It does not assess the repository's moving
-[Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md), which now
+[Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md), which
 requires the same asymptotic only along one existentially chosen coprime power
 ray.  On the [impressiveness ladder](collatz_ladder.md), the all-start target
 here is score `0.6` and the sparse-ray target is score `0.2`.  The probability
@@ -111,8 +111,8 @@ Three considerations push toward $C$ being true.
    Collatz orbit is below $f(N)$ for almost all $N$ in logarithmic density.
    This is a theorem about the actual arithmetic map, not merely simulation.
 3. Direct computation has verified convergence for every starting value below
-   $2^{71}$, with the project now reporting a slightly larger bound.  No
-   counterexample occurs in that exhaustive range.
+   $2^{71}$.  The linked project reports the current frontier; no
+   counterexample occurs in the stated exhaustive range.
 
 The relevant primary references are Tao's
 [almost-bounded-orbits theorem](https://arxiv.org/abs/1909.03562) and Barina's
