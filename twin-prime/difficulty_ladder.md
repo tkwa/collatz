@@ -69,12 +69,12 @@ because no consensus estimate of human-equivalent effort exists.
 | Closed state | Provisional target score | Work represented relative to baseline | Interpretation |
 |---|---:|---:|---|
 | $(246,D_0)$ | **0** | $1$ | Current rigorous state. |
-| $(100,D_0)$ | **1--2** | $3$--$7$ | A material unconditional improvement without a new general distribution theorem. |
-| $(50,D_0)$ | **2.5--4** | $12$--$55$ | Roughly an order-of-magnitude narrowing of the bounded-gap interval. |
-| First full $\mathrm{GEH}[1/2+\delta]$, with its best unconditional consequence | **4--5.5** | $55$--$245$ | The full convolution class crosses the classical one-half barrier. |
-| Full EH and $H_1\le12$ | **5.5--7** | $245$--$1{,}097$ | Near-maximal distribution for primes, but not generalized convolutions or parity breaking. |
-| Full GEH and $H_1\le6$ | **7.5--8.5** | $1{,}808$--$4{,}915$ | The standard distribution route is essentially exhausted; the specific-pair obstruction remains. |
-| $H_1\le4$ | **8.5--9.5** | $4{,}915$--$13{,}360$ | A new idea has gone below the GEH-based three-point barrier. |
+| $(100,D_0)$ | **1--2** | $3\text{--}7$ | A material unconditional improvement without a new general distribution theorem. |
+| $(50,D_0)$ | **2.5--4** | $12\text{--}55$ | Roughly an order-of-magnitude narrowing of the bounded-gap interval. |
+| First full $\mathrm{GEH}[1/2+\delta]$, with its best unconditional consequence | **4--5.5** | $55\text{--}245$ | The full convolution class crosses the classical one-half barrier. |
+| Full EH and $H_1\le12$ | **5.5--7** | $245\text{--}1{,}097$ | Near-maximal distribution for primes, but not generalized convolutions or parity breaking. |
+| Full GEH and $H_1\le6$ | **7.5--8.5** | $1{,}808\text{--}4{,}915$ | The standard distribution route is essentially exhausted; the specific-pair obstruction remains. |
+| $H_1\le4$ | **8.5--9.5** | $4{,}915\text{--}13{,}360$ | A new idea has gone below the GEH-based three-point barrier. |
 | $H_1=2$ | **10** | $22{,}026$ | Twin primes. |
 
 The full-EH and full-GEH rows use the optimized conditional gap consequences
