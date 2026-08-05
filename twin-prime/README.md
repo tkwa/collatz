@@ -64,7 +64,7 @@ claims.  The main structural anchors are:
   which records the unconditional bound $H_1\le246$ and the conditional
   $H_1\le6$ consequence of generalized Elliott--Halberstam; and
 - Terence Tao,
-  [“The logarithmically averaged Chowla and Elliott conjectures for two-point correlations”](https://doi.org/10.1017/fmp.2016.10),
+  [“The logarithmically averaged Chowla and Elliott conjectures for two-point correlations”](https://doi.org/10.1017/fmp.2016.6),
   which proves a logarithmically averaged two-point correlation theorem but
   not the Cesàro statement or twin primes.
 
