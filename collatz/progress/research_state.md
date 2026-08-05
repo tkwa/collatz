@@ -11,7 +11,7 @@ T(3q)=q,\qquad T(3q+1)=28q+2,\qquad T(3q+2)=q.
 Write
 
 ```math
-D_K(n)=\#\{0\le j<K:T^j(n)\not\equiv1\pmod 3\}.
+D_K(n)=\#\lbrace 0\le j\lt K:T^j(n)\not\equiv1\pmod 3\rbrace.
 ```
 
 The target is
@@ -274,8 +274,8 @@ gives, for every `N`,
 
 ```math
 x_0=
-\frac{3^N x_N}{\prod_{0\le j<N}a_j}
-+\sum_{0\le j<N}
+\frac{3^N x_N}{\prod_{0\le j\lt N}a_j}
++\sum_{0\le j\lt N}
 \frac{b_j3^j}{\prod_{0\le i\le j}a_i}.
 ```
 
