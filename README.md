@@ -22,6 +22,11 @@ distinguish those cases.
   Elliott--Halberstam progress non-decisive.
 - [`mahler/`](mahler/) contains weak escape problems for fractional parts of
   powers.  A calibrated ladder for this folder has not yet been developed.
+- [`abc/`](abc/) tracks the size of a coprime triple against its radical, from
+  the current best unconditional exponent up to the general Vojta conjecture.
+  Its headline conjecture sits below the endpoint of its ladder, so its scores
+  are not directly comparable with twin-prime scores without a stated
+  conversion.
 
 Cross-problem design questions are developed in [`theory/`](theory/).  The
 [historical ladder backtest](theory/historical_ladder_backtest.md) compares
