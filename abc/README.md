@@ -30,36 +30,33 @@ A system that proves abc has not exhausted the folder.
 
 ## Scoring convention used here
 
-This folder follows the **Collatz-style** convention: score `0` is the current
-rigorous frontier, the headline conjecture sits at **5--6**, and score `10` is
-the map-universal endpoint.  It does **not** follow the
-[twin-prime](../twin-prime/difficulty_ladder.md) convention, where the
-headline conjecture is calibrated to `10`.
-
-This inconsistency is deliberate but must not be hidden: **scores from this
-folder are not comparable with twin-prime scores without a stated conversion.**
-Any cross-folder aggregation rule should be tested against
-[`theory/historical_ladder_backtest.md`](../theory/historical_ladder_backtest.md)
-before use.
+This folder uses the repository-wide difficulty calibration.  Score `0` is
+the current rigorous frontier, ordinary abc over $\mathbb Q$ is score `5`, and
+general Vojta is score `10`.  abc sits below the endpoint because it is a
+specialization, not because this folder resets the scale.  These scores are
+directly comparable in meaning with the other folders, subject to the wide
+uncertainty stated in each ladder.
 
 ## Files
 
 - [`difficulty_ladder.md`](difficulty_ladder.md) is the primary scale.
-- [`effectivity_and_routes.md`](effectivity_and_routes.md) records the second
-  coordinate (effectivity), the plateau-then-cliff risk from the
+- [`effectivity_and_routes.md`](effectivity_and_routes.md) records the
+  orthogonal effectivity coordinate, the plateau-then-cliff risk from the
   function-field and Nevanlinna analogues, and the adjudication rule.
 
-## The two coordinates
+## Recorded state
 
 | Coordinate | Meaning |
 |---|---|
 | $\Theta$ | The best proved unconditional upper bound for $\log c$ as a function of $R$, ordered by growth. |
+| $V=(d,r)$ | The dimension and algebraic-point-degree reach of a proved truncated Vojta statement. |
 | $E$ | The effectivity state: whether the constants in the current best bound are computable. See [`effectivity_and_routes.md`](effectivity_and_routes.md). |
 
-The two are not reducible to one number.  Roth-, Schmidt-, and
-Faltings-type arguments are structurally ineffective; Baker's method is
-effective but loses an exponential factor.  A rung can clear one wall without
-touching the other, so the benchmark records both.
+The scalar ladder selects implication points from $\Theta$ and $V$.
+Effectivity remains an auxiliary diagnostic rather than an independent scalar
+rung: Roth-, Schmidt-, and Faltings-type arguments are structurally
+ineffective, while Baker's method is effective but loses an exponential
+factor.
 
 ## Status classes
 

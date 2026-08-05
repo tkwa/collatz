@@ -19,18 +19,18 @@ programme.
 
 ## Benchmark documents
 
-- [`difficulty_ladder.md`](difficulty_ladder.md) defines the two-coordinate
-  state, target-normalized score, calibration anchors, and an extended ladder
-  above twin primes.
+- [`difficulty_ladder.md`](difficulty_ladder.md) defines the lower-ladder
+  two-coordinate state and a shared-scale disjunctive ladder that continues above
+  twin primes to Bateman--Horn.
 - [`distribution_subladder.md`](distribution_subladder.md) develops the
   prime-distribution coordinate from Bombieri--Vinogradov-type information to
   generalized Elliott--Halberstam.
 - [`parity_and_alternative_routes.md`](parity_and_alternative_routes.md)
   explains why GEH is not assumed to be load-bearing and records
-  parity-breaking and correlation routes that the two-coordinate score does
+  parity-breaking and correlation routes that the lower-ladder coordinates do
   not directly represent.
 
-## Two-coordinate state
+## Lower-ladder state
 
 The formal state is
 
@@ -40,15 +40,20 @@ x=(H,D),
 
 where $H$ is the best proved unconditional upper bound for $H_1$ and $D$ is
 the strongest proved prime-distribution milestone on the distribution
-subladder.  The state is closed under known implications.  In particular, a
+subladder.  These coordinates cover the ladder through twin primes; stronger
+quantitative and breadth rungs are recorded directly.  The state is closed
+under known implications.  In particular, a
 proof of full GEH would also establish the standard conditional consequence
 $H_1\le6$, so it moves both coordinates.
 
-The benchmark intentionally does not add a third parity coordinate.  A
+The benchmark intentionally does not add a third parity coordinate.  The
+displayed scalar rungs use disjunctions of implication paths rather than a
+weighted average of $H$ and $D$.  A
 Chowla-type estimate, local Fourier-uniformity theorem, or new bilinear method
 may be excellent evidence about a future route without yet implying a better
-$H$ or $D$.  Such a result is documented, but its formal score remains
-unchanged until it has a proved consequence in one of the two coordinates.
+$H$ or $D$.  Below twin primes, such a result is documented but its formal
+score remains unchanged until it has a proved consequence in one of the two
+coordinates.
 
 This is conservative.  It is preferable to assigning speculative fractions
 of progress to techniques whose connection to twin primes is not yet a

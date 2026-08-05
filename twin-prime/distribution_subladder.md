@@ -20,9 +20,10 @@ for broad convolutions arising in sieve decompositions.  A theorem with a
 slightly smaller exponent but a much broader class need not be weaker for
 twin-prime purposes.
 
-The overall twin-prime benchmark still has only two coordinates: $H$ and the
-scalar $D$.  The pair $(\vartheta,\mathcal C)$ is used only to calibrate $D$
-without pretending that EH and GEH form one elementary linear chain.
+The lower ladder through twin primes uses $H$ and the scalar $D$.  The pair
+$(\vartheta,\mathcal C)$ is used only to calibrate $D$ without pretending that
+EH and GEH form one elementary linear chain; stronger rungs are recorded
+directly above twin primes.
 
 ## Informal definitions
 
@@ -92,10 +93,11 @@ Neither implication reaches $H_1=2$.
 ## Scoring the subladder
 
 Do not assign equal score increments to equal changes in $\vartheta$.  For
-each transition, estimate a distribution of human-equivalent replacement
-cost conditional on the previous state.  The scalar distribution credit is
-the logarithm of cumulative target-relevant work, with shared lemmas counted
-once.
+each transition, estimate cumulative effort on the shared
+$C_{PP}=B_{PP}+F_{PP}$ clock and count shared lemmas once.  The public ladder
+does not give this subladder an independent score: it pairs selected EH and
+GEH statements with gap milestones in logical disjunctions.  No fixed
+score-to-effort exchange rate is assumed.
 
 A future calibration should separately elicit at least:
 

@@ -20,7 +20,7 @@ It does not assess the repository's moving
 [Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md), which now
 requires the same asymptotic only along one existentially chosen coprime power
 ray.  On the [impressiveness ladder](collatz_ladder.md), the all-start target
-here is score `1.0` and the sparse-ray target is score `0.2`.  The probability
+here is score `1.2` and the sparse-ray target is score `0.3`.  The probability
 and proof-difficulty judgments below should not be transferred to the latter
 without a separate recalibration.
 

@@ -40,27 +40,23 @@ natural statement is shown to remain nontrivial.
 
 ## What a benchmark state records
 
-The natural mathematical state is usually multidimensional.  A benchmark
-should retain the smallest number of dimensions that still separates the
-main proof routes.  The twin-prime benchmark, for example, uses only:
+The underlying implication lattice may be multidimensional.  Preserve enough
+structure to distinguish the main proof routes, then select natural lattice
+points for the displayed scalar rungs.  When no single chain tracks the
+important routes smoothly, a rung may join statements with logical
+disjunction.
 
-1. the best unconditional gap bound; and
-2. the strongest applicable theorem on the distribution of primes.
-
-Other developments may be scientifically important without immediately
-moving either coordinate.  They should be recorded as route evidence, not
-converted into target progress merely because they are impressive.
-
-Known implications are applied automatically.  If a distribution theorem
-implies a better unconditional gap bound, the state moves in both coordinates
-at no additional credited cost.  This prevents double-counting the theorem
-and its routine corollary.
+Other developments may be scientifically important without establishing a
+displayed rung.  Record them as route evidence rather than assigning
+speculative fractional credit.  Apply known implications automatically so a
+theorem and its routine corollary are not counted twice.
 
 ## Difficulty scores
 
 Scores use one repository-wide difficulty calibration; they are not reset so
 that each folder's headline conjecture has the same endpoint.  Score `0` is the
-current rigorous frontier in a folder.  The cross-problem anchors are:
+current rigorous frontier in a folder, and its first positive rung must be
+open.  The cross-problem anchors are:
 
 - score `5` represents, very roughly, one to two doublings of cumulative
   human-equivalent effort in the relevant area beyond its 2026 frontier;
@@ -69,11 +65,15 @@ current rigorous frontier in a folder.  The cross-problem anchors are:
 - score `20` is roughly the difficulty of BB(7).
 
 For the score-`5` anchor, declare the relevant area before selecting its
-rungs.  Let $B_A$ be that area's 2026 stock of directed-equivalent effort and
-let $F_A(s)$ be future effort strategically directed at first reaching score
-$s$.  General historical effort in the declared area counts as about half as
-useful as directed strategic effort; effort outside the area is not included.
-The cumulative clock is
+rungs.  Let $D_A$ be its 2026 stock of work already directed at the benchmark,
+let $G_A$ be broader but credibly relevant work within that area, and set
+
+```math
+B_A=D_A+0.5G_A.
+```
+
+This does not count all effort in mathematics.  Let $F_A(s)$ be future effort
+strategically directed at first reaching score $s$.  The cumulative clock is
 
 ```math
 C_A(s)=B_A+F_A(s).
@@ -94,8 +94,11 @@ At integer $n$, an $n$-skip occurs when reaching $n+1$ takes less than `1.1`
 times the cumulative human-equivalent effort needed to reach $n$.  Prospective
 audits therefore compare $C_A(n+1)$ with $C_A(n)$, including the 2026 stock in
 both quantities, rather than comparing future effort alone.
+If any estimated integer-skip probability exceeds `50%`, replace or reorder
+the relevant rungs.  If no arrangement brings the maximum below `50%`, use
+fewer integer levels rather than inventing cosmetic milestones.
 
-## Headline targets and extended reach
+## Headline targets and stronger rungs
 
 A folder's headline target sits wherever these common anchors place it.  A
 folder may continue to stronger statements without changing scales.  A
