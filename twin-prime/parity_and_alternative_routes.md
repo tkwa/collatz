@@ -2,9 +2,9 @@
 
 ## Why this note exists
 
-The benchmark uses prime distribution as one of only two formal coordinates,
-but it does not assume that generalized Elliott--Halberstam is the decisive
-missing theorem.  Many sieve experts regard the parity obstruction as the
+The benchmark uses prime distribution as one of two formal coordinates below
+twin primes, but it does not assume that generalized Elliott--Halberstam is
+the decisive missing theorem.  Many sieve experts regard the parity obstruction as the
 more fundamental barrier between bounded gaps and a specified prime pair.
 
 This note incorporates that concern without adding a third benchmark
@@ -66,8 +66,8 @@ gives GEH substantial credit while refusing to make it a prerequisite.
 
 ## Candidate parity-breaking indicators
 
-The following developments could be important route evidence.  None is
-scored formally until it improves the unconditional gap $H$ or the
+The following developments could be important route evidence.  None receives
+a score below twin primes until it improves the unconditional gap $H$ or the
 distribution coordinate $D$.
 
 ### Two-point Liouville or Möbius correlations
@@ -99,8 +99,8 @@ frequency.
 
 This is an active literature whose precise records can change quickly.  The
 benchmark therefore does not hard-code a claimed 2026 interval exponent.
-Any future scored milestone should cite the exact theorem and show the proved
-reduction to $H$ or $D$.
+Any future below-twin scored milestone should cite the exact theorem and show
+the proved reduction to $H$ or $D$.
 
 ### Bilinear information for shifted primes
 
@@ -136,30 +136,28 @@ rather than actual progress.
 3. **Joint mechanism.**  One new dispersion or spectral framework improves
    distribution and parity-sensitive correlations together.
 
-The third route creates the largest skip risk because one theorem can move
-both formal coordinates and cross several score contours.
+The third route creates the largest lower-ladder skip risk because one theorem
+can move both formal coordinates and cross several score contours.
 
 ## Treatment of impressive but off-coordinate results
 
 The Riemann hypothesis does not by itself imply EH or GEH and does not improve
 the unconditional prime-gap bound to a new benchmark level.  Under the
-two-coordinate rule, a proof of RH alone therefore receives no formal
-twin-prime score.  A proved distribution or gap consequence of its methods
-would receive credit normally.
+lower-ladder rule, a proof of RH alone therefore receives no formal
+twin-prime score below `5`.  A proved distribution or gap consequence of its
+methods would receive credit normally.
 
 The same rule applies to progress on Sarnak, Chowla, or broad multiplicative
 randomness conjectures.  These results may be highly impressive and may
-change a forecast of future success.  Target-specific benchmark credit waits
-for a theorem connecting them to $H$ or $D$.
+change a forecast of future success.  Below twin primes, benchmark credit
+waits for a theorem connecting them to $H$ or $D$.
 
 This separation prevents the benchmark from turning theorem prestige or
 subjective method optimism into nominal progress toward twin primes.
 
-## Claims deliberately not adopted
+## Claims not adopted
 
-The supplied discussion motivating this note included several useful
-directions but also claims too compressed or time-sensitive for a benchmark
-definition.  This folder does not assume:
+This benchmark does not assume:
 
 - that two-point Chowla plus “standard sieve inputs” is a formally stated
   equivalence to twin primes;
@@ -174,6 +172,6 @@ recorded.
 
 ## Status
 
-This note is explanatory, not a new parity theorem.  It records why a
-two-coordinate benchmark can value GEH while remaining agnostic about whether
+This note is explanatory, not a new parity theorem.  It records why the
+lower-ladder coordinates can value GEH while remaining agnostic about whether
 GEH lies on the eventual proof path.
