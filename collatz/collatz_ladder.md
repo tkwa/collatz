@@ -1,12 +1,17 @@
 # An Impressiveness Ladder for Collatz-like Conjectures
 
-This note gives a subjective scale for measuring progress on the universal
-orbit problems in this folder.  It is not a probability scale and it is not
-intended to make adjacent scores equally difficult.  The lower part separates
-the many asymptotic growth rates between a logarithmic contraction count and
-positive density; the middle separates positive density, negative drift, and
-recurrence; and the upper part rewards uniformity across broad families of
-maps.
+This note gives a subjective scale for progress on the orbit problems in this
+folder.  The ordering is primarily by mathematical reach.  The numerical
+spacing is cross-checked against two different considerations: expected
+logarithmic human-equivalent effort and the risk that a decisive lemma proves
+several adjacent milestones at essentially the same time.  Those are three
+different judgments, not claims that a difficult proof automatically proves
+an impressive theorem.
+
+Score `0` is the current rigorous frontier, score `6` is classical Collatz,
+and score `10` is the map-universal `B^B` endpoint.  A one-point interval is
+intended to contain a real qualitative transition, but the scale is not a
+ratio scale and the estimates are not literature consensus.
 
 Throughout, `K` is the number of iterates and `D_K(n)` counts the relevant
 contracting-branch steps among the first `K` iterates of the starting value
@@ -14,12 +19,12 @@ contracting-branch steps among the first `K` iterates of the starting value
 Conjecture and the drift calculations below, these are precisely the
 division-branch steps.
 
-## The scale
+## The primary scale
 
 | Score | Milestone |
 |---:|---|
 | **0** | **Current rigorous frontier.**  For a useful fixed map, every orbit satisfies `D_K(n) = Omega_n(log K)`.  The logarithmic constant can be made arbitrarily large only by changing maps; this does not give a superlogarithmic bound for one fixed map. |
-| **0.4** | **The Weakest Collatz-like Conjecture.**  One fixed signed unit residue-affine map satisfies `D_K(n) = omega(log K)` on every sufficiently large member of one existentially chosen power ray whose base is coprime to the map base. |
+| **0.2** | **The Weakest Collatz-like Conjecture.**  One fixed signed unit residue-affine map satisfies `D_K(n) = omega(log K)` on every sufficiently large member of one existentially chosen power ray whose base is coprime to the map base. |
 | **0.7** | **The All-Start Signed Superlogarithmic Contraction Conjecture.**  One fixed signed residue-affine map on the integers, with unit multipliers of both contracting and expanding absolute slope, satisfies `D_K(n) = omega(log K)` for every nonnegative starting value. |
 | **1.0** | **The All-Start Nonnegative Superlogarithmic Contraction Conjecture.**  One fixed coprime self-map of the nonnegative integers, with both contracting and expanding branches, satisfies `D_K(n) = omega(log K)` for every starting value. |
 | **1.2** | One fixed map has a universal polylogarithmic lower bound such as `D_K(n) >= (log K)^(1+epsilon)`. |
@@ -27,22 +32,33 @@ division-branch steps.
 | **1.6** | One fixed map has `D_K(n) >= K^(1-epsilon)` for every fixed `epsilon > 0`. |
 | **1.8** | One fixed map has a near-linear but zero-density bound such as `D_K(n) >= K/(log K)^A`. |
 | **2.0** | **The Positive Division-Density Conjecture.**  Every orbit of one fixed admissible map has positive lower division density, with the positive constant allowed to depend on the starting value. |
-| **2.4** | One fixed map has a positive division-density lower bound uniform over all starting values. |
-| **2.8** | The uniform density is explicit and quantitatively substantial, but remains below the map's negative-drift threshold. |
-| **3.2** | Universal density or branch-frequency bounds can be pushed arbitrarily close to the negative-drift threshold. |
-| **3.7** | Every orbit crosses the relevant negative-drift threshold. |
-| **4.2** | Full expanding-branch frequency control gives every orbit uniformly negative multiplicative drift, rather than merely many division steps. |
-| **4.8** | **The Negative-Drift Periodicity Conjecture.**  Every orbit of one chosen admissible negative-drift map is eventually periodic. |
+| **2.5** | One fixed map has a positive division-density lower bound uniform over all starting values. |
+| **3.0** | The uniform density is explicit and quantitatively substantial, but remains below the map's negative-drift threshold. |
+| **3.5** | Universal density or branch-frequency bounds can be pushed arbitrarily close to the negative-drift threshold. |
+| **3.8** | In a family where total division density determines drift, every orbit crosses the relevant threshold. |
+| **4.0** | Full expanding-branch frequency control gives every orbit of one selected map negative multiplicative drift, including when total division density alone is insufficient. |
+| **4.5** | **The Negative-Drift Periodicity Conjecture.**  Every orbit of one chosen admissible negative-drift map is eventually periodic. |
+| **5.0** | Every shortcut-Collatz orbit has lower even-step frequency above its `0.36907...` negative-drift threshold.  This controls every start but does not by itself exclude rare arbitrarily long expansion bursts or nonstandard cycles. |
+| **5.5** | One of the two classical universal obstructions is removed: either every shortcut-Collatz orbit is bounded and hence eventually periodic, possibly in an unknown cycle, or `1 <-> 2` is proved to be its only positive cycle. |
 | **6.0** | **The classical Collatz conjecture.**  Every positive integer reaches the cycle `1 <-> 2` under the shortcut map. |
 | **7.0** | A common mechanism proves Collatz and a substantial nontrivial family of generalized Collatz maps. |
 | **8.0** | A broad theorem controls all maps in major structural classes of negative-drift residue-affine systems. |
 | **9.0** | A nearly universal theorem leaves only a sharply characterized exceptional family. |
 | **10** | Every admissible residue-affine map satisfying the `B^B` negative-drift condition has the asserted universal recurrence or convergence behavior. |
 
+The new one-coprime-ray conjecture belongs at `0.2`, rather than inheriting
+the old `0.4` placement of a profinite-density proposal.  It is a genuine
+infinite-orbit assertion and survived the recorded elementary attacks, but it
+asks about only `O(log X)` starts below `X` and existentially chooses both the
+map and the ray.  Its proof could still be very hard; the low score records
+the theorem's narrow reach, not confidence that a proof is near.
+
 The intermediate rates below positive density are representative landmarks,
 not a claim that these are the only natural choices.  There are infinitely
 many incomparable or more finely spaced rates between `omega(log K)` and
-linear growth.
+linear growth.  They receive only one score-point in total because a strong
+rigidity or branch-frequency lemma is unusually likely to overshoot several
+of them.
 
 ## Division density and negative drift
 
@@ -59,13 +75,13 @@ d\log(1/B)+(1-d)\log(a/B)
 It is negative precisely when
 
 ```math
-d > 1-\frac{\log B}{\log a}.
+d \gt 1-\frac{\log B}{\log a}.
 ```
 
 For the shortcut Collatz map, `B=2` and `a=3`, so the threshold is
 
 ```math
-d > 1-\frac{\log 2}{\log 3}
+d \gt 1-\frac{\log 2}{\log 3}
 = \frac{\log(3/2)}{\log 3}
 \approx 0.36907.
 ```
@@ -75,45 +91,111 @@ enough.  If `f_r` is the frequency of expanding residue `r`, the corresponding
 branch-weighted condition is
 
 ```math
-\sum_{r\in E} f_r\log a_r < \log B.
+\sum_{r\in E} f_r\log a_r \lt \log B.
 ```
 
 Under uniform residue frequencies, `f_r=1/B`, this becomes
 
 ```math
-\prod_{r\in E}a_r < B^B.
+\prod_{r\in E}a_r \lt B^B.
 ```
 
-This is why the ladder includes several separate steps between positive
-division density and a negative-drift conclusion.  A small positive density
-can coexist with exponential growth, and even a large total division density
-need not control which expanding branches occur.
+This is why the ladder separates positive density, substantial density,
+threshold crossing in a one-expander family, and full branch-weighted drift.
+A small positive density can coexist with exponential growth, and even a
+large total division density need not control which expanding branches occur.
 
 ## Existential and universal meanings
 
-The Negative-Drift Periodicity Conjecture in this repository is existential
-in the choice of map and universal only in the starting value.  Classical
-Collatz would prove it by supplying the shortcut Collatz map as a witness.  It
-is therefore placed below classical Collatz on this scale.
+The Negative-Drift Periodicity Conjecture is existential in the choice of map
+and universal only in the starting value.  Classical Collatz would prove it
+by supplying the shortcut Collatz map as a witness.  It is therefore placed
+below the fixed-map classical statements at scores `5` through `6`, despite
+having a stronger-sounding condition in its name.
 
 The score-10 endpoint means something genuinely stronger: a theorem uniform
 across all admissible parameter choices satisfying the `B^B` condition.  If
 "universal" meant only every starting value for one existentially chosen map,
 then a proof of Collatz would already establish that statement and could not
-coherently sit lower on a theorem-strength ladder.
+coherently sit lower on a theorem-reach ladder.
+
+Selected-map milestones need not logically imply the next selected-map
+milestone, because their witness maps may differ.  The ordering says that the
+later result would normally have greater reach and impressiveness, not that
+the table is a chain of formal implications.
+
+## Integer-boundary skip audit
+
+For calibration, let `H_i` be the cumulative future human-equivalent research
+effort until the first result scoring at least the integer `i`.  A boundary is
+"skipped" when `H_(i+1) < 1.05 H_i`.  Conditional on the relevant statements
+being true and reachable, the following are rough personal probabilities,
+with uncertainty of about 15 percentage points each:
+
+| Transition | Skip probability | Main reason it could be skipped |
+|---:|---:|---|
+| **0 -> 1** | **20%** | A universal rigidity lemma may solve an all-start statement before a ray-specific construction is isolated. |
+| **1 -> 2** | **30%** | A lower-bound mechanism may naturally yield positive density rather than a chosen intermediate rate. |
+| **2 -> 3** | **45%** | Quantitative branch control may arrive with a substantial explicit constant. |
+| **3 -> 4** | **60%** | Equidistribution or a structural frequency theorem can cross the drift threshold in the same argument. |
+| **4 -> 5** | **15%** | A tractable existentially chosen map can exploit structure unavailable for the fixed `3x+1` map. |
+| **5 -> 6** | **35%** | A genuinely universal Collatz mechanism may prove recurrence and cycle identification together rather than stop at frequency control. |
+| **6 -> 7** | **50%** | A Collatz proof may expose a mechanism that abstracts immediately to a nontrivial family. |
+| **7 -> 8** | **40%** | The first useful abstraction may already cover a major structural class. |
+| **8 -> 9** | **25%** | Broad methods may leave exceptional parameter families needing different ideas. |
+| **9 -> 10** | **12%** | The last exceptional maps may contain counterexamples or a qualitatively different obstruction. |
+
+These probabilities are not used to define the scores mechanically.  In
+particular, alternative lemmas raise skip risk because several approaches can
+mature in parallel, but the largest jumps would come from one theorem
+overshooting its nominal target.  The conspicuously low `4 -> 5` estimate is
+why the ladder reserves a full point between a designed witness map and the
+fixed classical map.
+
+## A conventional Collatz companion
+
+A more conventional ladder measures how much of the exceptional set for the
+classical map has been eliminated.  Let `E(X)` denote the number of positive
+integers at most `X` whose orbits do not reach `1`.  Bounds on `E(X)` below are
+hypothetical theorem statements, not known estimates.
+
+| Score | Conventional milestone |
+|---:|---|
+| **0** | Current knowledge: exhaustive finite verification, classical almost-all finite-stopping-time results, Tao's logarithmic-density almost-bounded-orbit theorem, and strong restrictions on possible cycles. |
+| **0.75** | Tao's almost-bounded conclusion is upgraded to natural density, preferably with a quantitative exceptional-set estimate. |
+| **1.25** | Actual convergence to `1` is proved for a logarithmic-density-one set of starts. |
+| **1.75** | Actual convergence to `1` is proved for a natural-density-one set of starts. |
+| **2.5** | A power-saving exceptional-set bound is proved: `E(X) = O(X^(1-delta))`. |
+| **3.25** | The exceptional set is subpolynomial: `E(X) = X^o(1)`. |
+| **4.0** | Only polylogarithmically many exceptions remain below `X`. |
+| **4.75** | `E(X) = o(log X)`.  This rules out an unbounded orbit, since one such orbit would itself supply `Omega(log X)` distinct exceptional starts below `X`. |
+| **5.5** | Either every orbit is bounded and eventually periodic, or the usual cycle is proved to be the only positive cycle. |
+| **6.0** | Both universal halves are joined: every positive orbit reaches `1 <-> 2`. |
+| **7-10** | The same increasingly broad generalized-map theorems as on the primary scale. |
+
+The conventional ladder is smoother for historical recognition and intuitive
+impressiveness: Tao-type results, exceptional-set bounds, boundedness, cycle
+exclusion, and full Collatz are familiar landmarks.  The primary ladder is
+probably smoother for forecasting proof effort because it keeps the
+all-start quantifier and the contraction-frequency observable fixed through
+most of the scale.  Neither is literally one-dimensional.  In particular,
+exceptional-set estimates can improve indefinitely without becoming
+universal, while boundedness and cycle exclusion are orthogonal halves of
+classical Collatz.
 
 ## How to read the numbers
 
-The scale measures the mathematical reach of a result, not expected proof
-length, historical fame, or probability of truth.  In particular:
+The scale deliberately keeps three judgments visible:
 
-- scores `0` through `2` concern the frequency of contraction events;
-- scores `2` through `4.2` concern quantitative frequencies strong enough to
-  control multiplicative drift;
-- scores `4.8` and `6` concern actual recurrence for a selected map; and
-- scores above `6` increasingly reward a proof that survives variation of the
-  parameters rather than exploiting one special map.
+- **theorem reach:** how many starts and maps are controlled, and how strong
+  the orbit conclusion is;
+- **expected log effort:** whether neighboring results plausibly require
+  comparable multiplicative increases in cumulative research effort; and
+- **skip risk:** whether a natural lemma is likely to establish several
+  milestones at once.
 
-The numerical gaps should consequently be read as broad bands, not as a
-metric in which a score of `6` is literally three times as impressive as a
-score of `2`.
+Theorem reach governs the ordering.  Expected effort and skip risk govern the
+spacing.  Historical fame is useful context in the conventional companion,
+but it does not raise a weak theorem's primary score.  Thus `6` is not
+literally three times as impressive as `2`, and a proof may be much harder or
+easier than its theorem's placement suggests.
