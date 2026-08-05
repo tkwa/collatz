@@ -113,6 +113,6 @@ currently known to satisfy the universal superlogarithmic conclusion, and no
 claim is made here that the signed formulation has been established as open
 in the literature.
 
-The definition audit, proved structural observations, and attempted
-trivializations are recorded in
-[`asymptotic_progress/signed_integer_family_redteam.md`](asymptotic_progress/signed_integer_family_redteam.md).
+The consolidated [research state](progress/research_state.md) records the
+shared structural obstruction and current proof frontier.  The extra signed
+freedoms remain provisional and are not claimed to trivialize the target.

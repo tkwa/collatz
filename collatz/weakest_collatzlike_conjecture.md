@@ -120,9 +120,9 @@ ray does not repair a local weakness of the first.  Under the repository's
 instruction to keep weakening the moving candidate until an elementary
 collapse appears, the one-coprime-ray statement is therefore preferred.
 
-The openness and itinerary arguments, together with the two-ray comparison,
-are proved in
-[`asymptotic_progress/weakest_coprime_ray_redteam.md`](asymptotic_progress/weakest_coprime_ray_redteam.md).
+The consolidated [research state](progress/research_state.md) records the
+finite-itinerary obstruction and the fixed-start distinction that also govern
+this sparse-ray formulation.
 
 ## Relationship to the earlier fixed-$2,3$ proposal
 

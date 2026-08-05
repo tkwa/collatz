@@ -1,71 +1,33 @@
-# Asymptotic progress
+# Progress
 
-This folder contains work toward proving a universal superlogarithmic lower
-bound
+This folder is the deliberately small working record for the all-start
+superlogarithmic contraction target
 
 ```math
-D_K(n)=\omega(\log K)
+D_K(n)=\omega(\log K).
 ```
 
-for a coprime residue-affine Collatz-like map.  The files currently collected
-here mostly study the pure-division subfamily, where each contracting branch
-is `q -> q`; that subfamily remains sufficient for the existential target.
+It contains exactly two documents:
 
-The provisional relaxation to signed unit multipliers, integer offsets, and
-integer-valued orbits is defined in
-[`../signed_superlogarithmic_contraction.md`](../signed_superlogarithmic_contraction.md).
-Its definition audit and attempted trivializations are recorded in
-[`signed_integer_family_redteam.md`](signed_integer_family_redteam.md).
-The current moving weakest relaxation, restricted to one coprime power ray, is
-defined in
-[`../weakest_collatzlike_conjecture.md`](../weakest_collatzlike_conjecture.md).
-Its red-team audit, including the proof that the discarded profinite
-relaxation is elementary, is in
-[`weakest_coprime_ray_redteam.md`](weakest_coprime_ray_redteam.md).
+- this overview, which fixes the scope and proof standard; and
+- [`research_state.md`](research_state.md), the consolidated account of the
+  baseline reductions, proved partial results, refuted shortcuts, candidate
+  families, and current arithmetic frontier.
 
-Completed proofs must clearly distinguish proved lemmas from conjectural
-steps, identify the map being studied, and include enough supporting
-calculations or formal checks to audit every transition.
+The target is existential in the map and universal in the starting value.  A
+proof for any admissible parameter choice is in scope.  Finite computation,
+negative average drift, or good behavior on a bounded range cannot establish
+the target, because increasingly long expanding residue words may occur at
+increasingly large starts.
 
-Current proved partial progress includes an explicit family with logarithmic
-lower-bound constants tending to infinity with the base; see
-[`unbounded_logarithmic_constants.md`](unbounded_logarithmic_constants.md).
-This is a near miss, not a proof of the superlogarithmic target for one map.
+The current conjecture statements live one level up.  In particular, see the
+[all-start nonnegative conjecture](../nonnegative_superlogarithmic_contraction.md),
+the [signed relaxation](../signed_superlogarithmic_contraction.md), and the
+[moving weakest conjecture](../weakest_collatzlike_conjecture.md).  The main
+prime-power obstruction has its own standalone derivation in
+[`../blockers/moving_endpoint_core_obstruction.md`](../blockers/moving_endpoint_core_obstruction.md).
 
-The search is not committed to that family.  See
-[`alternative_family_screen.md`](alternative_family_screen.md) for checked
-alternatives and [`failure_structure.md`](failure_structure.md) for a sharpened
-description of what any counterexample to the target would have to do.  The
-general fixed coprime contracting-branch family, its exact itinerary formula,
-and the boundary between unit and residue-collapsing multipliers are recorded
-in
-[`general_coprime_contracting_branches.md`](general_coprime_contracting_branches.md).
-The resulting fixed-length block identity is in
-[`bounded_chain_certificate.md`](bounded_chain_certificate.md).
-The exact fixed-start Archimedean normalization and its remaining adelic
-obstruction are recorded in
-[`global_normalization.md`](global_normalization.md).
-The failure of finite-state coding shortcuts for both the full residue
-itinerary and its binary expansion/division projection is proved in
-[`finite_state_coding_obstruction.md`](finite_state_coding_obstruction.md);
-the projected case covers variable-output carry transducers as well as
-synchronous ones, using affine deleted-digit rigidity and Furstenberg's
-topological multiplicative-independence theorem.  Meanwhile,
-[`prime_factor_reset.md`](prime_factor_reset.md) records what structured
-prime-power multipliers do and do not remove from the endpoint-unit problem.
-The corresponding macro elimination across arbitrary short intervening blocks
-is proved for the full prime-power family in
-[`prime_power_macro_chains.md`](prime_power_macro_chains.md).
-For the smallest prime-power candidate, the exact residual chain between odd
-endpoint cores is in [`odd_core_chain.md`](odd_core_chain.md).
-The exact arithmetic progression of possible endpoints after any fixed
-itinerary, and the resulting freedom to prescribe all non-multiplier-prime
-valuations locally, is proved in
-[`endpoint_arithmetic_progressions.md`](endpoint_arithmetic_progressions.md).
-The [`nearby_prime_family.md`](nearby_prime_family.md) construction combines
-unbounded logarithmic constants across maps with endpoint cores coprime to
-both a prime base and a prime expansion multiplier.
-The exact subexponential dependence required from a growing-rank valuation
-theorem, and its staircase-polynomial formulation for the ceiling family, are
-recorded in
-[`uniform_rank_valuation_target.md`](uniform_rank_valuation_target.md).
+Any claimed progress must label proved statements, candidate steps, and
+refuted routes separately.  A completed proof belongs here with the supporting
+lemmas and checks needed to audit it; exploratory scratch work should remain
+outside the committed main branch.

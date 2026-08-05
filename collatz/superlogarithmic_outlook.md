@@ -162,7 +162,7 @@ the ceiling-division family, expansion has probability about $1/B$ under a
 uniform-residue model and division has probability about $(B-1)/B$; increasing
 $B$ makes the typical logarithmic drift strongly negative.  The proved lower
 bound has an
-[arbitrarily large coefficient](asymptotic_progress/unbounded_logarithmic_constants.md)
+[arbitrarily large coefficient](progress/research_state.md#proved-logarithmic-lower-bound)
 of $\log K$ as the map varies.  Neither observation proves the fixed-map
 asymptotic statement, but both make a universal no-go theorem for all maps
 less likely than a proof obstruction for the candidates studied so far.
@@ -175,18 +175,18 @@ kind of evidence it supplies.
 ### Mostly evidence about proof difficulty
 
 - Every finite residue itinerary is realized by an ordinary nonnegative
-  integer, and its endpoints form an
-  [exact arithmetic progression](asymptotic_progress/endpoint_arithmetic_progressions.md).
+  integer, and its endpoints form an exact arithmetic progression; the
+  [consolidated research state](progress/research_state.md#proved-every-finite-residue-itinerary-is-realizable)
+  records the local-realizability argument.
   Therefore no fixed finite bad pattern or finite list of local valuations
   can be forbidden.
 - Finite-state carry transducers cannot compute either the full itinerary or
-  its binary expansion/division projection from ordinary base-$B$ digits; see
-  the [finite-state obstruction](asymptotic_progress/finite_state_coding_obstruction.md).
+  its binary expansion/division projection from ordinary base-$B$ digits.
 - Existing fixed-rank sparse-polynomial, $S$-unit, Subspace-Theorem, height,
   LTE, and rational-base results lose too much when the number of blocks
   grows.
 - The clean current sufficient statement is a fixed-start, growing-rank
-  [valuation estimate](asymptotic_progress/uniform_rank_valuation_target.md)
+  [valuation estimate](blockers/moving_endpoint_core_obstruction.md#10-an-explicit-statement-of-the-missing-theorem)
   with subexponential rank loss.  No checked theorem gives it.
 
 These results eliminate attractive proof strategies.  They do not construct
@@ -216,7 +216,7 @@ ordinary orbit.
 
 For the candidate families with an affine upper recurrence for division
 times, the proved
-[failure structure](asymptotic_progress/failure_structure.md) implies much
+[failure structure](progress/research_state.md#proved-failure-has-positive-density-proportional-gaps) implies much
 more than occasional long expansion runs.  Failure forces a positive upper
 density of proportional division-time gaps and hence arbitrarily long
 bounded-spacing chains of such gaps along one fixed orbit.  The endpoint

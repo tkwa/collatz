@@ -123,7 +123,7 @@ locally realizable by an ordinary congruence class.
 Open.  No fixed parameter choice is currently known to satisfy the universal
 superlogarithmic statement.
 
-The work in [`asymptotic_progress/`](asymptotic_progress/) studies the
+The work in [`progress/`](progress/) studies the
 pure-division subfamily, which remains a valid route to the revised
 existential target.  The broader contracting-branch family introduced here
 may offer additional arithmetic structure, but it does not remove the local
