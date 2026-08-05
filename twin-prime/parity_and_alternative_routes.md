@@ -144,7 +144,7 @@ can move both formal coordinates and cross several score contours.
 The Riemann hypothesis does not by itself imply EH or GEH and does not improve
 the unconditional prime-gap bound to a new benchmark level.  Under the
 lower-ladder rule, a proof of RH alone therefore receives no formal
-twin-prime score below `6`.  A proved distribution or gap consequence of its
+twin-prime score below `5`.  A proved distribution or gap consequence of its
 methods would receive credit normally.
 
 The same rule applies to progress on Sarnak, Chowla, or broad multiplicative
@@ -155,11 +155,9 @@ waits for a theorem connecting them to $H$ or $D$.
 This separation prevents the benchmark from turning theorem prestige or
 subjective method optimism into nominal progress toward twin primes.
 
-## Claims deliberately not adopted
+## Claims not adopted
 
-The supplied discussion motivating this note included several useful
-directions but also claims too compressed or time-sensitive for a benchmark
-definition.  This folder does not assume:
+This benchmark does not assume:
 
 - that two-point Chowla plus “standard sieve inputs” is a formally stated
   equivalence to twin primes;

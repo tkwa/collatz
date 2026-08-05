@@ -16,13 +16,13 @@ $K(\varepsilon)$ with $c\le K(\varepsilon)R^{1+\varepsilon}$.
 
 ## Why this folder exists
 
-The other folders in this repository track problems whose headline statement
-is the endpoint of the ladder.  This folder is shaped differently, and that is
-the point of including it.  abc is a *specialization* of a single much larger
-statement: Vojta's conjecture with truncated counting functions, applied to
-$\mathbb{P}^1$ with the divisor $\lbrace 0,1,\infty\rbrace$ and truncation
-level one, is abc.  The same master statement specializes to Faltings'
-theorem, Bombieri--Lang, Szpiro, and Hall.
+Like the Collatz and twin-prime folders, this folder retains headroom above
+its famous headline statement.  Here that headroom comes from an especially
+direct implication: abc is a *specialization* of Vojta's conjecture with
+truncated counting functions.  Applied to $\mathbb{P}^1$ with the divisor
+$\lbrace 0,1,\infty\rbrace$ and truncation level one, Vojta gives abc.  The
+same master statement also specializes to Faltings' theorem, Bombieri--Lang,
+Szpiro, and Hall.
 
 So the folder has genuine headroom above its famous problem, in the same way
 that [`collatz/`](../collatz/) has headroom above the classical conjecture.
@@ -31,7 +31,7 @@ A system that proves abc has not exhausted the folder.
 ## Scoring convention used here
 
 This folder uses the repository-wide difficulty calibration.  Score `0` is
-the current rigorous frontier, ordinary abc over $\mathbb Q$ is score `5`, and
+the current rigorous frontier, ordinary abc over $\mathbb Q$ is score `4`, and
 general Vojta is score `10`.  abc sits below the endpoint because it is a
 specialization, not because this folder resets the scale.  These scores are
 directly comparable in meaning with the other folders, subject to the wide

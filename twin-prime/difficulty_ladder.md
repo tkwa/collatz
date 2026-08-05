@@ -3,7 +3,7 @@
 ## Purpose
 
 This benchmark measures proved progress through twin primes and onward to
-broader prime-pattern conjectures.  Through score `6`, it uses two lower-ladder
+broader prime-pattern conjectures.  Through score `5`, it uses two lower-ladder
 coordinates:
 
 ```math
@@ -16,7 +16,7 @@ x=(H,D).
   [prime-distribution subladder](distribution_subladder.md).
 
 The baseline is $(246,D_0)$.  Twin primes is any state with $H=2$; stronger
-rungs above score `6` are recorded directly because $H$ and $D$ no longer
+rungs above score `5` are recorded directly because $H$ and $D$ no longer
 distinguish them.
 
 The coordinate pair is retained as an underlying theorem state, not averaged.
@@ -59,10 +59,10 @@ Every row above zero is open.  The word “or” denotes logical disjunction.
 | **1** | $H_1\le200$ **or** $\mathrm{EH}[11/20]$. |
 | **2** | $H_1\le100$ **or** $\mathrm{EH}[3/5]$. |
 | **3** | $H_1\le50$ **or** $\mathrm{EH}[2/3]$. |
-| **4** | $H_1\le12$ **or** $\mathrm{EH}[3/4]$. |
-| **5** | $H_1\le6$ **or** $\mathrm{GEH}[3/4]$ **or** full EH. |
-| 5.5 | $H_1\le4$ **or** full GEH. |
-| **6** | **Twin primes:** $H_1=2$. |
+| 3.5 | $H_1\le12$ **or** $\mathrm{EH}[3/4]$. |
+| **4** | $H_1\le6$ **or** $\mathrm{GEH}[3/4]$ **or** full EH. |
+| 4.5 | $H_1\le4$ **or** full GEH. |
+| **5** | **Twin primes:** $H_1=2$. |
 
 The lower alternatives are nested: stronger distribution exponents imply
 weaker ones, GEH implies EH at the same exponent, and smaller gap bounds imply
@@ -111,14 +111,14 @@ families of irreducible integer polynomials.
 
 | Score | Rung |
 |---:|---|
-| **7** | $\pi_2(X)\gg X/(\log X)^2$ for all sufficiently large $X$ **or** de Polignac's conjecture. |
-| **8** | The Hardy--Littlewood asymptotic for twin primes **or** Dickson's conjecture for every fixed admissible affine-linear family. |
-| 8.5 | The Hardy--Littlewood asymptotic for every fixed admissible affine-linear family **or** Schinzel's hypothesis H. |
+| **6** | $\pi_2(X)\gg X/(\log X)^2$ for all sufficiently large $X$ **or** de Polignac's conjecture. |
+| **7** | The Hardy--Littlewood asymptotic for twin primes **or** Dickson's conjecture for every fixed admissible affine-linear family. |
+| **8** | The Hardy--Littlewood asymptotic for every fixed admissible affine-linear family **or** Schinzel's hypothesis H. |
 | **9** | **Bateman--Horn** for every fixed admissible finite family of distinct irreducible integer polynomials with positive leading coefficients. |
 
-Each alternative at score `8` implies one at score `7`; each alternative at
-`8.5` implies one at `8`; and Bateman--Horn implies both alternatives at
-`8.5`.  Bateman--Horn is centered at `9`, with a subjective range of roughly
+Each alternative at score `7` implies one at score `6`; each alternative at
+`8` implies one at score `7`; and Bateman--Horn implies both alternatives at
+`8`.  Bateman--Horn is centered at `9`, with a subjective range of roughly
 `8--10.5`.  It is a master conjecture but is narrower than general Vojta or
 Schanuel, so the ladder is not stretched merely to occupy score `10`.
 
@@ -143,44 +143,47 @@ The central 2026 stock is provisionally $B_{PP}=8{,}000$
 directed-equivalent expert-years, with an 80% range of `2,000--30,000` and a
 sensitivity case near `12,000`.  This is an elicitation prior, not a measured
 labor total.  The following ratios are calibration targets used to place
-statements; they are not inferred from the scores after the fact.
+statements; they are not inferred from the scores after the fact.  The final
+column reports future effort from the July 2026 baseline, the clock used by
+the skip rule.
 
-| Score | Central $C_{PP}(s)/B_{PP}$ | $\log_{10}C_{PP}(s)$ at the central stock |
-|---:|---:|---:|
-| 0 | 1.00 | 3.90 |
-| 0.3 | 1.07 | 3.93 |
-| 1 | 1.25 | 4.00 |
-| 2 | 1.55 | 4.09 |
-| 3 | 1.93 | 4.19 |
-| 4 | 2.41 | 4.28 |
-| **5** | **3.00** | **4.38** |
-| 5.5 | 3.60 | 4.46 |
-| 6 | 4.50 | 4.56 |
-| 7 | 7.00 | 4.75 |
-| 8 | 12.0 | 4.98 |
-| 8.5 | 16.0 | 5.11 |
-| 9 | 22.0 | 5.25 |
+| Score | $C_{PP}(s)/B_{PP}$ | $F_{PP}(s)/B_{PP}$ | $\log_{10}F_{PP}(s)$ at the central stock |
+|---:|---:|---:|---:|
+| 0 | 1.00 | 0 | -- |
+| 0.3 | 1.07 | 0.07 | 2.75 |
+| 1 | 1.25 | 0.25 | 3.30 |
+| 2 | 1.55 | 0.55 | 3.64 |
+| 3 | 1.93 | 0.93 | 3.87 |
+| 3.5 | 2.41 | 1.41 | 4.05 |
+| 4 | 3.00 | 2.00 | 4.20 |
+| 4.5 | 3.60 | 2.60 | 4.32 |
+| **5** | **4.50** | **3.50** | **4.45** |
+| 6 | 7.00 | 6.00 | 4.68 |
+| 7 | 12.0 | 11.0 | 4.94 |
+| 8 | 16.0 | 15.0 | 5.08 |
+| 9 | 22.0 | 21.0 | 5.23 |
 
-Thus score `5` is centrally about `1.6` doublings over the predeclared 2026
-stock, within the shared anchor.  Twin primes is score `6`, not a normalized
-endpoint.
+Thus twin primes at score `5` is centrally about `2.2` doublings over the
+predeclared 2026 stock, within the shared two-to-four-doubling anchor.  It is
+not a normalized endpoint.
 
 ## Integer-skip audit
 
-Using $C_{PP}(s)=B_{PP}+F_{PP}(s)$ and the cumulative `1.1` rule gives the
-following provisional judgments, each uncertain by at least `15--20`
-percentage points.
+For integers $n\ge1$, the following provisional judgments use
+$F_{PP}(n+1)\lt1.1F_{PP}(n)$.  Each probability is uncertain by at least
+`15--20` percentage points.  Separately, the estimated probability that the
+first theorem reaching score `1` overshoots the score-`0.3` rung is `30%`;
+that is a baseline diagnostic, not a `0`-skip.
 
 | Boundary | Estimated skip probability | Principal reason |
 |---:|---:|---|
-| 0 to 1 | 30% | A sieve optimization or distribution theorem may overshoot the Weakest rung. |
 | 1 to 2 | 35% | The next gap or EH theorem may pass a round-number landmark. |
 | 2 to 3 | 35% | One estimate may improve both the exponent and optimized gap. |
-| 3 to 4 | 40% | A strong distribution theorem may overshoot the exponent landmark. |
-| 4 to 5 | 40% | A convolution estimate may prove GEH and EH together. |
-| 5 to 6 | 45% | A parity-breaking method may pass the `5.5` rung and solve twin primes. |
-| 6 to 7 | 40% | A first twin-prime proof may already be quantitative, or a general route may reach de Polignac. |
-| 7 to 8 | 35% | A prime-tuples framework may prove both qualitative and quantitative cases. |
+| 3 to 4 | 40% | A convolution estimate may prove GEH and EH together while improving the gap. |
+| 4 to 5 | 45% | A parity-breaking method may pass the `4.5` rung and solve twin primes. |
+| 5 to 6 | 40% | A first twin-prime proof may already be quantitative, or a general route may reach de Polignac. |
+| 6 to 7 | 35% | A prime-tuples framework may prove both qualitative and quantitative cases. |
+| 7 to 8 | 35% | An affine-linear framework may establish both asymptotic and qualitative forms. |
 | 8 to 9 | 40% | A polynomial-prime framework may pass Schinzel H on the way to Bateman--Horn. |
 
 No central value exceeds `50%`; if elicitation pushes one above it, the

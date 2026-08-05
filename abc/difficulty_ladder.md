@@ -1,7 +1,8 @@
 # A Difficulty Ladder for abc and Vojta
 
-Score `0` is the current rigorous frontier, score `5` is the ordinary abc
-conjecture over $\mathbb Q$, and score `10` is the general Vojta conjecture
+Score `0` is the current rigorous frontier, ordinary abc over $\mathbb Q$ is
+score `4`, score `5` begins the higher-dimensional Vojta lattice, and score
+`10` is the general Vojta conjecture
 with truncated counting functions.  These are positions on the repository's
 shared difficulty scale, not folder-specific endpoint normalization.  The
 estimates are subjective and are not literature consensus.
@@ -20,7 +21,7 @@ main qualitative event on the lower half of the ladder:
   $\log c\le A\log R$, equivalently $c\le R^{A}$.
 
 Every bound proved to date lies in the radical-power regime.  Crossing into
-the polynomial regime at score `3` is the analogue of a negative-drift
+the polynomial regime at score `2.5` is the analogue of a negative-drift
 threshold: it is where the exponential loss intrinsic to linear forms in
 logarithms would have to be broken.
 
@@ -42,21 +43,23 @@ here.
 | 0.3 | **The Weakest abc-like Conjecture.** There is a fixed $\delta\gt0$ with $\log c\ll R^{1/3-\delta}$ for all coprime triples: any fixed improvement of the Stewart--Yu exponent. |
 | **1** | **Subpower radical bound.** For every $\varepsilon\gt0$, $\log c\ll_{\varepsilon}R^{\varepsilon}$. |
 | **2** | **Polylogarithmic bound.** $\log c\ll(\log R)^M$ for some fixed finite $M$. |
-| **3** | **Weak polynomial abc.** $A(q)$ holds for some fixed finite $q\gt1$. |
-| **4** | **Quadratic abc bound.** $A(2)$ holds. |
-| **5** | **The abc conjecture over $\mathbb Q$.** For every $\varepsilon\gt0$, $c\le K(\varepsilon)R^{1+\varepsilon}$. Mordell, asymptotic Fermat, Szpiro, and the infinitude of non-Wieferich primes follow. |
-| **6** | $V_{2,1}$: truncated Vojta for rational points on all curves and surfaces. |
-| **7** | $V_{2,2}$ **or** $V_{3,1}$. |
+| 2.5 | **Weak polynomial abc.** $A(q)$ holds for some fixed finite $q\gt1$. |
+| **3** | **Quadratic abc bound.** $A(2)$ holds. |
+| **4** | **The abc conjecture over $\mathbb Q$.** For every $\varepsilon\gt0$, $c\le K(\varepsilon)R^{1+\varepsilon}$. Mordell, asymptotic Fermat, Szpiro, and the infinitude of non-Wieferich primes follow. |
+| **5** | $V_{2,1}$: truncated Vojta for rational points on all curves and surfaces. |
+| **6** | $V_{2,2}$ **or** $V_{3,1}$. |
+| **7** | $V_{2,4}$ **or** $V_{4,1}$. |
 | **8** | $V_{2,\infty}$ **or** $V_{\infty,1}$. |
 | **9** | $V_{3,\infty}$ **or** $V_{\infty,2}$. |
 | **10** | **General Vojta:** $V_{\infty,\infty}$. |
 
 The upper half is a two-route lattice.  Increasing the allowed point degree
 first follows the left alternatives; increasing dimension first follows the
-right alternatives.  Each alternative at a higher score implies at least one
-alternative immediately below it.  The curve case is not used as its own
-rung because Belyi-type reductions make it too close to abc for reliable
-integer spacing.
+right alternatives.  Each alternative at a higher score implies the
+corresponding alternative immediately below it.  The finite cutoff `4` is a
+calibration point, not a claim that degree or dimension four is intrinsically
+special.  The curve case is not used as its own rung because Belyi-type
+reductions make it too close to abc for reliable integer spacing.
 
 ## Implication closure
 
@@ -72,7 +75,7 @@ Selected proved reductions, all **[implication]**:
 - abc is equivalent to the modified Szpiro conjecture (Oesterlé).
 - abc implies infinitely many non-Wieferich primes (Silverman).
 - Weak polynomial abc implies asymptotic Fermat and Hall-type bounds, so score
-  `3` already discharges several named problems.
+  `2.5` already discharges several named problems.
 
 Effectivity is deliberately absent from the scalar chain.  Standard abc and
 Vojta statements need not provide computable constants, so general Vojta does
@@ -92,26 +95,29 @@ The central 2026 directed-equivalent stock is provisionally
 $B_{AV}=6{,}000$ expert-years, with an 80% range of `1,500--25,000`.  This is
 an elicitation prior, not a bibliometric measurement.  With
 $C_{AV}(s)=B_{AV}+F_{AV}(s)$, the following central ratios are calibration
-targets used to place the statements.  They are not effort estimates deduced
-from the assigned scores.
+targets used to place the statements.  The final column reports future effort
+from the July 2026 baseline, which is the clock used by the skip rule.  These
+are elicited estimates, not values deduced from the assigned scores.
 
-| Score | $C_{AV}(s)/B_{AV}$ | $\log_{10} C_{AV}(s)$ at the central stock |
-|---:|---:|---:|
-| 0 | 1.00 | 3.78 |
-| 0.3 | 1.07 | 3.81 |
-| 1 | 1.25 | 3.88 |
-| 2 | 1.55 | 3.97 |
-| 3 | 1.93 | 4.06 |
-| 4 | 2.41 | 4.16 |
-| **5** | **3.00** | **4.26** |
-| 6 | 5.30 | 4.50 |
-| 7 | 9.30 | 4.75 |
-| 8 | 16.3 | 4.99 |
-| 9 | 28.6 | 5.23 |
-| **10** | **50.0** | **5.48** |
+| Score | $C_{AV}(s)/B_{AV}$ | $F_{AV}(s)/B_{AV}$ | $\log_{10}F_{AV}(s)$ at the central stock |
+|---:|---:|---:|---:|
+| 0 | 1.00 | 0 | -- |
+| 0.3 | 1.07 | 0.07 | 2.62 |
+| 1 | 1.25 | 0.25 | 3.18 |
+| 2 | 1.55 | 0.55 | 3.52 |
+| 2.5 | 1.93 | 0.93 | 3.75 |
+| 3 | 2.41 | 1.41 | 3.93 |
+| 4 | 3.00 | 2.00 | 4.08 |
+| **5** | **5.30** | **4.30** | **4.41** |
+| 6 | 9.30 | 8.30 | 4.70 |
+| 7 | 12.3 | 11.3 | 4.83 |
+| 8 | 16.3 | 15.3 | 4.96 |
+| 9 | 28.6 | 27.6 | 5.22 |
+| **10** | **50.0** | **49.0** | **5.47** |
 
-Thus score `5` is centrally about `1.6` doublings over the 2026 stock, within
-the shared one-to-two-doubling anchor.  Placing general Vojta at `10` adopts
+Thus the score-`5` statement is centrally about `2.4` doublings over the 2026
+stock, within the shared two-to-four-doubling anchor.  Placing general Vojta at
+`10` adopts
 the provisional judgment that it is approximately the median-difficulty
 member of BB(6), Schanuel, and general Vojta; cross-problem elicitation that
 orders the trio differently should rescore it.  The endpoint itself supplies
@@ -120,20 +126,21 @@ have uncertainty of roughly one score point or more.
 
 ## Integer-skip audit
 
-The following prospective probabilities use the cumulative `1.1` rule from
-the repository scoring contract.  They are subjective to at least `15`
-percentage points.
+For integers $n\ge1$, the following prospective probabilities use the future-
+effort rule $F_{AV}(n+1)\lt1.1F_{AV}(n)$.  The probabilities are subjective to
+at least `15` percentage points.  Separately, the estimated probability that
+the first theorem reaching score `1` overshoots the score-`0.3` rung is `35%`;
+that is a baseline diagnostic, not a `0`-skip.
 
 | Boundary | Estimated skip probability | Main source of a skip |
 |---:|---:|---|
-| 0 to 1 | 35% | A first exponent improvement may already be subpower. |
 | 1 to 2 | 30% | A new height estimate may enter the polylogarithmic regime directly. |
-| 2 to 3 | 35% | Breaking the exponential loss may yield a polynomial bound immediately. |
-| 3 to 4 | 35% | A polynomial method may produce a small exponent without stopping at an arbitrary $q$. |
-| 4 to 5 | 25% | A near-linear radical bound may naturally be uniform in every $\varepsilon$. |
-| 5 to 6 | 20% | A geometric proof of abc may extend to rational points on surfaces. |
-| 6 to 7 | 40% | A Vojta framework may increase dimension or point degree in the same proof. |
-| 7 to 8 | 35% | Either lattice route may overshoot its first restricted case. |
+| 2 to 3 | 35% | Breaking the exponential loss may yield a quadratic bound rather than stop at an arbitrary exponent. |
+| 3 to 4 | 35% | A near-linear method may not stop at exponent two before proving abc. |
+| 4 to 5 | 25% | A geometric proof of abc may extend to rational points on surfaces. |
+| 5 to 6 | 20% | A Vojta framework may increase dimension or point degree in the same proof. |
+| 6 to 7 | 40% | One framework may pass several finite dimension or degree cutoffs at once. |
+| 7 to 8 | 35% | A uniform argument may remove the finite cutoff on one lattice axis. |
 | 8 to 9 | 35% | Uniformity in dimension or degree may arrive in a package. |
 | 9 to 10 | 30% | The last bounded dimension or degree restriction may not be load-bearing. |
 
