@@ -24,9 +24,8 @@ distinguish those cases.
   powers.  A calibrated ladder for this folder has not yet been developed.
 - [`abc/`](abc/) tracks the size of a coprime triple against its radical, from
   the current best unconditional exponent up to the general Vojta conjecture.
-  Its headline conjecture sits below the endpoint of its ladder, so its scores
-  are not directly comparable with twin-prime scores without a stated
-  conversion.
+  Its headline conjecture sits below the endpoint of its ladder; both use the
+  same repository-wide score calibration as the other folders.
 
 Cross-problem design questions are developed in [`theory/`](theory/).  The
 [historical ladder backtest](theory/historical_ladder_backtest.md) compares
@@ -87,8 +86,9 @@ favored rung.
 Numerical scores are contours through a multidimensional theorem state, not a
 claim that proofs must traverse a linear list of lemmas.  One theorem may jump
 several contours.  Milestones should be chosen or replaced to make expected
-log effort increase smoothly; a rung may be a disjunction of independently
-ordered statements when that materially reduces skip risk.
+log effort increase smoothly.  Prefer lattice points that preserve several
+natural implication paths.  A rung may be a disjunction of independently
+ordered statements only when that makes progress significantly smoother.
 
 At integer $n$, an $n$-skip occurs when reaching $n+1$ takes less than `1.1`
 times the cumulative human-equivalent effort needed to reach $n$.  Prospective
@@ -107,7 +107,7 @@ score.
 
 - Score the proved mathematical artifact, not the solver's reputation or the
   historical fame of the theorem.
-- A theorem outside the recorded coordinates receives no formal target score
+- A theorem outside the recorded coordinates receives no formal ladder score
   until a proved consequence moves a coordinate.  Possible method transfer
   may be reported separately.
 - Prefer a range or sensitivity analysis when human-equivalent costs are

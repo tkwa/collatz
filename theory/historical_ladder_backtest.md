@@ -15,22 +15,22 @@ maximum over many coordinates, a maximum over complete proof routes, or a
 portfolio aggregate?
 
 The historical cases below support a scalar public score, but not a scalar
-mathematical state.  They do **not** determine which scalar should be public,
-because theorem strength, work already banked, and probability of timely
-solution are different estimands.  The most robust common substrate is:
+mathematical state.  They do **not** make that score a forecast: theorem
+strength, work already banked, and probability of timely solution are
+different estimands.  The most robust substrate beneath the repository's
+required common-scale ladder is:
 
 1. retain a versioned portfolio of proved artifacts and implications;
 2. define complete, complement-aware production functions for credible proof
    routes;
-3. compute a route-level maximum when the objective is conservative theorem
-   reach or leading-route replacement work; and
-4. compute a prior-weighted route portfolio, including an unseen-route
-   reserve, when the objective is prediction.
+3. prefer natural implication-lattice points for the displayed rungs, using a
+   disjunction only when it makes the effort path significantly smoother; and
+4. keep forecasts and optional portfolio diagnostics separate from the
+   displayed difficulty score.
 
-The actionable recommendation is therefore a small objective-labeled
-dashboard before choosing one headline number.  If the repository later
-chooses banked leading-route work as its primary meaning, the route-level
-maximum is the best current scalar candidate.
+The artifact graph and route models remain useful for designing and auditing
+the scalar ladder.  They do not replace the common `5`, `10`, and `20`
+calibration or turn a folder's headline target into a fixed endpoint.
 
 This is a conditional conclusion about problems that admit ladder-like
 structure.  The selected history cannot establish how common such problems
@@ -545,14 +545,14 @@ semantics after the objective is chosen.
 
 ## Recommendation for this repository
 
-1. Replace “the mathematical state is two-dimensional” with “the benchmark
-   stores a theorem portfolio and exposes a small number of views.”  Retain
-   $(H,D)$ as a useful twin-prime display, not as the canonical ontology.
+1. Store a theorem portfolio beneath the scalar public ladder.  Auxiliary
+   coordinates may remain useful displays, but they are not separate scoring
+   systems.
 2. Define route functions over implication closure.  Complements live inside
    each route; alternatives are aggregated across routes.
-3. Do not take the maximum of raw dimensions.  If a single conservative
-   achievement score is needed now, take the maximum of complete route
-   functions.
+3. Choose displayed rungs from natural implication-lattice points.  Use a
+   disjunction of chains only when it significantly improves smoothness; do
+   not take the maximum of raw dimensions.
 4. Do not call that score an all-things-considered forecast.  Publish
    $F_{X,Y}$ separately using a dependency-aware portfolio with explicit
    unseen-route mass.
