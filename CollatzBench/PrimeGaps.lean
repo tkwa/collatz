@@ -40,7 +40,8 @@ def ElliottHalberstamAt (S : ElliottHalberstamSchema) (θ : ℝ) : Prop :=
 /-- Current Weakest twin-prime rung: `H₁ ≤ 244` or some EH exponent above `1/2`. -/
 def WeakestPrimePattern (S : ElliottHalberstamSchema) : Prop :=
   PrimeGapAtMost 244 ∨
-    ∃ δ : ℝ, 0 < δ ∧ ElliottHalberstamAt S ((1 : ℝ) / 2 + δ)
+    ∃ δ : ℝ, 0 < δ ∧ (1 : ℝ) / 2 + δ < 1 ∧
+      ElliottHalberstamAt S ((1 : ℝ) / 2 + δ)
 
 /-- Infinitely many pairs `p,p+2` are prime. -/
 def TwinPrimeConjecture : Prop :=
