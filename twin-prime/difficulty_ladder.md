@@ -184,12 +184,17 @@ is true.
 
 ## Integer-skip audit
 
-For integer $n\ge1$, an $n$-skip occurs when the realized effort to reach
+For integer $n\ge0$, an $n$-skip occurs when the realized effort to reach
 score $n+1$ is less than `1.1` times the effort to reach score $n$.  The table
 estimates this prospectively, allowing one proof to discharge both rungs.
+The `0`-to-`1` estimate asks whether the first post-baseline result overshoots
+the score-`0.3` Weakest rung rather than treating the already proved baseline
+as zero historical effort.  All estimates have uncertainty of at least `15`
+percentage points.
 
 | Boundary | Estimated $p(n\text{-skip})$ | Principal reason |
 |---:|---:|---|
+| 0 to 1 | 30% | A sieve optimization may jump directly to $H_1\le200$, or a distribution theorem may establish $\mathrm{EH}[11/20]$, without isolating the `0.3` rung. |
 | 1 to 2 | 35% | An EH estimate or sieve optimization may overshoot a round-number landmark. |
 | 2 to 3 | 35% | The same theorem may improve both the exponent and the optimized gap. |
 | 3 to 4 | 40% | A strong EH theorem could overshoot the exponent landmark. |
