@@ -17,9 +17,11 @@ moving lowest candidate; its document states the convention under which it
 is being minimized.
 
 The [Collatz-like impressiveness ladder](collatz_ladder.md) places these
-conjectures, the classical Collatz conjecture, and broader universal
-negative-drift theorems on a subjective scale from current knowledge to a
-full map-universal result.
+conjectures, the classical Collatz conjecture, a sharp classical stopping-time
+asymptotic, and increasingly uniform one-expander theorems on a subjective
+scale.  Its endpoint is the
+[Universal One-Expander Periodicity Conjecture](one_expander_universal_periodicity.md),
+not a theorem over arbitrary residue-affine maps.
 
 Research toward a superlogarithmic lower bound for the contraction-branch count
 is recorded in [`asymptotic_progress/`](asymptotic_progress/). Precise

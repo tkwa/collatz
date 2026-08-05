@@ -14,7 +14,8 @@ distinguish those cases.
 ## Problem folders
 
 - [`collatz/`](collatz/) studies contraction frequency, recurrence, classical
-  Collatz, and increasingly uniform generalized-map theorems.
+  Collatz, sharp classical stopping-time asymptotics, and a restricted
+  one-expander family near the possible universality boundary.
 - [`twin-prime/`](twin-prime/) tracks the best unconditional prime-gap bound
   together with progress in the distribution of primes.  Its notes also
   explain why the parity obstruction may make generalized

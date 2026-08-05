@@ -9,9 +9,11 @@ different judgments, not claims that a difficult proof automatically proves
 an impressive theorem.
 
 Score `0` is the current rigorous frontier, score `6` is classical Collatz,
-and score `10` is the map-universal `B^B` endpoint.  A one-point interval is
-intended to contain a real qualitative transition, but the scale is not a
-ratio scale and the estimates are not literature consensus.
+score `7` is a sharp asymptotic for the maximal classical stopping time, and
+score `10` is universal periodicity for a restricted one-expander family.  A
+one-point interval is intended to contain a real qualitative transition, but
+the scale is not a ratio scale and the estimates are not literature
+consensus.
 
 Throughout, `K` is the number of iterates and `D_K(n)` counts the relevant
 contracting-branch steps among the first `K` iterates of the starting value
@@ -41,10 +43,10 @@ division-branch steps.
 | **5.0** | Every shortcut-Collatz orbit has lower even-step frequency above its `0.36907...` negative-drift threshold.  This controls every start but does not by itself exclude rare arbitrarily long expansion bursts or nonstandard cycles. |
 | **5.5** | One of the two classical universal obstructions is removed: either every shortcut-Collatz orbit is bounded and hence eventually periodic, possibly in an unknown cycle, or `1 <-> 2` is proved to be its only positive cycle. |
 | **6.0** | **The classical Collatz conjecture.**  Every positive integer reaches the cycle `1 <-> 2` under the shortcut map. |
-| **7.0** | A common mechanism proves Collatz and a substantial nontrivial family of generalized Collatz maps. |
-| **8.0** | A broad theorem controls all maps in major structural classes of negative-drift residue-affine systems. |
-| **9.0** | A nearly universal theorem leaves only a sharply characterized exceptional family. |
-| **10** | Every admissible residue-affine map satisfying the `B^B` negative-drift condition has the asserted universal recurrence or convergence behavior. |
+| **7.0** | **Sharp classical stopping-time asymptotic.**  If $\tau(n)$ is the first shortcut iterate at $1$ and $M(X)=\max_{1\le n\le X}\tau(n)$, then $M(X)\sim c_{\mathrm{Col}}\log X$ for an explicit constant $c_{\mathrm{Col}}\gt0$. |
+| **8.0** | A common mechanism proves eventual periodicity for every start of a substantial explicit infinite family of positive, coprime, negative-drift maps having pure-division contracting branches and one expanding residue. |
+| **9.0** | A nearly uniform theorem handles every map in that one-expander class except a sharply characterized exceptional subfamily. |
+| **10** | **The Universal One-Expander Periodicity Conjecture.**  Every positive, coprime map with pure-division contracting branches, exactly one expanding residue, and $a\lt B^B$ has every nonnegative orbit eventually periodic. |
 
 The new one-coprime-ray conjecture belongs at `0.2`, rather than inheriting
 the old `0.4` placement of a profinite-density proposal.  It is a genuine
@@ -105,6 +107,29 @@ threshold crossing in a one-expander family, and full branch-weighted drift.
 A small positive density can coexist with exponential growth, and even a
 large total division density need not control which expanding branches occur.
 
+## The sharp classical milestone
+
+For the shortcut Collatz map $T$, set
+
+```math
+\tau(n)=\min\lbrace k\ge0:T^k(n)=1\rbrace,
+\qquad
+M(X)=\max_{1\le n\le X}\tau(n),
+```
+
+where $\tau(n)=\infty$ if the orbit never reaches $1$.  Score `7` asks for an
+explicit constant $c_{\mathrm{Col}}\gt0$ such that
+
+```math
+M(X)\sim c_{\mathrm{Col}}\log X.
+```
+
+This is deliberately much stronger than merely proving Collatz.  It requires
+the correct first-order growth of the most extreme stopping time below $X$,
+not just a finite bound for every individual start.  The exact constant is
+part of the theorem, rather than a placeholder that may be chosen after the
+proof.
+
 ## Existential and universal meanings
 
 The Negative-Drift Periodicity Conjecture is existential in the choice of map
@@ -113,11 +138,22 @@ by supplying the shortcut Collatz map as a witness.  It is therefore placed
 below the fixed-map classical statements at scores `5` through `6`, despite
 having a stronger-sounding condition in its name.
 
-The score-10 endpoint means something genuinely stronger: a theorem uniform
-across all admissible parameter choices satisfying the `B^B` condition.  If
-"universal" meant only every starting value for one existentially chosen map,
-then a proof of Collatz would already establish that statement and could not
-coherently sit lower on a theorem-reach ladder.
+The score-10 endpoint is uniform over the narrower class defined in
+[`one_expander_universal_periodicity.md`](one_expander_universal_periodicity.md).
+It varies $B$, the unique expanding residue, its positive coprime multiplier,
+and its nonnegative offset, while forcing every other branch to be pure
+division.  This is stronger than choosing one witness map but materially
+narrower than quantifying over arbitrary residue-affine systems.
+
+Broad generalized-Collatz systems can encode computation.  Kurtz and Simon,
+building on Conway, proved that a natural generalized totality problem is
+$\Pi^0_2$-complete.  No reduction is known here for the positive coprime
+one-expander class, and no theorem rules such a reduction out.  The endpoint
+is intentionally placed near that uncertain boundary, with a subjective
+universality risk around `10--15%`, rather than beyond it.
+
+Reference: Stuart A. Kurtz and Janos Simon,
+[“The Undecidability of the Generalized Collatz Problem”](https://doi.org/10.1007/978-3-540-72504-6_49).
 
 Selected-map milestones need not logically imply the next selected-map
 milestone, because their witness maps may differ.  The ordering says that the
@@ -140,10 +176,10 @@ with uncertainty of about 15 percentage points each:
 | **3 -> 4** | **60%** | Equidistribution or a structural frequency theorem can cross the drift threshold in the same argument. |
 | **4 -> 5** | **15%** | A tractable existentially chosen map can exploit structure unavailable for the fixed `3x+1` map. |
 | **5 -> 6** | **35%** | A genuinely universal Collatz mechanism may prove recurrence and cycle identification together rather than stop at frequency control. |
-| **6 -> 7** | **50%** | A Collatz proof may expose a mechanism that abstracts immediately to a nontrivial family. |
-| **7 -> 8** | **40%** | The first useful abstraction may already cover a major structural class. |
-| **8 -> 9** | **25%** | Broad methods may leave exceptional parameter families needing different ideas. |
-| **9 -> 10** | **12%** | The last exceptional maps may contain counterexamples or a qualitatively different obstruction. |
+| **6 -> 7** | **10%** | A sufficiently quantitative Collatz proof might also identify the sharp extreme stopping-time constant. |
+| **7 -> 8** | **20%** | The mechanism behind a sharp classical asymptotic may immediately control a substantial one-expander family. |
+| **8 -> 9** | **35%** | A structural theorem for one infinite family may cover almost the whole one-expander class at once. |
+| **9 -> 10** | **15%** | The exceptional maps may contain either counterexamples or the remaining computational simulations. |
 
 These probabilities are not used to define the scores mechanically.  In
 particular, alternative lemmas raise skip risk because several approaches can
@@ -171,7 +207,8 @@ hypothetical theorem statements, not known estimates.
 | **4.75** | `E(X) = o(log X)`.  This rules out an unbounded orbit, since one such orbit would itself supply `Omega(log X)` distinct exceptional starts below `X`. |
 | **5.5** | Either every orbit is bounded and eventually periodic, or the usual cycle is proved to be the only positive cycle. |
 | **6.0** | Both universal halves are joined: every positive orbit reaches `1 <-> 2`. |
-| **7-10** | The same increasingly broad generalized-map theorems as on the primary scale. |
+| **7.0** | The sharp maximal-stopping-time asymptotic $M(X)\sim c_{\mathrm{Col}}\log X$ with explicit $c_{\mathrm{Col}}$. |
+| **8-10** | The same increasingly uniform one-expander periodicity theorems as on the primary scale. |
 
 The conventional ladder is smoother for historical recognition and intuitive
 impressiveness: Tao-type results, exceptional-set bounds, boundedness, cycle
