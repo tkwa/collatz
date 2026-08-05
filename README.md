@@ -59,42 +59,36 @@ and its routine corollary.
 
 ## Difficulty scores
 
-For a target-normalized ladder, score `0` is the current rigorous state and
-score `10` is the target conjecture.  Let $W(x)$ denote the target-relevant
-human-equivalent **replacement work** represented by state $x$: roughly, the
-work a capable human research community would have needed to reproduce the
-proved portfolio from the baseline, using the cheapest credible route.
-Abandoned work and unrelated difficult theorems do not increase $W$.
+Scores use one repository-wide difficulty calibration; they are not reset so
+that each folder's headline conjecture has the same endpoint.  Score `0` is the
+current rigorous frontier in a folder.  The cross-problem anchors are:
 
-The intended calibration is
+- score `5` represents, very roughly, one to two doublings of cumulative
+  human-equivalent effort in the relevant area beyond its 2026 frontier;
+- score `10` is roughly the median difficulty of the three individual
+  problems BB(6), Schanuel's conjecture, and the general Vojta conjecture; and
+- score `20` is roughly the difficulty of BB(7).
 
-```math
-W(x)\approx C e^{S(x)}.
-```
+For the score-`5` anchor, first declare the relevant area and estimate its 2026
+stock of directed-equivalent effort.  General historical effort in that area
+counts as about half as useful as effort strategically directed at the
+benchmark.  This is not a count of all effort in mathematics.  A central
+estimate at score `5` should therefore represent about two to four times that
+area-specific 2026 stock after adding future directed effort.
 
-Thus one score point represents about a factor of $e$ in cumulative credited
-work.  Anchoring the baseline at `0` and the solution at `10` asserts that the
-solution represents about $e^{10}\approx 22{,}000$ times the baseline work.
-If that ratio is judged implausible for a problem, the honest generalization
-is $W(x)\approx C e^{\lambda S(x)}$ with a stated $\lambda$; a multiplicative
-constant alone cannot change the endpoint ratio.
-
-Numerical scores are value contours through the multidimensional state, not a
+Numerical scores are contours through a multidimensional theorem state, not a
 claim that proofs must traverse a linear list of lemmas.  One theorem may jump
-several contours.  Transition costs should generally increase near the target,
-but they need not increase exponentially as a function of the underlying
-mathematical milestones.
+several contours.  Milestones should be chosen or replaced to make expected
+log effort increase smoothly; a rung may be a disjunction of independently
+ordered statements when that materially reduces skip risk.
 
-## Target score and extended reach
+## Headline targets and extended reach
 
-The target-normalized score answers: **how much target-relevant work has been
-banked toward this conjecture?**  Some folders also include an extended reach
-ladder above the target.  That second scale measures theorem strength and
-generality; it should not be confused with the target-normalized work score.
-
-For example, the twin-prime target has score `10` on its own benchmark, while
-an extended number-theory ladder can place twin primes below de Polignac,
-prime-tuples, Hardy--Littlewood, and Bateman--Horn statements.
+A folder's headline target sits wherever these common anchors place it.  A
+folder may continue to stronger statements without changing scales.  A
+separate target-specific progress diagnostic is permissible, but it must be
+labeled separately and must not be presented as the repository difficulty
+score.
 
 ## Evaluation rules
 
