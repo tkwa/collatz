@@ -18,6 +18,8 @@ Commit frequently.
 
 There should be at most one "Weakest" conjecture in each folder which should be continually revised to reflect the frontier. All others should be named descriptively.
 
+You may freely delete language about obsolete versions of conjectures or the repo in general. All documentation should reflect *only* how the repo is, not how it used to be.
+
 ## Proof searches / red-teaming
 
 Do not try searching for an explicit set of parameters whose map converges, or has some minimum contraction density, over a bounded range of integers. That cannot prove it converges on all integers, because there could be arbitrarily long runs of expanding residue classes, just as in Collatz.
