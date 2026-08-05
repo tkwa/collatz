@@ -20,7 +20,7 @@ It does not assess the repository's moving
 [Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md), which now
 requires the same asymptotic only along one existentially chosen coprime power
 ray.  On the [impressiveness ladder](collatz_ladder.md), the all-start target
-here is score `1.2` and the sparse-ray target is score `0.3`.  The probability
+here is score `0.6` and the sparse-ray target is score `0.2`.  The probability
 and proof-difficulty judgments below should not be transferred to the latter
 without a separate recalibration.
 
@@ -48,13 +48,7 @@ Any probability assessment must respect this implication.  In particular,
 =\Pr(\neg C)\Pr(\neg S\mid\neg C).
 ```
 
-The earlier version of this note assigned $12\%$ to $\neg S$ without an
-explicit joint model for $C$ and $S$.  That was too pessimistic.  It treated
-the absence of a known fixed-start theorem as much stronger truth-level
-evidence than it is, and it did not account for the many ways in which $C$
-could be false while $S$ remains true.
-
-## Revised joint distribution
+## Joint distribution
 
 The following is my central subjective joint distribution.  These are
 epistemic judgments, not mathematical or frequentist results.
@@ -81,7 +75,7 @@ The decimal in $0.1\%$ should not be mistaken for measurement precision.  It
 is a compact way to record an order-of-magnitude judgment: roughly one chance
 in a thousand, with a plausible range spanning at least a factor of several.
 
-## Revised outcome distribution for $S$
+## Outcome distribution for $S$
 
 The following mutually exclusive categories sum to $100\%$.
 
@@ -169,8 +163,7 @@ less likely than a proof obstruction for the candidates studied so far.
 
 ## What the repository's obstructions do and do not show
 
-The most important calibration change is to classify each obstruction by the
-kind of evidence it supplies.
+Each obstruction should be classified by the kind of evidence it supplies.
 
 ### Mostly evidence about proof difficulty
 
@@ -193,8 +186,8 @@ These results eliminate attractive proof strategies.  They do not construct
 one bad infinite orbit.  In particular, realizability of every finite prefix
 uses a starting integer that may change with the prefix length.  The limiting
 infinite itinerary naturally belongs to a $B$-adic integer and need not come
-from any ordinary nonnegative integer.  Confusing those two assertions was a
-major source of the old $12\%$ estimate.
+from any ordinary nonnegative integer.  Confusing those two assertions would
+overstate the truth-level evidence supplied by the finite-prefix obstruction.
 
 ### Some evidence relevant to truth
 
@@ -244,21 +237,16 @@ Then $\Pr(\neg S)=qr$.  Three useful calibrations are:
 | Central estimate | 3% | 3.33% | 0.10% |
 | Skeptical exceptional-orbit model | 10% | 10% | 1.00% |
 
-The central number should move if either conditional changes.  For example,
-retaining the old $12\%$ estimate together with
-$\Pr(\neg C)=30\%$ would require
-$\Pr(\neg S\mid\neg C)=40\%$.  With
-$\Pr(\neg C)=12\%$, it would require the conditional to be $100\%$.  Those
-are coherent mathematical possibilities, but they amount to a strong belief
-in an obstruction shared by every admissible map.  The current repository
-does not provide evidence of that strength.
+The central number should move if either conditional changes.  Values far
+above the skeptical row would amount to a strong belief in an obstruction
+shared by every admissible map; the current repository does not provide
+evidence of that strength.
 
 The opposite extreme is also unjustified.  It would be a mistake to infer
 universal truth directly from negative drift, Tao's almost-all theorem, or
 finite verification.  All three can miss one exceptional ordinary integer.
 The $0.1\%$ central estimate is therefore much larger than the literal random
-model would suggest, while remaining much smaller than the old proof-blocker-
-driven estimate.
+model would suggest.
 
 ## Likely proof strategies
 
@@ -370,20 +358,3 @@ Evidence that would settle or strongly support $S$ includes:
   chains of proportional gaps; or
 - any proof of the Positive Division-Density Conjecture or of classical
   Collatz.
-
-## Token expenditure
-
-The initial proof attempt used **3,578,728 tokens** according to the goal
-tracker, out of the authorized 10 million-token budget.  The present
-probability reassessment used approximately **50,000 additional output
-tokens**, for an estimated cumulative total of about **3.63 million tokens**.
-
-The additional figure is a working-budget estimate rather than independent
-billing telemetry: the original proof goal was already marked blocked, so its
-tracker remained fixed at 3,578,728 and did not meter this reassessment as a
-separate goal.  The refinement included a fresh review of the proved failure
-structure, endpoint freedom, finite-state no-go results, uniform-rank
-valuation target, literature notes, classical almost-all theorem, and current
-computational verification evidence.
-
-Revised probability assessment and token count recorded on 2026-08-02.
