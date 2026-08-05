@@ -61,8 +61,8 @@ probability above `50%` is a warning to merge, reorder, or replace rungs.
 The score measures theorem reach and smooth trackable progress, not the
 probability of a solution by a date.  A headline conjecture may occur below
 the endpoint when stronger natural statements provide useful headroom.  In
-the prime-pattern ladder, twin primes is score `7` and Bateman--Horn is score
-`10`.
+the prime-pattern ladder, twin primes is score `6` and Bateman--Horn is score
+`8`; scores `9` and `10` remain available for harder cross-task anchors.
 
 ## Evaluation rules
 

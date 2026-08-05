@@ -54,12 +54,12 @@ denotes logical disjunction.
 | **3** | $H_1\le50$ **or** $\mathrm{EH}[2/3]$. |
 | **4** | $H_1\le12$ **or** $\mathrm{EH}[3/4]$. |
 | **5** | $H_1\le6$ **or** $\mathrm{GEH}[3/4]$. |
-| **6** | $H_1\le4$ **or** full GEH. |
-| **7** | **Twin primes:** $H_1=2$. |
-| **8** | $\pi_2(X)\gg X/(\log X)^2$ for all sufficiently large $X$ **or** de Polignac's conjecture. |
-| **9** | The Hardy--Littlewood asymptotic for twin primes **or** Dickson's conjecture for every fixed admissible affine-linear family. |
-| 9.5 | The Hardy--Littlewood asymptotic for every fixed admissible affine-linear family **or** Schinzel's hypothesis H. |
-| **10** | **Bateman--Horn** for every fixed admissible finite family of distinct irreducible integer polynomials with positive leading coefficients. |
+| 5.5 | $H_1\le4$ **or** full GEH. |
+| **6** | **Twin primes:** $H_1=2$. |
+| 6.5 | $\pi_2(X)\gg X/(\log X)^2$ for all sufficiently large $X$ **or** de Polignac's conjecture. |
+| **7** | The Hardy--Littlewood asymptotic for twin primes **or** Dickson's conjecture for every fixed admissible affine-linear family. |
+| 7.5 | The Hardy--Littlewood asymptotic for every fixed admissible affine-linear family **or** Schinzel's hypothesis H. |
+| **8** | **Bateman--Horn** for every fixed admissible finite family of distinct irreducible integer polynomials with positive leading coefficients. |
 
 The decimal rung at `0.3` is deliberately the only conjecture called
 “Weakest” in this folder.  Since gaps between sufficiently large consecutive
@@ -70,7 +70,7 @@ primes are even, $H_1\lt246$ is equivalent to $H_1\le244$.
 Write $R_s$ for the statement at score $s$.  The claimed direction is always
 
 ```math
-R_{10}\Longrightarrow R_{9.5}\Longrightarrow R_9
+R_8\Longrightarrow R_{7.5}\Longrightarrow R_7
 \Longrightarrow\cdots\Longrightarrow R_{0.3}\Longrightarrow R_0.
 ```
 
@@ -87,15 +87,15 @@ ones.  At the two joins:
 The first arrow is Proposition 1.7 of the Polymath paper; the second is
 restriction of the exponent.  The same paper also proves that full GEH gives
 $H_1\le6$, but it does not give $H_1\le4$.  Thus “full GEH” is a genuine
-alternative at score `6`, not a restatement of that row's gap alternative.
+alternative at score `5.5`, not a restatement of that row's gap alternative.
 No partial EH or GEH rung is claimed to imply the gap alternative on its own
 row.
 
 Above twin primes:
 
-- either alternative at score `8` implies infinitely many twin primes;
+- either alternative at score `6.5` implies infinitely many twin primes;
 - the twin-pair Hardy--Littlewood asymptotic implies the quantitative
-  alternative at score `8`;
+  alternative at score `6.5`;
 - Dickson implies de Polignac (including consecutiveness, by a CRT
   construction recorded in the source audit);
 - the general affine Hardy--Littlewood conjecture contains the twin-pair
@@ -112,29 +112,55 @@ Hardy--Littlewood formulas.
 
 Let $Y_s$ be the human-expert-years required by a non-automated research
 community, starting from the August 2026 frontier, to first prove rung $s$.
+A human-expert-year means one year of full-time work by a frontier research
+mathematician or an equivalent coordinated contribution.
 The estimates are conditional on the rung being true and provable in the
 accepted foundational framework.  The quantity calibrated is
 $\mathbb E[\log_{10}Y_s]$, not $\log_{10}\mathbb E[Y_s]$.
 
 | Score | $\mathbb E[\log_{10}Y_s]$ | 80% interval | Geometric-central effort |
 |---:|---:|---:|---:|
-| 0.3 | 1.6 | 0.5--3.0 | 40 expert-years |
-| 1 | 1.9 | 0.7--3.3 | 80 expert-years |
-| 2 | 2.2 | 0.9--3.6 | 160 expert-years |
-| 3 | 2.5 | 1.1--3.9 | 320 expert-years |
-| 4 | 2.8 | 1.3--4.2 | 630 expert-years |
-| 5 | 3.1 | 1.5--4.5 | 1,300 expert-years |
-| 6 | 3.4 | 1.7--4.8 | 2,500 expert-years |
-| 7 | 3.7 | 1.9--5.1 | 5,000 expert-years |
-| 8 | 4.0 | 2.1--5.4 | 10,000 expert-years |
-| 9 | 4.3 | 2.3--5.7 | 20,000 expert-years |
-| 9.5 | 4.45 | 2.4--5.9 | 28,000 expert-years |
-| 10 | 4.6 | 2.5--6.1 | 40,000 expert-years |
+| 0.3 | 2.3 | 0.8--4.0 | 200 expert-years |
+| 1 | 3.0 | 1.3--4.7 | 1,000 expert-years |
+| 2 | 4.0 | 2.1--5.9 | 10,000 expert-years |
+| 3 | 5.0 | 2.9--6.9 | 100,000 expert-years |
+| 4 | 6.0 | 3.7--7.9 | 1,000,000 expert-years |
+| 5 | 6.8 | 4.4--8.7 | 6,300,000 expert-years |
+| 5.5 | 7.0 | 4.6--8.9 | 10,000,000 expert-years |
+| 6 | 7.2 | 4.8--9.1 | 16,000,000 expert-years |
+| 6.5 | 7.4 | 5.0--9.3 | 25,000,000 expert-years |
+| 7 | 7.6 | 5.2--9.5 | 40,000,000 expert-years |
+| 7.5 | 7.8 | 5.4--9.7 | 63,000,000 expert-years |
+| 8 | 8.0 | 5.6--9.9 | 100,000,000 expert-years |
 
-The point estimates rise by about `0.3` log-ten units per integer rung: a
-factor of about two in central effort.  The intervals are intentionally much
-wider than the spacing.  They represent disagreement about future methods,
-not measurement error.
+The intervals are intentionally much wider than the spacing.  They represent
+disagreement about future methods and the exchange rate between historical
+and future work, not measurement error.
+
+### Cross-task anchors
+
+The absolute scale is tied to the development guide, not normalized to this
+folder.  For calibration, the cumulative human-equivalent effort embodied in
+the 2026 mathematical frontier is assigned a central value of about
+$10^{6.5}$ expert-years, with order-of-magnitude uncertainty.
+
+- Score `5` has central effort $10^{6.8}$ expert-years, about twice that
+  cumulative reference: roughly one doubling, within the guide's one-to-two
+  doubling anchor.
+- Twin primes at score `6` is above that anchor but below a master conjecture
+  spanning all polynomial prime values.
+- Bateman--Horn ends this ladder at score `8`, with central effort $10^8$
+  expert-years.  It is treated as one master-conjecture-scale achievement,
+  not as the score-`10` capability level.
+- Score `10` remains reserved for roughly the capability at which two among
+  $\mathrm{BB}(6)$, Schanuel, and general Vojta have been solved.  Extrapolating
+  this table would put that anchor near $10^9$ expert-years, but this ladder
+  deliberately has no score-`9` or score-`10` rung.
+
+The $10^{6.5}$ and $10^9$ conversions are subjective exchange-rate choices,
+not measurements of historical labor.  Their purpose is cross-task
+comparability.  Moving either by an order of magnitude should shift the whole
+table, not stretch Bateman--Horn back to score `10`.
 
 Pairing two alternatives does not assert that their proofs would look alike.
 The calibration makes the following more limited judgments:
@@ -168,11 +194,9 @@ estimates this prospectively, allowing one proof to discharge both rungs.
 | 2 to 3 | 35% | The same theorem may improve both the exponent and the optimized gap. |
 | 3 to 4 | 40% | A strong EH theorem could overshoot the exponent landmark. |
 | 4 to 5 | 40% | A convolution estimate may prove GEH and EH at once. |
-| 5 to 6 | 35% | Full GEH may arrive at the same time as its first exponent beyond one half. |
-| 6 to 7 | 45% | A method strong enough to beat the three-point barrier may solve the specified pair. |
-| 7 to 8 | 35% | A first twin-prime proof may already be quantitative or uniform in the even shift. |
-| 8 to 9 | 40% | A correlation method may yield an asymptotic, not merely infinitude. |
-| 9 to 10 | 35% | A polynomial-prime framework may establish Schinzel H or Bateman--Horn in one step. |
+| 5 to 6 | 45% | A method that beats the three-point barrier may pass the `5.5` rung and solve the specified pair. |
+| 6 to 7 | 40% | A first twin-prime proof may already be quantitative, while a general route may reach Dickson. |
+| 7 to 8 | 35% | A polynomial-prime framework may pass Schinzel H and establish Bateman--Horn in one step. |
 
 No estimate exceeds `50%`.  The largest risks occur at genuine implication
 shortcuts; adding more gap cutoffs would make those risks worse rather than
