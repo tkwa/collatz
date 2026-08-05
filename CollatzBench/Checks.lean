@@ -14,6 +14,7 @@ import CollatzBench.PrimeGaps
 #check CollatzBench.Collatz.ClassicalCollatz
 
 #check CollatzBench.Mahler.AlgebraicMultiplierEscape
+#check CollatzBench.Mahler.RationalBaseUniversalEscape
 
 #check CollatzBench.PrimeGaps.WeakestPrimePattern
 #check CollatzBench.PrimeGaps.TwinPrimeConjecture
