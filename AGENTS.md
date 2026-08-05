@@ -1,6 +1,8 @@
 ## Development
 
-Development guide is specified [here](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtEFuKxjmN6TaZq8CFxeidI_Xw/edit?tab=t.0).
+Development guide is specified [here](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtEFuKxjmN6TaZq8CFxeidI_Xw/edit?tab=t.0). Read it before starting any PR.
+
+Draft PRs should be made before the full PR is complete, so that humans can check on agent progress.
 
 For Markdown math that will be published on GitHub, checking that the
 `/markdown` API emits a `<math-renderer>` element is not enough: the browser
