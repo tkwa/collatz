@@ -6,12 +6,12 @@ orbit conclusion; the other fixes the shortcut Collatz map and strengthens
 its conclusion.  Two disjunctive rungs join those routes where a single chain
 would otherwise ignore substantial progress on one axis.
 
-Score `0` is the current rigorous frontier.  The first positive rung is the
-moving sparse-ray conjecture, score `5` is classical Collatz, scores `6--9`
-give sharper uniform stopping-time bounds, and score `9.5` adds universal
-periodicity for a restricted one-expander family while retaining the sharp
-classical stopping-time statement.  The folder stops below the repository's
-score-`10` reference; endpoints do not set the common scale.
+The scale runs from the current rigorous frontier through sparse- and
+all-start contraction statements, classical Collatz, progressively sharper
+uniform stopping-time bounds, and a cumulative restricted one-expander
+endpoint.  Scores use the
+[repository-wide calibration](../README.md#difficulty-scores); the estimates
+are subjective and are not literature consensus.
 
 Throughout, `K` is the number of iterates.  For a residue-affine map,
 $D_K(n)$ counts the designated contracting or pure-division steps among the
@@ -35,7 +35,7 @@ $D_K^{\rm Col}(n)$ for the number of even inputs among its first $K$ iterates.
 | **7.0** | **Polylogarithmic uniform stopping bound.**  There is an $A\gt0$ such that $M(X)=O((\log X)^A)$. |
 | **8.0** | **Linear-log uniform stopping bound.**  $M(X)=O(\log X)$. |
 | **9.0** | **Classical stopping-time limiting constant.**  $M(X)/\log X$ converges to a finite positive limit $c_{\rm Col}$. |
-| **9.5** | **Stopping-time limit plus [universal one-expander periodicity](one_expander_universal_periodicity.md).**  The score-`9` statement holds, and every map in the restricted positive, coprime, pure-division, one-expander class with $a\lt B^B$ has every nonnegative orbit eventually periodic. |
+| **9.5** | **Stopping-time limit plus [universal one-expander periodicity](one_expander_universal_periodicity.md).**  The preceding limiting statement holds, and every map in the restricted positive, coprime, pure-division, one-expander class with $a\lt B^B$ has every nonnegative orbit eventually periodic. |
 
 ## Why these lower rungs are selected
 
@@ -110,11 +110,12 @@ Under uniform residue frequencies, $f_r=1/B$, this becomes
 \prod_{r\in E}a_r\lt B^B.
 ```
 
-A small positive density can coexist with exponential growth, and even a
-large total division density need not control which expanding branches occur.
-The score-`2.3` inequality is deliberately non-strict: a strict lower bound
-above the threshold already forces boundedness and would collapse that part
-of the intended chain.
+This is why the ladder distinguishes positive density from the exact
+classical drift threshold.  A small positive density can coexist with
+exponential growth, and even a large total division density need not control
+which expanding branches occur.  The drift-threshold inequality is
+deliberately non-strict: a strict lower bound above the threshold already
+forces boundedness and would collapse that part of the intended chain.
 
 ## The stopping-time hierarchy
 
@@ -127,9 +128,9 @@ M(X)=\max_{1\le n\le X}\tau(n),
 ```
 
 where $\tau(n)=\infty$ if the orbit never reaches $1$.  Any finite upper
-bound for $M(X)$ implies classical Collatz.  Scores `6`, `7`, and `8`
-successively ask for polynomial, polylogarithmic, and logarithmic bounds.
-Score `9` asks for a finite positive limit
+bound for $M(X)$ implies classical Collatz.  The successive rungs ask for
+polynomial, polylogarithmic, and logarithmic bounds, followed by a finite
+positive limit
 
 ```math
 \frac{M(X)}{\log X}\longrightarrow c_{\rm Col}.
@@ -169,42 +170,32 @@ implies the finite-attractor statement because only the standard positive
 cycle is needed.  Each uniform stopping-time bound implies Collatz, and the
 successively sharper bounds imply one another.
 
-The score-`9.5` endpoint is a conjunction.  It retains the score-`9`
-stopping-time limit and adds the uniform component defined in
+The endpoint is a conjunction.  It retains the classical stopping-time limit
+and adds the uniform component defined in
 [`one_expander_universal_periodicity.md`](one_expander_universal_periodicity.md).
 Universal one-expander periodicity alone neither identifies the classical
 cycle nor supplies a stopping-time estimate, so omitting the conjunction
-would break the chain.
+would break the chain.  The linked definition records the restricted family
+and its computational-universality caveat.
 
-Broad generalized-Collatz systems can encode computation.  Kurtz and Simon,
-building on Conway, proved that a natural generalized totality problem is
-$\Pi^0_2$-complete.  No reduction is known here for the positive coprime
-one-expander class, and no theorem rules such a reduction out.  The endpoint
-is deliberately restricted rather than presented as a decidable fragment.
+## Effort and skip annotation
 
-Reference: Stuart A. Kurtz and Janos Simon,
-[“The Undecidability of the Generalized Collatz Problem”](https://doi.org/10.1007/978-3-540-72504-6_49).
+The Collatz elicitation area includes classical $3x+1$ and $mx+1$ stopping,
+cycle, and exceptional-set work; generalized residue-affine and one-expander
+integer dynamics; and adjacent arithmetic-dynamics, ergodic, or Diophantine
+work only when a plausible transfer is explicit.  Generic number theory and
+brute-force orbit verification are excluded.
 
-## Expected effort and integer-skip audit
-
-Let $E_{\rm Col}(s)$ denote the expected future strategically directed
-human-expert-years, measured from the July 2026 frontier, required first to
-reach contour $s$.  The central values below are elicited judgments, not
-measurements or consequences of the scores.  Uncertainty is at least about
-`0.5` log units through the middle of the ladder and wider near the
-one-expander endpoint; individual score placements are uncertain by roughly
-one point.
-
-For an integer $n\ge1$, an $n$-skip is the event
-
-```math
-E_{\rm Col}(n+1)\lt1.1E_{\rm Col}(n).
-```
-
-Noninteger rows have no integer-skip probability.  Score `9` is marked
-`n/a` because this folder selects no score-`10` Collatz contour.  The separate
-baseline diagnostic assigns about `20%` probability that the first theorem
-reaching score `1` also overshoots the score-`0.2` sparse-ray rung.
+The table applies the root README's future-effort and skip conventions.  Its
+central values are elicited judgments, not measurements or consequences of
+the scores.  Uncertainty is at least about `0.5` log units through the middle
+of the ladder and wider near the one-expander endpoint; individual score
+placements are uncertain by roughly one point, and the skip probabilities by
+at least `15--20` percentage points.  The entry on integer row $n$ concerns
+the transition from $n$ to $n+1$.  Score `9` is marked `n/a` because this
+folder selects no score-`10` contour.  The separate baseline diagnostic
+assigns about `20%` probability that the first theorem reaching score `1`
+also overshoots the score-`0.2` sparse-ray rung.
 
 | Score | Expected $\log_{10}$ future expert-years | $P(n\text{-skip})$, if applicable | Calibration note |
 |---:|---:|---:|---|
@@ -224,24 +215,8 @@ reaching score `1` also overshoots the score-`0.2` sparse-ray rung.
 | 9.5 | 5.47 | -- | Terminal conjunction; the one-expander component has especially wide universality and overlap uncertainty. |
 
 No estimated integer-skip probability exceeds `50%`.  The near-linearity of
-$\log_{10}E_{\rm Col}(s)$ below score `10` is a diagnostic for the selected
-contours, not an exact fitting constraint.  The universal anchors remain
-score `10` near the median individual difficulty among BB(6), Schanuel's
-conjecture, and general Vojta, and score `20` near BB(7); this folder's
-endpoint need not equal either anchor.
+the expected log-effort column below score `10` is a diagnostic for the
+selected contours, not an exact fitting constraint.
 
-## How to read the scale
-
-The scale keeps three judgments separate:
-
-- **theorem reach:** which starts and maps are controlled, and how strong the
-  orbit conclusion is;
-- **expected log effort:** whether successive contours plausibly require
-  smooth multiplicative increases in directed research effort; and
-- **skip risk:** whether one natural proof is likely to establish adjacent
-  integer contours at essentially the same time.
-
-Formal implication governs the ordering.  Expected effort and skip risk guide
-which lattice points are displayed.  Historical fame does not raise a weak
-statement's score, and bounded computation never establishes a universal
-orbit claim.
+The one-expander endpoint has a rough placement range of `7.5--12`; this is a
+difficulty sensitivity, not a proof-theoretic claim.

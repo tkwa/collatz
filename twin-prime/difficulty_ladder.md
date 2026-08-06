@@ -3,7 +3,7 @@
 ## Purpose
 
 This benchmark measures proved progress through twin primes and onward to
-broader prime-pattern conjectures.  Through score `5`, it uses two lower-ladder
+broader prime-pattern conjectures.  Through twin primes, it uses two lower-ladder
 coordinates:
 
 ```math
@@ -16,7 +16,7 @@ x=(H,D).
   [prime-distribution subladder](distribution_subladder.md).
 
 The baseline is $(246,D_0)$.  Twin primes is any state with $H=2$; stronger
-rungs above score `5` are recorded directly because $H$ and $D$ no longer
+rungs above the target are recorded directly because $H$ and $D$ no longer
 distinguish them.
 
 The coordinate pair is retained as an underlying theorem state, not averaged.
@@ -116,9 +116,9 @@ families of irreducible integer polynomials.
 | **8** | The Hardy--Littlewood asymptotic for every fixed admissible affine-linear family **or** Schinzel's hypothesis H. |
 | **9** | **Bateman--Horn** for every fixed admissible finite family of distinct irreducible integer polynomials with positive leading coefficients. |
 
-Each alternative at score `7` implies one at score `6`; each alternative at
-`8` implies one at score `7`; and Bateman--Horn implies both alternatives at
-`8`.  Bateman--Horn is centered at `9`, with a subjective range of roughly
+Each alternative in a row implies one in the row below it, and Bateman--Horn
+implies both alternatives in the preceding row.  Bateman--Horn is centered at
+`9`, with a subjective range of roughly
 `8--10.5`.  It is a master conjecture but is narrower than general Vojta or
 Schanuel, so the ladder is not stretched merely to occupy score `10`.
 
@@ -130,64 +130,41 @@ $Mt+a+d$ are admissible, while each interior value $Mt+a+j$ is divisible by
 $q_j$.  Dickson therefore makes the endpoints prime infinitely often and the
 interior values composite for large $t$, giving consecutive gaps of size $d$.
 
-## Area and effort annotation
+## Effort and skip annotation
 
-The predeclared area $A_{PP}$ is the dependency closure of prime patterns and
-prime values of integer polynomials.  It includes the relevant sieve,
+The prime-pattern elicitation area $A_{PP}$ is the dependency closure of prime
+patterns and prime values of integer polynomials.  It includes the relevant sieve,
 distribution, correlation, local-obstruction, and algebraic inputs, but not
 generic analytic number theory or algebraic geometry without a plausible
-dependency.  Direct work receives weight one and broader eligible work weight
-one half.
+dependency.
 
-The central 2026 stock is provisionally $B_{PP}=8{,}000$
-directed-equivalent expert-years, with an 80% range of `2,000--30,000` and a
-sensitivity case near `12,000`.  This is an elicitation prior, not a measured
-labor total.  The following ratios are calibration targets used to place
-statements; they are not inferred from the scores after the fact.  The final
-column reports future effort from the July 2026 baseline, the clock used by
-the skip rule.
+The table applies the root README's future-effort and skip conventions.
+Central logarithms are uncertain by at least roughly half a decade, and skip
+probabilities by at least `15--20` percentage points.  The entry on integer
+row $n$ concerns the transition from $n$ to $n+1$.
 
-| Score | $C_{PP}(s)/B_{PP}$ | $F_{PP}(s)/B_{PP}$ | $\log_{10}F_{PP}(s)$ at the central stock |
-|---:|---:|---:|---:|
-| 0 | 1.00 | 0 | -- |
-| 0.3 | 1.07 | 0.07 | 2.75 |
-| 1 | 1.25 | 0.25 | 3.30 |
-| 2 | 1.55 | 0.55 | 3.64 |
-| 3 | 1.93 | 0.93 | 3.87 |
-| 3.5 | 2.41 | 1.41 | 4.05 |
-| 4 | 3.00 | 2.00 | 4.20 |
-| 4.5 | 3.60 | 2.60 | 4.32 |
-| **5** | **4.50** | **3.50** | **4.45** |
-| 6 | 7.00 | 6.00 | 4.68 |
-| 7 | 12.0 | 11.0 | 4.94 |
-| 8 | 16.0 | 15.0 | 5.08 |
-| 9 | 22.0 | 21.0 | 5.23 |
+| Score | Expected $\log_{10}$ future expert-years | $P(n\text{-skip})$ | Main skip mechanism |
+|---:|---:|---:|---|
+| 0 | -- | -- | -- |
+| 0.3 | 2.75 | -- | -- |
+| 1 | 3.30 | 35% | The next gap or EH theorem may pass a round-number landmark. |
+| 2 | 3.64 | 35% | One estimate may improve both the exponent and optimized gap. |
+| 3 | 3.87 | 40% | A convolution estimate may prove GEH and EH together while improving the gap. |
+| 3.5 | 4.05 | -- | -- |
+| 4 | 4.20 | 45% | A parity-breaking method may pass the intermediate gap rung and solve twin primes. |
+| 4.5 | 4.32 | -- | -- |
+| 5 | 4.45 | 40% | A first twin-prime proof may already be quantitative, or a general route may reach de Polignac. |
+| 6 | 4.68 | 35% | A prime-tuples framework may prove both qualitative and quantitative cases. |
+| 7 | 4.94 | 35% | An affine-linear framework may establish both asymptotic and qualitative forms. |
+| 8 | 5.08 | 40% | A polynomial-prime framework may pass Schinzel H on the way to Bateman--Horn. |
+| 9 | 5.23 | n/a | The ladder has no score-`10` contour. |
 
-Thus twin primes at score `5` is centrally about `2.2` doublings over the
-predeclared 2026 stock, within the shared two-to-four-doubling anchor.  It is
-not a normalized endpoint.
-
-## Integer-skip audit
-
-For integers $n\ge1$, the following provisional judgments use
-$F_{PP}(n+1)\lt1.1F_{PP}(n)$.  Each probability is uncertain by at least
-`15--20` percentage points.  Separately, the estimated probability that the
-first theorem reaching score `1` overshoots the score-`0.3` rung is `30%`;
-that is a baseline diagnostic, not a `0`-skip.
-
-| Boundary | Estimated skip probability | Principal reason |
-|---:|---:|---|
-| 1 to 2 | 35% | The next gap or EH theorem may pass a round-number landmark. |
-| 2 to 3 | 35% | One estimate may improve both the exponent and optimized gap. |
-| 3 to 4 | 40% | A convolution estimate may prove GEH and EH together while improving the gap. |
-| 4 to 5 | 45% | A parity-breaking method may pass the `4.5` rung and solve twin primes. |
-| 5 to 6 | 40% | A first twin-prime proof may already be quantitative, or a general route may reach de Polignac. |
-| 6 to 7 | 35% | A prime-tuples framework may prove both qualitative and quantitative cases. |
-| 7 to 8 | 35% | An affine-linear framework may establish both asymptotic and qualitative forms. |
-| 8 to 9 | 40% | A polynomial-prime framework may pass Schinzel H on the way to Bateman--Horn. |
-
-No central value exceeds `50%`; if elicitation pushes one above it, the
-affected rungs should be merged or replaced.
+These are elicited estimates rather than values inferred from the assigned
+scores.  The estimated probability that the first theorem reaching score `1`
+overshoots the first positive rung is `30%`.  Twin primes and Bateman--Horn
+retain their displayed positions because the central future-effort sequence
+remains roughly geometric; neither position normalizes an endpoint or creates
+an intermediate anchor.
 
 ## Status
 

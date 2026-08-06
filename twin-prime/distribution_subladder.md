@@ -93,10 +93,10 @@ Neither implication reaches $H_1=2$.
 ## Scoring the subladder
 
 Do not assign equal score increments to equal changes in $\vartheta$.  For
-each transition, estimate cumulative effort on the shared
-$C_{PP}=B_{PP}+F_{PP}$ clock and count shared lemmas once.  The public ladder
-does not give this subladder an independent score: it pairs selected EH and
-GEH statements with gap milestones in logical disjunctions.  No fixed
+each transition, estimate expected future expert-years using the root
+README's common clock and count shared lemmas once.  The public ladder does
+not give this subladder an independent score: it pairs selected EH and GEH
+statements with gap milestones in logical disjunctions.  No fixed
 score-to-effort exchange rate is assumed.
 
 A future calibration should separately elicit at least:

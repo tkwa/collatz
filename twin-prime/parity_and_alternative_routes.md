@@ -144,8 +144,8 @@ can move both formal coordinates and cross several score contours.
 The Riemann hypothesis does not by itself imply EH or GEH and does not improve
 the unconditional prime-gap bound to a new benchmark level.  Under the
 lower-ladder rule, a proof of RH alone therefore receives no formal
-twin-prime score below `5`.  A proved distribution or gap consequence of its
-methods would receive credit normally.
+twin-prime score below the twin-prime contour.  A proved distribution or gap
+consequence of its methods would receive credit normally.
 
 The same rule applies to progress on Sarnak, Chowla, or broad multiplicative
 randomness conjectures.  These results may be highly impressive and may
