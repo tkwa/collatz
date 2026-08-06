@@ -45,9 +45,9 @@ subjective benchmark judgments.  The audit is current through August 5, 2026.
   |N_\delta(E)|\le C|\log\delta|^{-(d-1)}
   ```
 
-  for every $0\lt\delta\lt1$.  This is Theorem 1.3 of their August 2026
+  for every $0\lt\delta\lt1$.  This is Theorem 1.3 of their July 2026
   preprint, [*A construction of Kakeya Sets in Arbitrary
-  Dimension*](https://arxiv.org/abs/2607.14824).  It is an obstruction to
+  Dimension*](https://arxiv.org/abs/2607.14824v2).  It is an obstruction to
   lossless positive-volume endpoints, not to estimates allowing the standard
   $\delta^{-\varepsilon}$ loss.
 
@@ -121,9 +121,12 @@ and demanding a scale-independent positive lower bound is false.  The
 Fernández-Delgado--de la Salle examples have
 $|N_\delta(E)|\le C|\log\delta|^{-(d-1)}$ in every dimension.  Already in two
 dimensions the endpoint maximal problem has an unavoidable logarithmic loss.
-An exact optimal-polylogarithmic conjecture could be stronger than the
-displayed terminal rung, but no standard all-dimensional maximal formulation
-with adequately audited truth confidence was located.  The construction is
+The authors describe their construction as conjecturally optimal and note
+that Carbery's reverse Littlewood--Paley conjecture would give the matching
+ordinary Kakeya-set lower bound.  That sourced implication is to a set
+estimate, not to polynomial-Wolff tube families.  No standard
+all-dimensional *maximal* formulation with exact optimal logarithmic loss and
+adequately audited truth confidence was located.  The construction is
 compatible with the terminal polynomial-Wolff statement because every fixed
 power $\delta^{-\varepsilon}$ eventually dominates every power of
 $|\log\delta|$.
