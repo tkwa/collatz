@@ -96,7 +96,7 @@ additionally require its full convolution class.
 
 ## Polynomial prime conjectures
 
-The endpoint formulation follows Paul T. Bateman and Roger A. Horn,
+The score-9 formulation follows Paul T. Bateman and Roger A. Horn,
 [“A heuristic asymptotic formula concerning the distribution of prime
 numbers”](https://doi.org/10.1090/S0025-5718-1962-0148632-7), and the modern
 overview by Stephan Ramon Garcia,
@@ -127,6 +127,67 @@ Dickson by specialization to affine
 linear polynomials, but it does not supply the Hardy--Littlewood asymptotic.
 Conversely, the affine Hardy--Littlewood conjecture says nothing by itself
 about an irreducible nonlinear polynomial such as $t^2+1$.
+
+## Multivariate Bateman--Horn over $\mathbb Z$
+
+The final rung is the locally admissible case of Conjecture A.3 in Kevin
+Destagnol and Efthymios Sofos,
+[“Rational points and prime values of polynomials in moderately many
+variables”](https://arxiv.org/abs/1801.03082).
+
+Fix $n,r\ge1$ and pairwise nonassociate polynomials
+$f_1,\ldots,f_r\in\mathbb Z[x_1,\ldots,x_n]$ that are irreducible over
+$\mathbb Q$.  Let $f_{i,0}$ be the top-degree homogeneous part of $f_i$.
+For each prime $p$, put
+
+```math
+\nu_p(\mathbf f)=
+\#\lbrace\mathbf a\in\mathbb F_p^n:
+\prod_{i=1}^r f_i(\mathbf a)=0\rbrace.
+```
+
+The family is locally admissible when $\nu_p(\mathbf f)\lt p^n$ for every
+prime $p$.  For every fixed compact axis-parallel box
+$\mathcal B\subset\mathbb R^n$ of positive volume such that
+$f_{i,0}(\mathcal B)\subset(1,\infty)$ for every $i$, the conjecture as
+$P\to\infty$ is
+
+```math
+\#\lbrace\mathbf x\in\mathbb Z^n\cap P\mathcal B:
+f_1(\mathbf x),\ldots,f_r(\mathbf x)
+\text{ are positive primes}\rbrace
+\sim
+\mathfrak S(\mathbf f)
+\int_{P\mathcal B}
+\frac{d\mathbf x}{\prod_{i=1}^r\log f_{i,0}(\mathbf x)},
+```
+
+where
+
+```math
+\mathfrak S(\mathbf f)=
+\prod_p
+\frac{1-\nu_p(\mathbf f)/p^n}{(1-1/p)^r}.
+```
+
+Remark A.4 establishes convergence of this product.  Conjecture A.3 itself
+does not separately impose local admissibility; this benchmark selects its
+admissible case so that the main constant is positive and the asymptotic
+equivalent is nonzero.
+
+Taking $n=1$ gives the interval form of one-variable Bateman--Horn.  On a
+positive interval bounded away from zero, $f_{i,0}(x)=a_i x^{d_i}$ and
+
+```math
+\prod_{i=1}^r\log f_{i,0}(x)
+\sim
+\left(\prod_{i=1}^r d_i\right)(\log x)^r.
+```
+
+The local factors are the ordinary Bateman--Horn factors.  Applying the box
+asymptotic on scaled dyadic intervals and summing gives the cumulative
+one-variable asymptotic used at score `9`.  Thus score `9.5` implies score
+`9`; the reverse implication is not asserted.
 
 ## Dickson implies consecutive de Polignac gaps
 
@@ -194,8 +255,9 @@ arrows:
 - two-point Chowla $\Longrightarrow$ twin primes without additional,
   quantitatively compatible sieve input;
 - twin primes $\Longrightarrow$ a positive-order lower bound;
-- Dickson $\Longrightarrow$ a Hardy--Littlewood asymptotic; or
-- Schinzel H $\Longrightarrow$ Bateman--Horn.
+- Dickson $\Longrightarrow$ a Hardy--Littlewood asymptotic;
+- Schinzel H $\Longrightarrow$ Bateman--Horn; or
+- one-variable Bateman--Horn $\Longrightarrow$ multivariate Bateman--Horn.
 
-The last three distinctions are why the upper ladder has separate qualitative
-and quantitative branches.
+These distinctions explain both the separate qualitative and quantitative
+branches and the final multivariate step.
