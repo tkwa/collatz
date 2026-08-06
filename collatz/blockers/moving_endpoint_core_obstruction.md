@@ -80,9 +80,9 @@ Assume the affine upper recurrence above and suppose the superlogarithmic
 target fails.  Then there are constants $\delta,\eta\gt0$ and arbitrarily large
 $M$ for which
 
-$$
+```math
 \#\lbrace m\lt M:\tau_{m+1}\ge(1+\delta)\tau_m\rbrace\ge\eta M.
-$$
+```
 
 This is a proved averaging lemma.  To see its source, telescope
 
