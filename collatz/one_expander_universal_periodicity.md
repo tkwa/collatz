@@ -1,7 +1,9 @@
 # The Universal One-Expander Periodicity Conjecture
 
-This is the score-`10` endpoint of the
-[Collatz-like impressiveness ladder](collatz_ladder.md).  It is universal over
+This is the uniform component of the cumulative endpoint of the
+[Collatz-like impressiveness ladder](collatz_ladder.md).  That endpoint also
+retains the classical stopping-time limit so the ladder remains an
+implication chain.  The conjecture here is universal over
 a deliberately restricted map family near the project's estimated
 computational-universality boundary.
 
@@ -75,7 +77,7 @@ c=2.
 Consequently, the universal one-expander conjecture implies classical
 Collatz's eventual-periodicity half, but it does not identify the classical
 cycle.  The ladder places the full classical Collatz conjecture lower because
-score `6` also identifies `1 <-> 2` as the destination of every positive
+it also identifies $1\leftrightarrow2$ as the destination of every positive
 start.
 
 ## Why the family stops here
@@ -95,10 +97,11 @@ the other hand, negative average drift alone does not preclude computation on
 a sparse exceptional set, and this project has no impossibility theorem for a
 one-expander simulation.
 
-The score-`10` placement therefore reflects a judgment, not a known
-decidability theorem.  The project's current subjective probability that
-computational universality survives all these restrictions is approximately
-`10--15%`.
+The endpoint placement therefore reflects an overlap-aware
+judgment about the conjunction, not a known decidability theorem or a claim
+that the uniform component follows from the classical stopping-time result.
+The project's current subjective probability that computational universality
+survives all these restrictions is approximately `10--15%`.
 
 ## Status
 

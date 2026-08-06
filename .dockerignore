@@ -1,0 +1,6 @@
+**
+!lean-toolchain
+!lakefile.toml
+!CollatzBench.lean
+!CollatzBench/**
+!lean/Dockerfile
