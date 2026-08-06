@@ -34,9 +34,9 @@ parts of Fourier analysis.  All values are subjective.
 | 0.2 | 2.30 | -- | Minimal progress on any unrestricted geometric, maximal, or shading coordinate. |
 | 1 | 2.78 | 40% | A new planebrush or shading-stability argument may overshoot the first displayed contour. |
 | 2 | 3.13 | 45% | Structural control may jump from `3.1` through the sourced `3.25` barrier. |
-| 3 | 3.48 | 35% | Scale-specific methods may reach full upper Minkowski dimension before full Hausdorff dimension. |
-| 4 | 3.83 | 35% | A four-dimensional geometric proof may also control multiplicity in dimension three. |
-| 5 | 4.18 | 35% | Dimension-lifting or maximal methods may solve both alternatives together. |
+| 3 | 3.48 | 35% | A method proving full upper Minkowski dimension may also yield full Hausdorff dimension. |
+| 4 | 3.83 | 35% | A dimension-robust proof of $H_4$ or $M_3$ may extend directly to $H_5$ or $M_{\le4}$. |
+| 5 | 4.18 | 35% | The same machinery may pass from dimension `5` to `8`, or from $M_{\le4}$ to $M_{\le5}$. |
 | 6 | 4.52 | 40% | A dimension-uniform argument may cross several finite cutoffs. |
 | 7 | 4.86 | 40% | Removing ambient-dimension dependence may arrive with stronger maximal control. |
 | 8 | 5.18 | 35% | An all-dimensional maximal proof may already tolerate polynomial-Wolff families. |
