@@ -26,7 +26,7 @@ together with the preceding classical stopping-time limit; it is not a
 theorem over arbitrary residue-affine maps.
 
 Research toward a superlogarithmic lower bound for the contraction-branch count
-is recorded in [`asymptotic_progress/`](asymptotic_progress/). Precise
+is recorded in [`progress/`](progress/). Precise
 obstacles encountered by the current approaches are recorded in
 [`blockers/`](blockers/).
 
