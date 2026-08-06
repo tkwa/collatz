@@ -11,10 +11,18 @@ subjective benchmark judgments.  The audit is current through August 5, 2026.
   state that it does not resolve the three-dimensional maximal-function
   conjecture.  See [Wang--Zahl, Theorems 1.1 and
   1.2](https://arxiv.org/abs/2502.17655).
-- **[proved]** Katz and Zahl prove in $\mathbb R^4$ a maximal estimate above
-  dimension `3.049` and the still-best located Hausdorff bound
-  $h_0=3+(\sqrt{17665}-97)/600\gt3.059$.  See [Katz--Zahl, Theorem
-  2](https://arxiv.org/abs/1902.00989).
+- **[proved]** The corrected 2025 revision of Katz and Zahl proves in
+  $\mathbb R^4$ a maximal estimate at
+
+  ```math
+  3+\frac{2195737-13925\sqrt{17665}}{6959096}\gt3.049
+  ```
+
+  and the still-best located Hausdorff bound
+  $h_0=3+(\sqrt{17665}-97)/600\gt3.059$.  The arXiv abstract and Theorem 2
+  explicitly separate these exponents; earlier rendered versions are stale.
+  See [Katz--Zahl, Theorem
+  2](https://arxiv.org/html/1902.00989v3#Thmthm2).
 - **[proved]** Borges, Chan, Chen, Liu, Xi, and Zhan subsequently improve the
   four-dimensional maximal exponent to
   $m_0=(159+\sqrt{145})/56\gt3.054$.  Their introduction retains the
