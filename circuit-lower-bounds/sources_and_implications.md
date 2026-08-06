@@ -212,7 +212,7 @@ affine disperser inside that unchanged inequality cannot produce an
 unbounded positive additive gain.  The full eligible audit, including the
 quantifier, direct-sum, advice,
 encoding, basis, output, and refuter attacks, is recorded in the
-[progress note](progress/notes/eligible_frontier_red_team.md).
+[development note](dev_notes/notes/eligible_frontier_red_team.md).
 
 ## Strongest-statement audit
 
@@ -321,5 +321,5 @@ with the guide's common anchor, not a source-backed measurement.  Missing
 coefficient, polynomial, quantifier, stretched-exponent, and near-exponential
 contours were inserted after the eligible audit put the old central skip
 risks at 55--65%.  The refitted log efforts are approximately linear below
-score `10`; wide uncertainty remains.  The dedicated progress note records
+score `10`; wide uncertainty remains.  The dedicated development note records
 the construction and full audit.

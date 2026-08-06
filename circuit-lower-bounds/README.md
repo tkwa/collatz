@@ -65,8 +65,8 @@ ETH.
   arrows.
 - [`weakest_unrestricted_circuit_improvement.md`](weakest_unrestricted_circuit_improvement.md)
   is the folder's unique moving **Weakest** candidate.
-- [`progress/`](progress/) records the weakening, strengthening, and hostile
-  checks used to construct the benchmark.
+- [`dev_notes/`](dev_notes/) records the development and red-team checks used
+  to construct the benchmark.
 
 ## Status labels
 

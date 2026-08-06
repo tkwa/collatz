@@ -4,7 +4,7 @@ Date: 2026-08-05.  Audited commit:
 `c73ac4514e63fce8f8459e5ddd38e26751093048`.
 
 This note records the guide-mandated eligible-model audit.  It is deliberately
-kept under `progress/`; the benchmark documents remain owned by the main
+kept under `dev_notes/`; the benchmark documents remain owned by the main
 circuit-lower-bounds agent.
 
 ## Accounting protocol
