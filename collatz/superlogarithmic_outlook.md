@@ -23,7 +23,7 @@ ray whose base is multiplicatively independent of the map base.  The
 [impressiveness ladder](collatz_ladder.md) places that sparse-ray statement at
 score `0.2` and a stronger pure-division polylogarithmic statement at score
 `1`.  The all-start superlogarithmic target here is a descriptive lattice
-point strictly between them, not a separate scalar rung.  The probability
+point between them by implication, not a separate scalar rung.  The probability
 and proof-difficulty judgments below should not be transferred to either
 displayed rung without a separate recalibration.
 
