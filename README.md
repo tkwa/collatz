@@ -24,9 +24,8 @@ distinguish those cases.
   powers.  A calibrated ladder for this folder has not yet been developed.
 - [`abc/`](abc/) tracks the size of a coprime triple against its radical, from
   the current best unconditional exponent up to the general Vojta conjecture.
-  Its headline conjecture sits below the endpoint of its ladder, so its scores
-  are not directly comparable with twin-prime scores without a stated
-  conversion.
+  Its headline conjecture sits below the endpoint of its ladder; both use the
+  same repository-wide score calibration as the other folders.
 
 Cross-problem design questions are developed in [`theory/`](theory/).  The
 [historical ladder backtest](theory/historical_ladder_backtest.md) compares
@@ -41,66 +40,79 @@ natural statement is shown to remain nontrivial.
 
 ## What a benchmark state records
 
-The natural mathematical state is usually multidimensional.  A benchmark
-should retain the smallest number of dimensions that still separates the
-main proof routes.  The twin-prime benchmark, for example, uses only:
+The underlying implication lattice may be multidimensional.  Preserve enough
+structure to distinguish the main proof routes, then select natural lattice
+points for the displayed scalar rungs.  When no single chain tracks the
+important routes smoothly, a rung may join statements with logical
+disjunction.
 
-1. the best unconditional gap bound; and
-2. the strongest applicable theorem on the distribution of primes.
-
-Other developments may be scientifically important without immediately
-moving either coordinate.  They should be recorded as route evidence, not
-converted into target progress merely because they are impressive.
-
-Known implications are applied automatically.  If a distribution theorem
-implies a better unconditional gap bound, the state moves in both coordinates
-at no additional credited cost.  This prevents double-counting the theorem
-and its routine corollary.
+Other developments may be scientifically important without establishing a
+displayed rung.  Record them as route evidence rather than assigning
+speculative fractional credit.  Apply known implications automatically so a
+theorem and its routine corollary are not counted twice.
 
 ## Difficulty scores
 
-For a target-normalized ladder, score `0` is the current rigorous state and
-score `10` is the target conjecture.  Let $W(x)$ denote the target-relevant
-human-equivalent **replacement work** represented by state $x$: roughly, the
-work a capable human research community would have needed to reproduce the
-proved portfolio from the baseline, using the cheapest credible route.
-Abandoned work and unrelated difficult theorems do not increase $W$.
+The authoritative calibration, ladder-shape, endpoint, and skip rules live in
+the [development guide](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtEFuKxjmN6TaZq8CFxeidI_Xw/edit?tab=t.0).
+Scores use that one repository-wide scale; they are not reset so that each
+folder's headline conjecture has the same endpoint.
 
-The intended calibration is
+Score `10` is very roughly the median difficulty among BB(6), Schanuel's
+conjecture, and general Vojta; score `20` is roughly the difficulty of BB(7).
+A ladder's top may lie below or above `10`.  These are qualitative
+cross-problem anchors, not a second equation relating scores to expected
+years.
+
+For an area $A$, let $E_A(s)$ be the expected future human-expert-years of
+strategically directed research, measured from the July 2026 frontier, needed
+to first reach score $s$.  Folder tables report the central elicitation
 
 ```math
-W(x)\approx C e^{S(x)}.
+\ell_A(s)=\log_{10}E_A(s).
 ```
 
-Thus one score point represents about a factor of $e$ in cumulative credited
-work.  Anchoring the baseline at `0` and the solution at `10` asserts that the
-solution represents about $e^{10}\approx 22{,}000$ times the baseline work.
-If that ratio is judged implausible for a problem, the honest generalization
-is $W(x)\approx C e^{\lambda S(x)}$ with a stated $\lambda$; a multiplicative
-constant alone cannot change the endpoint ratio.
+The current frontier has $E_A(0)=0$, so its logarithm is undefined.  This
+future-effort clock is not a historical work stock, replacement cost, or count
+of all effort in mathematics.  The elicitation is a joint epistemic
+distribution over the expected-effort function $E_A$; a table reports one
+central logarithm from that distribution.
 
-Numerical scores are value contours through the multidimensional state, not a
+Numerical scores are contours through a multidimensional theorem state, not a
 claim that proofs must traverse a linear list of lemmas.  One theorem may jump
-several contours.  Transition costs should generally increase near the target,
-but they need not increase exponentially as a function of the underlying
-mathematical milestones.
+several contours.  Below score `10`, roughly even
+increments in $\ell_A$ are a spacing diagnostic rather than an exact global
+conversion formula.  No intermediate score, including `5`, is an independent
+anchor.  Prefer natural implication points to cosmetic milestones, and use a
+disjunction of independently ordered statements only when it materially
+improves spacing.
 
-## Target score and extended reach
+For an integer contour $n$ that has an $n+1$ contour in the same ladder, the
+reported skip probability is
 
-The target-normalized score answers: **how much target-relevant work has been
-banked toward this conjecture?**  Some folders also include an extended reach
-ladder above the target.  That second scale measures theorem strength and
-generality; it should not be confused with the target-normalized work score.
+```math
+\Pr\bigl(E_A(n+1)\lt1.1E_A(n)\bigr).
+```
 
-For example, the twin-prime target has score `10` on its own benchmark, while
-an extended number-theory ladder can place twin primes below de Polignac,
-prime-tuples, Hardy--Littlewood, and Bateman--Horn statements.
+This probability is over uncertainty in the elicited expected efforts, not
+randomness remaining after two expectations have been fixed.
+
+The first open rung is audited separately because $E_A(0)=0$; a terminal
+integer has no next-contour skip probability.
+
+## Headline targets and stronger rungs
+
+A folder's headline target sits wherever the shared calibration places it.  A
+folder may continue to stronger statements without changing scales.  A
+separate target-specific progress diagnostic is permissible, but it must be
+labeled separately and must not be presented as the repository difficulty
+score.
 
 ## Evaluation rules
 
 - Score the proved mathematical artifact, not the solver's reputation or the
   historical fame of the theorem.
-- A theorem outside the recorded coordinates receives no formal target score
+- A theorem outside the recorded coordinates receives no formal ladder score
   until a proved consequence moves a coordinate.  Possible method transfer
   may be reported separately.
 - Prefer a range or sensitivity analysis when human-equivalent costs are

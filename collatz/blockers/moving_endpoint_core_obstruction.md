@@ -561,17 +561,12 @@ map.
    remains realizable, that invariant must distinguish one fixed ordinary
    start globally rather than forbid a finite residue pattern.
 
-## Supporting derivations
+## Supporting context
 
-The detailed proofs and exact identities used here are recorded in:
-
-- [failure structure](../asymptotic_progress/failure_structure.md),
-- [prime-factor reset](../asymptotic_progress/prime_factor_reset.md),
-- [prime-power macro chains](../asymptotic_progress/prime_power_macro_chains.md),
-- [endpoint arithmetic progressions](../asymptotic_progress/endpoint_arithmetic_progressions.md),
-- [the uniform-rank valuation target](../asymptotic_progress/uniform_rank_valuation_target.md),
-- [the 4/3 odd-core chain](../asymptotic_progress/odd_core_chain.md), and
-- [the literature checks](../asymptotic_progress/literature_notes.md).
+This note contains the retained detailed derivation of the prime-power
+macro-chain obstruction.  The broader baseline reductions, candidate
+families, and proof-status summary are consolidated in the
+[research state](../progress/research_state.md).
 
 ## Bottom line
 

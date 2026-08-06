@@ -16,15 +16,17 @@ required orbit property.  “Weakest” is retained only for the deliberately
 moving lowest candidate; its document states the convention under which it
 is being minimized.
 
-The [Collatz-like impressiveness ladder](collatz_ladder.md) places these
-conjectures, the classical Collatz conjecture, a sharp classical stopping-time
-asymptotic, and increasingly uniform one-expander theorems on a subjective
-scale.  Its endpoint is the
+The [Collatz-like impressiveness ladder](collatz_ladder.md) selects a formal
+implication chain through the contraction conjectures, classical Collatz,
+uniform stopping-time bounds, and a cumulative one-expander endpoint.  The
+Negative-Drift Periodicity Conjecture remains a useful incomparable side
+statement rather than a scalar rung.  The endpoint includes the
 [Universal One-Expander Periodicity Conjecture](one_expander_universal_periodicity.md),
-not a theorem over arbitrary residue-affine maps.
+together with the preceding classical stopping-time limit; it is not a
+theorem over arbitrary residue-affine maps.
 
 Research toward a superlogarithmic lower bound for the contraction-branch count
-is recorded in [`asymptotic_progress/`](asymptotic_progress/). Precise
+is recorded in [`progress/`](progress/). Precise
 obstacles encountered by the current approaches are recorded in
 [`blockers/`](blockers/).
 

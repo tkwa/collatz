@@ -11,7 +11,7 @@ T(3q)=q,\qquad T(3q+1)=28q+2,\qquad T(3q+2)=q.
 Write
 
 ```math
-D_K(n)=\#\{0\le j<K:T^j(n)\not\equiv1\pmod 3\}.
+D_K(n)=\#\lbrace 0\le j\lt K:T^j(n)\not\equiv1\pmod 3\rbrace.
 ```
 
 The target is
@@ -90,11 +90,9 @@ D_K(n)\ge
 Thus `D_K(n)=\Omega_n(\log K)` unconditionally.
 
 For the ceiling-division family recorded below, the coefficient in this
-logarithmic lower bound can be made arbitrarily large as the base varies. A
-complete proof is in
-[`unbounded_logarithmic_constants.md`](unbounded_logarithmic_constants.md).
+logarithmic lower bound can be made arbitrarily large as the base varies.
 This remains a family of fixed-constant bounds, not a superlogarithmic bound
-for one fixed map.
+for one fixed map, so it cannot prove the target by choosing a large base.
 
 ## Proved: exact block transition
 
@@ -151,38 +149,23 @@ L_{i+1}+s_i
 
 No candidate mechanism is currently a proof.
 
-Two further structural results are recorded separately.  The full residue
-coding cannot be a finite-state transform of the ordinary base-`B` digits; see
-[`finite_state_coding_obstruction.md`](finite_state_coding_obstruction.md).
-The same note rules out a finite-state **binary** expansion/division projection
-for every base, using affine rigidity of deleted-digit Cantor sets and
-Furstenberg's topological multiplicative-independence theorem.
-Structured prime-power multipliers reset the multiplier-prime valuations of
-endpoint units after long runs, but leave all other prime factors free; see
-[`prime_factor_reset.md`](prime_factor_reset.md).  The resulting exact
-prime-to-six recurrence for the small `4/3` diagnostic map, together with the
-local-solvability obstruction to a one-block argument, is in
-[`odd_core_chain.md`](odd_core_chain.md).
-That note also eliminates arbitrary short intervening blocks between marked
-long gaps: failure would yield arbitrarily long chains of controlled odd cores
-whose successive corrections each contain a uniformly bounded number of
-`{2,3}`-unit terms.
-The family-level version for every prime-power expansion multiplier is proved
-in [`prime_power_macro_chains.md`](prime_power_macro_chains.md).
-For every admissible map, fixing a finite itinerary leaves an exact arithmetic
-progression of possible endpoints.  This makes all valuations outside the
-expansion-multiplier primes locally prescribable; see
-[`endpoint_arithmetic_progressions.md`](endpoint_arithmetic_progressions.md).
-The nearby-prime construction in
-[`nearby_prime_family.md`](nearby_prime_family.md) combines unbounded
-logarithmic constants across maps with endpoint cores coprime to both the base
-prime and multiplier prime, but it still leaves the same moving outside-prime
-core.
-For the ceiling family, the remaining fixed-start problem can be written as a
-staircase lacunary-polynomial valuation.  A bound whose rank-dependent loss is
-subexponential already implies the target; the exact statement and proof of
-this threshold are in
-[`uniform_rank_valuation_target.md`](uniform_rank_valuation_target.md).
+The structural conclusions that still govern the search are:
+
+1. the full residue coding is not a finite-state transform of ordinary
+   base-`B` digits, and neither is its direct binary expansion/division
+   projection;
+2. prime-power expansion multipliers reset only the multiplier-prime part of
+   a long-run endpoint, leaving a moving core with unrestricted prime support;
+3. a fixed finite itinerary leaves an arithmetic progression of possible
+   endpoints, so outside-prime valuations remain locally prescribable; and
+4. for the ceiling family, the missing arithmetic input can be phrased as a
+   growing-rank staircase valuation bound with subexponential rank loss.
+
+The standalone
+[moving-endpoint-core obstruction](../blockers/moving_endpoint_core_obstruction.md)
+contains the retained macro-chain derivation and the precise fixed-start
+interface.  None of these structural conclusions proves or refutes the
+superlogarithmic target.
 
 ## Proved: failure has positive-density proportional gaps
 
@@ -197,15 +180,14 @@ with fixed `A>1`.  If `\log\tau_m/m` does not tend to zero, a telescoping and
 averaging argument shows that some `\delta,\eta>0` satisfy
 
 ```math
-\left|\{m<M:\tau_{m+1}\ge(1+\delta)\tau_m\}\right|\ge\eta M
+\#\lbrace m\lt M:\tau_{m+1}\ge(1+\delta)\tau_m\rbrace\ge\eta M
 ```
 
 for arbitrarily large `M`.  In fact the long-gap indices are piecewise
 syndetic: one fixed spacing bound supports arbitrarily long chains of
 proportional gaps along the same bad orbit.  The complete argument is in
-[`failure_structure.md`](failure_structure.md), and the exact eliminated
-block identity it motivates is in
-[`bounded_chain_certificate.md`](bounded_chain_certificate.md).
+Sections 2 and 3 of the
+[moving-endpoint-core obstruction](../blockers/moving_endpoint_core_obstruction.md).
 
 This still cannot be finished by a local forbidden-pattern argument.  Every
 finite itinerary is realizable, including arbitrarily long finite prefixes in
@@ -292,8 +274,8 @@ gives, for every `N`,
 
 ```math
 x_0=
-\frac{3^N x_N}{\prod_{0\le j<N}a_j}
-+\sum_{0\le j<N}
+\frac{3^N x_N}{\prod_{0\le j\lt N}a_j}
++\sum_{0\le j\lt N}
 \frac{b_j3^j}{\prod_{0\le i\le j}a_i}.
 ```
 

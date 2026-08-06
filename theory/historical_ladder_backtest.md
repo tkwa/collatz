@@ -15,22 +15,22 @@ maximum over many coordinates, a maximum over complete proof routes, or a
 portfolio aggregate?
 
 The historical cases below support a scalar public score, but not a scalar
-mathematical state.  They do **not** determine which scalar should be public,
-because theorem strength, work already banked, and probability of timely
-solution are different estimands.  The most robust common substrate is:
+mathematical state.  They do **not** make that score a forecast: theorem
+strength, work already banked, and probability of timely solution are
+different estimands.  The most robust substrate beneath the repository's
+required common-scale ladder is:
 
 1. retain a versioned portfolio of proved artifacts and implications;
 2. define complete, complement-aware production functions for credible proof
    routes;
-3. compute a route-level maximum when the objective is conservative theorem
-   reach or leading-route replacement work; and
-4. compute a prior-weighted route portfolio, including an unseen-route
-   reserve, when the objective is prediction.
+3. prefer natural implication-lattice points for the displayed rungs, using a
+   disjunction only when it makes the effort path significantly smoother; and
+4. keep forecasts and optional portfolio diagnostics separate from the
+   displayed difficulty score.
 
-The actionable recommendation is therefore a small objective-labeled
-dashboard before choosing one headline number.  If the repository later
-chooses banked leading-route work as its primary meaning, the route-level
-maximum is the best current scalar candidate.
+The artifact graph and route models remain useful for designing and auditing
+the scalar ladder.  They do not replace the common `5`, `10`, and `20`
+calibration or turn a folder's headline target into a fixed endpoint.
 
 This is a conditional conclusion about problems that admit ladder-like
 structure.  The selected history cannot establish how common such problems
@@ -88,9 +88,10 @@ method's promise, or the knowledge that a route eventually succeeded.
 
 For each route $r$, a complete route-production function
 $s_r(\mathrm{cl}(P_t))$ maps all complementary ingredients of that route
-to a score in $[0,10]$.  It may behave like a minimum across indispensable
-components, a calibrated nonlinear bottleneck function, or an implication
-graph with replacement costs.  It is not the maximum of its ingredients.
+to the repository's common nonnegative difficulty scale.  It may behave like
+a minimum across indispensable components, a calibrated nonlinear bottleneck
+function, or an implication graph with replacement costs.  It is not the
+maximum of its ingredients, and a folder's target need not have score `10`.
 
 The conservative scalar is
 
@@ -313,21 +314,22 @@ leading-route maximum unchanged.  A broad theorem can raise impressiveness
 more than forecast probability.  A duplicated proof can be impressive but
 add little replacement work after overlap is removed.
 
-### Recommended minimal dashboard
+### Selected score and optional diagnostics
 
-Until one objective is explicitly selected, store the full artifact graph and
-publish three labeled outputs:
+This repository has selected **reach** as its common scalar: a conservative
+theorem-strength contour, usually obtained from implication closure and
+complete route states.  Store the full artifact graph beneath that score.
+When useful, publish two separately labeled diagnostics rather than folding
+them into reach:
 
-1. **Reach** $R$: conservative theorem-strength contour, usually a
-   route-level maximum.
-2. **Banked work** $B$: logarithm of leading-route or overlap-adjusted
+1. **Banked work** $W$: the logarithm of leading-route or overlap-adjusted
    portfolio replacement work, with the choice printed beside the number.
-3. **Forecast** $F_{X,Y}$: probabilities for a small fixed grid of effort
+2. **Forecast** $F_{X,Y}$: probabilities for a small fixed grid of effort
    multiples and target levels.
 
-Report skip and smoothness diagnostics beside these outputs, not as a fourth
-achievement score.  If a single benchmark number is mandatory, choose its
-estimand first and put that noun in the score's name.
+Report skip and smoothness diagnostics beside these outputs, not as another
+achievement score.  This preserves the information needed for forecasting
+without creating a second scalar ladder.
 
 ## Q1: are ladders predictive, or merely smooth in hindsight?
 
@@ -422,7 +424,8 @@ The temperature $\tau$ controls how much secondary routes matter.  This is
 smoother than a hard maximum, but the result changes if one route is split
 into two correlated descriptions.  It needs route priors and overlap
 corrections.  Once the target is proved, implication closure should set every
-route's outcome state to `10`, so the endpoint remains `10`.
+route's outcome state to the target's score on the common scale; it should not
+reset the target to `10`.
 
 ### Overlap-adjusted artifact portfolio
 
@@ -470,17 +473,24 @@ extra parameters are estimated out of sample.
 
 Let $A_j$ be the cumulative actual human-equivalent effort at historical event
 $j$, and let $S_j$ be the contemporaneously assigned score after that event.
-Because $A_j$ is uncertain, every statistic below should be computed over an
-elicited distribution, not a single invented hour count.
+For a prospective ladder, use the future expert-year clock $E_A(s)$ defined
+in the root README.  Because either quantity is uncertain, every statistic
+below should be computed over an elicited distribution, not a single invented
+hour count.
 
 ### Integer-boundary skipping
 
-Let $A(i)$ be the first cumulative effort at which $S_j\ge i$.  Boundary $i$
-is skipped under the repository's proposed rule when
+For a historical replay, let $A(i)$ be the first cumulative effort at which
+$S_j\ge i$.  Boundary $i$ is skipped when
 
 ```math
-A(i+1)\lt1.05A(i).
+A(i+1)\lt1.1A(i).
 ```
+
+For a prospective 2026 ladder, use $E_A(i)$ in the same inequality for every
+integer $i\ge1$ that has an $i+1$ contour.  The ratio is undefined at the
+July-2026 baseline $E_A(0)=0$; whether the first score-`1` result overshoots the first positive
+rung is a separate baseline diagnostic, not a `0`-skip under the ratio rule.
 
 Report the posterior probability of a skip, the expected number of skipped
 integer boundaries, and the longest run of consecutive skips.  Treat several
@@ -509,15 +519,17 @@ Smoothness should be reported against both actual reconstructed effort and
 replacement effort.  The first measures the historical research process; the
 second measures the mathematical stock.  They answer different questions.
 
-## The semantics of $\exp(S)$
+## The semantics of an exponential local fit
 
-The equation
+An equation such as
 
 ```math
-W(P)\approx C\exp(S(P))
+W(P)\approx C\exp(\lambda S(P))
 ```
 
-is coherent only after $W$ is named.
+is coherent only after $W$ is named and $\lambda$ is fitted for the declared
+area and range.  The repository's cross-problem anchors do not imply one
+global exchange rate between a score point and effort.
 
 - Under a hard maximum over complete routes, $W$ is approximately the
   **replacement work embodied in the leading route**, not all work performed
@@ -533,25 +545,26 @@ is coherent only after $W$ is named.
   it is not the probability itself.
 
 Thus a multiplicative work interpretation is not an argument for one
-aggregator.  It is a constraint on the semantics after the objective is
-chosen.
+aggregator or for endpoint normalization.  It is a constraint on the
+semantics after the objective is chosen.
 
 ## Recommendation for this repository
 
-1. Replace “the mathematical state is two-dimensional” with “the benchmark
-   stores a theorem portfolio and exposes a small number of views.”  Retain
-   $(H,D)$ as a useful twin-prime display, not as the canonical ontology.
+1. Store a theorem portfolio beneath the scalar public ladder.  Auxiliary
+   coordinates may remain useful displays, but they are not separate scoring
+   systems.
 2. Define route functions over implication closure.  Complements live inside
    each route; alternatives are aggregated across routes.
-3. Do not take the maximum of raw dimensions.  If a single conservative
-   achievement score is needed now, take the maximum of complete route
-   functions.
+3. Choose displayed rungs from natural implication-lattice points.  Use a
+   disjunction of chains only when it significantly improves smoothness; do
+   not take the maximum of raw dimensions.
 4. Do not call that score an all-things-considered forecast.  Publish
    $F_{X,Y}$ separately using a dependency-aware portfolio with explicit
    unseen-route mass.
-5. Decide whether the repository's $e^S$ language means leading-route or
-   total-portfolio replacement work.  It cannot mean actual cumulative hours
-   while remaining a state-only score.
+5. Name the work quantity and fit any local score-to-effort exchange rate
+   explicitly.  It cannot mean actual cumulative hours while remaining a
+   state-only score, and it must not override the authoritative shared
+   calibration.
 6. Preserve the four historical cases in a versioned replay dataset and add
    eligible censored cases.  Fit no numerical contour until blind,
    leave-one-problem-out tests are possible.
