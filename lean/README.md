@@ -1,7 +1,8 @@
 # Lean statement library
 
 The Lean project formalizes the quantifier structure and mathematical objects
-in selected repository conjecture statements.  A declaration such as
+in every dedicated conjecture file linked from a difficulty ladder, plus a
+small set of useful inline and background anchors.  A declaration such as
 `ClassicalCollatz : Prop` is a statement, not an axiom or a proof.
 
 The supported Santa-safe validation path is Docker, because native downloaded
@@ -26,5 +27,5 @@ lake build
 ```
 
 The project is pinned by `lean-toolchain` and `lakefile.toml`.  The
-[coverage manifest](coverage.md) lists the included statements and explicit
-exclusions.
+[coverage manifest](coverage.md) gives the source-file-to-declaration map and
+the explicit scope boundary.
