@@ -22,8 +22,8 @@ The [Collatz-like impressiveness ladder](collatz_ladder.md) selects a formal
 implication chain through two contraction-route joins, classical Collatz,
 uniform stopping-time bounds, and a cumulative one-expander endpoint.  The
 division-cycle strengthening of negative-drift periodicity is one branch of
-the score-`2` join; bare periodicity is not used because it does not imply
-division density.  The endpoint includes the
+the score-`2` join; the bare formulation is not used because it does not state
+that every eventual cycle contains a division step.  The endpoint includes the
 [Universal One-Expander Periodicity Conjecture](one_expander_universal_periodicity.md),
 together with the preceding classical stopping-time limit; it is not a
 theorem over arbitrary residue-affine maps.

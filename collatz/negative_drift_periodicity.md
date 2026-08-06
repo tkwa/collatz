@@ -58,7 +58,7 @@ T^{k+p}(n)=T^k(n)
 The period and entry time may depend on $n$.  Different starts may enter
 different cycles.
 
-## Why the division clause is necessary
+## Why the division clause is included
 
 Eventual periodicity by itself does not imply frequent contraction.  For
 example, the admissible negative-drift parameters
@@ -75,8 +75,9 @@ c_1=0
 
 give $T(3)=3$.  This is a periodic orbit lying entirely on the expanding
 branch.  The example does not settle whether every orbit of that map is
-periodic; it shows exactly why a bare all-orbit periodicity assertion would
-not imply positive division density.
+periodic.  It shows only that an individual periodic orbit need not contain a
+division step, so bare eventual periodicity does not by itself supply the
+per-cycle argument for positive division density.
 
 With the added clause, an orbit whose eventual period has length $p$ and
 contains $m\ge1$ division steps satisfies

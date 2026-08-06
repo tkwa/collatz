@@ -48,7 +48,7 @@ intermediate statement.  The current selection is:
 | Existential pure-division fixed-power contraction | Not a separate rung | A designed-map proof is likely to overshoot an arbitrary power toward density.  Fixing the shortcut Collatz map creates a materially different interface, so that version appears as one branch of score `1.6`. |
 | Bounds such as $K^{1-\varepsilon}$ or $K/(\log K)^A$ | Not separate rungs | These rates interpolate formally but are likely to be crossed by the same density mechanism and do not add a distinct proof interface. |
 | Existential pure-division density or classical fixed-power contraction | The two alternatives at score `1.6` | This is the first join of the designed-map and fixed-map routes.  Either alternative implies the score-`1` polylogarithmic statement. |
-| Bare negative-drift all-orbit periodicity | Not eligible for the chain | The parameters $B=2$, $E=\lbrace1\rbrace$, $a_1=3$, $c_1=0$ have the expanding fixed point $3$.  Thus periodicity alone does not imply division density. |
+| Bare negative-drift all-orbit periodicity | Not eligible for the chain | The parameters $B=2$, $E=\lbrace1\rbrace$, $a_1=3$, $c_1=0$ have the expanding fixed point $3$.  Thus an individual periodic orbit need not contain a division step; the explicit cycle clause is what supplies the intended implication to positive density. |
 | Negative-drift periodicity with a division step in every eventual cycle, or classical positive density | The two alternatives at score `2` | The added division clause makes the designed-map alternative imply positive density.  The classical alternative advances the fixed-map route.  Both imply score `1.6`. |
 
 The two disjunctions are therefore lattice joins, not arbitrary logical
@@ -186,16 +186,16 @@ integer dynamics; and adjacent arithmetic-dynamics, ergodic, or Diophantine
 work only when a plausible transfer is explicit.  Generic number theory and
 brute-force orbit verification are excluded.
 
-The table applies the root README's future-effort and skip conventions.  Its
-central values are elicited judgments, not measurements or consequences of
-the scores.  Uncertainty is at least about `0.5` log units through the middle
-of the ladder and wider near the one-expander endpoint; individual score
-placements are uncertain by roughly one point, and the skip probabilities by
-at least `15--20` percentage points.  The entry on integer row $n$ concerns
-the transition from $n$ to $n+1$.  Score `9` is marked `n/a` because this
-folder selects no score-`10` contour.  The separate baseline diagnostic
-assigns about `20%` probability that the first theorem reaching score `1`
-also overshoots the score-`0.2` sparse-ray rung.
+The table uses the [root README's joint epistemic future-effort and skip
+elicitation](../README.md#difficulty-scores).  Its central logarithms are
+uncertain by at least roughly half a decade through the middle of the ladder
+and more near the one-expander endpoint; individual score placements are
+uncertain by roughly one point, and the skip probabilities by at least
+`15--20` percentage points.  The entry on integer row $n$ concerns the
+transition from $n$ to $n+1$.  Score `9` is marked `n/a` because this folder
+selects no score-`10` contour.  The separate baseline diagnostic assigns about
+`20%` probability that the first theorem reaching score `1` also overshoots
+the score-`0.2` sparse-ray rung.
 
 | Score | Expected $\log_{10}$ future expert-years | $P(n\text{-skip})$, if applicable | Calibration note |
 |---:|---:|---:|---|

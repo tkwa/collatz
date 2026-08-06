@@ -3,8 +3,6 @@
 This is the repository's moving weakest formulation.  The name is
 operational rather than absolute: if this statement is proved by an
 elementary construction, it should be replaced by a weaker natural statement.
-Older formulations that remain mathematically significant keep descriptive
-names.
 
 ## Signed unit family
 
@@ -120,32 +118,32 @@ $u^s=B^L$, contrary to multiplicative independence.  This argument allows
 $u$ and $B$ to share primes; it does not assert that shared-prime rays have
 the same local behavior as unit rays.
 
-Indeed, local fullness holds in the form used below only when
-$\gcd(u,B)=1$.  When primes are shared, initial forced divisions can consume
-the shared part of $d u^k$, but there are only $O_k(1)$ such steps for each
-fixed exponent.  For example, under a base-$2$ map whose zero branch is pure
-division, a start $6^k$ reduces after $k$ steps to the still-open start $3^k$.
-In cases such as $u=2$, $B=6$, the ray is not locally full at all.
-Multiplicative independence still rules out an exact repeated exponent
-decrement, but no comparable finite-itinerary no-go certificate is claimed
-for these shared-prime cases.
+The fixed-word argument applies to every allowed $d$.  The stronger local-
+fullness certificate used below is narrower: it is asserted here only for
+$d=1$ and $\gcd(u,B)=1$.  If $u$ shares primes with $B$, initial forced
+divisions can consume part of $u^k$.  For example, under a base-$2$ map whose
+zero branch is pure division, a start $6^k$ reduces after $k$ steps to the
+still-open start $3^k$.  In cases such as $u=2$, $B=6$, the ray is not locally
+full at all.  No comparable certificate is claimed here when $\gcd(d,B)\ne1$
+or $\gcd(u,B)\ne1$.
 
 ## Why one exact scaled ray is retained
 
 Requiring two multiplicatively independent bases $u,v$, both coprime to
-$B$, is a natural stronger variant.  In the coprime subcase, it is not needed
-to prevent a finite-state or missing-digit trivialization.  For any single
-$u$ coprime to $B$, there is a fixed itinerary prefix after which the starts
-$u^k$ realize **every** finite residue continuation, for arbitrarily large
-exponents $k$.  In particular, one such ray already contains arbitrarily long
-expansion-only finite blocks among its members.
+$B$, is a natural stronger variant.  In the certified subcase $d=1$ and
+$\gcd(u,B)=1$, a second ray is not needed to prevent a finite-state or
+missing-digit trivialization.  There is a fixed itinerary prefix after which
+the starts $u^k$ realize **every** finite residue continuation, for arbitrarily
+large exponents $k$.  In particular, one such ray already contains arbitrarily
+long expansion-only finite blocks among its members.
 
 This local fullness does not refute the conjecture: the exponent producing a
 long bad prefix may change with the requested prefix length, whereas the
-conclusion is pointwise in each fixed exponent.  It does show that the second
-ray does not repair a local weakness of the first.  Under the repository's
-instruction to keep weakening the moving candidate until an elementary
-collapse appears, one exact scaled ray is therefore preferred.
+conclusion is pointwise in each fixed exponent.  In the certified subcase it
+shows that a second ray does not repair a local weakness of the first.  The
+full conjecture also permits $d$ not coprime to $B$ and shared-prime $u$;
+retaining those cases is a provisional weakening, not a claim that the
+local-fullness argument extends to them.
 
 The consolidated [research state](progress/research_state.md) records the
 finite-itinerary obstruction and the fixed-start distinction that also govern
@@ -204,6 +202,7 @@ revision.
 
 Provisional and not literature-certified as open.  No admissible witness is
 known to satisfy the scaled-ray conclusion, and no reduction proves that a
-witness cannot exist.  The coprime subcase has a local-fullness obstruction;
-the shared-prime subcase is retained because no elementary mechanism is
-known, not because that obstruction extends to it.
+witness cannot exist.  The $d=1$, coprime-$u$ subcase has a local-fullness
+obstruction.  Values of $d$ not coprime to $B$ and shared-prime values of $u$
+are retained because no elementary mechanism is known, not because that
+obstruction has been proved for them.
