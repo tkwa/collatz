@@ -27,14 +27,16 @@ $|Y(T)|\ge\lambda|T|$, let $A_3(q)$ denote
 \sum_{T\in\mathbb T}|T|
 ```
 
-for every $\varepsilon\gt0$, with one fixed finite $q$ independent of
+for every $\varepsilon\gt0$, with one fixed finite $q\ge3$ independent of
 $\varepsilon$.  Smaller $q$ is stronger.  The endpoint $A_3(3)$ is an
 equivalent shaded form of the three-dimensional Kakeya maximal-function
 conjecture.
 
 Write $M_n$ for the endpoint Kakeya maximal-function conjecture in
 $\mathbb R^n$, and $M_{\le d}$ for $M_n$ in every $2\le n\le d$.  An
-$\infty$ subscript means every finite ambient dimension.  Finally,
+$\infty$ subscript means every finite ambient dimension.  Thus
+$M_{\le d}$ is a conjunction, not an assumed dimension-lifting theorem.
+Finally,
 $M_n^{\mathrm{PWA}}$ is the same estimate for every tube family satisfying
 the polynomial Wolff axioms, a broader class that contains every
 direction-separated family.

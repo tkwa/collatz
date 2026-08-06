@@ -10,7 +10,7 @@ The conjecture is the following disjunction:
 
 1. there is an $\eta\gt0$ such that every Kakeya set in $\mathbb R^4$ has
    Hausdorff dimension at least $h_0+\eta$; or
-2. there is one fixed finite $q$ such that $A_3(q)$ holds, with the notation
+2. there is one fixed finite $q\ge3$ such that $A_3(q)$ holds, with the notation
    of the [folder README](README.md).
 
 The first alternative asks for any strict improvement over the best published

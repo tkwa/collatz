@@ -26,6 +26,14 @@ subjective benchmark judgments.  The audit is current through August 5, 2026.
   formulates the stronger polynomial-Wolff set, shaded, and maximal
   conjectures.  See [Zahl, Definition 4.1 and Conjecture
   4.2](https://arxiv.org/abs/2512.09397).
+- **[proved]** Katz and Rogers prove the polynomial Wolff axioms for
+  direction-separated tubes in every dimension.  See [Katz--Rogers,
+  Theorem 1.1](https://arxiv.org/abs/1802.09094).
+- **[current-status survey]** Guth's April 2026 survey records that the set
+  conjecture is proved in dimensions two and three and remains open in every
+  dimension $n\ge4$.  It also records only the implication from Stein
+  restriction to full Kakeya-set dimension, not to the maximal estimate used
+  above.  See [Guth, introduction](https://arxiv.org/abs/2604.03416).
 
 ## Adjacent implications
 
@@ -42,10 +50,10 @@ subjective benchmark judgments.  The audit is current through August 5, 2026.
    $\dim_H(K\times[0,1])=\dim_H(K)+1$.
 5. **[implication]** Consequently $H_b\Rightarrow H_a$ for $b\ge a$, and the
    finite-dimensional geometric alternatives form a chain.
-6. **[implication; pending a source-level write-up]** The standard product and
-   thickening reduction gives $M_{n+1}\Rightarrow M_n$.  The final version of
-   this audit will either cite a primary formulation of this reduction or
-   include the full normalization calculation.
+6. **[implication by definition]** $M_{\le b}\Rightarrow M_{\le a}$ for
+   $b\ge a$, because $M_{\le d}$ is the conjunction of the endpoint maximal
+   conjectures in dimensions $2,\ldots,d$.  The ladder does not rely on an
+   uncited dimension-lifting assertion for maximal operators.
 7. **[implication]** $M_n^{\mathrm{PWA}}\Rightarrow M_n$, because every
    direction-separated family satisfies the polynomial Wolff axioms.
 
@@ -64,7 +72,11 @@ uncertified subclass could make the statement accidentally true.
 **[subjective, work in progress]** The analytic alternative was weakened from
 $A_3(3)$ through arbitrary fixed exponents to the existence of some finite
 exponent independent of $\varepsilon$.  Allowing the exponent to depend on
-$\varepsilon$ is exactly the Wang--Zahl theorem and is therefore not open.
+$\varepsilon$ is exactly the Wang--Zahl theorem and is therefore proved.
+Section 3.3 of Zahl's survey identifies preventing repeated shading-density
+losses as an open direction, but the precise formulation with fixed $q$ is not
+quoted there as a named conjecture.  Its open status is therefore provisional
+rather than literature-certified.
 
 The disjunction is weaker than either alternative alone and credits the two
 currently distinct obstructions.  The guide-required frontier-agent
@@ -83,6 +95,13 @@ convex Wolff axioms is not an acceptable higher endpoint.  Zahl's survey gives
 a ruled-quadric construction in $\mathbb R^4$ showing that the analogue of
 the three-dimensional convex-Wolff theorem fails in higher dimensions.
 
+**[counterexample warning]** Removing every $\delta^{-\varepsilon}$ allowance
+is not a safe strengthening.  The two-dimensional endpoint maximal operator
+has an unavoidable logarithmic loss.  A conjecture for exact optimal
+polylogarithmic losses in all dimensions would be stronger, but no standard
+all-dimensional formulation with adequately audited truth confidence was
+located.
+
 **[subjective]** The polynomial-Wolff endpoint is provisionally assigned
 `75--85%` confidence of being provable in ZFC and is therefore starred.  Its
 main risk is mathematical falsity from an unrecognized higher-dimensional
@@ -92,8 +111,10 @@ falsity/independence red-team remains in progress.
 ## Deliberate non-implications
 
 - Fourier restriction and local smoothing are not used as rungs.  The cited
-  survey explains their close methodological relation to Kakeya but does not
-  state the implication needed by this ladder.
+  surveys state that restriction implies the full set-dimension conclusion,
+  but do not state that it implies the multiplicity-sensitive maximal
+  estimate needed above.  Restriction would therefore add no stronger
+  alternative above $H_\infty$ on the audited implications.
 - Full Hausdorff dimension does not by itself supply a maximal-function
   estimate.  Wang--Zahl's three-dimensional result is the concrete warning.
 - A tube-union estimate without shadings does not automatically control high

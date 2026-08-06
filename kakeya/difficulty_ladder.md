@@ -32,12 +32,16 @@ parts of Fourier analysis.  All values are subjective.
 |---:|---:|---:|---|
 | 0 | -- | n/a | Proved frontier. |
 | 0.2 | 2.30 | -- | Minimal strict progress on either active lower coordinate. |
-| 1 | 2.80 | 35% | A new planebrush or shading-stability argument may overshoot the first displayed contour. |
-| 2 | 3.18 | 40% | Structural control may yield a substantial exponent rather than stop at an arbitrary cutoff. |
-| 3 | 3.55 | 40% | A method approaching full dimension or sharp density may clear the penultimate contour. |
-| 4 | 3.92 | 35% | A four-dimensional geometric proof may also control multiplicity in dimension three. |
-| 5 | 4.28 | 35% | Dimension-lifting or maximal methods may solve both alternatives together. |
-| 6 | 4.65 | 40% | A dimension-uniform argument may cross several finite cutoffs. |
-| 7 | 5.02 | 40% | Removing ambient-dimension dependence may arrive with stronger maximal control. |
-| 8 | 5.40 | 35% | An all-dimensional maximal proof may already tolerate polynomial-Wolff families. |
-| 9* | 5.78 | n/a | Terminal stronger class; no score-`10` contour is selected. |
+| 1 | 2.78 | 35% | A new planebrush or shading-stability argument may overshoot the first displayed contour. |
+| 2 | 3.13 | 40% | Structural control may yield a substantial exponent rather than stop at an arbitrary cutoff. |
+| 3 | 3.48 | 40% | A method approaching full dimension or sharp density may clear the penultimate contour. |
+| 4 | 3.83 | 35% | A four-dimensional geometric proof may also control multiplicity in dimension three. |
+| 5 | 4.18 | 35% | Dimension-lifting or maximal methods may solve both alternatives together. |
+| 6 | 4.52 | 40% | A dimension-uniform argument may cross several finite cutoffs. |
+| 7 | 4.86 | 40% | Removing ambient-dimension dependence may arrive with stronger maximal control. |
+| 8 | 5.18 | 35% | An all-dimensional maximal proof may already tolerate polynomial-Wolff families. |
+| 9* | 5.38 | n/a | Terminal stronger class, judged below the shared score-`10` anchor. |
+
+The endpoint is placed below score `10`, whose shared reference is the median
+difficulty of `BB(6)`, Schanuel's conjecture, and general Vojta.  This is a
+comparison judgment, not a normalization fitted to make Kakeya end at `9`.
