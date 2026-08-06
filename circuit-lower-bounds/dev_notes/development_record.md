@@ -113,7 +113,7 @@ written and read back before integration.
 
 After commit `cce2b66` was pushed, the live GitHub pages for
 [`difficulty_ladder.md`](../difficulty_ladder.md),
-[`sources_and_implications.md`](../sources_and_implications.md), and the
+[`sources_and_implications.md`](sources_and_implications.md), and the
 [Weakest statement](../weakest_unrestricted_circuit_improvement.md) were
 inspected in a browser.  GitHub produced 77, 107, and 14 native math renderers
 respectively; all three ladder tables and the expected branch, endpoint,

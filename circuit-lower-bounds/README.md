@@ -22,7 +22,7 @@ lower bounds can be exponential without advancing this ladder.  Likewise,
 $P\ne NP$, $NP\nsubseteq P/poly$, a superpolynomial lower bound for one
 language in $NP$, and an exponential lower bound for one language in $NP$ are
 different statements.  The [source and implication
-audit](sources_and_implications.md) records the quantifiers needed for each
+audit](dev_notes/sources_and_implications.md) records the quantifiers needed for each
 displayed arrow.
 
 The current explicit-function frontier is usually summarized as
@@ -60,7 +60,7 @@ ETH.
 
 - [`difficulty_ladder.md`](difficulty_ladder.md) is the compact milestone and
   calibration table.
-- [`sources_and_implications.md`](sources_and_implications.md) fixes the
+- [`dev_notes/sources_and_implications.md`](dev_notes/sources_and_implications.md) fixes the
   circuit model, explicitness and length quantifiers, and audits sources and
   arrows.
 - [`weakest_unrestricted_circuit_improvement.md`](weakest_unrestricted_circuit_improvement.md)

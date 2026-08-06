@@ -9,14 +9,14 @@ H_1=\liminf_{n\to\infty}(p_{n+1}-p_n).
 ```
 
 The present unconditional theorem is $H_1\le246$.  The
-[source audit](sources_and_implications.md) records the literature basis for
+[source audit](dev_notes/sources_and_implications.md) records the literature basis for
 this frontier and every conditional implication used by the ladder.
 
 ## Documents
 
 - [`difficulty_ladder.md`](difficulty_ladder.md) contains the milestone and
   effort tables.
-- [`sources_and_implications.md`](sources_and_implications.md) defines the
+- [`dev_notes/sources_and_implications.md`](dev_notes/sources_and_implications.md) defines the
   named conjectures precisely and records implication directions,
   non-implications, and openness caveats.
 

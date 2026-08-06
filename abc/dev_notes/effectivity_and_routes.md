@@ -1,7 +1,7 @@
 # Effectivity, Analogues, and Adjudication
 
 This note holds the orthogonal effectivity coordinate of the
-[abc ladder](difficulty_ladder.md), the reasons its geometric analogues are
+[abc ladder](../difficulty_ladder.md), the reasons its geometric analogues are
 weak evidence about its arithmetic rungs, and the rule for deciding when a
 rung has been cleared.
 
