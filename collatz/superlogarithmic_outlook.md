@@ -19,10 +19,10 @@ family.
 It does not assess the repository's moving
 [Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md), which
 requires the same asymptotic only along one existentially chosen coprime power
-ray.  On the [impressiveness ladder](collatz_ladder.md), the all-start target
-here is score `0.6` and the sparse-ray target is score `0.2`.  The probability
-and proof-difficulty judgments below should not be transferred to the latter
-without a separate recalibration.
+ray.  The [impressiveness ladder](collatz_ladder.md) places the all-start and
+sparse-ray targets separately.  The probability and proof-difficulty
+judgments below should not be transferred to the latter without a separate
+recalibration.
 
 ## Classical Collatz and the target
 
