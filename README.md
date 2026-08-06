@@ -58,6 +58,12 @@ the [development guide](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtE
 Scores use that one repository-wide scale; they are not reset so that each
 folder's headline conjecture has the same endpoint.
 
+Score `10` is very roughly the median difficulty among BB(6), Schanuel's
+conjecture, and general Vojta; score `20` is roughly the difficulty of BB(7).
+A ladder's top may lie below or above `10`.  These are qualitative
+cross-problem anchors, not a second equation relating scores to expected
+years.
+
 For an area $A$, let $E_A(s)$ be the expected future human-expert-years of
 strategically directed research, measured from the July 2026 frontier, needed
 to first reach score $s$.  Folder tables report the central elicitation
@@ -73,7 +79,7 @@ table gives one central logarithm.
 
 Numerical scores are contours through a multidimensional theorem state, not a
 claim that proofs must traverse a linear list of lemmas.  One theorem may jump
-several contours.  Below the guide's upper calibration point, roughly even
+several contours.  Below score `10`, roughly even
 increments in $\ell_A$ are a spacing diagnostic rather than an exact global
 conversion formula.  No intermediate score, including `5`, is an independent
 anchor.  Prefer natural implication points to cosmetic milestones, and use a
