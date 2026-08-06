@@ -6,6 +6,34 @@ must appear here before it is used to order two rungs.
 
 ## Bounded gaps and GEH
 
+For $\vartheta\in(1/2,1)$, $\mathrm{EH}[\vartheta]$ and
+$\mathrm{GEH}[\vartheta]$ mean the standard Elliott--Halberstam and
+generalized Elliott--Halberstam conjectures at exponent $\vartheta$ in the
+bounded-gap framework.  Both use the standard unrestricted modulus and
+residue-class formulation; GEH additionally uses the full convolution class.
+Neither denotes a special-modulus result, and GEH does not denote a theorem
+for only restricted convolution types.  Full EH or full GEH means the
+corresponding conjecture for every fixed $\vartheta\lt1$.
+
+The named upper statements use these conventions:
+
+- **de Polignac:** every positive even $d$ occurs infinitely often as a gap
+  between consecutive primes;
+- **Dickson:** every fixed admissible finite family of distinct affine-linear
+  forms with positive leading coefficients is simultaneously prime infinitely
+  often;
+- **Hardy--Littlewood:** the singular-series asymptotic holds for every fixed
+  admissible family of distinct affine-linear forms;
+- **Schinzel H:** every fixed admissible finite family of distinct irreducible
+  integer polynomials with positive leading coefficients takes simultaneous
+  prime values infinitely often; and
+- **Bateman--Horn:** the corresponding singular-series asymptotic holds for
+  every such polynomial family.
+
+Here admissibility includes the absence of a fixed prime divisor of the
+product.  The later sections record the exact implication interfaces used by
+the ladder.
+
 The primary source is D. H. J. Polymath,
 [“Variants of the Selberg sieve, and bounded intervals containing many
 primes”](https://arxiv.org/abs/1407.4897), *Research in the Mathematical
@@ -31,9 +59,10 @@ The paper's discussion following the GPY theorem says that the only standard
 $\mathrm{EH}[\vartheta]$ results then known were for
 $\vartheta\lt1/2$.  Its generalized Bombieri--Vinogradov theorem similarly
 proves $\mathrm{GEH}[\vartheta]$ for every fixed
-$\vartheta\lt1/2$.  Results beyond one half with special moduli, fixed residue
-classes, or restricted convolution types do not establish the unrestricted
-EH or GEH alternatives in this ladder.
+$\vartheta\lt1/2$.  Results beyond one half with special moduli or fixed
+residue classes do not establish either unrestricted alternative in this
+ladder; results for restricted convolution types do not establish its GEH
+alternatives.
 
 For the intermediate rows, monotonicity is definitional: a standard
 $\mathrm{EH}[\vartheta_2]$ estimate with
@@ -61,9 +90,9 @@ ladder.  In particular, the score-`1` pair $H_1\le50$ or
 $\mathrm{EH}[2/3]$ is one coarse bridge; no implication between its two
 alternatives is asserted.
 
-Restricted-modulus results beyond one half do not establish these rungs.  The
-row requires the full coefficient/convolution class and unrestricted moduli
-in the source formulation.
+Restricted-modulus results beyond one half do not establish these rungs.  All
+EH and GEH rows require the unrestricted source formulation, and GEH rows
+additionally require its full convolution class.
 
 ## Polynomial prime conjectures
 
@@ -128,6 +157,12 @@ twin prime conjecture.
 
 ## Quantitative pair implications
 
+Let
+
+```math
+\pi_2(X)=\#\lbrace p\le X:\ p\text{ and }p+2\text{ are prime}\rbrace.
+```
+
 The Hardy--Littlewood twin-pair formula is
 
 ```math
@@ -141,15 +176,13 @@ in this benchmark.
 
 ## Open-status and non-implication checklist
 
-At the July 2026 frontier, rechecked live in August 2026, the source search
-found no validated improvement of the published unconditional $H_1\le246$
-record and no proof of any positive rung.  A
+The benchmark's current cited unconditional frontier is $H_1\le246$: the
+Polymath paper above proves this bound, and a
 [2024 expository chapter](http://www.lolathompson.com/uploads/1/1/0/6/110629329/chapter_12_2024.pdf)
-still states the `246` theorem.  The search also surfaced a 2025 student
-preprint whose title advertises a new bound, but the indexed description
-repeats $H_1\le246$ and no refereed publication or independent validation was
-found.  It is not treated as a new record.  This remains a literature-status
-judgment, not a theorem that no unpublished argument exists.
+continues to state it.  None of the sources cited in this audit establishes a
+positive rung, so the milestone table records `246` as score `0`.  This is a
+source-bounded literature-status judgment, not a theorem that no later,
+unpublished, or independently unvalidated argument exists.
 
 The ladder deliberately does **not** use any of these invalid or unsupported
 arrows:

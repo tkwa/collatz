@@ -123,8 +123,7 @@ locally realizable by an ordinary congruence class.
 Open.  No fixed parameter choice is currently known to satisfy the universal
 superlogarithmic statement.
 
-The work in [`progress/`](progress/) studies the
-pure-division subfamily, which remains a valid route to the revised
-existential target.  The broader contracting-branch family introduced here
-may offer additional arithmetic structure, but it does not remove the local
-finite-itinerary obstruction.
+The work in [`progress/`](progress/) studies the pure-division subfamily, one
+valid route to this existential target.  The broader contracting-branch
+family may offer additional arithmetic structure, but it does not remove the
+local finite-itinerary obstruction.

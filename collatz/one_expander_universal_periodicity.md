@@ -1,7 +1,7 @@
 # The Universal One-Expander Periodicity Conjecture
 
 This is the uniform component of the cumulative endpoint of the
-[Collatz-like impressiveness ladder](collatz_ladder.md).  That endpoint also
+[Collatz-like difficulty ladder](difficulty_ladder.md).  That endpoint also
 retains the classical stopping-time limit so the ladder remains an
 implication chain.  The conjecture here is universal over
 a deliberately restricted map family near the project's estimated

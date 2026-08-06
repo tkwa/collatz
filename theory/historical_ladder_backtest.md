@@ -28,8 +28,9 @@ required common-scale ladder is:
    displayed difficulty score.
 
 The artifact graph and route models remain useful for designing and auditing
-the scalar ladder.  They do not replace the common `5`, `10`, and `20`
-calibration or turn a folder's headline target into a fixed endpoint.
+the scalar ladder.  They do not replace the shared calibration in the
+[development guide](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtEFuKxjmN6TaZq8CFxeidI_Xw/edit?tab=t.0)
+or turn a folder's headline target into a fixed endpoint.
 
 This is a conditional conclusion about problems that admit ladder-like
 structure.  The selected history cannot establish how common such problems
@@ -193,8 +194,8 @@ almost primes.  Szemeredi's original paper is available from
 not logically atomic.  Coordinate-wise max would alternately overvalue dense
 combinatorics or undervalue the sparse majorant.  A complement-aware route
 function gives partial credit to the three-term prime theorem and to a general
-transference theorem, but reaches `10` only when the number-theoretic and
-combinatorial inputs fit together.
+transference theorem, but reaches the target's assigned contour only when the
+number-theoretic and combinatorial inputs fit together.
 
 ## Historical case 4: the Ricci-flow route to Poincare
 
@@ -472,10 +473,12 @@ extra parameters are estimated out of sample.
 
 Let $A_j$ be the cumulative actual human-equivalent effort at historical event
 $j$, and let $S_j$ be the contemporaneously assigned score after that event.
-For a prospective ladder, use the future expert-year clock $E_A(s)$ defined
-in the root README.  Because either quantity is uncertain, every statistic
-below should be computed over an elicited distribution, not a single invented
-hour count.
+Prospective ladder smoothness follows the future-expert-year and skip
+conventions in the
+[development guide](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtEFuKxjmN6TaZq8CFxeidI_Xw/edit?tab=t.0).
+Because reconstructed effort and score assignments are uncertain, every
+statistic below should be computed over an elicited distribution, not a single
+invented hour count.
 
 ### Integer-boundary skipping
 
@@ -485,11 +488,6 @@ $S_j\ge i$.  Boundary $i$ is skipped when
 ```math
 A(i+1)\lt1.1A(i).
 ```
-
-For a prospective 2026 ladder, use $E_A(i)$ in the same inequality for every
-integer $i\ge1$ that has an $i+1$ contour.  The ratio is undefined at the
-July-2026 baseline $E_A(0)=0$; whether the first score-`1` result overshoots the first positive
-rung is a separate baseline diagnostic, not a `0`-skip under the ratio rule.
 
 Report the posterior probability of a skip, the expected number of skipped
 integer boundaries, and the longest run of consecutive skips.  Treat several

@@ -108,7 +108,7 @@ chosen label to have positive density without proving frequent contraction.
 For example, take `B=2`, set `T(2q)=3q+1` and `T(2q+1)=q`, and count the
 expanding even residue.  The potential `V(n)=log_2(n+1)` decreases by one on
 odd inputs and increases by at most one on even inputs.  Summing along the
-orbit gives `D_K(n) >= (K-V(n))/2`, so the arbitrary-label version becomes
+orbit gives $D_K(n)\ge (K-V(n))/2$, so the arbitrary-label version becomes
 elementary without measuring contraction.
 
 ## Status
