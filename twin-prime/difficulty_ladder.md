@@ -116,15 +116,15 @@ The named conjectures are present because they form two nested routes with
 comparable effort contours, not merely because they are famous.
 
 - Below twin primes, the gap bounds and standard EH/GEH statements are
-  independently nested.  The single coarse bridge at score `1` replaces the
-  former sequence of round-number gap bounds and nearby EH exponents.  The
-  $2/3$ distribution level is a substantial conventional landmark, while
-  $H_1\le50$ is a factor-five outcome improvement; adding more cutoffs between
-  them and the baseline would mostly create likely same-proof skips.
+  independently nested.  Score `1` is the only coarse bridge before the
+  source-backed contours.  The $2/3$ distribution level is a substantial
+  conventional landmark, while $H_1\le50$ is a factor-five outcome
+  improvement; adding more cutoffs between them and the baseline would mostly
+  create likely same-proof skips.
 - The bounds `12` and `6` are source-backed conditional landmarks: full EH
-  gives the former and full GEH gives the latter.  Full EH is an explicit
-  third alternative at score `3`; without it, a proof of this natural theorem
-  would stop at score `2` despite being substantially stronger than
+  and full GEH give them, respectively.  Full EH is an explicit third
+  alternative at score `3`; without it, a proof of this natural theorem would
+  stop at score `2` despite being substantially stronger than
   $\mathrm{EH}[3/4]$ and incomparable with $\mathrm{GEH}[3/4]$.
 - The $H_1\le4$ rung is the last nontrivial even gap bound before twins, and
   full GEH is the final standard distribution conjecture before the parity
@@ -134,10 +134,9 @@ comparable effort contours, not merely because they are famous.
   and then affine families, while the other adds qualitative breadth from all
   even gaps to all affine families and then polynomial families.  Each branch
   has a written implication to the row below.
-- Extra round-number gap cutoffs and extra EH exponents were rejected as
-  rungs.  They are formally valid but are likely to be crossed by the same
-  proof, increasing skip risk without introducing a new mathematical
-  bottleneck.
+- Further round-number gap cutoffs and nearby EH exponents are omitted.  They
+  are formally valid but are likely to be crossed by the same proof,
+  increasing skip risk without introducing a new mathematical bottleneck.
 - Specific linear patterns such as Sophie Germain primes, and single
   nonlinear cases such as infinitely many primes of the form $n^2+1$, were
   also tested.  They do not imply the twin-pair or de Polignac alternatives
@@ -182,11 +181,10 @@ score `1` overshoots the score-`0.3` Weakest rung is `35%`; this is a baseline
 diagnostic rather than a `0`-skip, because the logarithmic future-effort clock
 is undefined at score `0`.
 
-No skip estimate exceeds `50%`.  The former score-`1` through score-`3`
-micro-rungs were collapsed precisely because several were likely to fall to
-one proof.  If later elicitation pushes a remaining boundary above `50%`, the
-response should again be to replace or merge rungs, not to add cosmetic
-cutoffs.
+No skip estimate exceeds `50%`.  No extra micro-rungs are inserted between the
+Weakest row and the source-backed contours because several would likely fall
+to one proof.  If later elicitation pushes a displayed boundary above `50%`,
+the response should be to replace or merge rungs, not to add cosmetic cutoffs.
 
 All effort numbers and pairing judgments are subjective.  If expert
 elicitation places two alternatives on one row far apart, that row should
