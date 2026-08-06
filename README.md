@@ -15,6 +15,9 @@ continuous scoring.
   one-variable Bateman--Horn to its multivariate extension over $\mathbb Z$.
 - [`abc/`](abc/) tracks progress on the abc conjecture and onward to the
   general Vojta conjecture.
+- [`circuit-lower-bounds/`](circuit-lower-bounds/) tracks unrestricted
+  nonuniform Boolean-circuit lower bounds from the explicit-function linear
+  frontier toward superpolynomial and exponential lower bounds.
 - Under development:
   - [`mahler/`](mahler/) contains weak escape problems for fractional parts of
     powers. Its difficulty ladder is not yet calibrated.
