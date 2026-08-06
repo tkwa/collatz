@@ -151,7 +151,7 @@ No candidate mechanism is currently a proof.
 The structural conclusions that still govern the search are:
 
 1. the full residue coding is not a finite-state transform of ordinary
-   base-$B$ digits, and neither is its direct binary expansion/division
+   base $B$ digits, and neither is its direct binary expansion/division
    projection;
 2. prime-power expansion multipliers reset only the multiplier-prime part of
    a long-run endpoint, leaving a moving core with unrestricted prime support;

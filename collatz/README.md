@@ -106,12 +106,9 @@ arbitrary residue-affine maps.
 
 ### Effort and skip annotations
 
-The effort column reports a subjective central estimate of $\log_{10}$ future
-expert-years, not a literature consensus or a normalization anchor.  A skip
-entry on integer row $n$ is the epistemic probability that the elicited
-expected effort at $n+1$ is less than `1.1` times the expected effort at $n$;
-it is not randomness in the logical implication chain.  Score `9` is `n/a`
-because there is no selected score-`10` contour.  The estimates cover
+The [development guide](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtEFuKxjmN6TaZq8CFxeidI_Xw/edit?tab=t.0)
+defines the shared effort and integer-skip fields.  For this ladder, score `9`
+is `n/a` because there is no selected score-`10` contour.  The estimates cover
 classical stopping, cycle, and exceptional-set work, generalized
 residue-affine and one-expander dynamics, and adjacent arithmetic-dynamics
 methods only when a plausible transfer is explicit.  Generic number theory

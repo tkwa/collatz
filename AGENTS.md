@@ -4,15 +4,24 @@ Development guide is specified [here](https://docs.google.com/document/d/1zy2Bjs
 
 Draft PRs should be made before the full PR is complete, so that humans can check on agent progress.
 
-For Markdown math that will be published on GitHub, checking that the
-`/markdown` API emits a `<math-renderer>` element is not enough: the browser
-can still display a client-side TeX error.  Prefer simple GitHub-compatible
-notation; for cardinalities, use `\#\lbrace\cdots\rbrace` rather than nested
+Before publishing Markdown, run
+`python3 -m unittest discover -s tests -p 'test_*.py'` and
+`python3 scripts/check_markdown.py .`.  This fast regression suite and scan
+cover every live GitHub rendering failure observed in this repository, along
+with missing local-link targets and stale paths.  For cardinalities, use
+`\#\lbrace\cdots\rbrace` rather than nested
 `\left|\left\{\cdots\right\}\right|`, and use `\lt` and `\gt` rather than
-raw `<` and `>` comparison characters inside math.  Before declaring the work
-complete, inspect the actual rendered GitHub page in a browser and confirm
-that changed formulas show neither a math error, missing symbols, nor raw TeX
-fallback.
+raw `<` and `>` comparison characters inside math.
+
+Checking that the `/markdown` API emits a `<math-renderer>` element is not
+enough: the browser can still display a client-side TeX error.  Inspect the
+actual GitHub page when introducing notation that the fast gate does not yet
+cover.  Whenever a new live-render failure is found, add a regression test
+before fixing the source so future work stays on the fast path.
+
+Automatic CI runs only the fast Markdown checks.  Lean validation is manual
+until benchmark execution becomes relevant; when dispatching it for a PR,
+select that PR's branch rather than the default branch.
 
 Commit frequently.
 

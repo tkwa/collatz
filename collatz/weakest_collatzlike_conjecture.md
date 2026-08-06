@@ -121,7 +121,7 @@ the same local behavior as unit rays.
 The fixed-word argument applies to every allowed $d$.  The stronger local-
 fullness certificate used below is narrower: it is asserted here only for
 $d=1$ and $\gcd(u,B)=1$.  If $u$ shares primes with $B$, initial forced
-divisions can consume part of $u^k$.  For example, under a base-$2$ map whose
+divisions can consume part of $u^k$.  For example, under a base $2$ map whose
 zero branch is pure division, a start $6^k$ reduces after $k$ steps to the
 still-open start $3^k$.  In cases such as $u=2$, $B=6$, the ray is not locally
 full at all.  No comparable certificate is claimed here when $\gcd(d,B)\ne1$
@@ -202,7 +202,7 @@ revision.
 
 Provisional and not literature-certified as open.  No admissible witness is
 known to satisfy the scaled-ray conclusion, and no reduction proves that a
-witness cannot exist.  The $d=1$, coprime-$u$ subcase has a local-fullness
-obstruction.  Values of $d$ not coprime to $B$ and shared-prime values of $u$
-are retained because no elementary mechanism is known, not because that
-obstruction has been proved for them.
+witness cannot exist.  The subcase $d=1$ with $u$ coprime to $B$ has a
+local-fullness obstruction.  Values of $d$ not coprime to $B$ and
+shared-prime values of $u$ are retained because no elementary mechanism is
+known, not because that obstruction has been proved for them.
