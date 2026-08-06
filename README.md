@@ -53,54 +53,46 @@ theorem and its routine corollary are not counted twice.
 
 ## Difficulty scores
 
-Scores use one repository-wide difficulty calibration; they are not reset so
-that each folder's headline conjecture has the same endpoint.  Score `0` is the
-current rigorous frontier in a folder, and its first positive rung must be
-open.  The cross-problem anchors are:
+The authoritative calibration, ladder-shape, endpoint, and skip rules live in
+the [development guide](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtEFuKxjmN6TaZq8CFxeidI_Xw/edit?tab=t.0).
+Scores use that one repository-wide scale; they are not reset so that each
+folder's headline conjecture has the same endpoint.
 
-- score `5` represents, very roughly, two to four doublings of cumulative
-  human-equivalent effort in the relevant area beyond its 2026 frontier;
-- score `10` is roughly the median difficulty of the three individual
-  problems BB(6), Schanuel's conjecture, and the general Vojta conjecture; and
-- score `20` is roughly the difficulty of BB(7).
-
-For the score-`5` anchor, declare the relevant area before selecting its
-rungs.  Let $D_A$ be its 2026 stock of work already directed at the benchmark,
-let $G_A$ be broader but credibly relevant work within that area, and set
+For an area $A$, let $E_A(s)$ be the expected future human-expert-years of
+strategically directed research, measured from the July 2026 frontier, needed
+to first reach score $s$.  Folder tables report the central elicitation
 
 ```math
-B_A=D_A+0.5G_A.
+\ell_A(s)=\log_{10}E_A(s).
 ```
 
-This does not count all effort in mathematics.  Let $F_A(s)$ be future effort
-strategically directed at first reaching score $s$.  The cumulative clock is
-
-```math
-C_A(s)=B_A+F_A(s).
-```
-
-A central estimate at score `5` should have $C_A(5)/B_A$ between `4` and `16`.
-Declaring the area first prevents moving its boundary merely to preserve a
-favored rung.
+The current frontier has $E_A(0)=0$, so its logarithm is undefined.  This
+future-effort clock is not a historical work stock, replacement cost, or count
+of all effort in mathematics.  Its uncertainty is a distribution, even when a
+table gives one central logarithm.
 
 Numerical scores are contours through a multidimensional theorem state, not a
 claim that proofs must traverse a linear list of lemmas.  One theorem may jump
-several contours.  Milestones should be chosen or replaced to make expected
-log effort increase smoothly.  Prefer lattice points that preserve several
-natural implication paths.  A rung may be a disjunction of independently
-ordered statements only when that makes progress significantly smoother.
+several contours.  Below the guide's upper calibration point, roughly even
+increments in $\ell_A$ are a spacing diagnostic rather than an exact global
+conversion formula.  No intermediate score, including `5`, is an independent
+anchor.  Prefer natural implication points to cosmetic milestones, and use a
+disjunction of independently ordered statements only when it materially
+improves spacing.
 
-Measure future effort from the July 2026 baseline.  For integer $n\ge1$, an
-$n$-skip occurs when $F_A(n+1)\lt1.1F_A(n)$.  The `0`-to-`1` audit instead asks
-whether the first post-baseline theorem that reaches score `1` overshoots the
-first positive rung; the ratio rule would be undefined at $F_A(0)=0$.
-If any estimated integer-skip probability exceeds `50%`, replace or reorder
-the relevant rungs.  If no arrangement brings the maximum below `50%`, use
-fewer integer levels rather than inventing cosmetic milestones.
+For an integer contour $n$ that has an $n+1$ contour in the same ladder, the
+reported skip probability is
+
+```math
+\Pr\bigl(E_A(n+1)\lt1.1E_A(n)\bigr).
+```
+
+The first open rung is audited separately because $E_A(0)=0$; a terminal
+integer has no next-contour skip probability.
 
 ## Headline targets and stronger rungs
 
-A folder's headline target sits wherever these common anchors place it.  A
+A folder's headline target sits wherever the shared calibration places it.  A
 folder may continue to stronger statements without changing scales.  A
 separate target-specific progress diagnostic is permissible, but it must be
 labeled separately and must not be presented as the repository difficulty
