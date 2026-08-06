@@ -19,40 +19,18 @@ expansion multiplier.  A different admissible map may avoid this exact
 algebra.  The more general finite-itinerary obstruction described below,
 however, applies to every admissible map.
 
-## 1. The target from scratch
+## 1. Target and notation
 
-Fix an integer $B\ge2$.  An admissible map on the nonnegative integers has the
-form
+Use the pure-division specialization of the admissible map family in the
+[all-start nonnegative conjecture](../nonnegative_superlogarithmic_contraction.md).
+Here $B$ is the base, $E$ is the set of expanding residues, and the residues
+outside $E$ are division branches.  For a starting value $n$, write
 
-$$
-T(Bq+r)=
-\begin{cases}
-q,&r\notin E,\\[1mm]
-a_rq+c_r,&r\in E,
-\end{cases}
-$$
+```math
+D_K(n)=\#\lbrace 0\le j\lt K:T^j(n)\bmod B\notin E\rbrace.
+```
 
-where
-
-$$
-\varnothing\ne E\subseteq\{1,\ldots,B-1\},
-\qquad
-a_r\gt B,
-\qquad
-\gcd(a_r,B)=1,
-\qquad
-c_r\ge0.
-$$
-
-The residues outside $E$ are called **division branches** and the residues in
-$E$ are called **expansion branches**.  For a starting value $n$, define
-
-$$
-D_K(n)=
-\left|\{0\le j\lt K:T^j(n)\bmod B\notin E\}\right|.
-$$
-
-The current intermediate goal is to find one admissible map for which
+The target is to find one admissible map for which
 
 $$
 \forall n\in\mathbb N_0,
@@ -103,7 +81,7 @@ target fails.  Then there are constants $\delta,\eta\gt0$ and arbitrarily large
 $M$ for which
 
 $$
-\left|\{m\lt M:\tau_{m+1}\ge(1+\delta)\tau_m\}\right|\ge\eta M.
+\#\lbrace m\lt M:\tau_{m+1}\ge(1+\delta)\tau_m\rbrace\ge\eta M.
 $$
 
 This is a proved averaging lemma.  To see its source, telescope
@@ -421,19 +399,13 @@ affine recurrence for $\tau_m$ and yields only $\Omega(\log K)$ divisions.
 
 ### Every finite itinerary is realizable
 
-This is the decisive reason a fixed local pattern cannot be forbidden.  For
-any admissible map and any finite residue word of length $N$, there is one
-residue class modulo $B^N$ whose first $N$ iterates follow that word.  The
-proof lifts one digit at a time; every branch multiplier is invertible modulo
-$B$.
-
-Consequently, for every finite $q$, some nonnegative starting value realizes
-a chain of $q$ proportional gaps and all its macro equations.  A contradiction
-that uses only a bounded number of adjacent links cannot work.  The starting
-integer is allowed to change with $q$.
-
-The desired proof must instead use that chains of unbounded length would all
-occur along **one fixed ordinary integer orbit**.
+The [research state](../progress/research_state.md#proved-every-finite-residue-itinerary-is-realizable)
+gives the canonical lifting proof that every finite residue word occurs on an
+ordinary nonnegative orbit.  Consequently, for every finite $q$, some start
+realizes a chain of $q$ proportional gaps and all its macro equations.  A
+bounded local contradiction cannot work because that start may change with
+$q$; the desired proof must use that unbounded chains would lie on **one fixed
+ordinary integer orbit**.
 
 ### Fixed-rank $S$-unit theorems do not include the endpoints
 
@@ -563,9 +535,9 @@ map.
 
 ## Supporting context
 
-This note contains the retained detailed derivation of the prime-power
-macro-chain obstruction.  The broader baseline reductions, candidate
-families, and proof-status summary are consolidated in the
+This note is the canonical detailed derivation of the prime-power macro-chain
+obstruction.  The broader baseline reductions, candidate families, and
+proof-status summary are consolidated in the
 [research state](../progress/research_state.md).
 
 ## Bottom line

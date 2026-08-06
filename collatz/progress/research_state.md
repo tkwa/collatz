@@ -2,7 +2,7 @@
 
 ## Baseline map
 
-The initial diagnostic example is
+The baseline diagnostic map is
 
 ```math
 T(3q)=q,\qquad T(3q+1)=28q+2,\qquad T(3q+2)=q.
@@ -22,9 +22,8 @@ D_K(n)=\omega(\log K)
 
 for every fixed `n`.
 
-The project is not committed to this map. Candidate families with simpler
-arithmetic are compared below, and any admissible map may serve as the final
-witness.
+The target is existential in the map.  Candidate families with simpler
+arithmetic are compared below, and any admissible map may serve as a witness.
 
 ## Status labels
 
@@ -163,37 +162,20 @@ The structural conclusions that still govern the search are:
 
 The standalone
 [moving-endpoint-core obstruction](../blockers/moving_endpoint_core_obstruction.md)
-contains the retained macro-chain derivation and the precise fixed-start
-interface.  None of these structural conclusions proves or refutes the
-superlogarithmic target.
+is the canonical macro-chain derivation and precise fixed-start interface.
+None of these structural conclusions proves or refutes the superlogarithmic
+target.
 
 ## Proved: failure has positive-density proportional gaps
 
-For every candidate in this folder, the elementary size argument supplies an
-affine recurrence
-
-```math
-\tau_{m+1}\le A\tau_m+C
-```
-
-with fixed `A>1`.  If `\log\tau_m/m` does not tend to zero, a telescoping and
-averaging argument shows that some `\delta,\eta>0` satisfy
-
-```math
-\#\lbrace m\lt M:\tau_{m+1}\ge(1+\delta)\tau_m\rbrace\ge\eta M
-```
-
-for arbitrarily large `M`.  In fact the long-gap indices are piecewise
-syndetic: one fixed spacing bound supports arbitrarily long chains of
-proportional gaps along the same bad orbit.  The complete argument is in
-Sections 2 and 3 of the
-[moving-endpoint-core obstruction](../blockers/moving_endpoint_core_obstruction.md).
-
-This still cannot be finished by a local forbidden-pattern argument.  Every
-finite itinerary is realizable, including arbitrarily long finite prefixes in
-which every division gap is proportional.  The endpoint units in the bounded
-chain therefore carry essential global information about the fixed starting
-integer.
+For every candidate in this folder, an elementary affine upper recurrence for
+the division times implies the following: failure of the target forces a
+positive upper density of proportional gaps.  Those gaps are piecewise
+syndetic, so one fixed spacing bound supports arbitrarily long chains along the
+same bad orbit.  Sections 2 and 3 of the
+[moving-endpoint-core obstruction](../blockers/moving_endpoint_core_obstruction.md)
+give the canonical proof and explain why the endpoint units retain essential
+global information about the fixed starting integer.
 
 ## Proved: every finite residue itinerary is realizable
 
@@ -234,8 +216,8 @@ L_{i+1}\le F(L_i,s_i)
 ```
 
 with a universal finite-valued function `F` can hold for all blocks of all
-integer orbits. This refutes the previously proposed universal recharge
-route, including
+integer orbits.  This rules out every universal recharge route of this form,
+including
 
 ```math
 L_{i+1}\le C_0+C_1s_i+C_2v_3(L_i).
@@ -308,8 +290,8 @@ statement for this structured series, not a finite-word restriction.
 
 ## Proved: one-expanding-residue normal form
 
-The preceding series is not special to the initial parameters. Suppose a
-map has base `B`, one expanding residue `e`, and expanding parameters `a,c`.
+The same series normal form holds for any map with base `B`, one expanding
+residue `e`, and expanding parameters `a,c`.
 Put
 
 ```math
@@ -356,7 +338,7 @@ a^{m-1}\left(\frac2a\right)^{\tau_m}
 ```
 
 Taking `c=(a\mp1)/2` makes `h=\pm1`. This is a cleaner candidate family
-than the initial `28/3` map for any theorem that is sensitive to coefficient
+than the baseline `28/3` map for any theorem that is sensitive to coefficient
 complexity. It is not yet a proof: the universal superlogarithmic sparsity
 claim for this singleton-coefficient series still has to be established.
 
@@ -468,7 +450,7 @@ T(3q)=q,\qquad T(3q+1)=5q+2,\qquad T(3q+2)=q,
 and the two division coefficients are `-2` and `2`.  This family replaces
 floor division by balanced-remainder division on the positive odd coordinate
 `X`; its expansion ratio `(B+2)/B` can be made arbitrarily close to one.
-These features make it a useful alternative to both the initial map and the
+These features make it a useful alternative to both the baseline map and the
 singleton-coefficient `B=2` family.  No superlogarithmic bound has yet been
 proved for it.
 

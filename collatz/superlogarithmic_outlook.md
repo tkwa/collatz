@@ -21,7 +21,7 @@ It does not assess the repository's moving
 [Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md), which
 requires the same asymptotic only along one existentially chosen exact scaled
 ray whose base is multiplicatively independent of the map base.  The
-[impressiveness ladder](collatz_ladder.md) places that sparse-ray statement at
+[difficulty ladder](difficulty_ladder.md) places that sparse-ray statement at
 score `0.2` and a stronger pure-division polylogarithmic statement at score
 `1`.  The all-start superlogarithmic target here is a descriptive lattice
 point between them by implication, not a separate scalar rung.  The probability
@@ -167,64 +167,25 @@ less likely than a proof obstruction for the candidates studied so far.
 
 ## What the repository's obstructions do and do not show
 
-Each obstruction should be classified by the kind of evidence it supplies.
-Most of the repository's detailed obstructions concern the pure-division
-route to the broader contracting-branch target, rather than exhausting every
-admissible contracting map.
+Most detailed obstructions concern the pure-division route, not every
+admissible contracting map.  Their technical statements and proofs are
+canonical in the [research state](progress/research_state.md) and the
+[moving-endpoint-core
+analysis](blockers/moving_endpoint_core_obstruction.md).  Their evidential
+roles are different:
 
-### Mostly evidence about proof difficulty
+| Result | What it supports | What it does not support |
+|---|---|---|
+| Every finite itinerary is realizable | Local forbidden-pattern and finite-state arguments cannot prove the target. | One ordinary integer realizes an arbitrary infinite itinerary; the realizing start may change with the prefix. |
+| Failure forces bounded-spacing chains of proportional gaps along one fixed orbit | Any counterexample has strong global structure, and the missing fixed-start theorem is precise. | Such an infinite chain exists; the reduction is conditional on failure. |
+| Existing valuation, height, sparse-sum, and rational-base methods stop at that interface | Several natural proof architectures are insufficient. | The conjecture is false or the interface cannot be crossed by another method or map. |
 
-- Every finite residue itinerary is realized by an ordinary nonnegative
-  integer, and its endpoints form an exact arithmetic progression; the
-  [consolidated research state](progress/research_state.md#proved-every-finite-residue-itinerary-is-realizable)
-  records the local-realizability argument.
-  Therefore no fixed finite bad pattern or finite list of local valuations
-  can be forbidden.
-- Finite-state carry transducers cannot compute either the full itinerary or
-  its binary expansion/division projection from ordinary base $B$ digits.
-- Existing fixed-rank sparse-polynomial, $S$-unit, Subspace-Theorem, height,
-  LTE, and rational-base results lose too much when the number of blocks
-  grows.
-- The clean current sufficient statement is a fixed-start, growing-rank
-  [valuation estimate](blockers/moving_endpoint_core_obstruction.md#10-an-explicit-statement-of-the-missing-theorem)
-  with subexponential rank loss.  No checked theorem gives it.
-
-These results eliminate attractive proof strategies.  They do not construct
-one bad infinite orbit.  In particular, realizability of every finite prefix
-uses a starting integer that may change with the prefix length.  The limiting
-infinite itinerary naturally belongs to a $B$-adic integer and need not come
-from any ordinary nonnegative integer.  Confusing those two assertions would
-overstate the truth-level evidence supplied by the finite-prefix obstruction.
-
-### Some evidence relevant to truth
-
-- A hypothetical bad orbit is arithmetically possible at every finite scale;
-  there is no compact local certificate that immediately rules it out.
-- Ordinary integer itineraries are not known to obey the random-residue model,
-  and bad symbolic sequences can be topologically abundant even when they
-  have probability zero under a Bernoulli measure.
-- No expanding map in the studied pure-division families is currently proved
-  to satisfy even the universal positive-division-density claim.  Rational-base
-  stopping problems already remain open at qualitative levels.
-
-These facts justify a nonzero falsity probability and prevent treating the
-choice among maps as a collection of independent random trials.  They still
-fall far short of evidence that **all** admissible maps possess an exceptional
-ordinary orbit.
-
-### Evidence that failure would be highly structured
-
-For the candidate families with an affine upper recurrence for division
-times, the proved
-[failure structure](progress/research_state.md#proved-failure-has-positive-density-proportional-gaps) implies much
-more than occasional long expansion runs.  Failure forces a positive upper
-density of proportional division-time gaps and hence arbitrarily long
-bounded-spacing chains of such gaps along one fixed orbit.  The endpoint
-cores in those chains have unrestricted prime support, which is why current
-local methods stop.  But the requirement that chains of unbounded length
-remain anchored to one fixed ordinary start is also a strong global
-constraint.  At present this is better viewed as a precise open interface
-than as evidence on which side of the interface the truth lies.
+There is nevertheless some truth-level caution: bad symbolic behavior is
+possible at every finite scale, ordinary itineraries need not follow the
+random-residue model, and no studied expanding pure-division map is known to
+satisfy universal positive division density.  This justifies a nonzero
+falsity probability, but it is far from evidence that **every** admissible map
+has an exceptional ordinary orbit.
 
 ## Stress tests and sensitivity
 
@@ -269,51 +230,15 @@ expert-years, my distribution over the main ingredient of that proof is:
 | Rational-base symbolic dynamics | 8% |
 | An unexpected method outside these categories | 6% |
 
-These routes may overlap.  The table classifies a future proof by what appears
-to do the decisive work.
-
-### 1. Fixed-start growing-rank valuation control
-
-The clearest current reduction asks for a valuation estimate whose loss is
-subexponential in the number of completed division blocks.  Existing
-fixed-rank $S$-unit, sparse-polynomial, and Subspace-Theorem bounds deteriorate
-too quickly as the rank grows.  A theorem that exploits the staircase support
-and the fact that every term comes from one fixed ordinary orbit would attack
-the obstruction directly.
-
-### 2. A map designed around a global invariant
-
-Finite residue itineraries and finite-state carry models are too flexible, so
-the invariant would need genuinely unbounded memory.  Plausible forms include
-an infinite-state potential, a canonical rational-base representation, or a
-quantity distributed across several valuations.  The aim would be to make a
-long succession of proportionally growing division gaps globally
-inconsistent, even though every finite prefix is locally realizable.
-
-### 3. Adelic or entropy rigidity
-
-Long expanding gaps create strong divisibility at the base prime, while the
-corresponding endpoints acquire Archimedean height and uncontrolled prime
-support elsewhere.  A product-formula, entropy, or height argument might show
-that the same fixed orbit cannot repeatedly satisfy all of these constraints
-at positive density.  This would have to use correlations across an
-unbounded sequence of blocks; one-block height bounds are insufficient.
-
-### 4. A stronger theorem proves $S$ as a corollary
-
-A proof of classical Collatz would settle $S$ immediately.  So would a proof
-that one admissible map has positive lower division density, or that all
-orbits of one expanding admissible map are eventually periodic and each
-eventual cycle contains a division step.  Since $S$ is much weaker, it is more
-likely to be proved directly, but a stronger breakthrough has enough
-independent probability to deserve its own category.
-
-### 5. Rational-base symbolic dynamics
-
-The orbit coding resembles normalization in a nonintegral base.  A sufficiently
-strong theorem excluding extremely sparse division symbols on every ordinary
-integer expansion could prove the target.  Present equidistribution and
-stopping results do not provide that universal, fixed-start conclusion.
+The first, third, and fifth categories attack the fixed-start interface from
+different directions; the canonical technical formulation is the
+[missing-theorem statement](blockers/moving_endpoint_core_obstruction.md#10-an-explicit-statement-of-the-missing-theorem).
+The designed-map category instead seeks global structure that avoids the
+moving-core obstruction.  The stronger-theorem category includes classical
+Collatz, universal positive division density, or periodicity with a division
+step in every eventual cycle.  The routes overlap, so the table assigns credit
+to the ingredient that does the decisive work rather than asserting that the
+mechanisms are disjoint.
 
 ## Provability calibration
 
@@ -336,11 +261,6 @@ proof whose search complexity, conceptual prerequisites, or minimum
 description length defeats a civilization controlling at least one galaxy.
 That is possible in principle but is a much stronger claim than saying that
 current mathematics lacks the right fixed-start theorem.
-
-The main proof routes should not be read as independent bets.  A successful
-global invariant may be proved with an adelic estimate; a rational-base
-theorem may supply the needed growing-rank valuation bound.  The table assigns
-credit to the ingredient that seems most likely to do the decisive work.
 
 ## What would change the assessment
 

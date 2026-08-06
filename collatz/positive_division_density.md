@@ -37,8 +37,8 @@ The residue classes outside $E$ are the division branches: on them, the map disc
 For $K\ge1$, let
 
 ```math
-D_K(n)=\left|\big\lbrace 0\le j\lt K:
-T^{\,j}(n)\bmod B\notin E\big\rbrace\right|,
+D_K(n)=\#\lbrace 0\le j\lt K:
+T^{\,j}(n)\bmod B\notin E\rbrace,
 ```
 
 the number of division-branch steps among the first $K$ iterates of $n$.
