@@ -58,6 +58,12 @@ the [development guide](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtE
 Scores use that one repository-wide scale; they are not reset so that each
 folder's headline conjecture has the same endpoint.
 
+Score `10` is very roughly the median difficulty among BB(6), Schanuel's
+conjecture, and general Vojta; score `20` is roughly the difficulty of BB(7).
+A ladder's top may lie below or above `10`.  These are qualitative
+cross-problem anchors, not a second equation relating scores to expected
+years.
+
 For an area $A$, let $E_A(s)$ be the expected future human-expert-years of
 strategically directed research, measured from the July 2026 frontier, needed
 to first reach score $s$.  Folder tables report the central elicitation
@@ -68,12 +74,13 @@ to first reach score $s$.  Folder tables report the central elicitation
 
 The current frontier has $E_A(0)=0$, so its logarithm is undefined.  This
 future-effort clock is not a historical work stock, replacement cost, or count
-of all effort in mathematics.  Its uncertainty is a distribution, even when a
-table gives one central logarithm.
+of all effort in mathematics.  The elicitation is a joint epistemic
+distribution over the expected-effort function $E_A$; a table reports one
+central logarithm from that distribution.
 
 Numerical scores are contours through a multidimensional theorem state, not a
 claim that proofs must traverse a linear list of lemmas.  One theorem may jump
-several contours.  Below the guide's upper calibration point, roughly even
+several contours.  Below score `10`, roughly even
 increments in $\ell_A$ are a spacing diagnostic rather than an exact global
 conversion formula.  No intermediate score, including `5`, is an independent
 anchor.  Prefer natural implication points to cosmetic milestones, and use a
@@ -86,6 +93,9 @@ reported skip probability is
 ```math
 \Pr\bigl(E_A(n+1)\lt1.1E_A(n)\bigr).
 ```
+
+This probability is over uncertainty in the elicited expected efforts, not
+randomness remaining after two expectations have been fixed.
 
 The first open rung is audited separately because $E_A(0)=0$; a terminal
 integer has no next-contour skip probability.
