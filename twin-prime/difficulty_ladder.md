@@ -43,8 +43,8 @@ The exact endpoint statement is given in
 
 ## The ladder
 
-Every row above score `0` is open as of the August 2026 audit.  The word “or”
-denotes logical disjunction.
+Every row above score `0` was open at the July 2026 frontier and remained open
+in the August 2026 recheck.  The word “or” denotes logical disjunction.
 
 | Score | Rung |
 |---:|---|

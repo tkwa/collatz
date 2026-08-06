@@ -141,9 +141,9 @@ in this benchmark.
 
 ## Open-status and non-implication checklist
 
-As of the August 2026 live audit, the source search found no validated
-improvement of the published unconditional $H_1\le246$ record and no proof of
-any positive rung.  A
+At the July 2026 frontier, rechecked live in August 2026, the source search
+found no validated improvement of the published unconditional $H_1\le246$
+record and no proof of any positive rung.  A
 [2024 expository chapter](http://www.lolathompson.com/uploads/1/1/0/6/110629329/chapter_12_2024.pdf)
 still states the `246` theorem.  The search also surfaced a 2025 student
 preprint whose title advertises a new bound, but the indexed description
