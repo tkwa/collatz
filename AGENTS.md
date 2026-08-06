@@ -22,8 +22,10 @@ You may freely delete language about obsolete versions of conjectures or the rep
 
 Documents should not duplicate information from the development guide, the README, or anywhere else.
 
-`difficulty_ladder.md` should have tables but minimal commentary. What commentary it does have should be focused on
-explaining the difficulty ladder and why it was constructed that way to a human non-specialist. Most of the commentary should be in folder `README.md`
+`difficulty_ladder.md` should be table-centered and use minimal commentary.
+Its commentary should explain the ladder and its construction to a human
+non-specialist. Most explanatory commentary belongs in the folder's
+`README.md`.
 
 ## Proof searches / red-teaming
 
