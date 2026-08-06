@@ -92,3 +92,13 @@ side.  Those figures do not satisfy the development guide's final frontier
 red-team gates.  A dedicated eligible frontier-model audit must honestly
 reach at least 100,000 weakest-side tokens and 50,000 endpoint-side tokens
 before this process can be called complete; its report will be linked here.
+
+## Rendering verification
+
+After commit `8ea16a4` was pushed, the live GitHub pages for
+[`difficulty_ladder.md`](../difficulty_ladder.md) and
+[`sources_and_implications.md`](../sources_and_implications.md) were inspected
+in a browser.  GitHub produced 51 and 79 native math renderers respectively,
+both tables appeared on the ladder page, and no renderer contained an
+`merror`, unknown-command, parse-error, or TeX-error node.  This is a
+client-rendered page check, not merely an API check for renderer elements.

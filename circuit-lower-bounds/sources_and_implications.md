@@ -228,6 +228,14 @@ calibrate the rejected near-maximum endpoint; they do not supply an $NP$
 language.  Lupanov's original theorem and modern expositions use slightly
 different complete bases, so only the order of growth is used here.
 
+Primary sources are Claude Shannon, “The Synthesis of Two-Terminal Switching
+Circuits,” *Bell System Technical Journal* 28 (1949), and Oleg Lupanov, “On a
+Method of Circuit Synthesis,” *Izvestiya VUZ, Radiofizika* 1 (1958), pages
+120--140.  A modern source confirming the exact hardest-function asymptotic
+is Magnus Find and Alexander Golovnev, “A Tighter Lower Bound on the Circuit
+Size of the Hardest Functions,”
+[ECCC TR11-086](https://eccc.weizmann.ac.il/report/2011/086/).
+
 For scores `2` and above, switching between fixed finite complete fan-in-two
 bases changes size by at most a constant factor and preserves the displayed
 growth regime.  It does not preserve the score-`0` or Weakest coefficient.
