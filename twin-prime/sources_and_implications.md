@@ -96,7 +96,7 @@ additionally require its full convolution class.
 
 ## Polynomial prime conjectures
 
-The endpoint formulation follows Paul T. Bateman and Roger A. Horn,
+The score-9 formulation follows Paul T. Bateman and Roger A. Horn,
 [“A heuristic asymptotic formula concerning the distribution of prime
 numbers”](https://doi.org/10.1090/S0025-5718-1962-0148632-7), and the modern
 overview by Stephan Ramon Garcia,
@@ -149,7 +149,8 @@ For each prime $p$, put
 The family is locally admissible when $\nu_p(\mathbf f)\lt p^n$ for every
 prime $p$.  For every fixed compact axis-parallel box
 $\mathcal B\subset\mathbb R^n$ of positive volume such that
-$f_{i,0}(\mathcal B)\subset(1,\infty)$ for every $i$, the conjecture is
+$f_{i,0}(\mathcal B)\subset(1,\infty)$ for every $i$, the conjecture as
+$P\to\infty$ is
 
 ```math
 \#\lbrace\mathbf x\in\mathbb Z^n\cap P\mathcal B:
