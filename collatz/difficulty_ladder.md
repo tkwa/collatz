@@ -26,7 +26,8 @@ start at most $X$ to reach $1$.
 | **7.0** | **Polylogarithmic uniform stopping bound.**  There is an $A\gt0$ such that $M(X)=O((\log X)^A)$. |
 | **8.0** | **Linear-log uniform stopping bound.**  $M(X)=O(\log X)$. |
 | **9.0** | **Classical stopping-time limiting constant.**  $M(X)/\log X$ converges to a finite positive limit $c_{\rm Col}$. |
-| **9.5** | **Stopping-time limit plus [universal one-expander periodicity](one_expander_universal_periodicity.md).**  The preceding limiting statement holds, and every map in the restricted positive, coprime, pure-division, one-expander class with $a\lt B^B$ has every nonnegative orbit eventually periodic. |
+| **9.5** | **[Exact maximum stopping constant](scaled_stopping_constant.md).**  $M(X)/\log X$ converges to the Lagarias--Weiss model value $\gamma_{\rm RRW}\approx41.677647$, conjectured for the actual map by Kontorovich--Lagarias. |
+| **10.0**\* | **Borderline terminal conjunction.**  The score-`9.5` exact maximum limit holds, and [universal one-expander periodicity](one_expander_universal_periodicity.md) holds for the restricted positive, coprime, pure-division family with $a\lt B^B$. |
 
 ## Selected joins and side points
 
@@ -37,6 +38,7 @@ start at most $X$ to reach $1$.
 | Existential pure-division density or classical fixed-power contraction | Alternatives at `1.6` | This first join credits progress on either axis; either route implies score `1`. |
 | Bare negative-drift periodicity | Not eligible | A cycle need not contain a division step, so bare periodicity does not imply positive division density. |
 | Designed-map periodicity with division or classical positive density | Alternatives at `2` | The cycle clause makes the designed-map route imply density; both alternatives imply score `1.6`. |
+| Kontorovich--Lagarias scaled stopping constant | Supporting consequence of score `9.5` | Its limsup statement does not by itself force convergence of $M(X)/\log X$, because record starts could be sparse. |
 
 ## Effort and skip annotation
 
@@ -57,8 +59,10 @@ These subjective estimates use the scope and interpretation summarized in the
 | 6 | 4.43 | 35% | A constructive proof may already contain a polynomial stopping bound. |
 | 7 | 4.78 | 30% | Quantitative contraction may sharpen directly from polynomial to polylogarithmic. |
 | 8 | 5.13 | 30% | Extreme-value control may pass from a polylogarithm to logarithmic order. |
-| 9 | 5.27 | n/a | Last selected integer contour; a logarithmic-bound proof may also identify the limiting constant. |
-| 9.5 | 5.47 | -- | Terminal conjunction; the one-expander component has especially wide universality and overlap uncertainty. |
+| 9 | 5.27 | 25% | An unspecified maximum limit need not identify the stochastic-model constant or settle the generalized-map component. |
+| 9.5 | 5.47 | -- | Identifies the limiting value with the stochastic-model constant. |
+| 10* | 5.82 | n/a | Terminal conjunction; the one-expander component has especially wide universality and overlap uncertainty. |
 
-The one-expander endpoint has a rough placement range of `7.5--12`; this is a
-difficulty sensitivity, not a proof-theoretic claim.
+The one-expander component has a rough placement range of `7.5--12`; this is a
+difficulty sensitivity, not a proof-theoretic claim.  The folder overview
+explains the asterisk on the terminal score.

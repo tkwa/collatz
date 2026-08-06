@@ -11,6 +11,13 @@ conclusions.
 - [The All-Start Nonnegative Superlogarithmic Contraction Conjecture](nonnegative_superlogarithmic_contraction.md) asks whether some fixed coprime self-map of $\mathbb N_0$ gives every orbit a contraction count satisfying $D_K(n)=\omega(\log K)$.
 - [The All-Start Signed Superlogarithmic Contraction Conjecture](signed_superlogarithmic_contraction.md) provisionally allows signed unit multipliers, integer offsets, and integer-valued orbits while retaining the same target for every nonnegative start.
 - [The Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md) asks only that one signed unit map satisfy the superlogarithmic target on every sufficiently large member of one existentially chosen exact scaled ray $d u^k$, where $u$ is multiplicatively independent of the map base.
+- [The Exact Maximum Stopping-Constant
+  Conjecture](scaled_stopping_constant.md) identifies the limiting maximum
+  stopping-time ratio with the Kontorovich--Lagarias stochastic-model
+  prediction.
+- [The Universal One-Expander Periodicity
+  Conjecture](one_expander_universal_periodicity.md) is the restricted
+  generalized-map component of the terminal conjunction.
 
 In these names, **all-start** means every starting value in $\mathbb N_0$.
 The descriptive names expose the starting-set quantifier, map family, and
@@ -94,25 +101,36 @@ M(X)=\max_{1\le n\le X}\tau(n),
 with $\tau(n)=\infty$ when $n$ never reaches $1$.  The upper rungs successively
 ask for polynomial, polylogarithmic, and logarithmic bounds on the worst
 stopping time, followed by convergence of $M(X)/\log X$ to a finite positive
-constant.  Each finite uniform bound implies classical Collatz.
+constant.  Score `9.5` strengthens this only by identifying that limit with
+the linked stochastic-model value.  The
+[source note](scaled_stopping_constant.md#literature-interface) explains why
+both maximum-limit rungs control more than the published limsup conjecture.
+Each finite uniform bound implies classical Collatz.
 
-The terminal score is a conjunction: it retains that classical stopping-time
-limit and adds the [Universal One-Expander Periodicity
+The terminal score is a conjunction: it retains the exact classical
+stopping-time limit and adds the [Universal One-Expander Periodicity
 Conjecture](one_expander_universal_periodicity.md).  The latter concerns only
 the restricted positive, coprime, pure-division family with one expanding
 residue and $a\lt B^B$.  It neither identifies the classical attractor nor
-supplies a stopping-time estimate, and no universality claim is made for
-arbitrary residue-affine maps.
+supplies a stopping-time estimate, so the conjunction is necessary to retain
+the scalar implication chain.
+
+The [one-expander note](one_expander_universal_periodicity.md#a-stronger-literature-conjecture)
+audits Matthews' strictly broader negative-product conjecture and explains why
+it remains an unscored side point.
 
 ### Effort and skip annotations
 
 The [development guide](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtEFuKxjmN6TaZq8CFxeidI_Xw/edit?tab=t.0)
-defines the shared effort and integer-skip fields.  For this ladder, score `9`
-is `n/a` because there is no selected score-`10` contour.  The estimates cover
+defines the shared effort and integer-skip fields.  The estimates cover
 classical stopping, cycle, and exceptional-set work, generalized
 residue-affine and one-expander dynamics, and adjacent arithmetic-dynamics
 methods only when a plausible transfer is explicit.  Generic number theory
 and brute-force orbit verification are not counted.
+
+The score-`10` asterisk marks the terminal conjunction as borderline under the
+development guide's endpoint-confidence rule.  The linked one-expander note
+explains the main uncertainty.
 
 The central effort estimates are uncertain by at least roughly half a decade
 through the middle of the ladder and more near the endpoint.  Individual
