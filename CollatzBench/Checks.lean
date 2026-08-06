@@ -1,6 +1,7 @@
 import CollatzBench.ABC
 import CollatzBench.Collatz
 import CollatzBench.CollatzLadder
+import CollatzBench.CircuitLowerBounds
 import CollatzBench.Mahler
 import CollatzBench.PrimeGaps
 
@@ -18,6 +19,8 @@ import CollatzBench.PrimeGaps
 #check (CollatzBench.Collatz.UniversalOneExpanderPeriodicity : Prop)
 #check (CollatzBench.Collatz.UniversalOneExpanderPolynomialPreperiod : Prop)
 #check (CollatzBench.Collatz.UniversalOneExpanderLogarithmicPreperiod : Prop)
+
+#check (CollatzBench.CircuitLowerBounds.WeakestUnrestrictedCircuitImprovement : Prop)
 
 #check (CollatzBench.Mahler.AlgebraicMultiplierEscape : Prop)
 #check (CollatzBench.Mahler.RationalBaseUniversalEscape : Prop)

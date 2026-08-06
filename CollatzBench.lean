@@ -1,5 +1,6 @@
 import CollatzBench.Collatz
 import CollatzBench.CollatzLadder
+import CollatzBench.CircuitLowerBounds
 import CollatzBench.ABC
 import CollatzBench.Mahler
 import CollatzBench.PrimeGaps
