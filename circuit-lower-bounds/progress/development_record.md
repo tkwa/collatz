@@ -111,10 +111,13 @@ written and read back before integration.
 
 ## Rendering verification
 
-After commit `8ea16a4` was pushed, the live GitHub pages for
-[`difficulty_ladder.md`](../difficulty_ladder.md) and
-[`sources_and_implications.md`](../sources_and_implications.md) were inspected
-in a browser.  GitHub produced 51 and 79 native math renderers respectively,
-both tables appeared on the ladder page, and no renderer contained an
-`merror`, unknown-command, parse-error, or TeX-error node.  This is a
-client-rendered page check, not merely an API check for renderer elements.
+After commit `cce2b66` was pushed, the live GitHub pages for
+[`difficulty_ladder.md`](../difficulty_ladder.md),
+[`sources_and_implications.md`](../sources_and_implications.md), and the
+[Weakest statement](../weakest_unrestricted_circuit_improvement.md) were
+inspected in a browser.  GitHub produced 77, 107, and 14 native math renderers
+respectively; all three ladder tables and the expected branch, endpoint,
+conditional-route, attribution, and no-rate text appeared.  No renderer
+contained an `merror`, unknown-command, parse-error, or TeX-error node.  This
+is a client-rendered page check, not merely an API check for renderer
+elements.
