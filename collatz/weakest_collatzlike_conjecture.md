@@ -147,23 +147,15 @@ ray does not repair a local weakness of the first.  Under the repository's
 instruction to keep weakening the moving candidate until an elementary
 collapse appears, one exact scaled ray is therefore preferred.
 
-The openness and itinerary arguments, together with the two-ray comparison,
-are proved in
-[`asymptotic_progress/weakest_coprime_ray_redteam.md`](asymptotic_progress/weakest_coprime_ray_redteam.md).
+The consolidated [research state](progress/research_state.md) records the
+finite-itinerary obstruction and the fixed-start distinction that also govern
+this sparse-ray formulation.
 
-## Relationship to the earlier fixed-$2,3$ proposal
+## Relationship to all-start formulations
 
-The earlier proposal required the same map to work on every sufficiently
-large power of both $2$ and $3$.  Replacing those fixed bases by two
-existentially chosen coprime bases changes two features at once: it allows
-friendlier rays but restricts the map base.  The two statements are therefore
-not logically comparable unless the fixed-$2,3$ witness also satisfies
-$\gcd(B,6)=1$.
-
-The present scaled one-ray conjecture is weaker than the existential
-two-coprime-ray variant: take $d=1$ and retain either ray.  It is also implied
-by either all-start conjecture in this folder: after a witness map is fixed,
-choose any $u\ge2$ multiplicatively independent of its base and take $d=1$.
+Either all-start conjecture in this folder implies the present scaled-ray
+statement: after fixing its witness map, take $d=1$ and choose any $u\ge2$
+multiplicatively independent of the map base.
 
 ## Relationship to classical Collatz
 
@@ -214,6 +206,4 @@ Provisional and not literature-certified as open.  No admissible witness is
 known to satisfy the scaled-ray conclusion, and no reduction proves that a
 witness cannot exist.  The coprime subcase has a local-fullness obstruction;
 the shared-prime subcase is retained because no elementary mechanism is
-known, not because that obstruction extends to it.  Exact collapses,
-structural obstructions, attempted constructions, and the final no-weakening
-audit are recorded in the red-team note linked above.
+known, not because that obstruction extends to it.
