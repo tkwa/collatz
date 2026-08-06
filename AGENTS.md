@@ -22,6 +22,9 @@ You may freely delete language about obsolete versions of conjectures or the rep
 
 Documents should not duplicate information from the development guide, the README, or anywhere else.
 
+`difficulty_ladder.md` should have tables but minimal commentary. What commentary it does have should be focused on
+explaining the difficulty ladder and why it was constructed that way to a human non-specialist. Most of the commentary should be in folder `README.md`
+
 ## Proof searches / red-teaming
 
 Do not try searching for an explicit set of parameters whose map converges, or has some minimum contraction density, over a bounded range of integers. That cannot prove it converges on all integers, because there could be arbitrarily long runs of expanding residue classes, just as in Collatz.
