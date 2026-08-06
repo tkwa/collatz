@@ -9,10 +9,9 @@ plausible sequence of intermediate theorems, does movement on that sequence
 predict a higher subsequent hazard of genuine progress or solution, or does
 the sequence merely make the history look smooth after the fact?
 
-**Q2. Given that a ladder is used, how should its state be collapsed?**  In
-particular, should the score be a function of two independent coordinates, a
-maximum over many coordinates, a maximum over complete proof routes, or a
-portfolio aggregate?
+**Q2. Given that a ladder is used, how should incomparable routes be exposed
+on one scale?**  In particular, should the score use logical disjunctions, a
+maximum over complete proof routes, or a portfolio aggregate?
 
 The historical cases below support a scalar public score, but not a scalar
 mathematical state.  They do **not** make that score a forecast: theorem
@@ -569,6 +568,5 @@ semantics after the objective is chosen.
    eligible censored cases.  Fit no numerical contour until blind,
    leave-one-problem-out tests are possible.
 
-This architecture is only slightly more complex than a collapsed ladder.  It
-prevents one scalar from being asked simultaneously to measure impressive
-mathematics, accumulated work, smoothness, and probability of timely success.
+This architecture keeps one public scale without pretending that methods are
+linearly ordered or that theorem reach is a deadline forecast.

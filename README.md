@@ -16,10 +16,8 @@ distinguish those cases.
 - [`collatz/`](collatz/) studies contraction frequency, recurrence, classical
   Collatz, sharp classical stopping-time asymptotics, and a restricted
   one-expander family near the possible universality boundary.
-- [`twin-prime/`](twin-prime/) tracks the best unconditional prime-gap bound
-  together with progress in the distribution of primes.  Its notes also
-  explain why the parity obstruction may make generalized
-  Elliott--Halberstam progress non-decisive.
+- [`twin-prime/`](twin-prime/) is a scalar disjunctive ladder from the best
+  unconditional prime-gap bound through twin primes to Bateman--Horn.
 - [`mahler/`](mahler/) contains weak escape problems for fractional parts of
   powers.  A calibrated ladder for this folder has not yet been developed.
 - [`abc/`](abc/) tracks the size of a coprime triple against its radical, from
@@ -112,9 +110,9 @@ score.
 
 - Score the proved mathematical artifact, not the solver's reputation or the
   historical fame of the theorem.
-- A theorem outside the recorded coordinates receives no formal ladder score
-  until a proved consequence moves a coordinate.  Possible method transfer
-  may be reported separately.
+- A theorem outside the displayed rungs receives no formal score until a
+  proved consequence establishes a rung.  Possible method transfer may be
+  reported separately.
 - Prefer a range or sensitivity analysis when human-equivalent costs are
   uncertain.
 - Freeze a scoring model for a benchmark evaluation.  New mathematical
