@@ -38,6 +38,18 @@ subjective benchmark judgments.  The audit is current through August 5, 2026.
   dimension $n\ge4$.  It also records only the implication from Stein
   restriction to full Kakeya-set dimension, not to the maximal estimate used
   above.  See [Guth, introduction](https://arxiv.org/abs/2604.03416).
+- **[proved]** Fernández-Delgado and de la Salle construct, for every finite
+  $d$, a Kakeya set $E\subset\mathbb R^d$ with
+
+  ```math
+  |N_\delta(E)|\le C|\log\delta|^{-(d-1)}
+  ```
+
+  for every $0\lt\delta\lt1$.  This is Theorem 1.3 of their August 2026
+  preprint, [*A construction of Kakeya Sets in Arbitrary
+  Dimension*](https://arxiv.org/abs/2607.14824).  It is an obstruction to
+  lossless positive-volume endpoints, not to estimates allowing the standard
+  $\delta^{-\varepsilon}$ loss.
 
 ## Adjacent implications
 
@@ -105,11 +117,16 @@ a ruled-quadric construction in $\mathbb R^4$ showing that the analogue of
 the three-dimensional convex-Wolff theorem fails in higher dimensions.
 
 **[counterexample warning]** Removing every $\delta^{-\varepsilon}$ allowance
-is not a safe strengthening.  The two-dimensional endpoint maximal operator
-has an unavoidable logarithmic loss.  A conjecture for exact optimal
-polylogarithmic losses in all dimensions would be stronger, but no standard
-all-dimensional formulation with adequately audited truth confidence was
-located.
+and demanding a scale-independent positive lower bound is false.  The
+Fernández-Delgado--de la Salle examples have
+$|N_\delta(E)|\le C|\log\delta|^{-(d-1)}$ in every dimension.  Already in two
+dimensions the endpoint maximal problem has an unavoidable logarithmic loss.
+An exact optimal-polylogarithmic conjecture could be stronger than the
+displayed terminal rung, but no standard all-dimensional maximal formulation
+with adequately audited truth confidence was located.  The construction is
+compatible with the terminal polynomial-Wolff statement because every fixed
+power $\delta^{-\varepsilon}$ eventually dominates every power of
+$|\log\delta|$.
 
 **[subjective]** The polynomial-Wolff endpoint is provisionally assigned
 `75--85%` confidence of being provable in ZFC and is therefore starred.  Its
