@@ -24,7 +24,10 @@ needed arithmetic-geometry semantics for Weil heights, normal-crossings
 divisors, truncated counting functions, and bounded-degree algebraic points.
 
 The library does not formalize every intermediate ladder rung or every
-conjecture mentioned as background. It excludes non-frontier Collatz variants,
-intermediate abc/Vojta and twin-prime rungs, explanatory literature
-conjectures, historical examples, and supporting targets in
-`collatz/progress/` or `collatz/blockers/`; none is claimed as covered here.
+conjecture mentioned as background. It excludes unformalized Collatz rungs,
+including the exact maximum stopping constant, universal one-expander
+periodicity, the polynomial-preperiod rung, and the logarithmic-preperiod
+endpoint; intermediate abc/Vojta and twin-prime rungs; the multivariate
+Bateman--Horn endpoint; explanatory literature conjectures; historical
+examples; and supporting targets in `collatz/progress/` or
+`collatz/blockers/`. None is claimed as covered here.

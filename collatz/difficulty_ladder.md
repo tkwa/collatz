@@ -25,8 +25,11 @@ start at most $X$ to reach $1$.
 | **6.0** | **Polynomial uniform stopping bound.**  There is an $A\gt0$ such that $M(X)=O(X^A)$. |
 | **7.0** | **Polylogarithmic uniform stopping bound.**  There is an $A\gt0$ such that $M(X)=O((\log X)^A)$. |
 | **8.0** | **Linear-log uniform stopping bound.**  $M(X)=O(\log X)$. |
-| **9.0** | **Classical stopping-time limiting constant.**  $M(X)/\log X$ converges to a finite positive limit $c_{\rm Col}$. |
-| **9.5** | **Stopping-time limit plus [universal one-expander periodicity](one_expander_universal_periodicity.md).**  The preceding limiting statement holds, and every map in the restricted positive, coprime, pure-division, one-expander class with $a\lt B^B$ has every nonnegative orbit eventually periodic. |
+| **9.0** | **Kontorovich--Lagarias scaled stopping constant.**  $\limsup_{n\to\infty}\tau(n)/\log n=\gamma_{\rm RRW}\approx41.677647$, equivalently $\limsup_{X\to\infty}M(X)/\log X=\gamma_{\rm RRW}$. |
+| **9.5** | **[Exact maximum stopping constant](scaled_stopping_constant.md).**  $M(X)/\log X$ converges to $\gamma_{\rm RRW}$, upgrading the score-`9` limsup to a full limit. |
+| **10.0** | **Classical exact limit plus generalized periodicity.**  The score-`9.5` limit holds, and [universal one-expander periodicity](one_expander_universal_periodicity.md) holds for the restricted positive, coprime, pure-division family with $a\lt B^B$. |
+| **10.5** | **Polynomial generalized cycle-entry bound.**  The score-`9.5` limit holds, and every map in that one-expander family has a [polynomial worst-case preperiod](one_expander_polynomial_preperiod.md). |
+| **11.0**\* | **Logarithmic generalized cycle-entry bound.**  The score-`9.5` limit holds, and every map in that family has a [logarithmic worst-case preperiod](one_expander_logarithmic_preperiod.md). |
 
 ## Selected joins and side points
 
@@ -37,6 +40,7 @@ start at most $X$ to reach $1$.
 | Existential pure-division density or classical fixed-power contraction | Alternatives at `1.6` | This first join credits progress on either axis; either route implies score `1`. |
 | Bare negative-drift periodicity | Not eligible | A cycle need not contain a division step, so bare periodicity does not imply positive division density. |
 | Designed-map periodicity with division or classical positive density | Alternatives at `2` | The cycle clause makes the designed-map route imply density; both alternatives imply score `1.6`. |
+| Convergence of $M(X)/\log X$ to an unspecified positive constant | Not selected | It is incomparable with score `9`: it controls record gaps but does not identify the stochastic-model limsup.  Score `9.5` requires both. |
 
 ## Effort and skip annotation
 
@@ -57,8 +61,13 @@ These subjective estimates use the scope and interpretation summarized in the
 | 6 | 4.43 | 35% | A constructive proof may already contain a polynomial stopping bound. |
 | 7 | 4.78 | 30% | Quantitative contraction may sharpen directly from polynomial to polylogarithmic. |
 | 8 | 5.13 | 30% | Extreme-value control may pass from a polylogarithm to logarithmic order. |
-| 9 | 5.27 | n/a | Last selected integer contour; a logarithmic-bound proof may also identify the limiting constant. |
-| 9.5 | 5.47 | -- | Terminal conjunction; the one-expander component has especially wide universality and overlap uncertainty. |
+| 9 | 5.27 | 25% | Identifies the extreme stopping-time limsup with the stochastic-model constant. |
+| 9.5 | 5.47 | -- | Upgrades that exact limsup to convergence of the normalized running maximum. |
+| 10 | 5.82 | 30% | A periodicity proof may already quantify cycle entry, but a qualitative recurrence argument need not give the optimal rate. |
+| 10.5 | 6.07 | -- | Polynomial preperiod control adds worst-case runtime content beyond eventual periodicity. |
+| 11* | 6.32 | n/a | Logarithmic preperiod is the optimal-order generalized cycle-entry bound and the borderline endpoint. |
 
-The one-expander endpoint has a rough placement range of `7.5--12`; this is a
-difficulty sensitivity, not a proof-theoretic claim.
+The periodicity component has a rough placement range of `7.5--12`, and the
+quantitative preperiod components have still wider upper uncertainty.  These
+are difficulty sensitivities, not proof-theoretic claims.  The folder overview
+explains the asterisk on the terminal score.

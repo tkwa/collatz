@@ -1,11 +1,13 @@
 # The Universal One-Expander Periodicity Conjecture
 
-This is the uniform component of the cumulative endpoint of the
-[Collatz-like difficulty ladder](difficulty_ladder.md).  That endpoint also
-retains the classical stopping-time limit so the ladder remains an
-implication chain.  The conjecture here is universal over
-a deliberately restricted map family near the project's estimated
-computational-universality boundary.
+This is the generalized-map component of score `10` in the
+[Collatz-like difficulty ladder](difficulty_ladder.md).  That score conjoins
+it with the exact classical maximum stopping-time constant.  The terminal
+score further strengthens cycle entry to a
+[logarithmic preperiod bound](one_expander_logarithmic_preperiod.md), with a
+[polynomial bound](one_expander_polynomial_preperiod.md) as the intermediate
+rung.  The conjecture here is universal over a deliberately restricted map
+family near the project's estimated computational-universality boundary.
 
 ## Map family
 
@@ -80,7 +82,48 @@ cycle.  The ladder places the full classical Collatz conjecture lower because
 it also identifies $1\leftrightarrow2$ as the destination of every positive
 start.
 
-## Why the family stops here
+## A broader literature conjecture
+
+For comparison, a standard generalized Collatz map on $\mathbb Z$ has the
+form
+
+```math
+T(x)=\frac{m_i x+b_i}{B}
+\qquad\text{when }x\equiv i\pmod B,
+```
+
+where $m_i\ne0$, $m_i i+b_i\equiv0\pmod B$, and
+$\gcd(m_i,B)=1$.  A conjecture attributed to Matthews predicts that every
+integer orbit is eventually periodic whenever
+
+```math
+\left\lvert\prod_{i=0}^{B-1}m_i\right\rvert\lt B^B.
+```
+
+Kionke states this formulation in
+[“A geometric approach to divergent points of higher dimensional Collatz
+mappings”](https://arxiv.org/abs/1511.05893), citing Matthews' Conjecture 3.1.
+It strictly contains the one-expander family above: take
+
+```math
+m_e=a,
+\qquad b_e=Bc-ae,
+\qquad
+m_i=1,\quad b_i=-i\quad(i\ne e).
+```
+
+Then the generalized formula is exactly the one-expander map and its
+multiplier product is $a\lt B^B$.  The Matthews conjecture therefore implies
+the periodicity statement on this page, but it is not a scored rung.
+Conjoining its much broader all-residue, all-integer claim with the exact
+classical stopping constant does not confidently clear the development
+guide's endpoint probability threshold.  Matthews gives no quantitative
+preperiod rate, while the ladder's quantitative preperiod conjectures cover
+only the narrower one-expander family.  Matthews implies their qualitative
+periodicity conclusion, but no implication to either quantitative rate is
+known.
+
+## Why the periodicity family stops here
 
 Natural generalized-Collatz systems with unrestricted rational affine
 branches can encode register machines.  Kurtz and Simon proved the associated
@@ -95,13 +138,22 @@ above.  Standard encodings use additional branch types or valuation changes
 that the coprime one-expander normal form does not transparently provide.  On
 the other hand, negative average drift alone does not preclude computation on
 a sparse exceptional set, and this project has no impossibility theorem for a
-one-expander simulation.
+one-expander simulation.  In
+[“The 3x+1 Problem: An
+Overview”](https://arxiv.org/abs/2111.02635), Lagarias asks whether the broader
+relatively-prime class contains an **ergodic** map that simulates a universal
+computer.  That question imposes neither the negative-product condition nor
+the one-expander restriction, and it is not a universality result for either
+subfamily.
 
-The endpoint placement therefore reflects an overlap-aware
-judgment about the conjunction, not a known decidability theorem or a claim
-that the uniform component follows from the classical stopping-time result.
-The project's current subjective probability that computational universality
-survives all these restrictions is approximately `10--15%`.
+The score-`10` component therefore reflects an overlap-aware judgment, not a
+known decidability theorem or a claim that the uniform component follows from
+the classical stopping-time result.  The project's current subjective
+probability that computational universality survives all the one-expander
+restrictions is approximately `10--15%`; the broader Matthews class carries
+materially more uncertainty.  The quantitative strengthenings have an
+additional risk from long but finite transients even when every orbit is
+eventually periodic.
 
 ## Status
 
