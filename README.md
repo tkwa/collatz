@@ -24,8 +24,9 @@ continuous scoring.
   - [`mahler/`](mahler/) contains weak escape problems for fractional parts of
     powers. Its difficulty ladder is not yet calibrated.
 - [`lean/`](lean/) maps every dedicated conjecture file linked from a
-  difficulty ladder, plus selected anchors, to closed propositions in the
-  pinned Lean and mathlib environment.
+  difficulty ladder, plus the weakest, strongest, and two important interior
+  milestones from every calibrated ladder folder, to closed propositions in
+  the pinned Lean and mathlib environment.
 
 Cross-problem design questions are developed in [`theory/`](theory/). The
 [historical ladder backtest](theory/historical_ladder_backtest.md) compares

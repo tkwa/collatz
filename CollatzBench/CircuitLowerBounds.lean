@@ -1,4 +1,5 @@
 import CollatzBench.Foundations
+import Mathlib.Analysis.SpecialFunctions.Pow.Real
 import Mathlib.Data.Fin.Basic
 import Mathlib.Data.Int.Basic
 import Mathlib.Data.List.GetD
@@ -114,5 +115,34 @@ def WeakestUnrestrictedCircuitImprovement : Prop :=
     ∀ A : ℝ, ∀ N : ℕ, ∃ n s : ℕ,
       N ≤ n ∧ CircuitComplexity L n s ∧
         (31 / 10 : ℝ) * n + A ≤ s
+
+/-- Polynomial-size nonuniform circuits in the same complete-`B₂` model. -/
+def InPPoly (L : Language) : Prop :=
+  (∀ n : ℕ, ∃ s : ℕ, CircuitComplexity L n s) ∧
+    ∃ C : ℝ, ∃ k N : ℕ, 0 < C ∧ ∀ n : ℕ, N ≤ n →
+      ∀ s : ℕ, CircuitComplexity L n s →
+        (s : ℝ) ≤ C * (n + 1 : ℝ) ^ k
+
+/-- Score `4`: a fixed polynomial circuit lower bound infinitely often. -/
+def FixedPolynomialGain : Prop :=
+  ∃ L : Language, ∃ δ : ℝ,
+    InNP L ∧ 0 < δ ∧
+    (∀ n : ℕ, ∃ s : ℕ, CircuitComplexity L n s) ∧
+    ∀ N : ℕ, ∃ n s : ℕ,
+      N ≤ n ∧ CircuitComplexity L n s ∧
+        Real.rpow (n : ℝ) (1 + δ) ≤ s
+
+/-- Score `6`: `NP` is not contained in `P/poly`, in the fixed direct models. -/
+def NPNotSubsetPPoly : Prop :=
+  ∃ L : Language, InNP L ∧ ¬ InPPoly L
+
+/-- Score `13`: eventual exponential hardness for one `NP` language. -/
+def StrongEventualExponentialCircuitHypothesis : Prop :=
+  ∃ L : Language, ∃ ε : ℝ,
+    InNP L ∧ 0 < ε ∧
+    (∀ n : ℕ, ∃ s : ℕ, CircuitComplexity L n s) ∧
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n →
+      ∀ s : ℕ, CircuitComplexity L n s →
+        Real.rpow 2 (ε * n) ≤ s
 
 end CollatzBench.CircuitLowerBounds

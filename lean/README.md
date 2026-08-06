@@ -1,9 +1,10 @@
 # Lean statement library
 
 The Lean project formalizes the quantifier structure and mathematical objects
-in every dedicated conjecture file linked from a difficulty ladder, plus a
-small set of useful inline and background anchors.  A declaration such as
-`ClassicalCollatz : Prop` is a statement, not an axiom or a proof.
+in every dedicated conjecture file linked from a difficulty ladder. It also
+compiles four representative statements from every calibrated ladder folder:
+the weakest, strongest, and two important interior milestones. A declaration
+such as `ClassicalCollatz : Prop` is a statement, not an axiom or a proof.
 
 The supported Santa-safe validation path is Docker, because native downloaded
 Lean executables are blocked on the development Mac:

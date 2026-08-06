@@ -1,16 +1,20 @@
 # Lean coverage
 
 Every entry below maps an actual mathematical statement—not merely a
-filename—to a closed Lean proposition.  Displayed quantifiers, constants,
+filename—to a closed Lean proposition. Displayed quantifiers, constants,
 maps, circuit semantics, Euclidean geometry, measures, and asymptotics are
-implemented directly; no user-supplied semantic schema stands in for them.
+implemented directly. For general Vojta, whose arithmetic-height stack is
+not yet available in pinned mathlib, one explicit typed datum lists the
+smooth/projective and normal-crossings hypotheses and each numerical
+invariant appearing in the inequality; there is no field that stands for the
+truth of the conjecture itself.
 
 ## Dedicated ladder-file coverage
 
-This is the completion criterion for issue `#1`: every dedicated conjecture
-Markdown file linked as a milestone from a `difficulty_ladder.md` is covered.
-Inline rungs, background conjectures, `dev_notes/`, and folders without a
-difficulty ladder are outside that criterion.
+Every dedicated conjecture Markdown file linked as a milestone from a
+`difficulty_ladder.md` is covered. Inline rungs are additionally covered when
+selected for the four-representative criterion below. Background conjectures,
+`dev_notes/`, and folders without a difficulty ladder remain outside scope.
 
 | Source file | Lean declaration | Coverage |
 |---|---|---|
@@ -24,6 +28,20 @@ difficulty ladder are outside that criterion.
 | `collatz/one_expander_logarithmic_preperiod.md` | `Collatz.UniversalOneExpanderLogarithmicPreperiod` | Exact map-dependent logarithmic cycle-entry bound over all starts up to `X`. |
 | `circuit-lower-bounds/weakest_unrestricted_circuit_improvement.md` | `CircuitLowerBounds.WeakestUnrestrictedCircuitImprovement` | Direct verifier-machine `NP`, acyclic complete-`B₂` circuits, minimum gate count, and unbounded-additive limsup quantifiers. |
 | `kakeya/weakest_kakeya_improvement.md` | `Kakeya.WeakestKakeyaImprovement` | Direct compact Kakeya sets, volume-neighborhood upper Minkowski dimension, direction-separated tube maximal estimate, shaded estimate, and exact three-way disjunction. |
+
+## Four representatives per ladder folder
+
+Each calibrated folder has its weakest and strongest rungs plus two important
+interior milestones. The compiled inventory is
+`representativeLadderCoverage` in `CollatzBench/Checks.lean`.
+
+| Folder | Weakest | Interior milestone 1 | Interior milestone 2 | Strongest |
+|---|---|---|---|---|
+| abc | `ABC.WeakestAbcLike` | `ABC.AbcConjecture` | `ABC.TruncatedVojtaDimensionTwoRationalPoints` | `ABC.GeneralVojta` |
+| circuit-lower-bounds | `CircuitLowerBounds.WeakestUnrestrictedCircuitImprovement` | `CircuitLowerBounds.FixedPolynomialGain` | `CircuitLowerBounds.NPNotSubsetPPoly` | `CircuitLowerBounds.StrongEventualExponentialCircuitHypothesis` |
+| collatz | `Collatz.WeakestScaledRay` | `Collatz.ClassicalCollatz` | `Collatz.ExactMaximumStoppingConstant` | `Collatz.UniversalOneExpanderLogarithmicPreperiod` |
+| kakeya | `Kakeya.WeakestKakeyaImprovement` | `Kakeya.FirstKakeyaCheckpoint` | `Kakeya.AllDimensionalMaximal` | `Kakeya.AllDimensionalPolynomialWolffMaximal` |
+| twin-prime | `PrimeGaps.WeakestPrimePattern` | `PrimeGaps.TwinPrimeConjecture` | `PrimeGaps.BatemanHorn` | `PrimeGaps.MultivariateBatemanHorn` |
 
 ## Additional statement coverage
 
@@ -46,5 +64,6 @@ dedicated-file completion criterion.
 The library does not claim coverage of ordinary inline ladder rungs,
 explanatory literature conjectures, historical examples, rejected variants,
 or supporting targets in `dev_notes/`, `collatz/progress/`, and
-`collatz/blockers/`. General Vojta remains excluded because the pinned mathlib
-does not supply the necessary arithmetic-geometry semantics.
+`collatz/blockers/`. The library does not claim to build mathlib's missing
+general arithmetic-height theory; the exact abstraction boundary for Vojta
+is documented above.
