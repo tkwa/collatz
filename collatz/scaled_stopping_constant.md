@@ -1,9 +1,9 @@
 # The Exact Maximum Stopping-Constant Conjecture
 
 This is the single-statement score 9.5 rung of the
-[Collatz-like difficulty ladder](difficulty_ladder.md).  It sharpens the
-existence of a maximum stopping-time limit by identifying its value with the
-constant predicted by stochastic models for extreme shortcut-Collatz
+[Collatz-like difficulty ladder](difficulty_ladder.md).  It upgrades the exact
+limsup at score `9` to convergence of the normalized running maximum, retaining
+the constant predicted by stochastic models for extreme shortcut-Collatz
 trajectories.
 
 ## The model constant
@@ -34,7 +34,7 @@ The stochastic models give
 ```
 
 For the shortcut Collatz map, let $\tau(n)$ be the number of iterations needed
-to reach 1, and put
+to reach 1, with $\tau(n)=\infty$ if it never does, and put
 
 ```math
 M(X)=\max_{1\le n\le X}\tau(n).
@@ -48,8 +48,8 @@ The maximum stopping time has the exact limiting constant
 \lim_{X\to\infty}\frac{M(X)}{\log X}=\gamma_{\rm RRW}.
 ```
 
-This is stronger than the score-9 statement, which only asks for some finite
-positive limiting constant.
+This is stronger than the score-`9` statement, which identifies the limsup but
+does not require the normalized running maximum to converge.
 
 ## Literature interface
 
@@ -68,15 +68,24 @@ Weiss, which give the same constant:
 [“The 3x+1 Problem: Two Stochastic
 Models”](https://doi.org/10.1214/aoap/1177005779).
 
-The maximum-limit form in this benchmark is not a verbatim conjecture from
-either paper.  Score 9 already requires convergence of the running maximum;
-score 9.5 additionally identifies that limit with the model constant.  In
-particular, convergence of $M(X)/\log X$ to $\gamma_{\rm RRW}$ implies the
-Kontorovich--Lagarias limsup statement: the upper
-bound follows from $\tau(n)\le M(n)$, while infinitely many record indices
-$r$ satisfy $M(r)=\tau(r)$ and supply the matching lower bound.  The converse
-does not follow from a limsup alone, because near-extremal record indices could
-in principle be arbitrarily sparse.
+For the shortcut map, the published limsup is equivalent to
+
+```math
+\limsup_{X\to\infty}\frac{M(X)}{\log X}=\gamma_{\rm RRW}.
+```
+
+Indeed, $\tau(n)\le M(n)$ gives one inequality.  Conversely, the definition of
+a limsup bounds every sufficiently large $\tau(n)$ by
+$(\gamma_{\rm RRW}+o(1))\log n$, which bounds the maximum over $n\le X$ by the
+same expression with $\log X$.  A hypothetical finite exceptional start with
+infinite stopping time cannot be hidden from the limsup, since all of its
+doublings have infinite stopping time as well.
+
+Score `9` is this literature conjecture.  The maximum-limit form at score
+`9.5` is not verbatim from either paper: it additionally rules out
+leading-order dips between near-extremal record starts.  The limsup alone
+permits those starts to be arbitrarily sparse and therefore does not force
+convergence of $M(X)/\log X$.
 
 ## Status
 

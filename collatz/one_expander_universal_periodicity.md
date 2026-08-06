@@ -1,8 +1,10 @@
 # The Universal One-Expander Periodicity Conjecture
 
-This is the generalized-map component of the terminal score in the
-[Collatz-like difficulty ladder](difficulty_ladder.md).  The terminal score
-conjoins it with the exact classical maximum stopping-time constant.  The
+This is the generalized-map component of score `10` in the
+[Collatz-like difficulty ladder](difficulty_ladder.md).  That score conjoins
+it with the exact classical maximum stopping-time constant.  The terminal
+score further strengthens cycle entry to a
+[polynomial preperiod bound](one_expander_polynomial_preperiod.md).  The
 conjecture here is universal over a deliberately restricted map family near
 the project's estimated computational-universality boundary.
 
@@ -79,7 +81,7 @@ cycle.  The ladder places the full classical Collatz conjecture lower because
 it also identifies $1\leftrightarrow2$ as the destination of every positive
 start.
 
-## A stronger literature conjecture
+## A broader literature conjecture
 
 For comparison, a standard generalized Collatz map on $\mathbb Z$ has the
 form
@@ -110,13 +112,17 @@ m_i=1,\quad b_i=-i\quad(i\ne e).
 ```
 
 Then the generalized formula is exactly the one-expander map and its
-multiplier product is $a\lt B^B$.  The Matthews conjecture is therefore a
-genuine stronger side point, but it is not a scored rung.  Conjoining its much
-broader all-residue, all-integer claim with the exact classical stopping
-constant does not confidently clear the development guide's endpoint
-probability threshold.
+multiplier product is $a\lt B^B$.  The Matthews conjecture therefore implies
+the periodicity statement on this page, but it is not a scored rung.
+Conjoining its much broader all-residue, all-integer claim with the exact
+classical stopping constant does not confidently clear the development
+guide's endpoint probability threshold.  Matthews gives no quantitative
+preperiod rate, while the ladder's
+[polynomial-preperiod endpoint](one_expander_polynomial_preperiod.md) covers
+only the narrower one-expander family; neither statement is currently known
+to subsume the other.
 
-## Why the scored family stops here
+## Why the periodicity family stops here
 
 Natural generalized-Collatz systems with unrestricted rational affine
 branches can encode register machines.  Kurtz and Simon proved the associated
@@ -139,12 +145,14 @@ computer.  That question imposes neither the negative-product condition nor
 the one-expander restriction, and it is not a universality result for either
 subfamily.
 
-The scored endpoint therefore reflects an overlap-aware judgment about the
-conjunction, not a known decidability theorem or a claim that the uniform
-component follows from the classical stopping-time result.  The project's
-current subjective probability that computational universality survives all
-the one-expander restrictions is approximately `10--15%`; the broader
-Matthews class carries materially more uncertainty.
+The score-`10` component therefore reflects an overlap-aware judgment, not a
+known decidability theorem or a claim that the uniform component follows from
+the classical stopping-time result.  The project's current subjective
+probability that computational universality survives all the one-expander
+restrictions is approximately `10--15%`; the broader Matthews class carries
+materially more uncertainty.  The terminal polynomial strengthening has an
+additional risk from long but finite transients even when every orbit is
+eventually periodic.
 
 ## Status
 
