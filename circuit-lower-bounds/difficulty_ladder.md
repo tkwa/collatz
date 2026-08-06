@@ -2,7 +2,7 @@
 
 The [folder overview](README.md) fixes the circuit model.  Exact sources,
 implications, and quantifier caveats are in the [source and implication
-audit](sources_and_implications.md).  Here $C_L(n)$ is the minimum $B_2$ size
+audit](dev_notes/sources_and_implications.md).  Here $C_L(n)$ is the minimum $B_2$ size
 of the characteristic function of $L$ on inputs of length $n$.
 
 ## Milestones

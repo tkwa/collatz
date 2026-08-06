@@ -31,4 +31,4 @@ ask for the sharp exponent $3$.
 
 This is the folder's unique moving **Weakest** statement.  Its openness
 qualifications and the rejected weakenings are recorded in the
-[source audit](sources_and_implications.md#weakening-audit).
+[source audit](dev_notes/sources_and_implications.md#weakening-audit).

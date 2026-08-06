@@ -59,13 +59,13 @@ Effectivity is tracked separately.  Standard abc and Vojta statements need
 not provide computable constants, so a stronger scalar rung need not improve
 the effectivity state.  The exact reductions and this orthogonal coordinate
 are recorded in
-[`effectivity_and_routes.md`](effectivity_and_routes.md).
+[`dev_notes/effectivity_and_routes.md`](dev_notes/effectivity_and_routes.md).
 
 ## Files
 
 - [`difficulty_ladder.md`](difficulty_ladder.md) contains the milestone and
   effort tables.
-- [`effectivity_and_routes.md`](effectivity_and_routes.md) contains the
+- [`dev_notes/effectivity_and_routes.md`](dev_notes/effectivity_and_routes.md) contains the
   implication audit, effectivity coordinate, analogue evidence, and
   adjudication rule.
 

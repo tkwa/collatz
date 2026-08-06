@@ -100,7 +100,7 @@ hypersurfaces give counterexamples in dimension at least four.
 
 - [`difficulty_ladder.md`](difficulty_ladder.md) contains the milestone and
   effort tables.
-- [`sources_and_implications.md`](sources_and_implications.md) gives exact
+- [`dev_notes/sources_and_implications.md`](dev_notes/sources_and_implications.md) gives exact
   definitions, primary sources, implication proofs, openness qualifications,
   and the weakening and strengthening audits.
 - [`weakest_kakeya_improvement.md`](weakest_kakeya_improvement.md) states the

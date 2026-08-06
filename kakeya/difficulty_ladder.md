@@ -1,7 +1,7 @@
 # A Difficulty Ladder for Kakeya Problems
 
 Notation is defined in the [folder README](README.md).  Exact statements and
-implication checks are in the [source audit](sources_and_implications.md).
+implication checks are in the [source audit](dev_notes/sources_and_implications.md).
 
 ## Milestones
 

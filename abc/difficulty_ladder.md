@@ -2,7 +2,7 @@
 
 The notation $A(q)$ and $V_{d,r}$ is defined in the
 [folder README](README.md).  Exact reductions and effectivity caveats are in
-[`effectivity_and_routes.md`](effectivity_and_routes.md).
+[`dev_notes/effectivity_and_routes.md`](dev_notes/effectivity_and_routes.md).
 
 ## Milestones
 

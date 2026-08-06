@@ -2,7 +2,7 @@
 
 This file distinguishes published theorems, formal implications, heuristics,
 and subjective benchmark design.  It is authoritative for the model and
-quantifiers used by the [difficulty ladder](difficulty_ladder.md).
+quantifiers used by the [difficulty ladder](../difficulty_ladder.md).
 
 ## Fixed model and notation
 
@@ -212,7 +212,7 @@ affine disperser inside that unchanged inequality cannot produce an
 unbounded positive additive gain.  The full eligible audit, including the
 quantifier, direct-sum, advice,
 encoding, basis, output, and refuter attacks, is recorded in the
-[development note](dev_notes/notes/eligible_frontier_red_team.md).
+[development note](notes/eligible_frontier_red_team.md).
 
 ## Strongest-statement audit
 

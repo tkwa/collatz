@@ -3,7 +3,7 @@
 The basic $H_1$ notation and construction rationale are in the
 [folder README](README.md).  Definitions of $\pi_2(X)$ and the named
 conjectures, together with every implication used below, are in the
-[source and implication audit](sources_and_implications.md).
+[source and implication audit](dev_notes/sources_and_implications.md).
 
 ## Milestones
 
