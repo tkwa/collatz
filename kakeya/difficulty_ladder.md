@@ -7,11 +7,11 @@ implication checks are in the [source audit](sources_and_implications.md).
 
 | Score | Milestone |
 |---:|---|
-| **0** | **Current rigorous frontiers.** $H_4(h_0)$ for $h_0=3+(\sqrt{17665}-97)/600\gt3.059$, and the four-dimensional maximal estimate at $m_0=3+(2195737-13925\sqrt{17665})/6959096\gt3.049$ (Katz--Zahl, 2021); every Kakeya set in $\mathbb R^3$ has dimension $3$ (Wang--Zahl, 2025). |
-| 0.2 | **[The Weakest Kakeya Improvement](weakest_kakeya_improvement.md).** Either $H_4(h_0+\eta)$ for some $\eta\gt0$, or $A_3(q)$ for some fixed finite $q$. |
-| **1** | $H_4(3.1)$ **or** $A_3(100)$. |
-| **2** | $H_4(3.25)$ **or** $A_3(20)$. |
-| **3** | $H_4(3.5)$ **or** $A_3(6)$. |
+| **0** | **Current rigorous frontiers.** $H_4(h_0)$ for $h_0=3+(\sqrt{17665}-97)/600\gt3.059$ (Katz--Zahl, 2021), and the four-dimensional maximal estimate at $m_0=(159+\sqrt{145})/56\gt3.054$ (Borges--Chan--Chen--Liu--Xi--Zhan, 2025); every Kakeya set in $\mathbb R^3$ has dimension $3$ (Wang--Zahl, 2025). |
+| 0.2 | **[The Weakest Kakeya Improvement](weakest_kakeya_improvement.md).** For some $\eta\gt0$, either $H_4(h_0+\eta)$ or $M_4(m_0+\eta)$ holds; alternatively, $A_3(q)$ holds for some fixed finite $q$. |
+| **1** | $H_4(3.1)$ **or** $M_4(3.075)$ **or** $A_3(100)$. |
+| **2** | $H_4(3.25)$ **or** $M_4(3.15)$ **or** $A_3(20)$. |
+| **3** | $H_4(3.5)$ **or** $M_4(3.3)$ **or** $A_3(6)$. |
 | **4** | $H_4$ **or** $M_3$. |
 | **5** | $H_5$ **or** $M_{\le4}$. |
 | **6** | $H_8$ **or** $M_{\le5}$. |

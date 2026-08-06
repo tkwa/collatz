@@ -32,8 +32,16 @@ $\varepsilon$.  Smaller $q$ is stronger.  The endpoint $A_3(3)$ is an
 equivalent shaded form of the three-dimensional Kakeya maximal-function
 conjecture.
 
-Write $M_n$ for the endpoint Kakeya maximal-function conjecture in
-$\mathbb R^n$, and $M_{\le d}$ for $M_n$ in every $2\le n\le d$.  An
+Write $M_n(s)$ for the maximal estimate at dimension $s\le n$, in the
+standard formulation
+
+```math
+\left\|\sum_{T\in\mathbb T}\chi_T\right\|_{s/(s-1)}
+\le C_\varepsilon\delta^{1-n/s-\varepsilon}.
+```
+
+Write $M_n=M_n(n)$ for the endpoint and $M_{\le d}$ for $M_n$ in every
+$2\le n\le d$.  An
 $\infty$ subscript means every finite ambient dimension.  Thus
 $M_{\le d}$ is a conjunction, not an assumed dimension-lifting theorem.
 Finally,
@@ -43,10 +51,11 @@ direction-separated family.
 
 ## Why the ladder has joins
 
-Below the four-dimensional set conjecture there are two independent routes:
-an improvement to the best four-dimensional Hausdorff-dimension bound, or a
-uniform density exponent in the three-dimensional shaded-tube theorem.  A
-disjunction is used so that either kind of genuine progress earns credit.
+Below the four-dimensional set conjecture there are three independent routes:
+an improvement to the best four-dimensional Hausdorff-dimension bound, an
+improvement to the four-dimensional maximal exponent, or a uniform density
+exponent in the three-dimensional shaded-tube theorem.  A disjunction is used
+so that any of these kinds of genuine progress earns credit.
 
 Above that join, the geometric route increases ambient-dimension breadth and
 the analytic route proves maximal estimates.  Each higher alternative

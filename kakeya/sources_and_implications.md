@@ -11,11 +11,15 @@ subjective benchmark judgments.  The audit is current through August 5, 2026.
   state that it does not resolve the three-dimensional maximal-function
   conjecture.  See [Wang--Zahl, Theorems 1.1 and
   1.2](https://arxiv.org/abs/2502.17655).
-- **[proved]** Katz and Zahl prove in $\mathbb R^4$ a maximal estimate at
-  dimension
-  $m_0=3+(2195737-13925\sqrt{17665})/6959096\gt3.049$ and the Hausdorff bound
+- **[proved]** Katz and Zahl prove in $\mathbb R^4$ a maximal estimate above
+  dimension `3.049` and the still-best located Hausdorff bound
   $h_0=3+(\sqrt{17665}-97)/600\gt3.059$.  See [Katz--Zahl, Theorem
   2](https://arxiv.org/abs/1902.00989).
+- **[proved]** Borges, Chan, Chen, Liu, Xi, and Zhan subsequently improve the
+  four-dimensional maximal exponent to
+  $m_0=(159+\sqrt{145})/56\gt3.054$.  Their introduction retains the
+  Katz--Zahl `3.059` Hausdorff result as the geometric record.  See [Theorem
+  1.2](https://arxiv.org/abs/2511.22824).
 - **[proved/definition]** Zahl's 2025 survey states the set, discretized
   tube-union, shaded tube-union, and maximal conjectures separately.  It
   records that the maximal forms are equivalent, imply the shaded form, and
@@ -56,18 +60,23 @@ subjective benchmark judgments.  The audit is current through August 5, 2026.
    uncited dimension-lifting assertion for maximal operators.
 7. **[implication]** $M_n^{\mathrm{PWA}}\Rightarrow M_n$, because every
    direction-separated family satisfies the polynomial Wolff axioms.
+8. **[implication]** For fixed $n$, a maximal estimate at a larger dimension
+   implies the selected lower maximal contours by interpolation with the
+   trivial $L^\infty$ multiplicity bound.  This is also the nesting used in
+   the standard formulation of the maximal conjecture for every $s\le n$.
 
 The displayed disjunctions therefore form a scalar chain: each alternative
 on a higher row implies at least one alternative immediately below it.
 
 ## Weakening audit
 
-**[subjective, work in progress]** The geometric alternative was weakened
-from $H_4$ to a fixed numerical improvement, then to an existential strict
-improvement over $h_0$.  Reducing the set of directions, imposing stickiness,
-or replacing Hausdorff dimension by an upper box statistic was rejected
-pending a clean openness theorem: nearby restricted cases are known, and an
-uncertified subclass could make the statement accidentally true.
+**[subjective, work in progress]** The four-dimensional alternatives were
+weakened from the full set and maximal conjectures to fixed numerical
+improvements, then to existential strict improvements over $h_0$ and $m_0$.
+Reducing the set of directions, imposing stickiness, or replacing Hausdorff
+dimension by an upper box statistic was rejected pending a clean openness
+theorem: nearby restricted cases are known, and an uncertified subclass could
+make the statement accidentally true.
 
 **[subjective, work in progress]** The analytic alternative was weakened from
 $A_3(3)$ through arbitrary fixed exponents to the existence of some finite
