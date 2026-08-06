@@ -60,12 +60,13 @@ def multiplicity {n : ℕ} (δ : ℝ) (family : Finset (Tube n)) (x : Point n) :
 
 /-- The standard direction-separated Kakeya maximal estimate at dimension `s`. -/
 def MaximalEstimateAt (n : ℕ) (s : ℝ) : Prop :=
-  ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧
-    ∀ δ : ℝ, 0 < δ → δ ≤ 1 →
-      ∀ family : Finset (Tube n), DirectionSeparated δ family →
-        eLpNorm (multiplicity δ family)
-            (ENNReal.ofReal (s / (s - 1))) volume ≤
-          ENNReal.ofReal (C * Real.rpow δ (1 - n / s - ε))
+  1 < s ∧ s ≤ n ∧
+    ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧
+      ∀ δ : ℝ, 0 < δ → δ ≤ 1 →
+        ∀ family : Finset (Tube n), DirectionSeparated δ family →
+          eLpNorm (multiplicity δ family)
+              (ENNReal.ofReal (s / (s - 1))) volume ≤
+            ENNReal.ofReal (C * Real.rpow δ (1 - n / s - ε))
 
 /-- A measurable shading occupying a `λ` fraction of its tube. -/
 def IsShading {n : ℕ} (δ density : ℝ) (shading : Tube n → Set (Point n))
