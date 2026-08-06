@@ -162,10 +162,12 @@ The construction is compatible with the terminal polynomial-Wolff statement
 because every fixed power $\delta^{-\varepsilon}$ eventually dominates every
 power of $|\log\delta|$.
 
-**[subjective]** A frontier-agent endpoint audit used 59,823 additional
-metered tokens on falsity, algorithmic-undecidability, and independence risks.
-It assigns the polynomial-Wolff endpoint an `82%` point estimate and a
-`75--85%` band for being provable in ZFC, so the rung is starred.  The dominant
+**[subjective]** The frontier-agent endpoint phase used 127,698 additional
+metered tokens after the weakening baseline; it first crossed the required
+threshold at an exact 59,823-token delta, then completed its note and
+verification passes.  It assigns the polynomial-Wolff endpoint an `82%` point
+estimate and a `75--85%` band for being provable in ZFC, so the rung is
+starred.  The dominant
 risk is falsity: a nested multiscale cascade or dimension-dependent ruled
 geometry might evade every bounded-complexity semialgebraic test.  Against
 that risk, the axioms detect every fixed-degree algebraic concentration, rule
