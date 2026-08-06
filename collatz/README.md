@@ -1,8 +1,7 @@
 # Collatz-like Conjectures
 
-This repository records deliberately modest Collatz-like conjectures with
-explicitly distinguished starting-set quantifiers, map families, and orbit
-conclusions.
+This folder records Collatz-like conjectures with explicitly distinguished
+starting-set quantifiers, map families, and orbit conclusions.
 
 - [The Negative-Drift Periodicity Conjecture](negative_drift_periodicity.md) asks whether some admissible negative-drift pure-division map has every orbit eventually enter a cycle containing a division step.
 - [The Positive Division-Density Conjecture](positive_division_density.md) asks whether some relatively-prime residue-affine map gives every orbit a positive lower density of division-branch steps.
@@ -11,6 +10,19 @@ conclusions.
 - [The All-Start Nonnegative Superlogarithmic Contraction Conjecture](nonnegative_superlogarithmic_contraction.md) asks whether some fixed coprime self-map of $\mathbb N_0$ gives every orbit a contraction count satisfying $D_K(n)=\omega(\log K)$.
 - [The All-Start Signed Superlogarithmic Contraction Conjecture](signed_superlogarithmic_contraction.md) provisionally allows signed unit multipliers, integer offsets, and integer-valued orbits while retaining the same target for every nonnegative start.
 - [The Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md) asks only that one signed unit map satisfy the superlogarithmic target on every sufficiently large member of one existentially chosen exact scaled ray $d u^k$, where $u$ is multiplicatively independent of the map base.
+- [The Exact Maximum Stopping-Constant
+  Conjecture](scaled_stopping_constant.md) identifies the limiting maximum
+  stopping-time ratio with the Kontorovich--Lagarias stochastic-model
+  prediction.
+- [The Universal One-Expander Periodicity
+  Conjecture](one_expander_universal_periodicity.md) is the restricted
+  generalized-map component at score `10`.
+- [The Universal One-Expander Polynomial-Preperiod
+  Conjecture](one_expander_polynomial_preperiod.md) strengthens that component
+  with a polynomial worst-case cycle-entry bound at score `10.5`.
+- [The Universal One-Expander Logarithmic-Preperiod
+  Conjecture](one_expander_logarithmic_preperiod.md) gives the optimal-order
+  generalized cycle-entry bound at the starred terminal score.
 
 In these names, **all-start** means every starting value in $\mathbb N_0$.
 The descriptive names expose the starting-set quantifier, map family, and
@@ -93,26 +105,44 @@ M(X)=\max_{1\le n\le X}\tau(n),
 
 with $\tau(n)=\infty$ when $n$ never reaches $1$.  The upper rungs successively
 ask for polynomial, polylogarithmic, and logarithmic bounds on the worst
-stopping time, followed by convergence of $M(X)/\log X$ to a finite positive
-constant.  Each finite uniform bound implies classical Collatz.
+stopping time.  Score `9` is the published Kontorovich--Lagarias conjecture
+identifying the extreme stopping-time limsup with $\gamma_{\rm RRW}$, while
+score `9.5` strengthens it to convergence of $M(X)/\log X$ to that value.  The
+[source note](scaled_stopping_constant.md#literature-interface) records the
+equivalence used at score `9` and why full convergence is stronger.  Each
+finite uniform bound implies classical Collatz.
 
-The terminal score is a conjunction: it retains that classical stopping-time
+Score `10` is a conjunction: it retains the exact classical stopping-time
 limit and adds the [Universal One-Expander Periodicity
-Conjecture](one_expander_universal_periodicity.md).  The latter concerns only
-the restricted positive, coprime, pure-division family with one expanding
-residue and $a\lt B^B$.  It neither identifies the classical attractor nor
-supplies a stopping-time estimate, and no universality claim is made for
-arbitrary residue-affine maps.
+Conjecture](one_expander_universal_periodicity.md) for the restricted positive,
+coprime, pure-division family with one expanding residue and $a\lt B^B$.
+Score `10.5` retains the same classical component and strengthens the
+generalized component to a [polynomial worst-case cycle-entry
+bound](one_expander_polynomial_preperiod.md).  Score `11` strengthens that
+component again to a [logarithmic worst-case cycle-entry
+bound](one_expander_logarithmic_preperiod.md).  None of the generalized
+statements identifies the classical attractor or the exact classical stopping
+constant, so the conjunctions are necessary to retain the scalar implication
+chain.
+
+The [one-expander note](one_expander_universal_periodicity.md#a-broader-literature-conjecture)
+audits Matthews' broader qualitative conjecture, which does not supply a
+quantitative preperiod bound.
 
 ### Effort and skip annotations
 
 The [development guide](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtEFuKxjmN6TaZq8CFxeidI_Xw/edit?tab=t.0)
-defines the shared effort and integer-skip fields.  For this ladder, score `9`
-is `n/a` because there is no selected score-`10` contour.  The estimates cover
+defines the shared effort and integer-skip fields.  The estimates cover
 classical stopping, cycle, and exceptional-set work, generalized
 residue-affine and one-expander dynamics, and adjacent arithmetic-dynamics
 methods only when a plausible transfer is explicit.  Generic number theory
 and brute-force orbit verification are not counted.
+
+The score-`11` asterisk marks the logarithmic-preperiod conjunction as
+borderline under the development guide's endpoint-confidence rule.  The
+[endpoint note](one_expander_logarithmic_preperiod.md#why-the-endpoint-is-starred)
+explains the residual uncertainty.  Scores `10` and `10.5` retain the
+progressively weaker periodicity and polynomial components.
 
 The central effort estimates are uncertain by at least roughly half a decade
 through the middle of the ladder and more near the endpoint.  Individual
@@ -120,8 +150,7 @@ placements are uncertain by roughly one score point, and skip estimates by at
 least `15--20` percentage points.  Near-linearity in the effort column is a
 diagnostic, not a fitting constraint.  The separate sparse-ray diagnostic
 assigns about `20%` probability that the first score-`1` theorem also
-overshoots score `0.2`.  The shared construction rules are in the
-[development guide](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtEFuKxjmN6TaZq8CFxeidI_Xw/edit?tab=t.0).
+overshoots score `0.2`.
 
 ## Research record
 

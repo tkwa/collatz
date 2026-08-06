@@ -1,8 +1,8 @@
 # Prime Patterns
 
 This folder tracks theorem strength from the current bounded-gap frontier,
-through twin primes, to the Bateman--Horn conjecture.  Let $p_n$ be the
-$n$-th prime and
+through twin primes and one-variable Bateman--Horn, to multivariate
+Bateman--Horn over $\mathbb Z$.  Let $p_n$ be the $n$-th prime and
 
 ```math
 H_1=\liminf_{n\to\infty}(p_{n+1}-p_n).
@@ -51,16 +51,19 @@ families.  The selected joins are:
 - the twin-pair Hardy--Littlewood asymptotic **or** Dickson; and
 - affine Hardy--Littlewood asymptotics **or** Schinzel H.
 
-Bateman--Horn is the endpoint because it supplies both the quantitative affine
-branch and the qualitative polynomial branch.  Named patterns such as Sophie
-Germain primes or primes of the form $n^2+1$ are not rungs because they do not
-imply either branch immediately below them.
+One-variable Bateman--Horn joins the quantitative affine branch and the
+qualitative polynomial branch.  The final half-step is the
+Destagnol--Sofos multivariate extension: the same local-to-global prime-value
+asymptotic for admissible polynomial families in any number of variables over
+$\mathbb Z$.  Named patterns such as Sophie Germain primes or primes of the
+form $n^2+1$ are not rungs because they do not imply either branch immediately
+below them.
 
 ## Calibration
 
 The score and skip columns use the
 [development guide](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtEFuKxjmN6TaZq8CFxeidI_Xw/edit?tab=t.0).
-On that shared scale, twin primes is score `5` and Bateman--Horn is score `9`;
-neither is an independently imposed anchor.  The numerical effort estimates
-and the pairing of alternatives are subjective, while the implication audit
-is mathematical.
+On that shared scale, twin primes is score `5`, one-variable Bateman--Horn is
+score `9`, and multivariate Bateman--Horn is score `9.5`; none is an
+independently imposed anchor.  The numerical effort estimates and the pairing
+of alternatives are subjective, while the implication audit is mathematical.

@@ -11,8 +11,8 @@ continuous scoring.
 ## Repository structure
 
 - [`collatz/`](collatz/) studies the Collatz conjecture.
-- [`twin-prime/`](twin-prime/) includes the twin prime conjecture and
-  Bateman--Horn.
+- [`twin-prime/`](twin-prime/) continues from the twin prime conjecture through
+  one-variable Bateman--Horn to its multivariate extension over $\mathbb Z$.
 - [`abc/`](abc/) tracks progress on the abc conjecture and onward to the
   general Vojta conjecture.
 - [`circuit-lower-bounds/`](circuit-lower-bounds/) tracks unrestricted
