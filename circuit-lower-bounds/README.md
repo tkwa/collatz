@@ -42,19 +42,19 @@ too exposed to exact bookkeeping and rounding to pass the guide's 20% rule.
 ## How the ladder grows
 
 The lower rows first make unbounded additive progress, increase the best
-coefficient, then leave every linear bound, reach a fixed polynomial gain,
-and arrive at
-$NP\nsubseteq P/poly$.  The upper rows impose explicit eventual growth rates
-on one $NP$ language.  These are stronger than noncontainment in $P/poly$:
-the latter guarantees large circuits on infinitely many lengths for every
-fixed polynomial exponent, not one eventual superpolynomial lower bound.
+coefficient, then pass mild and fixed-polynomial rates before arriving at
+$NP\nsubseteq P/poly$.  The upper spine separately imposes eventual hardness,
+first without a rate and then through explicit subexponential contours.  An
+infinitely-often exponential bound is an incomparable side branch: it need
+not hold eventually, while an eventual subexponential bound has no fixed
+linear exponent.  The penultimate rung conjoins both achievements before the
+endpoint requires exponential hardness at every sufficiently large length.
 
-The stretched-exponential exponents are calibration contours rather than
-named conjectures.  They are included because every contour implies the one
-below and because a coefficient-only ladder would have unacceptable skip
-risk.  The terminal exponential statement is starred: its truth and eventual
-length quantifier put the subjective probability of ZFC provability in the
-development guide's borderline band.
+The numerical exponents are calibration contours rather than named
+conjectures.  The terminal exponential statement is starred at a knife-edge
+80% central truth-and-eventual-proof judgment: requiring the bound at every
+sufficiently large length is a separate obstacle, not standard nonuniform
+ETH.
 
 ## Documents
 

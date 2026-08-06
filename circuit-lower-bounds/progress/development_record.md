@@ -38,18 +38,21 @@ moving Weakest document records that judgment.
 
 ## Strengthening path
 
-Starting from $NP\nsubseteq P/poly$, the selected path imposes an eventual
-$n^{\log\log n}$ bound and then increases the exponent through explicit
-quasipolynomial, stretched-exponential, and near-exponential contours.  The
-strongest retained candidate is eventual $2^{\Omega(n)}$ circuit complexity
-for some $NP$ language.
+Starting from $NP\nsubseteq P/poly$, the selected upper spine first imposes a
+no-rate eventual superpolynomial bound, then increases the rate through
+explicit quasipolynomial, stretched-exponential, and near-exponential
+contours.  Infinitely-often exponential hardness forms an incomparable side
+branch.  A conjunction joins the branches before the strongest retained
+candidate, eventual $2^{\Omega(n)}$ circuit complexity for some $NP$
+language.
 
 Stronger candidates were searched by fixing SAT, requiring Shannon-order
 complexity, and conjoining hardness at every length.  They were rejected
 because linear exponents are encoding- and reduction-length-sensitive, and
 near-maximum complexity for a uniform $NP$ language did not reach the guide's
-80% truth-and-ZFC-provability threshold.  The retained endpoint is itself
-borderline and therefore starred.
+80% truth-and-eventual-proof threshold.  The retained endpoint is itself a
+knife-edge 80% central judgment, with a 65--89% plausible range, and is
+therefore starred.
 
 ## Hostile-check categories
 
@@ -74,16 +77,23 @@ $\omega(n)$ bound to $NP\nsubseteq P/poly$.  That is not an implication:
 every $P$ language has polynomial-size circuits, and an eventual
 $\omega(n)$ bound is not equivalent to noncontainment in $P/poly$.  The final
 chain keeps all positive witnesses in $NP$, uses i.o. bounds through score
-`4`, and changes to eventual bounds only in the stronger direction above it.
+`5`, reaches nonuniform separation at score `6`, and changes to eventual
+bounds only in the stronger direction above it.  The i.o. exponential branch
+is shown separately rather than being misrepresented as an implication of
+the eventual subexponential spine.
 
 ## Calibration
 
 The final central effort estimates grow from $10^{2.22}$ expert-years for the
-Weakest statement to $10^{5.55}$ at score `10`.  This is approximately
-geometric below the guide's common score-`10` anchor.  The ladder contains
-many more than two doublings of headroom.  Every reported integer skip
-probability is at most `45%`; uncertainties are at least `15--20` percentage
-points, so these are design judgments rather than measured frequencies.
+Weakest statement to $10^{5.55}$ at score `10`.  After inserting the natural
+coefficient, mild-superlinear, polynomial, quantifier, stretched-exponent,
+and near-exponential stopping points, log effort is approximately linear
+below score `10`.  The scale contains about eleven doublings of headroom by
+score `10` and more above it.  The old central skip estimates were 55--65% in
+several gaps; the repaired chain puts every integer estimate at 45% or below,
+with at least `15--20` percentage points of uncertainty.  The score-`10`
+placement remains a provisional direct comparison with the guide's common
+anchor, not a source-backed measurement.
 
 ## Process accounting
 
@@ -94,9 +104,10 @@ side.  Those figures do not count toward the development guide's final
 frontier red-team gates.  The dedicated
 [eligible-model audit](notes/eligible_frontier_red_team.md) used 101,117
 instrumented tokens exclusively on the Weakest phase, from meter 86,555 to
-187,672, and selected the unbounded-additive replacement.  Its endpoint phase
-began at 187,672 and remains in progress; no endpoint completion is claimed
-here yet.
+187,672, and selected the unbounded-additive replacement.  The endpoint phase
+used 306,110 tokens, from 187,672 to 493,782.  The scalar and calibration
+phase used another 66,282 tokens, ending at 560,064.  All three phases were
+written and read back before integration.
 
 ## Rendering verification
 

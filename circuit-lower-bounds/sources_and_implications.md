@@ -72,25 +72,26 @@ in $B_2$.  Sources:
 
 ## Positive-rung implication chain
 
-Every item below is **[implication]**.  Existential witnesses may differ from
-row to row: if a higher statement supplies one suitable $NP$ language, that
-same language witnesses the lower growth statement.
+Every item below is **[implication]**.  One witness for a higher numerical
+bound also witnesses the lower bound; existential witnesses in different rows
+need not otherwise agree.
 
-1. If $\limsup C_L(n)/n\gt3.1$, then some fixed $\varepsilon\gt0$
-   satisfies $C_L(n)\ge(3.1+\varepsilon)n$ infinitely often.  Hence
-   $C_L(n)-3.1n\ge\varepsilon n$ on an unbounded set and its limsup is
-   positive infinity.
-2. If $\limsup C_L(n)/n=\infty$, then that limsup is greater than `3.1`.
-3. If $C_L(n)\ge n^{1+\delta}$ infinitely often for fixed $\delta\gt0$,
-   then $C_L(n)/n\ge n^\delta$ on those lengths, so its limsup is infinite.
-4. An i.o. quadratic lower bound is score `2` with $\delta=1$.
-5. $NP\nsubseteq P/poly$ means that some fixed $L\in NP$ is outside every
-   $SIZE(n^k)$.  In particular, $C_L(n)\gt n^2$ for infinitely many $n$;
-   otherwise an eventual $n^2$ upper bound, enlarged for finitely many small
-   lengths, would put $L$ in $P/poly$.
-6. An eventual $n^{\log\log n}$ lower bound exceeds $n^k$ eventually for
-   every fixed $k$, so its witness is outside $P/poly$.
-7. Each later displayed rate eventually dominates its predecessor:
+1. A fixed coefficient above `3.1` gives an additive gain
+   $\varepsilon n\to\infty$.  An i.o. `10n` bound supplies such a coefficient,
+   and an infinite coefficient limsup supplies i.o. `10n`.
+2. An i.o. $n\log n$ bound makes $C_L(n)/n$ unbounded.  An i.o.
+   $n^{1+\delta}$ bound eventually dominates $n\log n$ on the same unbounded
+   set of lengths.
+3. An i.o. quadratic bound is the preceding row with $\delta=1$, and i.o.
+   $n^{10}$ dominates the quadratic checkpoint.
+4. $NP\nsubseteq P/poly$ means that some fixed $L\in NP$ is outside every
+   $SIZE(n^k)$.  In particular, $C_L(n)\gt n^{10}$ for infinitely many $n$;
+   otherwise an eventual $n^{10}$ upper bound, enlarged for finitely many
+   small lengths, would put $L$ in $P/poly$.
+5. If one $L\in NP$ eventually exceeds $n^k$ for every fixed $k$, then it is
+   outside $P/poly$.  An eventual $n^{\log\log n}$ bound has this no-rate
+   eventual property.
+6. The eventual upper branch follows by direct asymptotic domination:
 
 ```math
 n^{\log\log n}
@@ -99,19 +100,34 @@ n^{\log\log n}
 \ \,\ll\ \,
 2^{n^{1/10}}
 \ \,\ll\ \,
-2^{n^{1/4}}
-\ \,\ll\ \,
 2^{n^{1/2}}
 \ \,\ll\ \,
 2^{n^{3/4}}
 \ \,\ll\ \,
+2^{n^{9/10}}
+\ \,\ll\ \,
 2^{n/\log n}
+\ \,\ll\ \,
+2^{n/\log\log n}
 \ \,\ll\ \,
 2^{\varepsilon n}
 ```
 
-for every fixed $\varepsilon\gt0$, after a threshold depending on
-$\varepsilon$.  Thus every higher eventual bound implies the row below.
+The existential $\delta$ row sits between the second and third displayed
+terms as a
+statement: any fixed $\delta\gt0$ eventually makes $n^\delta$ exceed
+$(\log n)^2$, while the `1/10` row witnesses the existential statement by
+choosing $\delta=1/10$.  This does not assert one asymptotic comparison for
+every possible $\delta$.  Every comparison involving $\varepsilon$ holds
+after a threshold depending on that positive constant.
+
+The infinitely-often exponential branch separately implies
+$NP\nsubseteq P/poly$.  It is incomparable with every displayed eventual
+subexponential rate: exponential spikes can leave infinitely many easy
+lengths, while an eventual $2^{n/\log\log n}$ bound has zero linear exponent.
+Score `12` explicitly conjoins the two branches, possibly with different
+witness languages.  The eventual exponential endpoint implies that
+conjunction with one witness; the conjunction does not imply the endpoint.
 
 Score `0` is an unconditional theorem, so it is logically implied by every
 statement.  The score-`0` $P$ witness is not claimed to be the $NP$ witness
@@ -141,7 +157,7 @@ Karp and Lipton prove the relevant collapse consequence of an $NP\subseteq
 P/poly$ assumption in “Some Connections between Nonuniform and Uniform
 Complexity Classes,” *STOC 1980*,
 [doi:10.1145/800141.804678](https://doi.org/10.1145/800141.804678).  This is
-context for the strength of score `4`, not an equivalence with $P\ne NP$.
+context for the strength of score `6`, not an equivalence with $P\ne NP$.
 
 Kannan proves fixed-polynomial lower bounds higher in the polynomial
 hierarchy, not for $NP$: “Circuit-Size Lower Bounds and Non-Reducibility to
@@ -207,16 +223,32 @@ The terminal statement is
 \quad C_L(n)\ge2^{\varepsilon n}.
 ```
 
-It is marked `*`.  **[subjective]** The current central judgment is roughly
-80% that it is true and provable in ZFC or future widely accepted extensions,
-placing it inside the guide's `75--85%` borderline band.  It is much stronger
-than $NP\nsubseteq P/poly$ and could be false even if that separation holds.
+It is marked `*`.  **[subjective]** The eligible audit's central joint
+truth-and-eventual-proof judgment is a knife-edge 80%, with a 65--89%
+plausible range.  This places it inside the guide's `75--85%` borderline band,
+not safely above the endpoint threshold.  It is much stronger than
+$NP\nsubseteq P/poly$ and could be false even if that separation holds.
+
+The eventual quantifier is a separate obstacle.  The endpoint says
+$\liminf_n \log_2 C_L(n)/n\gt0$.  By contrast,
+$NP\nsubseteq SIZE(2^{o(n)})$ supplies only an infinitely-often condition,
+equivalently a positive linear-exponent limsup.  Exponential spikes can leave
+infinitely many easy lengths, while every-length $2^{n/\log\log n}$ hardness
+has zero linear exponent.  Neither branch implies the other; score `12`
+conjoins them and the endpoint fills the remaining easy lengths.  The
+endpoint is not ordinary ETH, SETH, or a standard nonuniform-ETH notation.
 
 The following stronger candidates were rejected:
 
 - A fixed encoding of Circuit-SAT or 3-SAT with the same eventual exponential
-  lower bound is not known to follow from an existential $NP$ bound.  Linear
-  exponents are sensitive to reduction length and invalid encodings.
+  lower bound is not known to follow from an existential $NP$ bound.  In
+  common raw bit encodings, a formula of length $N$ has only
+  $O(N/\log N)$ indexed variables, giving a $2^{O(N/\log N)}$ exhaustive-search
+  circuit upper bound.  Thus the raw-length exponential claim can be false
+  even though variable-count ETH remains plausible.
+- Eventual $2^{(1-o(1))n}$ hardness for some $NP$ language received only a
+  62% central judgment; polynomial distance from the Shannon ceiling and a
+  fixed fraction of that ceiling received still lower judgments.
 - A Shannon-order bound $\Omega(2^n/n)$ for an $NP$ language is close to the
   maximum complexity of arbitrary truth tables.  The audit assigns it below
   75% truth-and-provability confidence and found no standard literature
@@ -225,12 +257,22 @@ The following stronger candidates were rejected:
   length adds both maximum-complexity and eventual-density assumptions without
   a separate proof program.
 
+A clean conditional truth route exists.  Suppose a uniform polynomial-time
+generator maps $\lfloor\alpha n\rfloor$ bits to $n$ bits, for fixed
+$0\lt\alpha\lt1$, and is pseudorandom against $2^{\gamma n}$-size circuits
+at every sufficiently large $n$.  Its range language is in $NP$, and an exact
+small range-membership circuit would distinguish generator output from
+uniform with overwhelming advantage.  The range therefore witnesses the
+endpoint.  This requires length-regular exponential security; ordinary
+one-way-function or polynomial-security PRG assumptions do not suffice, and
+the argument is conditional evidence for truth rather than a proof route.
+
 The endpoint is a concrete arithmetic assertion once a verifier machine is
 chosen existentially.  Circuit minimization's algorithmic hardness does not
 make it undecidable.  No independence theorem is known for this assertion,
 but independence cannot be excluded.
 
-Three general barriers widen the uncertainty:
+Four general barriers widen the uncertainty:
 
 - Baker, Gill, and Solovay show that relativizing techniques cannot settle
   $P$ versus $NP$: [doi:10.1137/0204037](https://doi.org/10.1137/0204037).
@@ -240,6 +282,10 @@ Three general barriers widen the uncertainty:
 - Aaronson and Wigderson show that major techniques algebrize and that
   non-algebrizing ideas are needed:
   [arXiv:0805.1385](https://arxiv.org/abs/0805.1385).
+- Atserias and Mueller's bounded-arithmetic consistency and magnification
+  results isolate an almost-everywhere proof obstacle in weak theories.  They
+  do not prove ZFC independence and concern `EXP` versus polynomial circuits,
+  not this endpoint: [arXiv:2604.25251](https://arxiv.org/abs/2604.25251).
 
 These are barriers to known proof styles, not evidence that the endpoint is
 false or independent.
@@ -257,8 +303,8 @@ Primary sources are Claude Shannon, “The Synthesis of Two-Terminal Switching
 Circuits,” *Bell System Technical Journal* 28 (1949), and Oleg Lupanov, “On a
 Method of Circuit Synthesis,” *Izvestiya VUZ, Radiofizika* 1 (1958), pages
 120--140.  A modern source confirming the exact hardest-function asymptotic
-is Magnus Find and Alexander Golovnev, “A Tighter Lower Bound on the Circuit
-Size of the Hardest Functions,”
+is Masaki Yamamoto, “A Tighter Lower Bound on the Circuit Size of the Hardest
+Boolean Functions,”
 [ECCC TR11-086](https://eccc.weizmann.ac.il/report/2011/086/).
 
 For scores `2` and above, switching between fixed finite complete fan-in-two
@@ -270,8 +316,10 @@ ladder remains in $B_2$ even when upper rows are qualitatively basis-robust.
 ## Calibration status
 
 Every score, expert-year estimate, probability interval, and skip estimate is
-**[subjective]**.  The exponent contours are not claimed to be historically
-canonical.  They keep adjacent implications explicit and reduce, but cannot
-eliminate, the risk that a new general method crosses several rows at once.
-The dedicated progress notes record the construction and remaining
-uncertainty.
+**[subjective]**.  The score-`10` placement is a provisional direct comparison
+with the guide's common anchor, not a source-backed measurement.  Missing
+coefficient, polynomial, quantifier, stretched-exponent, and near-exponential
+contours were inserted after the eligible audit put the old central skip
+risks at 55--65%.  The refitted log efforts are approximately linear below
+score `10`; wide uncertainty remains.  The dedicated progress note records
+the construction and full audit.
