@@ -152,25 +152,16 @@ longer be the standard Bateman--Horn conjecture requested for this folder.
 
 ## Future-effort calibration and skip audit
 
-Let $E_{PP}(s)$ be the expected future strategically directed
-human-expert-years, measured from the July 2026 frontier, needed to first
-reach contour $s$.  The table reports a central estimate of
-$\log_{10}E_{PP}(s)$ and a deliberately wide subjective 80% interval.  It
-does not add historical work to the future clock.  Score `0` is the starting
-state, so its future effort is zero and its logarithm is undefined.
+The table applies the [repository-wide future-effort and skip
+conventions](../README.md#difficulty-scores) to the prime-pattern area
+$A_{PP}$: the dependency closure of prime patterns and prime values of integer
+polynomials.  It includes relevant sieve, distribution, correlation,
+local-obstruction, and algebraic inputs, but not generic work without a
+plausible dependency.  Each central $\ell_{PP}(s)$ has a deliberately wide
+subjective 80% interval; the skip entry on integer row $n$ concerns the next
+integer contour.
 
-For an integer $n\ge1$,
-
-```math
-p_n=\Pr\bigl(E_{PP}(n+1)\lt1.1E_{PP}(n)\bigr)
-```
-
-is the estimated probability of an $n$-skip.  The event concerns correlated
-research outcomes, so it is not determined by the ratio of the two central
-estimates.  Noninteger rows have no $n$-skip, and the terminal integer has no
-next boundary.
-
-| Score | Expected $\log_{10}$ future expert-years | $P(n\text{-skip})$, if applicable | Calibration note |
+| Score | Central $\ell_{PP}(s)$ (subjective 80% interval) | $P(n\text{-skip})$, if applicable | Calibration note |
 |---:|---:|---:|---|
 | 0 | -- | n/a | Current $H_1\le246$ theorem; the future clock starts here. |
 | 0.3 | 2.55 (`1.2--4.0`) | -- | Minimal strict gap improvement or any unrestricted EH gain beyond $1/2$. |
@@ -196,11 +187,6 @@ micro-rungs were collapsed precisely because several were likely to fall to
 one proof.  If later elicitation pushes a remaining boundary above `50%`, the
 response should again be to replace or merge rungs, not to add cosmetic
 cutoffs.
-
-The repository's score-`10` anchor is the median difficulty of the individual
-problems BB(6), Schanuel's conjecture, and general Vojta; score `20` is roughly
-BB(7).  Bateman--Horn is placed at `9` by the common scale, and this folder
-ends there rather than forcing its endpoint to score `10`.
 
 All effort numbers and pairing judgments are subjective.  If expert
 elicitation places two alternatives on one row far apart, that row should

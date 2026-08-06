@@ -30,7 +30,7 @@ general Vojta automatically supplies. **[subjective]**
 
 ## The analogues, and why they are weak evidence
 
-Three analogues of abc are proved. None of them is scored above `0`, and the
+Three analogues of abc are proved. None establishes an arithmetic rung beyond the current frontier, and the
 reason matters for anyone reading this benchmark as a capability signal.
 
 - **Polynomial abc.** Mason--Stothers: for coprime polynomials $a+b=c$ over a
@@ -58,7 +58,7 @@ not by itself establish a positive scalar rung.
 
 ## Route allocation
 
-A **[subjective]** prior over how score `2` or above is first reached, if it
+A **[subjective]** prior over how the polylogarithmic rung or a stronger one is first reached, if it
 is reached by human research:
 
 | Route | Weight |
@@ -89,7 +89,7 @@ For a continuously scored benchmark, a rung whose status depends on an
 unresolved community dispute is unusable. The rule adopted here is therefore
 independent of the dispute:
 
-> A rung at score `2` or above is cleared when the statement has a
+> The polylogarithmic or any stronger rung is cleared when the statement has a
 > machine-checkable formal proof, in Lean or an equivalent system, that
 > typechecks against a statement of the rung agreed in advance.
 
@@ -105,5 +105,5 @@ This has three properties worth stating.
    scored differently from one that can, and the gap between those two events
    is itself a measurement worth recording.
 
-Rungs below `2` are quantitative bounds and may be adjudicated by ordinary
+The weaker quantitative rungs may be adjudicated by ordinary
 refereeing, since no comparable dispute risk attaches to them.

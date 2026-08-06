@@ -30,12 +30,10 @@ A system that proves abc has not exhausted the folder.
 
 ## Scoring convention used here
 
-This folder uses the repository-wide difficulty calibration.  Score `0` is
-the current rigorous frontier, ordinary abc over $\mathbb Q$ is score `4`, and
-general Vojta is score `10`.  abc sits below the endpoint because it is a
-specialization, not because this folder resets the scale.  These scores are
-directly comparable in meaning with the other folders, subject to the wide
-uncertainty stated in each ladder.
+This folder uses the repository-wide difficulty calibration.  abc sits below
+general Vojta because it is a specialization, not because this folder resets
+the scale.  Current placements and their uncertainty appear only in the
+primary ladder.
 
 ## Files
 

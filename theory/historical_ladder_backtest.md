@@ -328,8 +328,7 @@ them into reach:
 
 Report skip and smoothness diagnostics beside these outputs, not as another
 achievement score.  This preserves the information needed for forecasting
-without creating a second scalar ladder or colliding with the notation $B_A$
-for an area's 2026 stock.
+without creating a second scalar ladder.
 
 ## Q1: are ladders predictive, or merely smooth in hindsight?
 
@@ -473,11 +472,8 @@ extra parameters are estimated out of sample.
 
 Let $A_j$ be the cumulative actual human-equivalent effort at historical event
 $j$, and let $S_j$ be the contemporaneously assigned score after that event.
-For a prospective 2026 ladder in a predeclared area $A$, let $B_A$ be the
-directed-equivalent 2026 stock and $F_A(s)$ the future directed effort from
-that baseline.  The score-`5` anchor compares
-$C_A(s)=B_A+F_A(s)$ with $B_A$, while prospective integer skips compare the
-future clock $F_A$.  Because either quantity is uncertain, every statistic
+For a prospective ladder, use the future expert-year clock $E_A(s)$ defined
+in the root README.  Because either quantity is uncertain, every statistic
 below should be computed over an elicited distribution, not a single invented
 hour count.
 
@@ -490,9 +486,9 @@ $S_j\ge i$.  Boundary $i$ is skipped when
 A(i+1)\lt1.1A(i).
 ```
 
-For a prospective 2026 ladder, use $F_A(i)$ in the same inequality for every
-integer $i\ge1$.  The ratio is undefined at the July-2026 baseline
-$F_A(0)=0$; whether the first score-`1` result overshoots the first positive
+For a prospective 2026 ladder, use $E_A(i)$ in the same inequality for every
+integer $i\ge1$ that has an $i+1$ contour.  The ratio is undefined at the
+July-2026 baseline $E_A(0)=0$; whether the first score-`1` result overshoots the first positive
 rung is a separate baseline diagnostic, not a `0`-skip under the ratio rule.
 
 Report the posterior probability of a skip, the expected number of skipped
@@ -566,8 +562,8 @@ semantics after the objective is chosen.
    unseen-route mass.
 5. Name the work quantity and fit any local score-to-effort exchange rate
    explicitly.  It cannot mean actual cumulative hours while remaining a
-   state-only score, and it must not override the shared `5`, `10`, and `20`
-   anchors.
+   state-only score, and it must not override the authoritative shared
+   calibration.
 6. Preserve the four historical cases in a versioned replay dataset and add
    eligible censored cases.  Fit no numerical contour until blind,
    leave-one-problem-out tests are possible.
