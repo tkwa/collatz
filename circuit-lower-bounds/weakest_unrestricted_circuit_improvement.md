@@ -1,29 +1,46 @@
 # The Weakest Unrestricted-Circuit Improvement
 
-## Provisional statement
+## Statement
 
-In the complete fan-in-two Boolean basis $B_2$, prove a strict asymptotic
-improvement over the exact Li--Yang lower bound for an explicit family in
-$P$.
+There are a language $L\in NP$ and a constant $\varepsilon\gt0$ such that
 
-This wording is intentionally provisional.  The published theorem is usually
-summarized as $3.1n-o(n)$, but a mathematically minimal strengthening depends
-on the actual lower-order loss, affine-disperser parameters, construction,
-and input-length quantifier.  Those details are being recovered from the
-primary theorem before a quantified replacement is adopted.
+```math
+C_L(n)\ge(3.1+\varepsilon)n
+```
 
-## Replacement rule
+for infinitely many $n$.  Equivalently,
+$\limsup_{n\to\infty}C_L(n)/n\gt3.1$.
 
-This is the folder's single moving **Weakest** candidate.  It will be replaced
-by a weaker open formulation whenever hostile checking finds at least a 20%
-chance that the new formulation removes a core obstacle.  Candidate moves
-include improving only the known lower-order loss, requiring an improvement
-on an unbounded set of lengths, weakening explicitness without making it
-vacuous, or asking for a smaller fixed coefficient gain.  Counting arguments
-for non-explicit functions are ineligible because they remove the central
-explicit-lower-bound obstacle entirely.
+Here $C_L(n)$ is minimum size in the complete binary basis $B_2$, with the
+model fixed in the [folder README](README.md).  The language, $\varepsilon$,
+and infinite set of lengths are all existential.  No constructibility of the
+hard lengths is required.
+
+## Weakening record
+
+This is the folder's single moving **Weakest** conjecture.  The weakening
+process started from exponential circuit complexity for a fixed $NP$-complete
+language, then relaxed the language to an existential $NP$ witness, the
+length quantifier to infinitely often, and the growth rate down through
+superpolynomial and superlinear bounds to a leading-coefficient gain.
+
+Three formally weaker directions were rejected:
+
+- Improving only the $O(\mathrm{polylog}\,n)$ score-`0` loss may improve
+  affine-source construction rather than unrestricted-circuit analysis.
+- A $3.1n+O(1)$ or $3.1n+h(n)$ additive gain leaves the leading-order barrier
+  intact.  The audit assigns under 20% probability that such a result removes
+  a core obstacle.
+- Allowing arbitrary, nonuniform truth tables makes large lower bounds a
+  counting theorem.  Requiring one $NP$ language retains uniform explicitness.
+
+Weakening the length set below infinitely many unbounded lengths also becomes
+vacuous: any finite collection of hard truth tables can be built into one
+polynomial-time language.
 
 ## Status
 
-**Provisional open-status formulation.**  This document records a research
-target, not a proof and not yet a certified minimal open statement.
+**Open as of August 2026.**  The cited 2026 frontier account still identifies
+$3.1n-o(n)$ as the best explicit-function lower bound and says that even a
+superlinear lower bound for a function in $P$, or in $NP$, is unknown.  The
+minimality judgment is subjective; it is not a literature theorem.

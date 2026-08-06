@@ -4,16 +4,16 @@ This folder develops a benchmark from the best unconditional lower bound for
 an explicit Boolean-function family against unrestricted fan-in-two Boolean
 circuits to major nonuniform lower bounds.  The exact model is the complete
 binary basis $B_2$: a circuit is a directed acyclic graph with $n$ Boolean
-inputs, one Boolean output, arbitrary fan-out, and gates computing arbitrary
-functions of at most two inputs.  Size counts non-input gates.  Constants and
-negated literals can be absorbed at only constant cost, but every comparison
-in the primary ladder uses this one convention.
+inputs, one Boolean output, arbitrary fan-out, and gates labelled by any of
+the sixteen functions from $\mathbb F_2^2$ to $\mathbb F_2$.  Size is the
+number of gates; inputs are free.  Every comparison in the primary ladder
+uses this one convention.
 
 For a family $f=(f_n)$, write $C_{B_2}(f_n)$ for its minimum circuit size in
 this model.  A language supplies the family of characteristic functions on
-all strings of each length.  Unless a row explicitly says otherwise, a bound
-holds for every sufficiently large input length; this is stronger than an
-infinitely-often bound.
+all strings of each length.  The abbreviation **i.o.** means “for infinitely
+many input lengths.”  Every row that instead holds for all sufficiently large
+lengths says so explicitly.
 
 ## Why model discipline matters
 
@@ -25,12 +25,35 @@ different statements.  The [source and implication
 audit](sources_and_implications.md) records the quantifiers needed for each
 displayed arrow.
 
-The current explicit-function frontier is a $3.1n-o(n)$ lower bound for an
-affine disperser computable in $P$.  The exact first strict improvement is
-still being hostile-checked against the primary theorem's hidden loss term;
-the draft ladder therefore marks its first row provisional rather than
-pretending that “replace $3.1$ by a larger constant” is automatically the
-weakest open statement.
+The current explicit-function frontier is usually summarized as
+$3.1n-o(n)$.  The primary gate-elimination inequality is
+$3.1n-26.1d-25.6$ for an affine disperser of dimension $d$.  Combining it
+with Xin Li's polynomial-time affine extractor at polylogarithmic dimension
+gives one uniform $P$ family with a $3.1n-O(\mathrm{polylog}\,n)$ lower
+bound for all sufficiently large $n$.
+
+The first open rung deliberately permits an $NP$ witness and asks only for a
+leading-coefficient improvement on infinitely many lengths.  This keeps the
+later chain in one witness class.  Additive and lower-order sharpenings were
+considered and rejected as the benchmark's moving Weakest statement because
+they probably do not remove the core leading-order barrier with the required
+20% probability.
+
+## How the ladder grows
+
+The lower rows first increase the best coefficient, then leave every linear
+bound, reach a fixed polynomial gain, and arrive at
+$NP\nsubseteq P/poly$.  The upper rows impose explicit eventual growth rates
+on one $NP$ language.  These are stronger than noncontainment in $P/poly$:
+the latter guarantees large circuits on infinitely many lengths for every
+fixed polynomial exponent, not one eventual superpolynomial lower bound.
+
+The stretched-exponential exponents are calibration contours rather than
+named conjectures.  They are included because every contour implies the one
+below and because a coefficient-only ladder would have unacceptable skip
+risk.  The terminal exponential statement is starred: its truth and eventual
+length quantifier put the subjective probability of ZFC provability in the
+development guide's borderline band.
 
 ## Documents
 
@@ -53,3 +76,10 @@ weakest open statement.
 - **[subjective]** is a benchmark-design or effort judgment.
 
 Every score, effort estimate, and skip probability is **[subjective]**.
+
+## Important exclusions
+
+The $4.5n-o(n)$ and $5n-o(n)$ affine-disperser bounds use the smaller $U_2$
+basis, which excludes XOR and XNOR gates.  They are not stronger results in
+this folder's model.  Exponential lower bounds for monotone, bounded-depth,
+formula, or bounded-fan-out circuits are also outside the scale.
