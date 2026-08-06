@@ -152,20 +152,42 @@ Fernández-Delgado--de la Salle examples have
 $|N_\delta(E)|\le C|\log\delta|^{-(d-1)}$ in every dimension.  Already in two
 dimensions the endpoint maximal problem has an unavoidable logarithmic loss.
 The authors describe their construction as conjecturally optimal and note
-that Carbery's reverse Littlewood--Paley conjecture would give the matching
-ordinary Kakeya-set lower bound.  That sourced implication is to a set
-estimate, not to polynomial-Wolff tube families.  No standard
-all-dimensional *maximal* formulation with exact optimal logarithmic loss and
-adequately audited truth confidence was located.  The construction is
-compatible with the terminal polynomial-Wolff statement because every fixed
-power $\delta^{-\varepsilon}$ eventually dominates every power of
-$|\log\delta|$.
+that Carbery's reverse Littlewood--Paley conjecture would give the optimal
+ordinary maximal-operator logarithmic bound
+$O(|\log\delta|^{(d-1)/d})$, hence the matching Kakeya-set lower bound.  That
+sourced implication does not cover polynomial-Wolff tube families.  No
+standard all-dimensional *polynomial-Wolff maximal* formulation with exact
+optimal logarithmic loss and adequately audited truth confidence was located.
+The construction is compatible with the terminal polynomial-Wolff statement
+because every fixed power $\delta^{-\varepsilon}$ eventually dominates every
+power of $|\log\delta|$.
 
-**[subjective]** The polynomial-Wolff endpoint is provisionally assigned
-`75--85%` confidence of being provable in ZFC and is therefore starred.  Its
-main risk is mathematical falsity from an unrecognized higher-dimensional
-near-miss, not known algorithmic undecidability.  The guide-required
-falsity/independence red-team remains in progress.
+**[subjective]** A frontier-agent endpoint audit used 59,823 additional
+metered tokens on falsity, algorithmic-undecidability, and independence risks.
+It assigns the polynomial-Wolff endpoint an `82%` point estimate and a
+`75--85%` band for being provable in ZFC, so the rung is starred.  The dominant
+risk is falsity: a nested multiscale cascade or dimension-dependent ruled
+geometry might evade every bounded-complexity semialgebraic test.  Against
+that risk, the axioms detect every fixed-degree algebraic concentration, rule
+out the known four-dimensional quadric near-miss, and are the target of
+current polynomial-partitioning methods.  No counterexample was located.
+
+The same audit rejected the following stronger endpoints:
+
+- exponents above $n/(n-1)$ and a scale-independent endpoint bound fail the
+  standard bush tests and logarithmic obstructions;
+- an exact-logarithmic polynomial-Wolff endpoint is not well normalized under
+  axioms that themselves allow $\delta^{-\varepsilon}$ losses;
+- adjoining the exact-logarithmic ordinary maximal conjecture was assessed at
+  only `65--75%` joint plausibility; and
+- adjoining all-dimensional reverse Littlewood--Paley was assessed at only
+  `60--70%` and expands the elicitation area beyond incidence geometry.
+
+The audit assigns less than `2%` subjective risk to independence or
+algorithmic undecidability.  Failure in fixed dimension and at rational
+exponents is approximable by finite tube configurations, and no iteration,
+universality, or arithmetic encoding is known.  This is evidence, not a
+metamathematical proof.
 
 ## Deliberate non-implications
 

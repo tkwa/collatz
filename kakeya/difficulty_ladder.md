@@ -20,7 +20,7 @@ implication checks are in the [source audit](sources_and_implications.md).
 | **9*** | $M_\infty^{\mathrm{PWA}}$: the endpoint maximal estimate in every finite dimension for every tube family satisfying the polynomial Wolff axioms. |
 
 The asterisk marks a terminal statement whose probability of being provable
-in ZFC is provisionally assessed in the guide's borderline `75--85%` band.
+in ZFC is assessed in the guide's borderline `75--85%` band.
 
 ## Effort and skip estimates
 
