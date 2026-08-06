@@ -84,10 +84,11 @@ requires positive multipliers and nonnegative offsets.  Its maps preserve
 $\mathbb N_0$, so that formulation is a special case of the present one.
 Consequently, the nonnegative all-start conjecture implies this conjecture.
 
-Requiring the same conclusion only for every sufficiently large power along
-one existentially chosen ray whose base is coprime to $B$ gives the
-[Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md), which is
-implied by the present all-start statement.
+Requiring the same conclusion only on every sufficiently large member of one
+existentially chosen exact scaled ray $d u^k$, where $u$ is multiplicatively
+independent of $B$, gives the
+[Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md).  The
+present all-start statement implies it.
 
 The converse is not known.  Integer offsets may let an orbit cross zero, and
 negative multipliers may reverse its direction.  These extra freedoms could
@@ -104,7 +105,11 @@ $\lvert a_r\rvert$.
 The counted set also cannot be chosen independently of contraction.  If it
 could include expanding branches, a simple potential argument can force the
 chosen label to have positive density without proving frequent contraction.
-That elementary collapse is recorded in the red-team note linked below.
+For example, take `B=2`, set `T(2q)=3q+1` and `T(2q+1)=q`, and count the
+expanding even residue.  The potential `V(n)=log_2(n+1)` decreases by one on
+odd inputs and increases by at most one on even inputs.  Summing along the
+orbit gives `D_K(n) >= (K-V(n))/2`, so the arbitrary-label version becomes
+elementary without measuring contraction.
 
 ## Status
 
@@ -113,6 +118,6 @@ currently known to satisfy the universal superlogarithmic conclusion, and no
 claim is made here that the signed formulation has been established as open
 in the literature.
 
-The definition audit, proved structural observations, and attempted
-trivializations are recorded in
-[`asymptotic_progress/signed_integer_family_redteam.md`](asymptotic_progress/signed_integer_family_redteam.md).
+The consolidated [research state](progress/research_state.md) records the
+shared structural obstruction and current proof frontier.  The extra signed
+freedoms remain provisional and are not claimed to trivialize the target.

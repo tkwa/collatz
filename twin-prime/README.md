@@ -1,73 +1,50 @@
-# Twin-Prime Benchmark
+# Prime-Patterns Difficulty Ladder
 
-This folder defines a benchmark for progress toward the twin prime
-conjecture.  Its target is
+This folder defines a one-dimensional difficulty ladder beginning at the
+current bounded-gap theorem, passing through the twin prime conjecture, and
+ending at the Bateman--Horn conjecture.  It is intended to measure theorem
+strength, not to forecast which technique will win.
 
-```math
-\#\lbrace p:\ p\text{ and }p+2\text{ are both prime}\rbrace=\infty.
-```
-
-Equivalently, if $p_n$ is the $n$-th prime and
+The present unconditional baseline is
 
 ```math
-H_1=\liminf_{n\to\infty}(p_{n+1}-p_n),
+H_1=\liminf_{n\to\infty}(p_{n+1}-p_n)\le246.
 ```
 
-then the conjecture says $H_1=2$.  The current unconditional benchmark
-baseline is $H_1\le246$, proved by the Maynard--Tao and Polymath bounded-gap
-programme.
+The [D. H. J. Polymath bounded-gap paper](https://arxiv.org/abs/1407.4897)
+proves this bound.  Its abstract also records the two conditional anchors used
+here: Elliott--Halberstam gives $H_1\le12$, while generalized
+Elliott--Halberstam gives $H_1\le6$.
 
-## Benchmark documents
+## Documents
 
-- [`difficulty_ladder.md`](difficulty_ladder.md) defines the two-coordinate
-  state, target-normalized score, calibration anchors, and an extended ladder
-  above twin primes.
-- [`distribution_subladder.md`](distribution_subladder.md) develops the
-  prime-distribution coordinate from Bombieri--Vinogradov-type information to
-  generalized Elliott--Halberstam.
-- [`parity_and_alternative_routes.md`](parity_and_alternative_routes.md)
-  explains why GEH is not assumed to be load-bearing and records
-  parity-breaking and correlation routes that the two-coordinate score does
-  not directly represent.
+- [`difficulty_ladder.md`](difficulty_ladder.md) states the scalar ladder,
+  defines every disjunction, and gives the difficulty and skip estimates.
+- [`sources_and_implications.md`](sources_and_implications.md) records the
+  source audit, exact implication directions, non-implications, and openness
+  caveats.
 
-## Two-coordinate state
+The benchmark is a scalar chain.  Distribution conjectures appear as
+alternatives inside logical disjunctions.  A theorem earns a rung exactly when
+it proves the displayed statement; no credit is assigned for method prestige
+or a forecast of future usefulness.
 
-The formal state is
+Below twins, the ladder keeps one coarse gap/EH bridge before the source-backed
+`12`, `6`, and parity-sensitive `4` contours.  Nearby round-number gap bounds
+and EH exponents are omitted because one proof would be likely to cross several
+of them at once.
 
-```math
-x=(H,D),
-```
+## Reading the OR rungs
 
-where $H$ is the best proved unconditional upper bound for $H_1$ and $D$ is
-the strongest proved prime-distribution milestone on the distribution
-subladder.  The state is closed under known implications.  In particular, a
-proof of full GEH would also establish the standard conditional consequence
-$H_1\le6$, so it moves both coordinates.
+If a rung is $A\lor B$, either theorem is sufficient.  The next rung has been
+chosen so that each of its alternatives implies at least one alternative on
+the rung below.  Thus the score is a scalar even though research can follow
+different routes.  This is the only aggregation rule.
 
-The benchmark intentionally does not add a third parity coordinate.  A
-Chowla-type estimate, local Fourier-uniformity theorem, or new bilinear method
-may be excellent evidence about a future route without yet implying a better
-$H$ or $D$.  Such a result is documented, but its formal score remains
-unchanged until it has a proved consequence in one of the two coordinates.
+All effort numbers are explicitly subjective estimates of future strategically
+directed human-expert-years from the July 2026 frontier.  Mathematical
+implications and literature status are audited separately from those
+judgments.
 
-This is conservative.  It is preferable to assigning speculative fractions
-of progress to techniques whose connection to twin primes is not yet a
-theorem.
-
-## Status and sources
-
-The ladder is provisional and its effort estimates are not mathematical
-claims.  The main structural anchors are:
-
-- D. H. J. Polymath,
-  [“Variants of the Selberg sieve, and bounded intervals containing many primes”](https://doi.org/10.1186/s40687-014-0012-7),
-  which records the unconditional bound $H_1\le246$ and the conditional
-  $H_1\le6$ consequence of generalized Elliott--Halberstam; and
-- Terence Tao,
-  [“The logarithmically averaged Chowla and Elliott conjectures for two-point correlations”](https://doi.org/10.1017/fmp.2016.6),
-  which proves a logarithmically averaged two-point correlation theorem but
-  not the Cesàro statement or twin primes.
-
-Claims about the exact current frontier of rapidly changing correlation or
-short-interval estimates should be checked against the latest literature
-before being used as benchmark coordinates.
+On the repository-wide scale, twin primes is score `5` and Bateman--Horn is
+score `9`; neither value is normalized to this folder's endpoints.

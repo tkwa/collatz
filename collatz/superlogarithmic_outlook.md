@@ -10,19 +10,23 @@ every fixed starting value $n$,
 D_K(n)=\omega(\log K).
 ```
 
-Here $D_K(n)$ is the number of division-branch steps among the first $K$
-iterates.  This is an existential statement about the choice of map, followed
-by a universal statement about all of its ordinary nonnegative-integer
-orbits.  The target is not tied to the initial $4/3$-type diagnostic map or to
-any other particular candidate family.
+Here $D_K(n)$ is the number of contracting-branch steps among the first $K$
+iterates.  In a pure-division witness, including the shortcut Collatz map,
+these are exactly the division-branch steps.  This is an existential statement
+about the choice of map, followed by a universal statement about all of its
+ordinary nonnegative-integer orbits.  The target is not restricted to the
+pure-division subfamily.
 
 It does not assess the repository's moving
-[Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md), which now
-requires the same asymptotic only along one existentially chosen coprime power
-ray.  On the [impressiveness ladder](collatz_ladder.md), the all-start target
-here is score `1.0` and the sparse-ray target is score `0.2`.  The probability
-and proof-difficulty judgments below should not be transferred to the latter
-without a separate recalibration.
+[Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md), which
+requires the same asymptotic only along one existentially chosen exact scaled
+ray whose base is multiplicatively independent of the map base.  The
+[impressiveness ladder](collatz_ladder.md) places that sparse-ray statement at
+score `0.2` and a stronger pure-division polylogarithmic statement at score
+`1`.  The all-start superlogarithmic target here is a descriptive lattice
+point between them by implication, not a separate scalar rung.  The probability
+and proof-difficulty judgments below should not be transferred to either
+displayed rung without a separate recalibration.
 
 ## Classical Collatz and the target
 
@@ -32,8 +36,8 @@ Let
 - $S$ be the existential superlogarithmic statement above.
 
 The shortcut Collatz map is admissible.  If $C$ is true, every positive orbit
-of that map eventually enters $1\leftrightarrow2$, where division steps have
-density $1/2$.  It follows rigorously that
+of that map eventually enters $1\leftrightarrow2$, where its contracting,
+pure-division branch has density $1/2$.  It follows rigorously that
 
 ```math
 C\Longrightarrow S,
@@ -48,13 +52,7 @@ Any probability assessment must respect this implication.  In particular,
 =\Pr(\neg C)\Pr(\neg S\mid\neg C).
 ```
 
-The earlier version of this note assigned $12\%$ to $\neg S$ without an
-explicit joint model for $C$ and $S$.  That was too pessimistic.  It treated
-the absence of a known fixed-start theorem as much stronger truth-level
-evidence than it is, and it did not account for the many ways in which $C$
-could be false while $S$ remains true.
-
-## Revised joint distribution
+## Joint distribution
 
 The following is my central subjective joint distribution.  These are
 epistemic judgments, not mathematical or frequentist results.
@@ -81,7 +79,7 @@ The decimal in $0.1\%$ should not be mistaken for measurement precision.  It
 is a compact way to record an order-of-magnitude judgment: roughly one chance
 in a thousand, with a plausible range spanning at least a factor of several.
 
-## Revised outcome distribution for $S$
+## Outcome distribution for $S$
 
 The following mutually exclusive categories sum to $100\%$.
 
@@ -117,8 +115,8 @@ Three considerations push toward $C$ being true.
    Collatz orbit is below $f(N)$ for almost all $N$ in logarithmic density.
    This is a theorem about the actual arithmetic map, not merely simulation.
 3. Direct computation has verified convergence for every starting value below
-   $2^{71}$, with the project now reporting a slightly larger bound.  No
-   counterexample occurs in that exhaustive range.
+   $2^{71}$.  The linked project reports the current frontier; no
+   counterexample occurs in the stated exhaustive range.
 
 The relevant primary references are Tao's
 [almost-bounded-orbits theorem](https://arxiv.org/abs/1909.03562) and Barina's
@@ -157,44 +155,46 @@ Thus $\neg S$ is not the generic way for $\neg C$ to occur.  It requires a
 much more extreme symbolic failure and requires that failure to survive the
 freedom to design a different map.
 
-There is also positive heuristic evidence from the admissible families.  In
-the ceiling-division family, expansion has probability about $1/B$ under a
-uniform-residue model and division has probability about $(B-1)/B$; increasing
-$B$ makes the typical logarithmic drift strongly negative.  The proved lower
-bound has an
-[arbitrarily large coefficient](asymptotic_progress/unbounded_logarithmic_constants.md)
+There is also positive heuristic evidence from the pure-division subfamily,
+which is a sufficient source of witnesses for $S$.  In the ceiling-division
+family, expansion has probability about $1/B$ under a uniform-residue model
+and division has probability about $(B-1)/B$; increasing $B$ makes the typical
+logarithmic drift strongly negative.  The proved lower bound has an
+[arbitrarily large coefficient](progress/research_state.md#proved-logarithmic-lower-bound)
 of $\log K$ as the map varies.  Neither observation proves the fixed-map
 asymptotic statement, but both make a universal no-go theorem for all maps
 less likely than a proof obstruction for the candidates studied so far.
 
 ## What the repository's obstructions do and do not show
 
-The most important calibration change is to classify each obstruction by the
-kind of evidence it supplies.
+Each obstruction should be classified by the kind of evidence it supplies.
+Most of the repository's detailed obstructions concern the pure-division
+route to the broader contracting-branch target, rather than exhausting every
+admissible contracting map.
 
 ### Mostly evidence about proof difficulty
 
 - Every finite residue itinerary is realized by an ordinary nonnegative
-  integer, and its endpoints form an
-  [exact arithmetic progression](asymptotic_progress/endpoint_arithmetic_progressions.md).
+  integer, and its endpoints form an exact arithmetic progression; the
+  [consolidated research state](progress/research_state.md#proved-every-finite-residue-itinerary-is-realizable)
+  records the local-realizability argument.
   Therefore no fixed finite bad pattern or finite list of local valuations
   can be forbidden.
 - Finite-state carry transducers cannot compute either the full itinerary or
-  its binary expansion/division projection from ordinary base-$B$ digits; see
-  the [finite-state obstruction](asymptotic_progress/finite_state_coding_obstruction.md).
+  its binary expansion/division projection from ordinary base $B$ digits.
 - Existing fixed-rank sparse-polynomial, $S$-unit, Subspace-Theorem, height,
   LTE, and rational-base results lose too much when the number of blocks
   grows.
 - The clean current sufficient statement is a fixed-start, growing-rank
-  [valuation estimate](asymptotic_progress/uniform_rank_valuation_target.md)
+  [valuation estimate](blockers/moving_endpoint_core_obstruction.md#10-an-explicit-statement-of-the-missing-theorem)
   with subexponential rank loss.  No checked theorem gives it.
 
 These results eliminate attractive proof strategies.  They do not construct
 one bad infinite orbit.  In particular, realizability of every finite prefix
 uses a starting integer that may change with the prefix length.  The limiting
 infinite itinerary naturally belongs to a $B$-adic integer and need not come
-from any ordinary nonnegative integer.  Confusing those two assertions was a
-major source of the old $12\%$ estimate.
+from any ordinary nonnegative integer.  Confusing those two assertions would
+overstate the truth-level evidence supplied by the finite-prefix obstruction.
 
 ### Some evidence relevant to truth
 
@@ -203,9 +203,9 @@ major source of the old $12\%$ estimate.
 - Ordinary integer itineraries are not known to obey the random-residue model,
   and bad symbolic sequences can be topologically abundant even when they
   have probability zero under a Bernoulli measure.
-- No expanding admissible map is currently proved to satisfy even the weaker
-  universal positive-density claim.  Rational-base stopping problems already
-  remain open at qualitative levels.
+- No expanding map in the studied pure-division families is currently proved
+  to satisfy even the universal positive-division-density claim.  Rational-base
+  stopping problems already remain open at qualitative levels.
 
 These facts justify a nonzero falsity probability and prevent treating the
 choice among maps as a collection of independent random trials.  They still
@@ -216,7 +216,7 @@ ordinary orbit.
 
 For the candidate families with an affine upper recurrence for division
 times, the proved
-[failure structure](asymptotic_progress/failure_structure.md) implies much
+[failure structure](progress/research_state.md#proved-failure-has-positive-density-proportional-gaps) implies much
 more than occasional long expansion runs.  Failure forces a positive upper
 density of proportional division-time gaps and hence arbitrarily long
 bounded-spacing chains of such gaps along one fixed orbit.  The endpoint
@@ -244,21 +244,16 @@ Then $\Pr(\neg S)=qr$.  Three useful calibrations are:
 | Central estimate | 3% | 3.33% | 0.10% |
 | Skeptical exceptional-orbit model | 10% | 10% | 1.00% |
 
-The central number should move if either conditional changes.  For example,
-retaining the old $12\%$ estimate together with
-$\Pr(\neg C)=30\%$ would require
-$\Pr(\neg S\mid\neg C)=40\%$.  With
-$\Pr(\neg C)=12\%$, it would require the conditional to be $100\%$.  Those
-are coherent mathematical possibilities, but they amount to a strong belief
-in an obstruction shared by every admissible map.  The current repository
-does not provide evidence of that strength.
+The central number should move if either conditional changes.  Values far
+above the skeptical row would amount to a strong belief in an obstruction
+shared by every admissible map; the current repository does not provide
+evidence of that strength.
 
 The opposite extreme is also unjustified.  It would be a mistake to infer
 universal truth directly from negative drift, Tao's almost-all theorem, or
 finite verification.  All three can miss one exceptional ordinary integer.
 The $0.1\%$ central estimate is therefore much larger than the literal random
-model would suggest, while remaining much smaller than the old proof-blocker-
-driven estimate.
+model would suggest.
 
 ## Likely proof strategies
 
@@ -351,10 +346,11 @@ credit to the ingredient that seems most likely to do the decisive work.
 
 Evidence that would materially increase $\Pr(\neg S)$ includes:
 
-- a theorem forcing a sparse-division ordinary orbit for every admissible map;
+- a theorem forcing a sparse contracting-branch count on some ordinary orbit
+  of every admissible map;
 - an explicit general mechanism turning topologically bad $B$-adic
   itineraries into ordinary nonnegative starting integers; or
-- a sparse-division counterexample for several arithmetically distinct,
+- sparse-contraction counterexamples for several arithmetically distinct,
   strongly negative-drift maps.
 
 Merely finding a divergent Collatz orbit would increase $\Pr(\neg C)$ much
@@ -370,20 +366,3 @@ Evidence that would settle or strongly support $S$ includes:
   chains of proportional gaps; or
 - any proof of the Positive Division-Density Conjecture or of classical
   Collatz.
-
-## Token expenditure
-
-The initial proof attempt used **3,578,728 tokens** according to the goal
-tracker, out of the authorized 10 million-token budget.  The present
-probability reassessment used approximately **50,000 additional output
-tokens**, for an estimated cumulative total of about **3.63 million tokens**.
-
-The additional figure is a working-budget estimate rather than independent
-billing telemetry: the original proof goal was already marked blocked, so its
-tracker remained fixed at 3,578,728 and did not meter this reassessment as a
-separate goal.  The refinement included a fresh review of the proved failure
-structure, endpoint freedom, finite-state no-go results, uniform-rank
-valuation target, literature notes, classical almost-all theorem, and current
-computational verification evidence.
-
-Revised probability assessment and token count recorded on 2026-08-02.
