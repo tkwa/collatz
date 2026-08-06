@@ -19,7 +19,10 @@ starting-set quantifiers, map families, and orbit conclusions.
   generalized-map component at score `10`.
 - [The Universal One-Expander Polynomial-Preperiod
   Conjecture](one_expander_polynomial_preperiod.md) strengthens that component
-  with a worst-case cycle-entry bound at the terminal score.
+  with a polynomial worst-case cycle-entry bound at score `10.5`.
+- [The Universal One-Expander Logarithmic-Preperiod
+  Conjecture](one_expander_logarithmic_preperiod.md) gives the optimal-order
+  generalized cycle-entry bound at the starred terminal score.
 
 In these names, **all-start** means every starting value in $\mathbb N_0$.
 The descriptive names expose the starting-set quantifier, map family, and
@@ -115,14 +118,16 @@ Conjecture](one_expander_universal_periodicity.md) for the restricted positive,
 coprime, pure-division family with one expanding residue and $a\lt B^B$.
 Score `10.5` retains the same classical component and strengthens the
 generalized component to a [polynomial worst-case cycle-entry
-bound](one_expander_polynomial_preperiod.md).  Neither generalized statement
-identifies the classical attractor or the exact classical stopping constant,
-so the conjunctions are necessary to retain the scalar implication chain.
+bound](one_expander_polynomial_preperiod.md).  Score `11` strengthens that
+component again to a [logarithmic worst-case cycle-entry
+bound](one_expander_logarithmic_preperiod.md).  None of the generalized
+statements identifies the classical attractor or the exact classical stopping
+constant, so the conjunctions are necessary to retain the scalar implication
+chain.
 
 The [one-expander note](one_expander_universal_periodicity.md#a-broader-literature-conjecture)
-audits Matthews' broader qualitative conjecture.  The
-[preperiod note](one_expander_polynomial_preperiod.md#the-stronger-logarithmic-side-point)
-records the natural logarithmic strengthening and why it remains unscored.
+audits Matthews' broader qualitative conjecture, which does not supply a
+quantitative preperiod bound.
 
 ### Effort and skip annotations
 
@@ -133,11 +138,11 @@ residue-affine and one-expander dynamics, and adjacent arithmetic-dynamics
 methods only when a plausible transfer is explicit.  Generic number theory
 and brute-force orbit verification are not counted.
 
-The score-`10.5` asterisk marks the polynomial-preperiod conjunction as
-borderline under the development guide's endpoint-confidence rule.  Score
-`10` retains the less quantitative periodicity component without an
-asterisk.  The linked one-expander notes explain the two distinct risks:
-nonperiodic computation and very long but finite transients.
+The score-`11` asterisk marks the logarithmic-preperiod conjunction as
+borderline under the development guide's endpoint-confidence rule.  The
+[endpoint note](one_expander_logarithmic_preperiod.md#why-the-endpoint-is-starred)
+explains the residual uncertainty.  Scores `10` and `10.5` retain the
+progressively weaker periodicity and polynomial components.
 
 The central effort estimates are uncertain by at least roughly half a decade
 through the middle of the ladder and more near the endpoint.  Individual

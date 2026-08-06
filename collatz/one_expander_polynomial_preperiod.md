@@ -1,11 +1,12 @@
 # The Universal One-Expander Polynomial-Preperiod Conjecture
 
-This is the generalized-map component of the terminal score in the
+This is the generalized-map component of score `10.5` in the
 [Collatz-like difficulty ladder](difficulty_ladder.md).  It strengthens
 [universal one-expander periodicity](one_expander_universal_periodicity.md)
-by bounding how long an orbit can take to enter a cycle.  The terminal score
+by bounding how long an orbit can take to enter a cycle.  Score `10.5`
 conjoins this statement with the exact classical maximum stopping-time
-constant.
+constant, and the terminal score strengthens the bound to
+[logarithmic order](one_expander_logarithmic_preperiod.md).
 
 ## Cycle-entry time
 
@@ -42,38 +43,6 @@ offset $c$; no bound uniform in the parameters is asserted.  This conjecture
 implies universal one-expander periodicity, since a finite bound for any
 $X\ge n$ forces $\rho_T(n)\lt\infty$.
 
-## The stronger logarithmic side point
-
-The random-residue and negative-drift heuristics suggest the sharper law
-
-```math
-R_T(X)=O_T(\log(X+2)).
-```
-
-Logarithmic order would be best possible for every eventually periodic map
-in the family.  Indeed, $T(B^j)=B^{j-1}$ for $j\ge1$.  If any $B^j$ with
-$j\ge0$ lies on a cycle, let $J$ be the largest such exponent; this is finite
-because one cycle contains only finitely many values.  For every $k\gt J$,
-the start $B^k$ then needs exactly $k-J$ steps to enter that cycle.  If no
-$B^j$ with $j\ge0$ lies on a cycle, the same orbit segment gives
-$\rho_T(B^k)\ge k$.  Monotonicity of $R_T$ therefore gives
-
-```math
-R_T(X)\ge\left\lfloor\frac{\log X}{\log B}\right\rfloor-O_T(1).
-```
-
-No admissible map with a superlogarithmic preperiod maximum is known here.
-Nevertheless, the logarithmic claim is not scored: typical-orbit drift does
-not control the rarest natural-number starts, which could follow near-neutral
-residue itineraries or retain long finite computations.  The project's
-current red-team estimate gives the universal logarithmic statement only
-about a `65--78%` chance of being provable in the accepted foundational
-setting.  The polynomial statement is the strongest quantitative version
-that remains near the asterisked endpoint range.  The current estimates are
-roughly `76--86%` for the polynomial component itself and `72--82%` for its
-terminal conjunction with the exact classical constant; the latter range is
-why the score is explicitly borderline.
-
 ## Literature interface
 
 The [periodicity note](one_expander_universal_periodicity.md#a-broader-literature-conjecture)
@@ -83,5 +52,5 @@ does not supply this narrower quantitative bound.
 ## Status
 
 Provisional open conjecture.  No proof or counterexample is claimed, and the
-polynomial rate is a project-created strengthening rather than a standard
-named conjecture from the literature.
+polynomial rate is a project-created intermediate statement rather than a
+standard named conjecture from the literature.

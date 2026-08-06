@@ -26,7 +26,8 @@ divisors, truncated counting functions, and bounded-degree algebraic points.
 The library does not formalize every intermediate ladder rung or every
 conjecture mentioned as background. It excludes unformalized Collatz rungs,
 including the exact maximum stopping constant, universal one-expander
-periodicity, and polynomial-preperiod endpoint; intermediate abc/Vojta and
-twin-prime rungs; the multivariate Bateman--Horn endpoint; explanatory
-literature conjectures; historical examples; and supporting targets in
-`collatz/progress/` or `collatz/blockers/`. None is claimed as covered here.
+periodicity, the polynomial-preperiod rung, and the logarithmic-preperiod
+endpoint; intermediate abc/Vojta and twin-prime rungs; the multivariate
+Bateman--Horn endpoint; explanatory literature conjectures; historical
+examples; and supporting targets in `collatz/progress/` or
+`collatz/blockers/`. None is claimed as covered here.

@@ -4,9 +4,10 @@ This is the generalized-map component of score `10` in the
 [Collatz-like difficulty ladder](difficulty_ladder.md).  That score conjoins
 it with the exact classical maximum stopping-time constant.  The terminal
 score further strengthens cycle entry to a
-[polynomial preperiod bound](one_expander_polynomial_preperiod.md).  The
-conjecture here is universal over a deliberately restricted map family near
-the project's estimated computational-universality boundary.
+[logarithmic preperiod bound](one_expander_logarithmic_preperiod.md), with a
+[polynomial bound](one_expander_polynomial_preperiod.md) as the intermediate
+rung.  The conjecture here is universal over a deliberately restricted map
+family near the project's estimated computational-universality boundary.
 
 ## Map family
 
@@ -117,10 +118,10 @@ the periodicity statement on this page, but it is not a scored rung.
 Conjoining its much broader all-residue, all-integer claim with the exact
 classical stopping constant does not confidently clear the development
 guide's endpoint probability threshold.  Matthews gives no quantitative
-preperiod rate, while the ladder's
-[polynomial-preperiod endpoint](one_expander_polynomial_preperiod.md) covers
-only the narrower one-expander family; neither statement is currently known
-to subsume the other.
+preperiod rate, while the ladder's quantitative preperiod conjectures cover
+only the narrower one-expander family.  Matthews implies their qualitative
+periodicity conclusion, but no implication to either quantitative rate is
+known.
 
 ## Why the periodicity family stops here
 
@@ -150,7 +151,7 @@ known decidability theorem or a claim that the uniform component follows from
 the classical stopping-time result.  The project's current subjective
 probability that computational universality survives all the one-expander
 restrictions is approximately `10--15%`; the broader Matthews class carries
-materially more uncertainty.  The terminal polynomial strengthening has an
+materially more uncertainty.  The quantitative strengthenings have an
 additional risk from long but finite transients even when every orbit is
 eventually periodic.
 
