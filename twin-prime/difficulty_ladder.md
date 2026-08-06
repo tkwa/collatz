@@ -20,6 +20,7 @@ conjectures, together with every implication used below, are in the
 | **7** | The Hardy--Littlewood asymptotic for twin primes **or** Dickson's conjecture for every fixed admissible family of distinct affine-linear forms. |
 | **8** | The Hardy--Littlewood asymptotic for every fixed admissible family of distinct affine-linear forms **or** Schinzel's hypothesis H. |
 | **9** | **Bateman--Horn** for every fixed admissible finite family of distinct irreducible integer polynomials with positive leading coefficients. |
+| **9.5** | **Multivariate Bateman--Horn over $\mathbb Z$.**  The Destagnol--Sofos asymptotic for every fixed locally admissible irreducible polynomial family in any number of variables and every eligible expanding box. |
 
 ## Effort and skip estimates
 
@@ -40,4 +41,5 @@ are subjective.
 | 6 | 4.78 (`2.7--6.9`) | 35% | Quantitative twin depth or consecutive-gap breadth. |
 | 7 | 5.13 (`2.9--7.4`) | 35% | Exact twin asymptotics or qualitative affine-family breadth. |
 | 8 | 5.47 (`3.1--7.9`) | 40% | Quantitative affine breadth or qualitative polynomial breadth. |
-| **9** | **5.82 (`3.3--8.4`)** | n/a | Bateman--Horn closes both selected upper branches. |
+| **9** | **5.82 (`3.3--8.4`)** | n/a | One-variable Bateman--Horn closes both selected upper branches. |
+| 9.5 | 6.00 (`3.4--8.7`) | -- | Adds arbitrary-dimensional polynomial families and geometric regions; score `9` is its one-variable specialization. |

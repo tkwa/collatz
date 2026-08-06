@@ -124,7 +124,8 @@ noncomputable def PolynomialFamily.batemanHornMainTerm
 def PolynomialFamily.IsSingularSeries (F : PolynomialFamily) (C : ℝ) : Prop :=
   Filter.Tendsto F.singularSeriesPartial Filter.atTop (nhds C)
 
-/-- Bateman--Horn for every admissible finite family in the exact endpoint class. -/
+/-- Bateman--Horn for every admissible finite family in the exact score-9
+one-variable class. -/
 def BatemanHorn : Prop :=
   ∀ F : PolynomialFamily, ∃ C : ℝ,
     F.IsSingularSeries C ∧
