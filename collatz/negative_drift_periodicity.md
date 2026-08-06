@@ -51,11 +51,7 @@ eventually repeats a period containing a division step:
 \forall n\in\mathbb N_0\ \exists k\ge0\ \exists p\ge1:
 \quad
 T^{k+p}(n)=T^k(n)
-```
-
-and
-
-```math
+\quad\text{and}\quad
 \#\lbrace0\le j\lt p:T^{k+j}(n)\bmod B\notin E\rbrace\ge1.
 ```
 

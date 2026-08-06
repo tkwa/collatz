@@ -18,11 +18,14 @@ family.
 
 It does not assess the repository's moving
 [Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md), which
-requires the same asymptotic only along one existentially chosen coprime power
-ray.  On the [impressiveness ladder](collatz_ladder.md), the all-start target
-here is score `0.6` and the sparse-ray target is score `0.2`.  The probability
-and proof-difficulty judgments below should not be transferred to the latter
-without a separate recalibration.
+requires the same asymptotic only along one existentially chosen exact scaled
+ray whose base is multiplicatively independent of the map base.  The
+[impressiveness ladder](collatz_ladder.md) places that sparse-ray statement at
+score `0.2` and a stronger pure-division polylogarithmic statement at score
+`1`.  The all-start superlogarithmic target here is a descriptive lattice
+point strictly between them, not a separate scalar rung.  The probability
+and proof-difficulty judgments below should not be transferred to either
+displayed rung without a separate recalibration.
 
 ## Classical Collatz and the target
 
