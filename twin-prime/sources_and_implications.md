@@ -47,6 +47,20 @@ modulus range to $x^{\vartheta_1}$.  Proposition 1.7 of the paper proves
 “Full GEH” means every fixed exponent below one, not the literal endpoint
 modulus $x$.
 
+The unconditional gap alternatives use only the elementary nesting
+
+```math
+H_1\le2\Longrightarrow H_1\le4\Longrightarrow H_1\le6
+\Longrightarrow H_1\le12\Longrightarrow H_1\le50
+\Longrightarrow H_1\le244\Longrightarrow H_1\le246.
+```
+
+Together with exponent restriction, GEH-to-EH, and the two source-backed
+conditional bounds above, this verifies every lower OR join in the displayed
+ladder.  In particular, the score-`1` pair $H_1\le50$ or
+$\mathrm{EH}[2/3]$ is one coarse bridge; no implication between its two
+alternatives is asserted.
+
 Restricted-modulus results beyond one half do not establish these rungs.  The
 row requires the full coefficient/convolution class and unrestricted moduli
 in the source formulation.

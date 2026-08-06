@@ -29,6 +29,11 @@ alternatives inside logical disjunctions.  A theorem earns a rung exactly when
 it proves the displayed statement; no credit is assigned for method prestige
 or a forecast of future usefulness.
 
+Below twins, the ladder keeps one coarse gap/EH bridge before the source-backed
+`12`, `6`, and parity-sensitive `4` contours.  Nearby round-number gap bounds
+and EH exponents are omitted because one proof would be likely to cross several
+of them at once.
+
 ## Reading the OR rungs
 
 If a rung is $A\lor B$, either theorem is sufficient.  The next rung has been
@@ -36,8 +41,10 @@ chosen so that each of its alternatives implies at least one alternative on
 the rung below.  Thus the score is a scalar even though research can follow
 different routes.  This is the only aggregation rule.
 
-All effort numbers are explicitly subjective.  Mathematical implications and
-literature status are audited separately from those judgments.
+All effort numbers are explicitly subjective estimates of future strategically
+directed human-expert-years from the July 2026 frontier.  Mathematical
+implications and literature status are audited separately from those
+judgments.
 
 On the repository-wide scale, twin primes is score `5` and Bateman--Horn is
 score `9`; neither value is normalized to this folder's endpoints.
