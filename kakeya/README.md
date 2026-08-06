@@ -46,8 +46,19 @@ $\infty$ subscript means every finite ambient dimension.  Thus
 $M_{\le d}$ is a conjunction, not an assumed dimension-lifting theorem.
 Finally,
 $M_n^{\mathrm{PWA}}$ is the same estimate for every tube family satisfying
-the polynomial Wolff axioms, a broader class that contains every
-direction-separated family.
+the polynomial Wolff axioms.  Concretely, for every bounded-complexity
+semialgebraic set $S$, every $\delta\le\lambda\le1$, and every
+$\varepsilon\gt0$, these axioms require
+
+```math
+\#\lbrace T\in\mathbb T:|T\cap S|\ge\lambda|T|\rbrace
+\le C_{n,E,\varepsilon}\delta^{-\varepsilon}
+|S|\delta^{1-n}\lambda^{-n},
+```
+
+where $E$ bounds the complexity of $S$.  This is a broader class than
+direction-separated families; Katz and Rogers prove that every such family
+satisfies these axioms.
 
 ## Why the ladder has joins
 
