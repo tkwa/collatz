@@ -1,50 +1,66 @@
-# Prime-Patterns Difficulty Ladder
+# Prime Patterns
 
-This folder defines a one-dimensional difficulty ladder beginning at the
-current bounded-gap theorem, passing through the twin prime conjecture, and
-ending at the Bateman--Horn conjecture.  It is intended to measure theorem
-strength, not to forecast which technique will win.
-
-The present unconditional baseline is
+This folder tracks theorem strength from the current bounded-gap frontier,
+through twin primes, to the Bateman--Horn conjecture.  Let $p_n$ be the
+$n$-th prime and
 
 ```math
-H_1=\liminf_{n\to\infty}(p_{n+1}-p_n)\le246.
+H_1=\liminf_{n\to\infty}(p_{n+1}-p_n).
 ```
 
-The [D. H. J. Polymath bounded-gap paper](https://arxiv.org/abs/1407.4897)
-proves this bound.  Its abstract also records the two conditional anchors used
-here: Elliott--Halberstam gives $H_1\le12$, while generalized
-Elliott--Halberstam gives $H_1\le6$.
+The present unconditional theorem is $H_1\le246$.  The
+[source audit](sources_and_implications.md) records the literature basis for
+this frontier and every conditional implication used by the ladder.
 
 ## Documents
 
-- [`difficulty_ladder.md`](difficulty_ladder.md) states the scalar ladder,
-  defines every disjunction, and gives the difficulty and skip estimates.
-- [`sources_and_implications.md`](sources_and_implications.md) records the
-  source audit, exact implication directions, non-implications, and openness
-  caveats.
+- [`difficulty_ladder.md`](difficulty_ladder.md) contains the milestone and
+  effort tables.
+- [`sources_and_implications.md`](sources_and_implications.md) defines the
+  named conjectures precisely and records implication directions,
+  non-implications, and openness caveats.
 
-The benchmark is a scalar chain.  Distribution conjectures appear as
-alternatives inside logical disjunctions.  A theorem earns a rung exactly when
-it proves the displayed statement; no credit is assigned for method prestige
-or a forecast of future usefulness.
+## How to read the disjunctive rows
 
-Below twins, the ladder keeps one coarse gap/EH bridge before the source-backed
-`12`, `6`, and parity-sensitive `4` contours.  Nearby round-number gap bounds
-and EH exponents are omitted because one proof would be likely to cross several
-of them at once.
+If a row is $A\lor B$, either theorem clears it.  Each alternative on the next
+row implies at least one alternative below, so the displayed scores still form
+one scalar implication chain even though research can follow different
+routes.
 
-## Reading the OR rungs
+The first positive row is the folder's unique **Weakest** conjecture.  Since
+all sufficiently large consecutive-prime gaps are even, the smallest possible
+strict improvement over `246` is $H_1\le244$.  The other disjunct records any
+unrestricted Elliott--Halberstam gain beyond exponent $1/2$.
 
-If a rung is $A\lor B$, either theorem is sufficient.  The next rung has been
-chosen so that each of its alternatives implies at least one alternative on
-the rung below.  Thus the score is a scalar even though research can follow
-different routes.  This is the only aggregation rule.
+## Why these contours are displayed
 
-All effort numbers are explicitly subjective estimates of future strategically
-directed human-expert-years from the July 2026 frontier.  Mathematical
-implications and literature status are audited separately from those
-judgments.
+Below twin primes, the outcome bounds and the EH/GEH distribution statements
+form independently nested routes.  Score `1` is the only coarse bridge before
+the source-backed `12` and `6` contours.  The $H_1\le4$ row is the last
+nontrivial even gap bound before twins, while full GEH is the last standard
+distribution conjecture before the parity barrier.  Additional round-number
+gap cutoffs and nearby EH exponents are omitted because a single proof would
+be likely to cross several of them.
 
-On the repository-wide scale, twin primes is score `5` and Bateman--Horn is
-score `9`; neither value is normalized to this folder's endpoints.
+Above twin primes, one branch adds quantitative depth for prime pairs and then
+all affine families.  The other adds qualitative breadth from every even
+consecutive gap, to every admissible affine family, and then to polynomial
+families.  The selected joins are:
+
+- a positive-order twin count **or** de Polignac;
+- the twin-pair Hardy--Littlewood asymptotic **or** Dickson; and
+- affine Hardy--Littlewood asymptotics **or** Schinzel H.
+
+Bateman--Horn is the endpoint because it supplies both the quantitative affine
+branch and the qualitative polynomial branch.  Named patterns such as Sophie
+Germain primes or primes of the form $n^2+1$ are not rungs because they do not
+imply either branch immediately below them.
+
+## Calibration
+
+The score and skip columns use the
+[development guide](https://docs.google.com/document/d/1zy2BjsC8qZkjdfG57MtEFuKxjmN6TaZq8CFxeidI_Xw/edit?tab=t.0).
+On that shared scale, twin primes is score `5` and Bateman--Horn is score `9`;
+neither is an independently imposed anchor.  The numerical effort estimates
+and the pairing of alternatives are subjective, while the implication audit
+is mathematical.

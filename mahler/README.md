@@ -1,6 +1,6 @@
-# Weak Escape Problems for Powers
+# Candidate Escape Problems for Powers
 
-This folder contains two minimal escape problems:
+This folder contains two descriptively named candidate conjectures:
 
 - [an algebraic-multiplier conjecture for powers of $e$](algebraic_multiplier_for_powers_of_e.md),
   which asks whether some positive algebraic $x$ makes $\{xe^n\}$ fail to
@@ -8,6 +8,10 @@ This folder contains two minimal escape problems:
 - the rational-base conjecture below, in which one subquadratic rational base
   may be chosen and every positive real starting value must escape its Mahler
   interval.
+
+The candidates vary different objects and quantifiers.  No implication is
+recorded in this folder, so the repository does not order them as successive
+rungs.
 
 ## Rational-base conjecture
 
@@ -27,7 +31,7 @@ such that every positive real starting value eventually escapes the interval
 $[0,1/q)$:
 
 ```math
-\forall x\in\mathbb R_{>0}\quad
+\forall x\in\mathbb R_{\gt0}\quad
 \exists n\in\mathbb N_0:\qquad
 \left\{x\left(\frac pq\right)^n\right\}\ge\frac1q.
 ```
@@ -39,16 +43,16 @@ no $Z_{p/q}$-numbers. Applying the conjecture to each tail $x(p/q)^m$ would
 show that the sequence escapes $[0,1/q)$ infinitely often, so the one-hit and
 infinitely-many-hits versions are equivalent.
 
-### Why this is a minimal universal statement
+### Why this is a deliberately weak universal statement
 
 The conjecture asks only for one base for which one visit to a fixed region is
 unavoidable. It does not identify the base, assert density, equidistribution,
 normality, or even require visits to every subinterval of $[0,1]$.
 
-The restriction $p<q^2$ keeps the chosen base on the only side of the known
-phase transition where universal escape is plausible. For $p>q^2$, infinitely
+The restriction $p\lt q^2$ keeps the chosen base on the only side of the known
+phase transition where universal escape is plausible. For $p\gt q^2$, infinitely
 many $Z_{p/q}$-numbers are known to exist. The boundary $p=q^2$ cannot occur
-under $\gcd(p,q)=1$ with $q>1$.
+under $\gcd(p,q)=1$ with $q\gt1$.
 
 The original case $(p,q)=(3,2)$ is Mahler's 1968 $Z$-number problem and
 remains open. Mahler's conjecture would imply this one by supplying a specific
@@ -67,4 +71,4 @@ Thus their Conjecture 1.4 implies the weaker existential-base conjecture stated
 here. Their conjectured normality of all minimal rational-base words is
 stronger still. They also explain that Dubickas and Mossinghoff had previously
 conjectured nonexistence throughout the narrower range
-$1<q<p<q(q-1)$.
+$1\lt q\lt p\lt q(q-1)$.

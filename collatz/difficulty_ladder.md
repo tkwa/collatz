@@ -43,7 +43,7 @@ start at most $X$ to reach $1$.
 These subjective estimates use the scope and interpretation summarized in the
 [folder overview](README.md#effort-and-skip-annotations).
 
-| Score | Expected $\log_{10}$ future expert-years | $P(n\text{-skip})$, if applicable | Calibration note |
+| Score | Expected $\log_{10}$ cumulative human-expert-years from the current frontier | $P(n\text{-skip})$, if applicable | Calibration note |
 |---:|---:|---:|---|
 | 0 | -- | n/a | Current proved frontier; future effort is zero, so its logarithm is undefined. |
 | 0.2 | 2.15 | -- | Exceptionally weak sparse-start statement; the large gap to score `1` is intentional. |

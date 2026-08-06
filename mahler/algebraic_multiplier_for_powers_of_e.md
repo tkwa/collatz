@@ -2,8 +2,9 @@
 
 Metric theory says that $\{xe^n\}$ is uniformly distributed modulo one for
 almost every real starting value $x$. Effective constructions can even produce
-individual computable starting values with this property. No comparable result
-appears to be known when $x$ is required to be algebraic.
+individual computable starting values with this property. The references
+collected here do not supply an algebraic starting value with comparable
+behavior.
 
 ## Conjecture
 
@@ -11,15 +12,15 @@ There exists a positive real algebraic number $x$ such that the fractional
 parts of $xe^n$ do not converge to zero:
 
 ```math
-\exists x\in\overline{\mathbb Q}\cap\mathbb R_{>0}:\qquad
-\limsup_{n\to\infty}\{xe^n\}>0.
+\exists x\in\overline{\mathbb Q}\cap\mathbb R_{\gt0}:\qquad
+\limsup_{n\to\infty}\{xe^n\}\gt0.
 ```
 
 Equivalently,
 
 ```math
-\exists x\in\overline{\mathbb Q}\cap\mathbb R_{>0}
-\quad\exists\varepsilon>0
+\exists x\in\overline{\mathbb Q}\cap\mathbb R_{\gt0}
+\quad\exists\varepsilon\gt0
 \quad\forall N\ge1
 \quad\exists n\ge N:\qquad
 \{xe^n\}\ge\varepsilon.
@@ -32,18 +33,17 @@ frequency, or uniform distribution.
 
 ## Status and open-status caveat
 
-This is proposed as a candidate open problem. Kaneko noted in 2012 that even
-the specific case $x=1$ was unresolved: one could not disprove
-$\{e^n\}\to0$. A targeted literature check found no later result proving
-nonconvergence for any positive algebraic multiplier $x$.
+This is a candidate problem whose open status still needs a dedicated source
+audit. Kaneko noted in 2012 that even the specific case $x=1$ was unresolved:
+one could not disprove $\{e^n\}\to0$. None of the references below establishes
+nonconvergence for a positive algebraic multiplier $x$.
 
 The distinction matters because failure to settle the particular case $x=1$
 does not by itself prove that the existential algebraic statement is open; a
 different algebraic multiplier could conceivably be tractable. The open-status
-assessment here is therefore provisional and based on the absence of a known
-algebraic witness, not merely on the unresolved $x=1$ case. The headline is a
-precise conjecture, but this note should not be read as a claim that the entire
-literature has certified its novelty.
+assessment here is therefore unverified rather than inferred from the
+unresolved $x=1$ case. The headline is a precise candidate conjecture, but this
+note does not claim that the literature has certified its novelty or openness.
 
 ## Why this formulation is weaker than $x=1$
 
@@ -51,7 +51,7 @@ The conjecture permits any positive algebraic multiplier. Since $1$ is
 algebraic, the concrete conjecture
 
 ```math
-\limsup_{n\to\infty}\{e^n\}>0
+\limsup_{n\to\infty}\{e^n\}\gt0
 ```
 
 would imply the headline statement, but not conversely. The algebraic witness
@@ -63,11 +63,11 @@ $e$.
 There is a natural chain of admissible starting values:
 
 ```math
-\mathbb N_{>0}
+\mathbb N_{\gt0}
 \subset
-\mathbb Q_{>0}
+\mathbb Q_{\gt0}
 \subset
-\left(\overline{\mathbb Q}\cap\mathbb R_{>0}\right)
+\left(\overline{\mathbb Q}\cap\mathbb R_{\gt0}\right)
 \subset
 \{\text{positive computable reals}\}.
 ```
@@ -80,8 +80,8 @@ statement.
 The statement
 
 ```math
-\exists m\in\mathbb N_{>0}:\qquad
-\limsup_{n\to\infty}\{me^n\}>0
+\exists m\in\mathbb N_{\gt0}:\qquad
+\limsup_{n\to\infty}\{me^n\}\gt0
 ```
 
 is equivalent to the case $x=1$. Indeed, if $\{e^n\}\to0$, then for every
@@ -98,22 +98,22 @@ Conversely, if $\{e^n\}\not\to0$, the witness $m=1$ works.
 Allowing
 
 ```math
-\exists x\in\mathbb Q_{>0}
+\exists x\in\mathbb Q_{\gt0}
 ```
 
 is formally weaker than fixing $x=1$, but the integer-scaling equivalence no
 longer applies. If $\{e^n\}\to0$, a denominator can still detect the eventual
 residue classes of the nearby integers. For example, $\{e^n/2\}$ need not tend
 to zero unless those integers are eventually even. We do not know whether the
-rational version is genuinely easier to prove. No rational witness was found
-in the literature check, while the algebraic formulation enlarges the
+rational version is genuinely easier to prove. The references cited here do
+not supply a rational witness, while the algebraic formulation enlarges the
 admissible arithmetic class further.
 
 ### Allowing computable reals makes the statement known
 
 Kulikova gave an effective construction of a starting value $x$ for which
 $\{x\beta^n\}$ is uniformly distributed modulo one for a specified
-noninteger base $\beta>1$. Since $e$ is computable, this supplies a computable
+noninteger base $\beta\gt1$. Since $e$ is computable, this supplies a computable
 $x$ such that $\{xe^n\}$ is uniformly distributed and therefore has every
 point of $[0,1]$ as a limit point.
 
