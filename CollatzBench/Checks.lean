@@ -1,5 +1,6 @@
 import CollatzBench.ABC
 import CollatzBench.Collatz
+import CollatzBench.CollatzLadder
 import CollatzBench.Mahler
 import CollatzBench.PrimeGaps
 
@@ -10,6 +11,13 @@ import CollatzBench.PrimeGaps
 
 #check (CollatzBench.Collatz.WeakestScaledRay : Prop)
 #check (CollatzBench.Collatz.ClassicalCollatz : Prop)
+#check (CollatzBench.Collatz.PureDivisionPolylogarithmicContraction : Prop)
+#check (CollatzBench.Collatz.PowerOrDensityContraction : Prop)
+#check (CollatzBench.Collatz.PeriodicityOrClassicalDensity : Prop)
+#check (CollatzBench.Collatz.ExactMaximumStoppingConstant : Prop)
+#check (CollatzBench.Collatz.UniversalOneExpanderPeriodicity : Prop)
+#check (CollatzBench.Collatz.UniversalOneExpanderPolynomialPreperiod : Prop)
+#check (CollatzBench.Collatz.UniversalOneExpanderLogarithmicPreperiod : Prop)
 
 #check (CollatzBench.Mahler.AlgebraicMultiplierEscape : Prop)
 #check (CollatzBench.Mahler.RationalBaseUniversalEscape : Prop)

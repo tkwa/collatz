@@ -1,4 +1,5 @@
 import CollatzBench.Collatz
+import CollatzBench.CollatzLadder
 import CollatzBench.ABC
 import CollatzBench.Mahler
 import CollatzBench.PrimeGaps
