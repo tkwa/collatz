@@ -21,7 +21,8 @@ fixed canonical $NP$-complete language.  Successive accepted weakenings were:
 3. move through subexponential, superpolynomial, polynomial, and superlinear
    rates;
 4. replace a fixed coefficient gain by some positive coefficient gain; and
-5. retain only $\limsup C_L(n)/n\gt3.1$.
+5. replace every fixed leading-order gain by the no-rate condition
+   $\limsup(C_L(n)-3.1n)=+\infty$.
 
 Each accepted move had at least a 20% subjective chance of removing a core
 difficulty.  Enlarging the witness class to $\Sigma_2^P$ fails because
@@ -29,10 +30,11 @@ Kannan's theorem already gives much stronger fixed-polynomial lower bounds
 there.  Shrinking the hard length set to finitely many lengths fails because
 finite truth tables can be hardcoded in a $P$ language.
 
-Loss-only and additive improvements were considered but rejected.  They are
-formally weaker, but currently receive under 20% probability of removing the
-leading-order general-circuit obstacle.  The unique moving Weakest document
-records that judgment.
+Loss-only, exact-line, and bounded-additive improvements were considered but
+rejected.  They are formally weaker, but receive under 20% probability of
+removing a core general-circuit obstacle.  The retained unbounded-additive
+candidate received a central 25% estimate in the eligible audit.  The unique
+moving Weakest document records that judgment.
 
 ## Strengthening path
 
@@ -76,7 +78,7 @@ chain keeps all positive witnesses in $NP$, uses i.o. bounds through score
 
 ## Calibration
 
-The final central effort estimates grow from $10^{2.55}$ expert-years for the
+The final central effort estimates grow from $10^{2.22}$ expert-years for the
 Weakest statement to $10^{5.55}$ at score `10`.  This is approximately
 geometric below the guide's common score-`10` anchor.  The ladder contains
 many more than two doublings of headroom.  Every reported integer skip
@@ -85,13 +87,16 @@ points, so these are design judgments rather than measured frequencies.
 
 ## Process accounting
 
-The bounded model/source audit in
+The preliminary bounded model/source audit in
 [`notes/frontier_model_and_quantifier_audit.md`](notes/frontier_model_and_quantifier_audit.md)
 spent approximately 9,000 tokens on the weakest side and 5,000 on the endpoint
-side.  Those figures do not satisfy the development guide's final frontier
-red-team gates.  A dedicated eligible frontier-model audit must honestly
-reach at least 100,000 weakest-side tokens and 50,000 endpoint-side tokens
-before this process can be called complete; its report will be linked here.
+side.  Those figures do not count toward the development guide's final
+frontier red-team gates.  The dedicated
+[eligible-model audit](notes/eligible_frontier_red_team.md) used 101,117
+instrumented tokens exclusively on the Weakest phase, from meter 86,555 to
+187,672, and selected the unbounded-additive replacement.  Its endpoint phase
+began at 187,672 and remains in progress; no endpoint completion is claimed
+here yet.
 
 ## Rendering verification
 

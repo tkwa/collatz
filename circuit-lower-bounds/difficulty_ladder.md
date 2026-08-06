@@ -10,7 +10,8 @@ of the characteristic function of $L$ on inputs of length $n$.
 | Score | Milestone |
 |---:|---|
 | **0** | **Current rigorous frontier.** One uniform family in $P$ has $B_2$ circuit size at least $3.1n-O(\mathrm{polylog}\,n)$ for all sufficiently large $n$. |
-| 0.3 | **[The Weakest unrestricted-circuit improvement](weakest_unrestricted_circuit_improvement.md).** Some $L\in NP$ satisfies $\limsup_{n\to\infty}C_L(n)/n\gt3.1$. |
+| 0.2 | **[The Weakest unrestricted-circuit improvement](weakest_unrestricted_circuit_improvement.md).** Some $L\in NP$ satisfies $\limsup_{n\to\infty}(C_L(n)-3.1n)=+\infty$. |
+| 0.6 | **Fixed leading-coefficient gain.** Some $L\in NP$ satisfies $\limsup_{n\to\infty}C_L(n)/n\gt3.1$. |
 | **1** | **Unbounded linear coefficient.** Some $L\in NP$ satisfies $\limsup_{n\to\infty}C_L(n)/n=\infty$. |
 | **2** | **Fixed polynomial gain, i.o.** For some $L\in NP$ and $\delta\gt0$, $C_L(n)\ge n^{1+\delta}$ for infinitely many $n$. |
 | **3** | **Quadratic lower bound, i.o.** Some $L\in NP$ satisfies $C_L(n)\ge n^2$ for infinitely many $n$. |
@@ -37,7 +38,8 @@ likely to be provable in ZFC or future widely accepted foundations.
 | Score | Expected $\log_{10}$ cumulative human-expert-years from the current frontier | $P(n\text{-skip})$ | Main skip mechanism |
 |---:|---:|---:|---|
 | 0 | -- | n/a | Current theorem; future effort starts here. |
-| 0.3 | 2.55 | -- | Leading-coefficient improvement on an unbounded length set. |
+| 0.2 | 2.22 | -- | Unbounded additive progress above the optimized `3.1` line, with no prescribed rate. |
+| 0.6 | 2.55 | -- | A fixed leading-coefficient improvement on an unbounded length set. |
 | 1 | 3.02 | 40% | A new method may yield a polynomial rather than merely unbounded linear gain. |
 | 2 | 3.39 | 40% | A polynomial lower-bound technique may not stop below exponent two. |
 | 3 | 3.70 | 45% | A proof at one polynomial exponent may separate $NP$ from all polynomial-size circuits. |

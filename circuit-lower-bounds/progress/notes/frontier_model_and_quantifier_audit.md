@@ -2,7 +2,9 @@
 
 Date: 2026-08-05.  This is a bounded source audit for the circuit-lower-bounds
 worktree.  It is not the guide-mandated final 100,000-token weakest-statement
-red-team or 50,000-token endpoint red-team.
+red-team or 50,000-token endpoint red-team.  The current conclusions and
+instrumented counts are in the later
+[`eligible_frontier_red_team.md`](eligible_frontier_red_team.md) audit.
 
 ## Exact score-0 model and theorem
 
@@ -85,24 +87,23 @@ of removing a core difficulty.  The affine-disperser method itself cannot
 have dimension one for $n\gt1$: nonconstancy on every two-point affine line
 would require a Boolean function to separate every pair of inputs.
 
-The weakest candidate from this audit that plausibly clears the guide's 20%
-core-difficulty test is:
+The later eligible audit found that the weakest candidate plausibly clearing
+the guide's 20% core-difficulty test is:
 
-> There exist a language $L\in NP$ and a constant $\epsilon\gt0$ such that
-> $C_{B_2}(L\cap\{0,1\}^n)\ge(3.1+\epsilon)n$ for infinitely many $n$.
+> There is a language $L\in NP$ such that
+> $\limsup_n(C_L(n)-3.1n)=+\infty$.
 
-Equivalently, $\limsup_n C_L(n)/n\gt3.1$.  Allowing an $NP$ witness rather than
-requiring the known $P$ affine-disperser family is a deliberate weakening and
-keeps the chain compatible with later $NP$ rungs.  If the folder insists on
-an all-sufficiently-large-length statement or a $P$ witness, that is a
-strictly stronger candidate and should not be labelled the weakest without a
-reason.  A final audit must still decide whether the even weaker additive
-variants have at least a 20% chance of removing a core obstacle.
+It asks for no rate of additive progress.  The eligible audit assigned a
+central 25% chance that it removes a core obstacle.  Fixed leading-coefficient
+gain is a stronger intermediate rung.  Allowing an $NP$ witness rather than
+requiring the known $P$ affine-disperser family is deliberate and keeps the
+chain compatible with later $NP$ rungs.
 
 The 2026 Carmosino--Dang--Jackman abstract and the Li--Yang abstract support
 the open-status frontier: gate elimination remains the primary/only known
 general-circuit method and $3.1n-o(n)$ is state of the art.  This bounded
-audit did not independently certify every additive variant as open.
+preliminary audit did not independently certify every additive variant as
+open; the eligible audit performed the subsequent hostile checks.
 
 ## A model-safe implication spine
 
@@ -110,20 +111,21 @@ Use one existential $NP$ witness throughout.  One possible logically valid
 spine, with all inequalities referring to minimal $B_2$ circuit size of the
 ordinary characteristic function on inputs of length $n$, is:
 
-1. $\exists L\in NP:\limsup C_L(n)/n\gt3.1$.
-2. $\exists L\in NP:\limsup C_L(n)/n=\infty$.
-3. $NP\not\subseteq P/poly$.
-4. $\exists L\in NP:C_L(n)\ge n^{\log\log n}$ for all sufficiently large
+1. $\exists L\in NP:\limsup(C_L(n)-3.1n)=+\infty$.
+2. $\exists L\in NP:\limsup C_L(n)/n\gt3.1$.
+3. $\exists L\in NP:\limsup C_L(n)/n=\infty$.
+4. $NP\not\subseteq P/poly$.
+5. $\exists L\in NP:C_L(n)\ge n^{\log\log n}$ for all sufficiently large
    $n$ (one possible explicit eventual-superpolynomial rung).
-5. $\exists L\in NP,\delta\gt0:C_L(n)\ge2^{n^\delta}$ for all sufficiently
+6. $\exists L\in NP,\delta\gt0:C_L(n)\ge2^{n^\delta}$ for all sufficiently
    large $n$.
-6. $\exists L\in NP,\epsilon\gt0:C_L(n)\ge2^{\epsilon n}$ for all sufficiently
+7. $\exists L\in NP,\epsilon\gt0:C_L(n)\ge2^{\epsilon n}$ for all sufficiently
    large $n$.
 
-Each higher-numbered statement implies the previous one.  Rung 3 means that
+Each higher-numbered statement implies the previous one.  Rung 4 means that
 some fixed $L\in NP$ is outside every $SIZE(n^k)$.  In minimal-size notation
 this yields arbitrarily large polynomial exponents on infinitely many
-lengths and hence rung 2.  It does **not** yield an eventual
+lengths and hence rung 3.  It does **not** yield an eventual
 $n^{\omega(1)}$ bound.  Thus the draft row “requires $\omega(n)$” is
 ambiguous and, under the usual eventual interpretation, does not follow from
 $NP\not\subseteq P/poly$.
@@ -143,7 +145,7 @@ Also:
 ## Endpoint red-team
 
 The strongest endpoint this bounded audit would retain provisionally is rung
-6: **some $NP$ language has eventual $2^{\Omega(n)}$ circuit complexity**.
+7: **some $NP$ language has eventual $2^{\Omega(n)}$ circuit complexity**.
 It has huge headroom and implies every lower row.  It should be starred or
 left unscored until the full endpoint audit assigns at least 80% probability
 of ZFC-provability.  It is much stronger than $NP\not\subseteq P/poly$ and

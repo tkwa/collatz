@@ -32,17 +32,18 @@ with Xin Li's polynomial-time affine extractor at polylogarithmic dimension
 gives one uniform $P$ family with a $3.1n-O(\mathrm{polylog}\,n)$ lower
 bound for all sufficiently large $n$.
 
-The first open rung deliberately permits an $NP$ witness and asks only for a
-leading-coefficient improvement on infinitely many lengths.  This keeps the
-later chain in one witness class.  Additive and lower-order sharpenings were
-considered and rejected as the benchmark's moving Weakest statement because
-they probably do not remove the core leading-order barrier with the required
-20% probability.
+The first open rung deliberately permits an $NP$ witness and asks only that
+$C_L(n)-3.1n$ be unbounded above, with no prescribed rate.  This keeps the
+later chain in one witness class while remaining robust under bounded changes
+to the gate-count convention.  Bounded additive and loss-only sharpenings
+were rejected as the benchmark's moving Weakest statement because they are
+too exposed to exact bookkeeping and rounding to pass the guide's 20% rule.
 
 ## How the ladder grows
 
-The lower rows first increase the best coefficient, then leave every linear
-bound, reach a fixed polynomial gain, and arrive at
+The lower rows first make unbounded additive progress, increase the best
+coefficient, then leave every linear bound, reach a fixed polynomial gain,
+and arrive at
 $NP\nsubseteq P/poly$.  The upper rows impose explicit eventual growth rates
 on one $NP$ language.  These are stronger than noncontainment in $P/poly$:
 the latter guarantees large circuits on infinitely many lengths for every

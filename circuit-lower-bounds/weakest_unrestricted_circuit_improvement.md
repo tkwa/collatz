@@ -2,19 +2,20 @@
 
 ## Statement
 
-There are a language $L\in NP$ and a constant $\varepsilon\gt0$ such that
+There is a language $L\in NP$ such that
 
 ```math
-C_L(n)\ge(3.1+\varepsilon)n
+\limsup_{n\to\infty}\bigl(C_L(n)-3.1n\bigr)=+\infty.
 ```
 
-for infinitely many $n$.  Equivalently,
-$\limsup_{n\to\infty}C_L(n)/n\gt3.1$.
+Equivalently, for every real $A$ there are arbitrarily large $n$ for which
+$C_L(n)\ge3.1n+A$.  No growth rate for the additive gain is prescribed.
 
 Here $C_L(n)$ is minimum size in the complete binary basis $B_2$, with the
-model fixed in the [folder README](README.md).  The language, $\varepsilon$,
-and infinite set of lengths are all existential.  No constructibility of the
-hard lengths is required.
+model fixed in the [folder README](README.md).  One fixed language must work
+on an unbounded sequence of lengths.  No efficient constructibility or
+density condition on those hard lengths is required; ordinary computability
+of the set is automatic from the fixed decidable language.
 
 ## Weakening record
 
@@ -22,15 +23,17 @@ This is the folder's single moving **Weakest** conjecture.  The weakening
 process started from exponential circuit complexity for a fixed $NP$-complete
 language, then relaxed the language to an existential $NP$ witness, the
 length quantifier to infinitely often, and the growth rate down through
-superpolynomial and superlinear bounds to a leading-coefficient gain.
+superpolynomial, superlinear, leading-coefficient, and finally no-rate
+unbounded-additive gains.
 
 Three formally weaker directions were rejected:
 
 - Improving only the $O(\mathrm{polylog}\,n)$ score-`0` loss may improve
   affine-source construction rather than unrestricted-circuit analysis.
-- A $3.1n+O(1)$ or $3.1n+h(n)$ additive gain leaves the leading-order barrier
-  intact.  The audit assigns under 20% probability that such a result removes
-  a core obstacle.
+- Merely crossing $3.1n$ infinitely often, or obtaining only a bounded
+  additive gain, is sensitive to rounding and bounded gate-count conventions.
+  The audit assigns these variants under 20% probability of removing a core
+  obstacle.
 - Allowing arbitrary, nonuniform truth tables makes large lower bounds a
   counting theorem.  Requiring one $NP$ language retains uniform explicitness.
 
@@ -41,6 +44,9 @@ polynomial-time language.
 ## Status
 
 **Open as of August 2026.**  The cited 2026 frontier account still identifies
-$3.1n-o(n)$ as the best explicit-function lower bound and says that even a
-superlinear lower bound for a function in $P$, or in $NP$, is unknown.  The
-minimality judgment is subjective; it is not a literature theorem.
+$3.1n-o(n)$ as the best explicit-function lower bound.  The exact known
+inequality is $3.1n-26.1d-25.6$.  Its additive term is always negative, so
+replacing only the affine disperser inside that unchanged inequality cannot
+supply an unbounded positive gain.  The eligible red-team assigns a
+**[subjective]** 25% chance that the statement removes a core obstacle.  Its
+minimality is not a literature theorem.

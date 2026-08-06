@@ -76,17 +76,21 @@ Every item below is **[implication]**.  Existential witnesses may differ from
 row to row: if a higher statement supplies one suitable $NP$ language, that
 same language witnesses the lower growth statement.
 
-1. If $\limsup C_L(n)/n=\infty$, then that limsup is greater than `3.1`.
-2. If $C_L(n)\ge n^{1+\delta}$ infinitely often for fixed $\delta\gt0$,
+1. If $\limsup C_L(n)/n\gt3.1$, then some fixed $\varepsilon\gt0$
+   satisfies $C_L(n)\ge(3.1+\varepsilon)n$ infinitely often.  Hence
+   $C_L(n)-3.1n\ge\varepsilon n$ on an unbounded set and its limsup is
+   positive infinity.
+2. If $\limsup C_L(n)/n=\infty$, then that limsup is greater than `3.1`.
+3. If $C_L(n)\ge n^{1+\delta}$ infinitely often for fixed $\delta\gt0$,
    then $C_L(n)/n\ge n^\delta$ on those lengths, so its limsup is infinite.
-3. An i.o. quadratic lower bound is score `2` with $\delta=1$.
-4. $NP\nsubseteq P/poly$ means that some fixed $L\in NP$ is outside every
+4. An i.o. quadratic lower bound is score `2` with $\delta=1$.
+5. $NP\nsubseteq P/poly$ means that some fixed $L\in NP$ is outside every
    $SIZE(n^k)$.  In particular, $C_L(n)\gt n^2$ for infinitely many $n$;
    otherwise an eventual $n^2$ upper bound, enlarged for finitely many small
    lengths, would put $L$ in $P/poly$.
-5. An eventual $n^{\log\log n}$ lower bound exceeds $n^k$ eventually for
+6. An eventual $n^{\log\log n}$ lower bound exceeds $n^k$ eventually for
    every fixed $k$, so its witness is outside $P/poly$.
-6. Each later displayed rate eventually dominates its predecessor:
+7. Each later displayed rate eventually dominates its predecessor:
 
 ```math
 n^{\log\log n}
@@ -151,27 +155,48 @@ calling the result open.
 The final candidate is
 
 ```math
-\exists L\in NP:\quad \limsup_{n\to\infty}\frac{C_L(n)}n\gt3.1.
+\exists L\in NP:\quad
+\limsup_{n\to\infty}\bigl(C_L(n)-3.1n\bigr)=+\infty.
 ```
 
-It is weaker than requiring a $P$ witness, a fixed named $NP$-complete
-language, an eventual coefficient gain, or a fixed gain such as `3.2`.  It is
-not supplied by counting: a different hard truth table at every length does
-not define one uniform $NP$ language.
+It asks for one fixed language and no rate for the additive gain.  It is
+weaker than requiring a $P$ witness, a fixed named $NP$-complete language, an
+eventual gain, or any fixed leading-coefficient improvement.  It is not
+supplied by counting: a different hard truth table or polynomial-size
+description at every length does not define one uniform $NP$ language.
 
 Hostile checks considered direct-sum composition, padding, finite hardcoding,
-complementation, promise problems, multiple outputs, restricted bases, and
-nonuniform truth-table selection.  None yields the statement in the fixed
-model.  In particular, no unrestricted-circuit direct-sum theorem lets one
-amplify the known `3.1` coefficient by combining independent affine
-dispersers.
+complementation, promise problems, multiple outputs, restricted bases,
+refuter formulations, and nonuniform slice selection.  None yields the
+statement in the fixed model.  In particular, no unrestricted-circuit
+direct-sum theorem lets one turn finite hard functions or independent affine
+dispersers into an unbounded additive gain.
 
-Pure loss improvements such as replacing $O(\log^C n)$ by a smaller term,
-or additive statements such as $3.1n+1$ infinitely often, are formally
-weaker.  **[subjective]** They were rejected under the development guide's
-replacement rule: each has under 20% probability of removing a core
-leading-order unrestricted-circuit difficulty.  They could instead improve
-the affine-source construction or close finite-size bookkeeping cases.
+Pure loss improvements, exact-line crossings, and bounded additive gains are
+formally weaker.  **[subjective]** They were rejected under the development
+guide's replacement rule: each has under 20% probability of removing a core
+unrestricted-circuit
+difficulty and is unusually sensitive to rounding or bounded changes in
+gate-count convention.  The retained no-rate unbounded gain is
+convention-robust and received a central 25% estimate, with a 20--35%
+plausible range.  This minimality judgment is not a theorem.
+
+Changing the $NP$ language after the requested length makes the problem a
+finite-hardcoding theorem.  Allowing $P/poly$, $NP/poly$, or polynomially
+described slices also makes a linear lower bound follow by counting.  By
+contrast, constant-size advice adds nothing to the infinitely-often existential
+claim: one advice value recurs infinitely often and can be frozen into the
+machine.  An existential $coNP$ witness is equivalent here because the output
+gate can be complemented without changing size.  Enlarging the class to
+$\Sigma_2^P$ crosses into Kannan's proved fixed-polynomial lower bounds.
+
+The known finite inequality does not supply the new statement: its correction
+$-26.1d-25.6$ is negative for every admissible $d$.  Thus replacing only the
+affine disperser inside that unchanged inequality cannot produce an
+unbounded positive additive gain.  The full eligible audit, including the
+quantifier, direct-sum, advice,
+encoding, basis, output, and refuter attacks, is recorded in the
+[progress note](progress/notes/eligible_frontier_red_team.md).
 
 ## Strongest-statement audit
 
@@ -238,9 +263,9 @@ Size of the Hardest Functions,”
 
 For scores `2` and above, switching between fixed finite complete fan-in-two
 bases changes size by at most a constant factor and preserves the displayed
-growth regime.  It does not preserve the score-`0` or Weakest coefficient.
-That is why the whole primary ladder remains in $B_2$ even when upper rows are
-qualitatively basis-robust.
+growth regime.  It does not preserve the score-`0` coefficient or the `3.1`
+baseline in either low positive contour.  That is why the whole primary
+ladder remains in $B_2$ even when upper rows are qualitatively basis-robust.
 
 ## Calibration status
 
