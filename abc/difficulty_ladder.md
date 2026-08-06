@@ -95,21 +95,21 @@ skip probabilities are subjective to at least `15` percentage points.  In the
 last column, the entry on integer row $n$ is the probability of skipping from
 $n$ to $n+1$; `n/a` marks a terminal integer contour.
 
-| Score | Expected $\log_{10}$ future expert-years | $P(n\text{-skip})$ |
-|---:|---:|---:|
-| 0 | -- | -- |
-| 0.3 | 2.62 | -- |
-| 1 | 3.18 | 30% |
-| 2 | 3.52 | 35% |
-| 2.5 | 3.75 | -- |
-| 3 | 3.93 | 35% |
-| 4 | 4.08 | 25% |
-| 5 | 4.41 | 20% |
-| 6 | 4.70 | 40% |
-| 7 | 4.83 | 35% |
-| 8 | 4.96 | 35% |
-| 9 | 5.22 | 30% |
-| 10 | 5.47 | n/a |
+| Score | Expected $\log_{10}$ future expert-years | $P(n\text{-skip})$ | Main skip mechanism |
+|---:|---:|---:|---|
+| 0 | -- | -- | -- |
+| 0.3 | 2.62 | -- | -- |
+| 1 | 3.18 | 30% | A new height estimate may enter the polylogarithmic regime directly. |
+| 2 | 3.52 | 35% | Breaking the exponential loss may yield a quadratic bound rather than stop at an arbitrary exponent. |
+| 2.5 | 3.75 | -- | -- |
+| 3 | 3.93 | 35% | A near-linear method may not stop at exponent two before proving abc. |
+| 4 | 4.08 | 25% | A geometric proof of abc may extend to rational points on surfaces. |
+| 5 | 4.41 | 20% | A Vojta framework may increase dimension or point degree in the same proof. |
+| 6 | 4.70 | 40% | One framework may pass several finite dimension or degree cutoffs at once. |
+| 7 | 4.83 | 35% | A uniform argument may remove the finite cutoff on one lattice axis. |
+| 8 | 4.96 | 35% | Uniformity in dimension or degree may arrive in a package. |
+| 9 | 5.22 | 30% | The last bounded dimension or degree restriction may not be load-bearing. |
+| 10 | 5.47 | n/a | The ladder has no score-`11` contour. |
 
 These are elicited estimates rather than values inferred from the assigned
 scores.  The relatively close central estimates from scores `6` through `8`
