@@ -22,9 +22,8 @@ distinguish those cases.
   powers.  A calibrated ladder for this folder has not yet been developed.
 - [`abc/`](abc/) tracks the size of a coprime triple against its radical, from
   the current best unconditional exponent up to the general Vojta conjecture.
-  Its headline conjecture sits below the endpoint of its ladder, so its scores
-  are not directly comparable with twin-prime scores without a stated
-  conversion.
+  Its headline conjecture sits below the endpoint of its ladder; both use the
+  same repository-wide score calibration as the other folders.
 
 Cross-problem design questions are developed in [`theory/`](theory/).  The
 [historical ladder backtest](theory/historical_ladder_backtest.md) compares
@@ -39,30 +38,71 @@ natural statement is shown to remain nontrivial.
 
 ## What a benchmark state records
 
-The natural mathematical state may be multidimensional, but the displayed
-score should be one-dimensional.  Incomparable proof routes can be combined
-in a logical disjunction when doing so materially improves path tracking.
-Known implications are applied automatically, without double-counting a
-theorem and its routine corollaries.
+The underlying implication lattice may be multidimensional.  Preserve enough
+structure to distinguish the main proof routes, then select natural lattice
+points for the displayed scalar rungs.  When no single chain tracks the
+important routes smoothly, a rung may join statements with logical
+disjunction.
+
+Other developments may be scientifically important without establishing a
+displayed rung.  Record them as route evidence rather than assigning
+speculative fractional credit.  Apply known implications automatically so a
+theorem and its routine corollary are not counted twice.
 
 ## Difficulty scores
 
-Score `0` is the current rigorous state, and the first positive score must be
-an open problem.  Scores are chosen so the expected logarithm of
-human-expert-years rises as smoothly as the mathematics permits.  Each rung
-reports that estimate explicitly; a one-point interval is not assumed to have
-the same exchange rate in every folder unless the annotations support it.
+Scores use one repository-wide difficulty calibration; they are not reset so
+that each folder's headline conjecture has the same endpoint.  Score `0` is the
+current rigorous frontier in a folder, and its first positive rung must be
+open.  The cross-problem anchors are:
 
-One theorem may jump several contours.  At integer $n$, the ladder therefore
-also estimates the probability of an $n$-skip: reaching $n+1$ with less than
-`1.1` times the human-equivalent effort needed to reach $n$.  A skip
-probability above `50%` is a warning to merge, reorder, or replace rungs.
+- score `5` represents, very roughly, two to four doublings of cumulative
+  human-equivalent effort in the relevant area beyond its 2026 frontier;
+- score `10` is roughly the median difficulty of the three individual
+  problems BB(6), Schanuel's conjecture, and the general Vojta conjecture; and
+- score `20` is roughly the difficulty of BB(7).
 
-The score measures theorem reach and smooth trackable progress, not the
-probability of a solution by a date.  A headline conjecture may occur below
-the endpoint when stronger natural statements provide useful headroom.  In
-the prime-pattern ladder, twin primes is score `6` and Bateman--Horn is score
-`8`; scores `9` and `10` remain available for harder cross-task anchors.
+For the score-`5` anchor, declare the relevant area before selecting its
+rungs.  Let $D_A$ be its 2026 stock of work already directed at the benchmark,
+let $G_A$ be broader but credibly relevant work within that area, and set
+
+```math
+B_A=D_A+0.5G_A.
+```
+
+This does not count all effort in mathematics.  Let $F_A(s)$ be future effort
+strategically directed at first reaching score $s$.  The cumulative clock is
+
+```math
+C_A(s)=B_A+F_A(s).
+```
+
+A central estimate at score `5` should have $C_A(5)/B_A$ between `4` and `16`.
+Declaring the area first prevents moving its boundary merely to preserve a
+favored rung.
+
+Numerical scores are contours through a multidimensional theorem state, not a
+claim that proofs must traverse a linear list of lemmas.  One theorem may jump
+several contours.  Milestones should be chosen or replaced to make expected
+log effort increase smoothly.  Prefer lattice points that preserve several
+natural implication paths.  A rung may be a disjunction of independently
+ordered statements only when that makes progress significantly smoother.
+
+Measure future effort from the July 2026 baseline.  For integer $n\ge1$, an
+$n$-skip occurs when $F_A(n+1)\lt1.1F_A(n)$.  The `0`-to-`1` audit instead asks
+whether the first post-baseline theorem that reaches score `1` overshoots the
+first positive rung; the ratio rule would be undefined at $F_A(0)=0$.
+If any estimated integer-skip probability exceeds `50%`, replace or reorder
+the relevant rungs.  If no arrangement brings the maximum below `50%`, use
+fewer integer levels rather than inventing cosmetic milestones.
+
+## Headline targets and stronger rungs
+
+A folder's headline target sits wherever these common anchors place it.  A
+folder may continue to stronger statements without changing scales.  A
+separate target-specific progress diagnostic is permissible, but it must be
+labeled separately and must not be presented as the repository difficulty
+score.
 
 ## Evaluation rules
 

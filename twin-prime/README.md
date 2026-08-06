@@ -38,3 +38,6 @@ different routes.  This is the only aggregation rule.
 
 All effort numbers are explicitly subjective.  Mathematical implications and
 literature status are audited separately from those judgments.
+
+On the repository-wide scale, twin primes is score `5` and Bateman--Horn is
+score `9`; neither value is normalized to this folder's endpoints.

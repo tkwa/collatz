@@ -1,6 +1,6 @@
 # Effectivity, Analogues, and Adjudication
 
-This note holds the second coordinate of the
+This note holds the orthogonal effectivity coordinate of the
 [abc ladder](difficulty_ladder.md), the reasons its geometric analogues are
 weak evidence about its arithmetic rungs, and the rule for deciding when a
 rung has been cleared.
@@ -24,9 +24,9 @@ radical-power regime.
 
 This is the trade to watch. Baker's method is effective and weak; subspace and
 Faltings-type methods are ineffective and, on adjacent problems, strong. A
-route that reaches score `4.0` will most likely arrive at $E_0$, and the
-transition from `5.0` to `6.0` is then a separate research problem rather than
-a strengthening of the same argument. **[subjective]**
+route that reaches the polynomial or abc rungs may arrive at $E_0$. Making
+the same bound effective is then a separate research problem, not a rung that
+general Vojta automatically supplies. **[subjective]**
 
 ## The analogues, and why they are weak evidence
 
@@ -52,13 +52,13 @@ tractability; nothing in the proved analogues suggests a route across.
 A system that produces further results of this shape, including new
 applications of the subspace theorem to integral points on surfaces in the
 Corvaja--Zannier, Levin, and Autissier style, is doing recombination inside an
-existing paradigm. That is worth scoring, and the ladder scores it near `0`
-to `0.8`. It should not be read as partial progress toward score `2.0`.
+existing paradigm. That may be worth recording near the baseline, but it does
+not by itself establish a positive scalar rung.
 **[subjective]**
 
 ## Route allocation
 
-A **[subjective]** prior over how score `2.0` or above is first reached, if it
+A **[subjective]** prior over how score `2` or above is first reached, if it
 is reached by human research:
 
 | Route | Weight |
@@ -89,7 +89,7 @@ For a continuously scored benchmark, a rung whose status depends on an
 unresolved community dispute is unusable. The rule adopted here is therefore
 independent of the dispute:
 
-> A rung at score `2.0` or above is cleared when the statement has a
+> A rung at score `2` or above is cleared when the statement has a
 > machine-checkable formal proof, in Lean or an equivalent system, that
 > typechecks against a statement of the rung agreed in advance.
 
@@ -105,5 +105,5 @@ This has three properties worth stating.
    scored differently from one that can, and the gap between those two events
    is itself a measurement worth recording.
 
-Rungs below `2.0` are quantitative bounds and may be adjudicated by ordinary
+Rungs below `2` are quantitative bounds and may be adjudicated by ordinary
 refereeing, since no comparable dispute risk attaches to them.
