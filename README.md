@@ -74,8 +74,9 @@ to first reach score $s$.  Folder tables report the central elicitation
 
 The current frontier has $E_A(0)=0$, so its logarithm is undefined.  This
 future-effort clock is not a historical work stock, replacement cost, or count
-of all effort in mathematics.  Its uncertainty is a distribution, even when a
-table gives one central logarithm.
+of all effort in mathematics.  The elicitation is a joint epistemic
+distribution over the expected-effort function $E_A$; a table reports one
+central logarithm from that distribution.
 
 Numerical scores are contours through a multidimensional theorem state, not a
 claim that proofs must traverse a linear list of lemmas.  One theorem may jump
@@ -92,6 +93,9 @@ reported skip probability is
 ```math
 \Pr\bigl(E_A(n+1)\lt1.1E_A(n)\bigr).
 ```
+
+This probability is over uncertainty in the elicited expected efforts, not
+randomness remaining after two expectations have been fixed.
 
 The first open rung is audited separately because $E_A(0)=0$; a terminal
 integer has no next-contour skip probability.
