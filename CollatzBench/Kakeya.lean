@@ -140,26 +140,31 @@ def carrier {n : ℕ} (formula : SemialgebraicFormula n) : Set (Point n) :=
 
 end SemialgebraicFormula
 
-/-- The polynomial Wolff incidence axiom with explicit semialgebraic tests. -/
+/-- A tube family indexed by its thickness scale. -/
+abbrev TubeFamilies (n : ℕ) := ℝ → Finset (Tube n)
+
+/-- The polynomial Wolff incidence axiom with explicit semialgebraic tests and
+a constant uniform in the scale, density, and test set. -/
 def SatisfiesPolynomialWolffAxioms {n : ℕ}
-    (δ : ℝ) (family : Finset (Tube n)) : Prop :=
+    (families : TubeFamilies n) : Prop :=
   ∀ E : ℕ, ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧
-    ∀ density : ℝ, 0 < density → density ≤ 1 →
-      ∀ formula : SemialgebraicFormula n, formula.complexity ≤ E →
-        ((family.filter fun T =>
-          density * volumeReal (T.carrier δ) ≤
-            volumeReal (T.carrier δ ∩ formula.carrier)).card : ℝ) ≤
-          C * Real.rpow δ (-ε) * volumeReal formula.carrier *
-            Real.rpow δ (1 - n) * Real.rpow density (-n : ℝ)
+    ∀ δ : ℝ, 0 < δ → δ ≤ 1 →
+      ∀ density : ℝ, δ ≤ density → density ≤ 1 →
+        ∀ formula : SemialgebraicFormula n, formula.complexity ≤ E →
+          (((families δ).filter fun T =>
+            density * volumeReal (T.carrier δ) ≤
+              volumeReal (T.carrier δ ∩ formula.carrier)).card : ℝ) ≤
+            C * Real.rpow δ (-ε) * volumeReal formula.carrier *
+              Real.rpow δ (1 - n) * Real.rpow density (-n : ℝ)
 
 /-- The endpoint maximal estimate for every polynomial-Wolff tube family. -/
 def PolynomialWolffMaximalAt (n : ℕ) : Prop :=
-  ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧
-    ∀ δ : ℝ, 0 < δ → δ ≤ 1 →
-      ∀ family : Finset (Tube n), SatisfiesPolynomialWolffAxioms δ family →
-        eLpNorm (multiplicity δ family)
-            (ENNReal.ofReal (n / (n - 1 : ℝ))) volume ≤
-          ENNReal.ofReal (C * Real.rpow δ (-ε))
+  ∀ families : TubeFamilies n, SatisfiesPolynomialWolffAxioms families →
+    ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧
+      ∀ δ : ℝ, 0 < δ → δ ≤ 1 →
+        eLpNorm (multiplicity δ (families δ))
+              (ENNReal.ofReal (n / (n - 1 : ℝ))) volume ≤
+            ENNReal.ofReal (C * Real.rpow δ (-ε))
 
 /-- Score `9`: the polynomial-Wolff endpoint in every finite dimension. -/
 def AllDimensionalPolynomialWolffMaximal : Prop :=
