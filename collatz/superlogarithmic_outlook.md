@@ -10,19 +10,23 @@ every fixed starting value $n$,
 D_K(n)=\omega(\log K).
 ```
 
-Here $D_K(n)$ is the number of division-branch steps among the first $K$
-iterates.  This is an existential statement about the choice of map, followed
-by a universal statement about all of its ordinary nonnegative-integer
-orbits.  The target is not tied to any particular diagnostic map or candidate
-family.
+Here $D_K(n)$ is the number of contracting-branch steps among the first $K$
+iterates.  In a pure-division witness, including the shortcut Collatz map,
+these are exactly the division-branch steps.  This is an existential statement
+about the choice of map, followed by a universal statement about all of its
+ordinary nonnegative-integer orbits.  The target is not restricted to the
+pure-division subfamily.
 
 It does not assess the repository's moving
 [Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md), which
-requires the same asymptotic only along one existentially chosen coprime power
-ray.  The [impressiveness ladder](collatz_ladder.md) places the all-start and
-sparse-ray targets separately.  The probability and proof-difficulty
-judgments below should not be transferred to the latter without a separate
-recalibration.
+requires the same asymptotic only along one existentially chosen exact scaled
+ray whose base is multiplicatively independent of the map base.  The
+[impressiveness ladder](collatz_ladder.md) places that sparse-ray statement at
+score `0.2` and a stronger pure-division polylogarithmic statement at score
+`1`.  The all-start superlogarithmic target here is a descriptive lattice
+point between them by implication, not a separate scalar rung.  The probability
+and proof-difficulty judgments below should not be transferred to either
+displayed rung without a separate recalibration.
 
 ## Classical Collatz and the target
 
@@ -32,8 +36,8 @@ Let
 - $S$ be the existential superlogarithmic statement above.
 
 The shortcut Collatz map is admissible.  If $C$ is true, every positive orbit
-of that map eventually enters $1\leftrightarrow2$, where division steps have
-density $1/2$.  It follows rigorously that
+of that map eventually enters $1\leftrightarrow2$, where its contracting,
+pure-division branch has density $1/2$.  It follows rigorously that
 
 ```math
 C\Longrightarrow S,
@@ -151,11 +155,11 @@ Thus $\neg S$ is not the generic way for $\neg C$ to occur.  It requires a
 much more extreme symbolic failure and requires that failure to survive the
 freedom to design a different map.
 
-There is also positive heuristic evidence from the admissible families.  In
-the ceiling-division family, expansion has probability about $1/B$ under a
-uniform-residue model and division has probability about $(B-1)/B$; increasing
-$B$ makes the typical logarithmic drift strongly negative.  The proved lower
-bound has an
+There is also positive heuristic evidence from the pure-division subfamily,
+which is a sufficient source of witnesses for $S$.  In the ceiling-division
+family, expansion has probability about $1/B$ under a uniform-residue model
+and division has probability about $(B-1)/B$; increasing $B$ makes the typical
+logarithmic drift strongly negative.  The proved lower bound has an
 [arbitrarily large coefficient](progress/research_state.md#proved-logarithmic-lower-bound)
 of $\log K$ as the map varies.  Neither observation proves the fixed-map
 asymptotic statement, but both make a universal no-go theorem for all maps
@@ -164,6 +168,9 @@ less likely than a proof obstruction for the candidates studied so far.
 ## What the repository's obstructions do and do not show
 
 Each obstruction should be classified by the kind of evidence it supplies.
+Most of the repository's detailed obstructions concern the pure-division
+route to the broader contracting-branch target, rather than exhausting every
+admissible contracting map.
 
 ### Mostly evidence about proof difficulty
 
@@ -196,9 +203,9 @@ overstate the truth-level evidence supplied by the finite-prefix obstruction.
 - Ordinary integer itineraries are not known to obey the random-residue model,
   and bad symbolic sequences can be topologically abundant even when they
   have probability zero under a Bernoulli measure.
-- No expanding admissible map is currently proved to satisfy even the weaker
-  universal positive-density claim.  Rational-base stopping problems already
-  remain open at qualitative levels.
+- No expanding map in the studied pure-division families is currently proved
+  to satisfy even the universal positive-division-density claim.  Rational-base
+  stopping problems already remain open at qualitative levels.
 
 These facts justify a nonzero falsity probability and prevent treating the
 choice among maps as a collection of independent random trials.  They still
@@ -339,10 +346,11 @@ credit to the ingredient that seems most likely to do the decisive work.
 
 Evidence that would materially increase $\Pr(\neg S)$ includes:
 
-- a theorem forcing a sparse-division ordinary orbit for every admissible map;
+- a theorem forcing a sparse contracting-branch count on some ordinary orbit
+  of every admissible map;
 - an explicit general mechanism turning topologically bad $B$-adic
   itineraries into ordinary nonnegative starting integers; or
-- a sparse-division counterexample for several arithmetically distinct,
+- sparse-contraction counterexamples for several arithmetically distinct,
   strongly negative-drift maps.
 
 Merely finding a divergent Collatz orbit would increase $\Pr(\neg C)$ much

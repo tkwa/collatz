@@ -84,10 +84,11 @@ requires positive multipliers and nonnegative offsets.  Its maps preserve
 $\mathbb N_0$, so that formulation is a special case of the present one.
 Consequently, the nonnegative all-start conjecture implies this conjecture.
 
-Requiring the same conclusion only for every sufficiently large power along
-one existentially chosen ray whose base is coprime to $B$ gives the
-[Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md), which is
-implied by the present all-start statement.
+Requiring the same conclusion only on every sufficiently large member of one
+existentially chosen exact scaled ray $d u^k$, where $u$ is multiplicatively
+independent of $B$, gives the
+[Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md).  The
+present all-start statement implies it.
 
 The converse is not known.  Integer offsets may let an orbit cross zero, and
 negative multipliers may reverse its direction.  These extra freedoms could

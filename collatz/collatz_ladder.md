@@ -1,43 +1,35 @@
 # An Impressiveness Ladder for Collatz-like Conjectures
 
-This note gives a subjective scale for progress on the orbit problems in this
-folder.  The ordering is primarily by mathematical reach.  The numerical
-spacing is cross-checked against two different considerations: expected
-logarithmic human-equivalent effort and the risk that a decisive lemma proves
-several adjacent milestones at essentially the same time.  Those are three
-different judgments, not claims that a difficult proof automatically proves
-an impressive theorem.
+This note selects a scalar implication chain from a two-axis lattice of orbit
+problems.  One axis allows a favorable residue-affine map and strengthens its
+orbit conclusion; the other fixes the shortcut Collatz map and strengthens
+its conclusion.  Two disjunctive rungs join those routes where a single chain
+would otherwise ignore substantial progress on one axis.
 
 The scale runs from the current rigorous frontier through sparse- and
 all-start contraction statements, classical Collatz, progressively sharper
 uniform stopping-time bounds, and a cumulative restricted one-expander
-endpoint.  The estimates are subjective and are not literature consensus.
+endpoint.  Scores use the
+[repository-wide calibration](../README.md#difficulty-scores); the estimates
+are subjective and are not literature consensus.
 
-Throughout, `K` is the number of iterates and `D_K(n)` counts the relevant
-contracting-branch steps among the first `K` iterates of the starting value
-`n`.  In the pure-division family used by the Positive Division-Density
-Conjecture and the drift calculations below, these are precisely the
-division-branch steps.
-
-For the shortcut Collatz map, write $D_K^{\rm Col}(n)$ for the number of even
-inputs among the first $K$ iterates of $n$.
+Throughout, `K` is the number of iterates.  For a residue-affine map,
+$D_K(n)$ counts the designated contracting or pure-division steps among the
+first $K$ iterates of $n$.  For the shortcut Collatz map, write
+$D_K^{\rm Col}(n)$ for the number of even inputs among its first $K$ iterates.
 
 ## The primary scale
 
 | Score | Milestone |
 |---:|---|
-| **0** | **Current rigorous frontier.**  For a useful fixed map, every orbit satisfies `D_K(n) = Omega_n(log K)`.  The logarithmic constant can be made arbitrarily large only by changing maps; this does not give a superlogarithmic bound for one fixed map. |
-| **0.2** | **[The Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md).**  Some signed unit map and some $u$ coprime to the map base satisfy $D_K(u^k)=\omega(\log K)$ for every sufficiently large fixed exponent $k$. |
-| **0.4** | **[All-Start Signed Superlogarithmic Contraction](signed_superlogarithmic_contraction.md).**  Some signed unit map satisfies $D_K(n)=\omega(\log K)$ for every $n\in\mathbb N_0$. |
-| **0.6** | **[All-Start Nonnegative Superlogarithmic Contraction](nonnegative_superlogarithmic_contraction.md).**  The preceding conclusion has a witness with positive multipliers and nonnegative offsets. |
-| **0.8** | **Pure-division superlogarithmic contraction.**  The all-start conclusion has a witness whose contracting branches are pure division. |
-| **1.0** | **Pure-division polylogarithmic contraction.**  Such a map has $D_K(n)\ge(\log K)^{1+\delta}$ eventually for every start, for some fixed $\delta\gt0$. |
-| **1.3** | **Pure-division power contraction.**  Such a map has $D_K(n)\ge K^\delta$ eventually for every start, for some fixed $\delta\gt0$. |
-| **1.6** | **[Positive Division-Density Conjecture](positive_division_density.md).**  Some pure-division map has $\liminf_{K\to\infty}D_K(n)/K\gt0$ for every start. |
-| **2.0** | **Classical positive division density.**  Every positive shortcut-Collatz orbit has positive lower even-step density. |
+| **0** | **Current rigorous frontier.**  For an explicit useful fixed map, every orbit satisfies $D_K(n)=\Omega_n(\log K)$.  The logarithmic coefficient can be made arbitrarily large only by changing maps, which does not give a superlogarithmic bound for one fixed map. |
+| **0.2** | **[The Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md).**  Some signed unit map and some exact scaled ray $d u^k$, with $u$ multiplicatively independent of the map base, satisfy $D_K(d u^k)=\omega(\log K)$ for every sufficiently large fixed exponent $k$. |
+| **1.0** | **[Pure-Division Polylogarithmic Contraction](pure_division_polylogarithmic_contraction.md).**  Some nonnegative pure-division map and one fixed $\delta\gt0$ satisfy $D_K(n)\ge(\log K)^{1+\delta}$ eventually for every nonnegative start. |
+| **1.6** | **[Power-or-Density Contraction](power_or_density_contraction.md).**  Either some pure-division map has positive division density on every orbit, or the shortcut Collatz map has a common fixed-power lower bound $D_K^{\rm Col}(n)\ge K^\delta$ on every orbit. |
+| **2.0** | **[Periodicity-or-Classical-Density](periodicity_or_classical_density.md).**  Either some negative-drift pure-division map has every orbit eventually enter a cycle containing a division step, or every shortcut-Collatz orbit has positive lower even-step density. |
 | **2.3** | **Classical drift-threshold frequency.**  Every positive shortcut-Collatz orbit satisfies $\liminf_{K\to\infty}D_K^{\rm Col}(n)/K\ge\theta_{\rm Col}$, where $\theta_{\rm Col}=1-\frac{\log 2}{\log 3}$. |
 | **3.0** | **Classical bounded-orbit conjecture.**  Every positive shortcut-Collatz orbit is bounded, equivalently eventually periodic in some positive cycle. |
-| **4.0** | **Finite-attractor Collatz conjecture.**  There exists a finite set of positive cycles such that every positive orbit eventually enters one of them. |
+| **4.0** | **Finite-attractor Collatz conjecture.**  There is a finite set of positive cycles such that every positive orbit eventually enters one of them. |
 | **5.0** | **Classical Collatz conjecture.**  Every positive integer reaches $1$, equivalently the cycle $1\leftrightarrow2$. |
 | **6.0** | **Polynomial uniform stopping bound.**  There is an $A\gt0$ such that $M(X)=O(X^A)$. |
 | **7.0** | **Polylogarithmic uniform stopping bound.**  There is an $A\gt0$ such that $M(X)=O((\log X)^A)$. |
@@ -45,59 +37,85 @@ inputs among the first $K$ iterates of $n$.
 | **9.0** | **Classical stopping-time limiting constant.**  $M(X)/\log X$ converges to a finite positive limit $c_{\rm Col}$. |
 | **9.5** | **Stopping-time limit plus [universal one-expander periodicity](one_expander_universal_periodicity.md).**  The preceding limiting statement holds, and every map in the restricted positive, coprime, pure-division, one-expander class with $a\lt B^B$ has every nonnegative orbit eventually periodic. |
 
-The sparse-ray rung has low theorem reach because it existentially chooses the
-map and controls only `O(log X)` starts below $X$.  Requiring the ray base to
-be coprime to the map base prevents immediate base-alignment collapse;
-cardinality-only sparse sets would be gameable.  Rates such as
-$K^{1-\varepsilon}$ and $K/(\log K)^A$ are omitted because the same mechanism
-is unusually likely to overshoot them without creating a new proof interface.
+## Why these lower rungs are selected
+
+The scalar chain does not assign separate scores to every syntactically
+intermediate statement.  The current selection is:
+
+| Lattice candidate | Current scalar treatment | Reason |
+|---|---|---|
+| All-start signed superlogarithmic, all-start nonnegative superlogarithmic, and pure-division superlogarithmic contraction | Descriptive side points between scores `0.2` and `1` | Changing the starting set, sign restrictions, pure-division restriction, and an unspecified superlogarithmic rate one axis at a time is unusually likely to create several milestones from one global orbit argument.  Score `1` uses one substantive diagonal cut instead. |
+| Existential pure-division fixed-power contraction | Not a separate rung | A designed-map proof is likely to overshoot an arbitrary power toward density.  Fixing the shortcut Collatz map creates a materially different interface, so that version appears as one branch of score `1.6`. |
+| Bounds such as $K^{1-\varepsilon}$ or $K/(\log K)^A$ | Not separate rungs | These rates interpolate formally but are likely to be crossed by the same density mechanism and do not add a distinct proof interface. |
+| Existential pure-division density or classical fixed-power contraction | The two alternatives at score `1.6` | This is the first join of the designed-map and fixed-map routes.  Either alternative implies the score-`1` polylogarithmic statement. |
+| Bare negative-drift all-orbit periodicity | Not eligible for the chain | The parameters $B=2$, $E=\lbrace1\rbrace$, $a_1=3$, $c_1=0$ have the expanding fixed point $3$.  Thus an individual periodic orbit need not contain a division step; the explicit cycle clause is what supplies the intended implication to positive density. |
+| Negative-drift periodicity with a division step in every eventual cycle, or classical positive density | The two alternatives at score `2` | The added division clause makes the designed-map alternative imply positive density.  The classical alternative advances the fixed-map route.  Both imply score `1.6`. |
+
+The two disjunctions are therefore lattice joins, not arbitrary logical
+weakenings.  Written from stronger to weaker, the lower formal chain is
+
+```math
+\begin{aligned}
+\text{classical boundedness}
+&\Longrightarrow \text{classical drift-threshold frequency}\\
+&\Longrightarrow
+  (\text{designed periodicity with division}
+   \ \lor\ \text{classical positive density})\\
+&\Longrightarrow
+  (\text{existential pure-division density}
+   \ \lor\ \text{classical fixed-power contraction})\\
+&\Longrightarrow \text{pure-division polylogarithmic contraction}\\
+&\Longrightarrow \text{the scaled-ray Weakest conjecture}.
+\end{aligned}
+```
 
 ## Division density and negative drift
 
-Division density alone determines drift only in special families.  Suppose a
-base-`B` map has one expanding multiplier `a`, and an orbit uses the division
-branches with asymptotic frequency `d`.  Ignoring bounded affine terms, its
+Division density determines drift only in special families.  Suppose a
+base-$B$ map has one expanding multiplier $a$, and an orbit uses the division
+branches with asymptotic frequency $d$.  Ignoring bounded affine terms, its
 mean logarithmic multiplier is
 
 ```math
 d\log(1/B)+(1-d)\log(a/B)
-= (1-d)\log a-\log B.
+=(1-d)\log a-\log B.
 ```
 
 It is negative precisely when
 
 ```math
-d \gt 1-\frac{\log B}{\log a}.
+d\gt1-\frac{\log B}{\log a}.
 ```
 
-For the shortcut Collatz map, `B=2` and `a=3`, so the threshold is
+For the shortcut Collatz map, $B=2$ and $a=3$, so the threshold is
 
 ```math
-d \gt 1-\frac{\log 2}{\log 3}
-= \frac{\log(3/2)}{\log 3}
-\approx 0.36907.
+\theta_{\rm Col}
+=1-\frac{\log 2}{\log 3}
+=\frac{\log(3/2)}{\log 3}
+\approx0.36907.
 ```
 
-For several expanding residue classes, the total division density is not
-enough.  If `f_r` is the frequency of expanding residue `r`, the corresponding
+For several expanding residue classes, total division density is not enough.
+If $f_r$ is the frequency of expanding residue $r$, the corresponding
 branch-weighted condition is
 
 ```math
-\sum_{r\in E} f_r\log a_r \lt \log B.
+\sum_{r\in E}f_r\log a_r\lt\log B.
 ```
 
-Under uniform residue frequencies, `f_r=1/B`, this becomes
+Under uniform residue frequencies, $f_r=1/B$, this becomes
 
 ```math
-\prod_{r\in E}a_r \lt B^B.
+\prod_{r\in E}a_r\lt B^B.
 ```
 
-This is why the ladder separates classical positive density from the exact
+This is why the ladder distinguishes positive density from the exact
 classical drift threshold.  A small positive density can coexist with
 exponential growth, and even a large total division density need not control
-which expanding branches occur.  The drift-threshold inequality is deliberately
-non-strict: a strict lower bound above the threshold already forces
-boundedness and would reverse the intended chain.
+which expanding branches occur.  The drift-threshold inequality is
+deliberately non-strict: a strict lower bound above the threshold already
+forces boundedness and would collapse that part of the intended chain.
 
 ## The stopping-time hierarchy
 
@@ -109,60 +127,56 @@ For the shortcut Collatz map $T$, set
 M(X)=\max_{1\le n\le X}\tau(n),
 ```
 
-where $\tau(n)=\infty$ if the orbit never reaches $1$.  Any finite upper bound
-for $M(X)$ implies classical Collatz.  The successive rungs ask for
+where $\tau(n)=\infty$ if the orbit never reaches $1$.  Any finite upper
+bound for $M(X)$ implies classical Collatz.  The successive rungs ask for
 polynomial, polylogarithmic, and logarithmic bounds, followed by a finite
 positive limit
 
 ```math
-\frac{M(X)}{\log X}\longrightarrow c_{\mathrm{Col}}.
+\frac{M(X)}{\log X}\longrightarrow c_{\rm Col}.
 ```
 
-The limiting statement is much stronger than merely proving Collatz.  It
-requires the correct first-order growth of the most extreme stopping time,
-and the constant is part of the theorem rather than a value chosen after the
-proof.
+The limiting statement requires the first-order growth of the most extreme
+stopping time; the constant is part of the theorem rather than a value chosen
+after the proof.
 
-## Formal implication audit and the endpoint
+## Formal implication audit and endpoint
 
-Every rung formally implies the one below it.  The map families in the first
-part are nested.  Polylogarithmic contraction implies superlogarithmic
-contraction; power contraction implies a polylogarithmic bound; and positive
-lower density implies a common fixed-power bound after allowing the eventual
-threshold to depend on the start.  The shortcut Collatz map is an admissible
-pure-division witness, so its positive-density statement implies the
-existential density rung.
+Both score-`1.6` alternatives imply score `1`: positive lower density gives a
+pointwise linear lower bound, and any fixed positive power of $K$ eventually
+dominates $(\log K)^2$.  At score `2`, designed-map periodicity implies
+positive density because every eventual cycle contains a division step.
+Classical positive density supplies both score-`1.6` alternatives, since the
+shortcut map is admissible and a pointwise linear bound eventually dominates
+a common fixed power such as $K^{1/2}$.
 
-A bounded integer orbit is eventually periodic.  On a positive Collatz cycle
-with $o$ odd and $e$ even steps, the affine composition has slope
-$3^o/2^{o+e}$ and a positive additive term, so a positive fixed point requires
-$3^o/2^{o+e}\lt1$.  Hence $e/(o+e)\gt\theta_{\rm Col}$, proving that the
-bounded-orbit rung implies the drift-threshold rung.  The finite-attractor statement implies boundedness, and
-classical Collatz implies it because only the standard positive cycle occurs.
-Each uniform stopping-time bound implies Collatz and the successively sharper
-bounds imply one another.
+The classical drift threshold implies positive classical density.  A bounded
+integer orbit is eventually periodic.  On a positive Collatz cycle with $o$
+odd and $e$ even steps, the affine composition has slope
+$3^o/2^{o+e}$ and a positive additive term.  A positive fixed point therefore
+requires
+
+```math
+\frac{3^o}{2^{o+e}}\lt1,
+```
+
+so $e/(o+e)\gt\theta_{\rm Col}$.  This proves that score `3` implies score
+`2.3`.  Classical boundedness also supplies the shortcut map as a witness for
+the designed periodicity alternative: every positive eventual cycle contains
+an even input, and zero is a division-branch fixed point.
+
+The finite-attractor statement implies boundedness.  Classical Collatz
+implies the finite-attractor statement because only the standard positive
+cycle is needed.  Each uniform stopping-time bound implies Collatz, and the
+successively sharper bounds imply one another.
 
 The endpoint is a conjunction.  It retains the classical stopping-time limit
 and adds the uniform component defined in
 [`one_expander_universal_periodicity.md`](one_expander_universal_periodicity.md).
 Universal one-expander periodicity alone neither identifies the classical
-cycle nor supplies a stopping-time estimate, so dropping the conjunction
-would break the implication chain.
-
-Broad generalized-Collatz systems can encode computation.  Kurtz and Simon,
-building on Conway, proved that a natural generalized totality problem is
-$\Pi^0_2$-complete.  No reduction is known here for the positive coprime
-one-expander class, and no theorem rules such a reduction out.  The endpoint
-is intentionally placed near that uncertain boundary, with a subjective
-universality risk around `10--15%`, rather than beyond it.
-
-Reference: Stuart A. Kurtz and Janos Simon,
-[“The Undecidability of the Generalized Collatz Problem”](https://doi.org/10.1007/978-3-540-72504-6_49).
-
-The restricted endpoint varies $B$, the unique expanding residue, its positive
-coprime multiplier, and its nonnegative offset, while forcing every other
-branch to be pure division.  It is materially narrower than arbitrary
-residue-affine systems.
+cycle nor supplies a stopping-time estimate, so omitting the conjunction
+would break the chain.  The linked definition records the restricted family
+and its computational-universality caveat.
 
 ## Effort and skip annotation
 
@@ -172,60 +186,37 @@ integer dynamics; and adjacent arithmetic-dynamics, ergodic, or Diophantine
 work only when a plausible transfer is explicit.  Generic number theory and
 brute-force orbit verification are excluded.
 
-The table applies the root README's future-effort and skip conventions.  The
-central logarithms are uncertain by at least roughly half a decade, while the
-skip probabilities are uncertain by at least `15--20` percentage points.  The
-entry on integer row $n$ concerns the transition from $n$ to $n+1$.
+The table uses the [root README's joint epistemic future-effort and skip
+elicitation](../README.md#difficulty-scores).  Its central logarithms are
+uncertain by at least roughly half a decade through the middle of the ladder
+and more near the one-expander endpoint; individual score placements are
+uncertain by roughly one point, and the skip probabilities by at least
+`15--20` percentage points.  The entry on integer row $n$ concerns the
+transition from $n$ to $n+1$.  Score `9` is marked `n/a` because this folder
+selects no score-`10` contour.  The separate baseline diagnostic assigns about
+`20%` probability that the first theorem reaching score `1` also overshoots
+the score-`0.2` sparse-ray rung.
 
-| Score | Expected $\log_{10}$ future expert-years | $P(n\text{-skip})$ | Main skip mechanism |
+| Score | Expected $\log_{10}$ future expert-years | $P(n\text{-skip})$, if applicable | Calibration note |
 |---:|---:|---:|---|
-| 0 | -- | -- | -- |
-| 0.2 | 2.15 | -- | -- |
-| 0.4 | 2.58 | -- | -- |
-| 0.6 | 2.78 | -- | -- |
-| 0.8 | 2.89 | -- | -- |
-| 1 | 2.99 | 30% | A lower-bound mechanism may naturally yield positive density rather than a chosen intermediate rate. |
-| 1.3 | 3.14 | -- | -- |
-| 1.6 | 3.27 | -- | -- |
-| 2 | 3.38 | 40% | A classical frequency theorem may reach the drift threshold and boundedness together. |
-| 2.3 | 3.50 | -- | -- |
-| 3 | 3.60 | 35% | A recurrence proof may control the global cycle set as part of the same argument. |
-| 4 | 3.85 | 35% | A finite-attractor proof may also identify the standard cycle as the only attractor. |
-| 5 | 4.05 | 25% | A constructive Collatz proof may carry an explicit polynomial stopping bound. |
-| 6 | 4.43 | 35% | A quantitative contraction proof may naturally be polylogarithmic. |
-| 7 | 4.78 | 30% | Extreme-value control may sharpen a polylogarithm directly to logarithmic order. |
-| 8 | 5.13 | 30% | A logarithmic upper-bound proof may also identify the limiting constant. |
-| 9 | 5.27 | n/a | The ladder has no score-`10` contour. |
-| 9.5 | 5.47 | -- | -- |
+| 0 | -- | n/a | Current proved frontier; future effort is zero, so its logarithm is undefined. |
+| 0.2 | 2.15 | -- | Exceptionally weak sparse-start statement; the large gap to score `1` is intentional. |
+| 1 | 2.99 | 30% | One diagonal all-start, map-family, and rate milestone replaces several highly coupled micro-rungs. |
+| 1.6 | 3.27 | -- | First two-route join: designed-map density or classical fixed-power contraction. |
+| 2 | 3.38 | 40% | Second join: designed-map periodicity with division or classical positive density. |
+| 2.3 | 3.50 | -- | Exact non-strict classical drift threshold. |
+| 3 | 3.60 | 35% | Boundedness may arrive with global cycle control, but the lower joins permit earlier progress on either main route. |
+| 4 | 3.85 | 35% | A recurrence proof may control finitely many attractors before identifying the standard cycle. |
+| 5 | 4.05 | 25% | Classical Collatz is the folder's famous target, not a normalization anchor. |
+| 6 | 4.43 | 35% | A constructive proof may already contain a polynomial stopping bound. |
+| 7 | 4.78 | 30% | Quantitative contraction may sharpen directly from polynomial to polylogarithmic. |
+| 8 | 5.13 | 30% | Extreme-value control may pass from a polylogarithm to logarithmic order. |
+| 9 | 5.27 | n/a | Last selected integer contour; a logarithmic-bound proof may also identify the limiting constant. |
+| 9.5 | 5.47 | -- | Terminal conjunction; the one-expander component has especially wide universality and overlap uncertainty. |
 
-These are elicited estimates rather than values inferred from the assigned
-scores.  The estimated probability that the first theorem reaching score `1`
-overshoots the first positive rung is `20%`.
+No estimated integer-skip probability exceeds `50%`.  The near-linearity of
+the expected log-effort column below score `10` is a diagnostic for the
+selected contours, not an exact fitting constraint.
 
-The one-expander endpoint has a rough placement range of `7.5--12`; its
-central value is slightly below the shared score-`10` comparator rather than
-being normalized to the end of this folder.  The estimated risk that the
-restricted family still supports computation or otherwise defeats the
-intended foundational reachability is about `10--15%`.
-
-The endpoint is a final half-step rather than an integer boundary.  Its
-central future-effort ratio relative to the preceding contour is about `1.60`.  The
-one-expander conjunct is priced separately rather than treated as an automatic
-consequence of the classical result.  The uncertainty is especially wide
-because the amount of machinery shared by the two conjuncts is unknown.
-
-## How to read the numbers
-
-The scale deliberately keeps three judgments visible:
-
-- **theorem reach:** how many starts and maps are controlled, and how strong
-  the orbit conclusion is;
-- **expected log effort:** whether neighboring results plausibly require
-  comparable multiplicative increases in cumulative research effort; and
-- **skip risk:** whether a natural lemma is likely to establish several
-  milestones at once.
-
-Theorem reach governs the ordering.  Expected effort and skip risk govern the
-spacing.  Historical fame does not raise a weak theorem's score.  Score
-differences are not ratios of impressiveness, and a proof may be much harder
-or easier than its theorem's placement suggests.
+The one-expander endpoint has a rough placement range of `7.5--12`; this is a
+difficulty sensitivity, not a proof-theoretic claim.
