@@ -94,8 +94,8 @@ noncomputable def PolynomialFamily.primeValueCount (F : PolynomialFamily) (X : �
 noncomputable def PolynomialFamily.rootCountMod (F : PolynomialFamily) (p : ℕ) : ℕ :=
   by
     classical
-    exact ((Finset.range p).filter (fun a =>
-      ∃ i : Fin F.arity, (p : ℤ) ∣ (F.poly i).eval (a : ℤ))).card
+    exact ((Finset.range p).filter (fun a : ℕ =>
+      ∃ i : Fin F.arity, (p : ℤ) ∣ (F.poly i).eval (Int.ofNat a))).card
 
 /-- The Bateman--Horn local factor at `p`. -/
 noncomputable def PolynomialFamily.localFactor (F : PolynomialFamily) (p : ℕ) : ℝ :=
@@ -107,10 +107,10 @@ noncomputable def PolynomialFamily.singularSeriesPartial
     (F : PolynomialFamily) (Y : ℕ) : ℝ :=
   by
     classical
-    exact ∏ p in (Finset.range (Y + 1)).filter Nat.Prime, F.localFactor p
+    exact ((Finset.range (Y + 1)).filter Nat.Prime).prod F.localFactor
 
 def PolynomialFamily.degreeProduct (F : PolynomialFamily) : ℕ :=
-  ∏ i : Fin F.arity, (F.poly i).natDegree
+  Finset.univ.prod fun i : Fin F.arity => (F.poly i).natDegree
 
 /-- The order-`k` logarithmic integral, clamped only at finite initial inputs. -/
 noncomputable def generalizedLogarithmicIntegral (k X : ℕ) : ℝ :=
