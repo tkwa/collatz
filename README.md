@@ -15,6 +15,8 @@ continuous scoring.
   Bateman--Horn.
 - [`abc/`](abc/) tracks progress on the abc conjecture and onward to the
   general Vojta conjecture.
+- [`kakeya/`](kakeya/) tracks geometric and maximal-function forms of the
+  Euclidean Kakeya conjecture.
 - Under development:
   - [`mahler/`](mahler/) contains weak escape problems for fractional parts of
     powers. Its difficulty ladder is not yet calibrated.
