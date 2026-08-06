@@ -28,6 +28,10 @@ subjective benchmark judgments.  The audit is current through August 5, 2026.
   $m_0=(159+\sqrt{145})/56\gt3.054$.  Their introduction retains the
   Katz--Zahl `3.059` Hausdorff result as the geometric record.  See [Theorem
   1.2](https://arxiv.org/abs/2511.22824).
+- **[proved/current status]** Choudhuri proves that every sticky Kakeya set in
+  $\mathbb R^4$ has Hausdorff dimension at least $13/4$, and states that the
+  sticky Kakeya conjecture remains open in higher dimensions.  See
+  [Choudhuri, Theorem 1.2](https://arxiv.org/abs/2410.23579v1).
 - **[proved/definition]** Zahl's 2025 survey states the set, discretized
   tube-union, shaded tube-union, and maximal conjectures separately.  It
   records that the maximal forms are equivalent, imply the shaded form, and
@@ -72,8 +76,9 @@ subjective benchmark judgments.  The audit is current through August 5, 2026.
    Kakeya, then $K\times[0,1]\subset\mathbb R^{n+1}$ contains a unit segment
    in every direction after taking suitable subsegments, and
    $\dim_H(K\times[0,1])=\dim_H(K)+1$.
-5. **[implication]** Consequently $H_b\Rightarrow H_a$ for $b\ge a$, and the
-   finite-dimensional geometric alternatives form a chain.
+5. **[implication]** Consequently $H_b\Rightarrow H_a$ for $b\ge a$.
+   Also $H_n(s_2)\Rightarrow H_n(s_1)$ when $s_2\ge s_1$.  These are the
+   nestings used by the finite-dimensional geometric alternatives.
 6. **[implication by definition]** $M_{\le b}\Rightarrow M_{\le a}$ for
    $b\ge a$, because $M_{\le d}$ is the conjunction of the endpoint maximal
    conjectures in dimensions $2,\ldots,d$.  The ladder does not rely on an
@@ -84,21 +89,33 @@ subjective benchmark judgments.  The audit is current through August 5, 2026.
    implies the selected lower maximal contours by interpolation with the
    trivial $L^\infty$ multiplicity bound.  This is also the nesting used in
    the standard formulation of the maximal conjecture for every $s\le n$.
+9. **[implication]** $U_4(s_2)\Rightarrow U_4(s_1)$ when $s_2\ge s_1$.
+   Also $H_4(s)$ implies $U_4(s)$ because Hausdorff dimension is at most upper
+   Minkowski dimension.  Thus $U_4(3.1)$ implies the pointwise strict
+   upper-Minkowski alternative in the Weakest rung, since $3.1\gt h_0$.
 
 The displayed disjunctions therefore form a scalar chain: each alternative
 on a higher row implies at least one alternative immediately below it.
 
 ## Weakening audit
 
-**[subjective, work in progress]** The four-dimensional alternatives were
-weakened from the full set and maximal conjectures to fixed numerical
-improvements, then to existential strict improvements over $h_0$ and $m_0$.
-Reducing the set of directions, imposing stickiness, or replacing Hausdorff
-dimension by an upper box statistic was rejected pending a clean openness
-theorem: nearby restricted cases are known, and an uncertified subclass could
-make the statement accidentally true.
+**[subjective]** On the unrestricted geometric coordinate, the selected
+statement was weakened through uniform Hausdorff, lower-Minkowski, and
+upper-Minkowski improvements to the pointwise assertion
+$\overline{\dim}_{M}K\gt h_0$ for every $K$.  The gap may depend on $K$.
+Passing to an existentially chosen $K$ is proved trivially by a set with
+interior; passing to Assouad dimension also loses the intended frontier.
+Special sticky or algebraic subclasses were excluded from this coordinate
+because they do not measure unrestricted Kakeya progress.
 
-**[subjective, work in progress]** The analytic alternative was weakened from
+The strongest rejected scope challenge was the pointwise assertion that every
+sticky Kakeya set in $\mathbb R^4$ has Hausdorff dimension strictly greater
+than $13/4$.  It is a source-certified open restricted-class improvement, not
+a redundant reformulation.  It is omitted because admitting named subclasses
+also introduces plany, regular, midpoint, and other incomparable axes, so
+there is no canonical weakest unrestricted benchmark.
+
+**[subjective]** The analytic alternative was weakened from
 $A_3(3)$ through arbitrary fixed exponents to the existence of some finite
 exponent independent of $\varepsilon$.  Allowing the exponent to depend on
 $\varepsilon$ is exactly the Wang--Zahl theorem and is therefore proved.
@@ -107,10 +124,15 @@ losses as an open direction, but the precise formulation with fixed $q$ is not
 quoted there as a named conjecture.  Its open status is therefore provisional
 rather than literature-certified.
 
-The disjunction is weaker than either alternative alone and credits the two
-currently distinct obstructions.  The guide-required frontier-agent
-red-team is still in progress; no token-threshold completion claim is made in
-this scaffold.
+The disjunction is weaker than any alternative alone and credits three
+currently distinct obstructions.  A frontier-agent weakening audit used
+304,720 metered tokens, tested dimension notions, uniform versus pointwise
+quantifiers, restricted classes, and shading-density formulations, and found
+no proof or counterexample to the displayed statement.  The upper-Minkowski
+alternative and the fixed-exponent $A_3(q)$ alternative are not named
+conjectures in the cited literature, so their open status remains a
+source-audited frontier judgment rather than a published theorem of
+non-provability.
 
 ## Strengthening audit
 

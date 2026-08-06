@@ -8,10 +8,10 @@ implication checks are in the [source audit](sources_and_implications.md).
 | Score | Milestone |
 |---:|---|
 | **0** | **Current rigorous frontiers.** $H_4(h_0)$ for $h_0=3+(\sqrt{17665}-97)/600\gt3.059$ (Katz--Zahl, 2021 paper, corrected 2025 revision), and the four-dimensional maximal estimate at $m_0=(159+\sqrt{145})/56\gt3.054$ (Borges--Chan--Chen--Liu--Xi--Zhan, 2025); every Kakeya set in $\mathbb R^3$ has dimension $3$ (Wang--Zahl, 2025). |
-| 0.2 | **[The Weakest Kakeya Improvement](weakest_kakeya_improvement.md).** For some $\eta\gt0$, either $H_4(h_0+\eta)$ or $M_4(m_0+\eta)$ holds; alternatively, $A_3(q)$ holds for some fixed finite $q$. |
-| **1** | $H_4(3.1)$ **or** $M_4(3.075)$ **or** $A_3(100)$. |
-| **2** | $H_4(3.25)$ **or** $M_4(3.15)$ **or** $A_3(20)$. |
-| **3** | $H_4(3.5)$ **or** $M_4(3.3)$ **or** $A_3(6)$. |
+| 0.2 | **[The Weakest Kakeya Improvement](weakest_kakeya_improvement.md).** Every four-dimensional Kakeya set $K$ has $\overline{\dim}_{M}K\gt h_0$; **or** $M_4(m_0+\eta)$ holds for some $\eta\gt0$; **or** $A_3(q)$ holds for some fixed finite $q$. |
+| **1** | $U_4(3.1)$ **or** $M_4(3.075)$ **or** $A_3(100)$. |
+| **2** | $U_4(3.25)$ **or** $H_4(3.1)$ **or** $M_4(3.15)$ **or** $A_3(20)$. |
+| **3** | $U_4$ **or** $H_4(3.25)$ **or** $M_4(3.3)$ **or** $A_3(6)$. |
 | **4** | $H_4$ **or** $M_3$. |
 | **5** | $H_5$ **or** $M_{\le4}$. |
 | **6** | $H_8$ **or** $M_{\le5}$. |
@@ -31,10 +31,10 @@ parts of Fourier analysis.  All values are subjective.
 | Score | Expected $\log_{10}$ cumulative human-expert-years from the current frontier | $P(n\text{-skip})$, if applicable | Main skip mechanism |
 |---:|---:|---:|---|
 | 0 | -- | n/a | Proved frontier. |
-| 0.2 | 2.30 | -- | Minimal strict progress on either active lower coordinate. |
-| 1 | 2.78 | 35% | A new planebrush or shading-stability argument may overshoot the first displayed contour. |
-| 2 | 3.13 | 40% | Structural control may yield a substantial exponent rather than stop at an arbitrary cutoff. |
-| 3 | 3.48 | 40% | A method approaching full dimension or sharp density may clear the penultimate contour. |
+| 0.2 | 2.30 | -- | Minimal progress on any unrestricted geometric, maximal, or shading coordinate. |
+| 1 | 2.78 | 40% | A new planebrush or shading-stability argument may overshoot the first displayed contour. |
+| 2 | 3.13 | 45% | Structural control may jump from `3.1` through the sourced `3.25` barrier. |
+| 3 | 3.48 | 35% | Scale-specific methods may reach full upper Minkowski dimension before full Hausdorff dimension. |
 | 4 | 3.83 | 35% | A four-dimensional geometric proof may also control multiplicity in dimension three. |
 | 5 | 4.18 | 35% | Dimension-lifting or maximal methods may solve both alternatives together. |
 | 6 | 4.52 | 40% | A dimension-uniform argument may cross several finite cutoffs. |

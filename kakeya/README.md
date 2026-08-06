@@ -17,6 +17,20 @@ $\delta^{-\varepsilon}$ loss.
 For $s\le n$, $H_n(s)$ means that every Kakeya set in $\mathbb R^n$ has
 Hausdorff dimension at least $s$.  Write $H_n=H_n(n)$.
 
+Write $U_n(s)$ when the same lower bound is required only for upper Minkowski
+dimension, and $U_n=U_n(n)$.  For bounded $K$ this dimension is
+
+```math
+\overline{\dim}_{M}K
+=n-\liminf_{\delta\downarrow0}
+\frac{\log|N_\delta(K)|}{\log\delta}.
+```
+
+The geometric alternative in the Weakest rung is deliberately non-uniform:
+it asserts
+$\overline{\dim}_{M}K\gt h_0$ separately for every $K$, not $U_4(h_0+\eta)$
+for one common $\eta\gt0$.
+
 For a direction-separated family $\mathbb T$ of $\delta$-tubes in
 $\mathbb R^3$, with measurable shadings $Y(T)\subseteq T$ satisfying
 $|Y(T)|\ge\lambda|T|$, let $A_3(q)$ denote
@@ -63,17 +77,19 @@ satisfies these axioms.
 ## Why the ladder has joins
 
 Below the four-dimensional set conjecture there are three independent routes:
-an improvement to the best four-dimensional Hausdorff-dimension bound, an
-improvement to the four-dimensional maximal exponent, or a uniform density
-exponent in the three-dimensional shaded-tube theorem.  A disjunction is used
-so that any of these kinds of genuine progress earns credit.
+a pointwise upper-Minkowski improvement beyond the best universal
+Hausdorff-dimension floor, an improvement to the four-dimensional maximal
+exponent, or a uniform density exponent in the three-dimensional shaded-tube
+theorem.  A disjunction is used so that any of these kinds of genuine progress
+earns credit.
 
 Above that join, the geometric route increases ambient-dimension breadth and
-the analytic route proves maximal estimates.  Each higher alternative
-implies an alternative on the row below.  The maximal conjecture is not
-treated as interchangeable with the set conjecture: maximal estimates imply
-the shaded tube-union statement, then the Hausdorff statement, then the
-Minkowski statement.
+the analytic route proves maximal estimates.  The first three geometric rows
+also distinguish upper Minkowski from Hausdorff progress rather than treating
+the dimension notions as interchangeable.  Each higher alternative implies
+an alternative on the row below.  Maximal estimates imply the shaded
+tube-union statement, then the Hausdorff statement, then the Minkowski
+statement.
 
 The terminal polynomial-Wolff-axiom statement is stronger than the ordinary
 all-dimensional maximal conjecture.  Replacing polynomial Wolff axioms by
