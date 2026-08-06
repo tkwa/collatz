@@ -5,18 +5,18 @@ import CollatzBench.PrimeGaps
 
 /-! Compile-time coverage checks for the declarations promised in `lean/coverage.md`. -/
 
-#check CollatzBench.ABC.WeakestAbcLike
-#check CollatzBench.ABC.AbcConjecture
-#check CollatzBench.ABC.GeneralVojtaSchema
-#check CollatzBench.ABC.GeneralVojta
+#check (CollatzBench.ABC.WeakestAbcLike : Prop)
+#check (CollatzBench.ABC.AbcConjecture : Prop)
 
-#check CollatzBench.Collatz.WeakestScaledRay
-#check CollatzBench.Collatz.ClassicalCollatz
+#check (CollatzBench.Collatz.WeakestScaledRay : Prop)
+#check (CollatzBench.Collatz.ClassicalCollatz : Prop)
 
-#check CollatzBench.Mahler.AlgebraicMultiplierEscape
-#check CollatzBench.Mahler.RationalBaseUniversalEscape
+#check (CollatzBench.Mahler.AlgebraicMultiplierEscape : Prop)
+#check (CollatzBench.Mahler.RationalBaseUniversalEscape : Prop)
 
-#check CollatzBench.PrimeGaps.WeakestPrimePattern
-#check CollatzBench.PrimeGaps.TwinPrimeConjecture
+#check (CollatzBench.PrimeGaps.WeakestPrimePattern : Prop)
+#check (CollatzBench.PrimeGaps.chebyshevPsiInProgression : ℕ → ℕ → ℕ → ℝ)
+#check (CollatzBench.PrimeGaps.ElliottHalberstamAt : ℝ → Prop)
+#check (CollatzBench.PrimeGaps.TwinPrimeConjecture : Prop)
 #check CollatzBench.PrimeGaps.PolynomialFamily
-#check CollatzBench.PrimeGaps.BatemanHorn
+#check (CollatzBench.PrimeGaps.BatemanHorn : Prop)

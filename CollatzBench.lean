@@ -7,6 +7,6 @@ import CollatzBench.Checks
 /-!
 # CollatzBench statement formalizations
 
-This is the root of the Lean library.  The declarations are propositions, not
-claims that the open conjectures have been proved.
+This is the root of the Lean library.  Each conjecture declaration is a closed
+proposition, not a claim that the open conjecture has been proved.
 -/

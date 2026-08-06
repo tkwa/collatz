@@ -26,5 +26,6 @@ lake build
 ```
 
 The project is pinned by `lean-toolchain` and `lakefile.toml`.  The coverage
-manifest tracks each in-scope statement to its Lean declaration and
-distinguishes exact definitions from intentionally typed schemas.
+manifest tracks each included statement to a closed Lean proposition.  It also
+lists statements deliberately omitted because the pinned libraries do not yet
+provide enough foundations to state them faithfully.
