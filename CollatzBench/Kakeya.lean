@@ -1,7 +1,7 @@
 import CollatzBench.Foundations
 import Mathlib.Analysis.InnerProductSpace.EuclideanDist
 import Mathlib.MeasureTheory.Function.LpSeminorm.Basic
-import Mathlib.MeasureTheory.Measure.Lebesgue
+import Mathlib.MeasureTheory.Measure.Haar.InnerProductSpace
 
 /-!
 # The dedicated weakest Kakeya statement
@@ -56,24 +56,24 @@ def DirectionSeparated {n : ℕ} (δ : ℝ) (family : Finset (Tube n)) : Prop :=
     δ ≤ min ‖T.direction - U.direction‖ ‖T.direction + U.direction‖
 
 def multiplicity {n : ℕ} (δ : ℝ) (family : Finset (Tube n)) (x : Point n) : ℝ :=
-  ∑ T ∈ family, if x ∈ T.carrier δ then 1 else 0
+  ∑ T ∈ family, (T.carrier δ).indicator (fun _ => 1) x
 
 /-- The standard direction-separated Kakeya maximal estimate at dimension `s`. -/
 def MaximalEstimateAt (n : ℕ) (s : ℝ) : Prop :=
   ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧
     ∀ δ : ℝ, 0 < δ → δ ≤ 1 →
       ∀ family : Finset (Tube n), DirectionSeparated δ family →
-        snorm (multiplicity δ family)
+        eLpNorm (multiplicity δ family)
             (ENNReal.ofReal (s / (s - 1))) volume ≤
           ENNReal.ofReal (C * Real.rpow δ (1 - n / s - ε))
 
 /-- A measurable shading occupying a `λ` fraction of its tube. -/
-def IsShading {n : ℕ} (δ λ : ℝ) (shading : Tube n → Set (Point n))
+def IsShading {n : ℕ} (δ density : ℝ) (shading : Tube n → Set (Point n))
     (family : Finset (Tube n)) : Prop :=
   ∀ T ∈ family,
     MeasurableSet (shading T) ∧
     shading T ⊆ T.carrier δ ∧
-    λ * volumeReal (T.carrier δ) ≤ volumeReal (shading T)
+    density * volumeReal (T.carrier δ) ≤ volumeReal (shading T)
 
 def shadedUnion {n : ℕ} (family : Finset (Tube n))
     (shading : Tube n → Set (Point n)) : Set (Point n) :=
@@ -82,10 +82,10 @@ def shadedUnion {n : ℕ} (family : Finset (Tube n))
 /-- The three-dimensional shaded-tube estimate `A₃(q)`. -/
 def ShadedEstimate3 (q : ℕ) : Prop :=
   ∀ ε : ℝ, 0 < ε → ∃ c : ℝ, 0 < c ∧
-    ∀ δ λ : ℝ, 0 < δ → δ ≤ 1 → 0 < λ → λ ≤ 1 →
+    ∀ δ density : ℝ, 0 < δ → δ ≤ 1 → 0 < density → density ≤ 1 →
       ∀ family : Finset (Tube 3), DirectionSeparated δ family →
-        ∀ shading : Tube 3 → Set (Point 3), IsShading δ λ shading family →
-          c * Real.rpow δ ε * Real.rpow λ q *
+        ∀ shading : Tube 3 → Set (Point 3), IsShading δ density shading family →
+          c * Real.rpow δ ε * Real.rpow density q *
               (∑ T ∈ family, volumeReal (T.carrier δ)) ≤
             volumeReal (shadedUnion family shading)
 
