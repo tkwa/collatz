@@ -26,11 +26,11 @@ The upper rungs use these standard conjectures:
 
 - **de Polignac:** every positive even $d$ occurs infinitely often as a gap
   between consecutive primes;
-- **Dickson:** every fixed admissible finite family of affine-linear forms
-  with positive leading coefficients is simultaneously prime infinitely
+- **Dickson:** every fixed admissible finite family of distinct affine-linear
+  forms with positive leading coefficients is simultaneously prime infinitely
   often;
 - **Hardy--Littlewood:** the predicted singular-series asymptotic holds for
-  every fixed admissible affine-linear family;
+  every fixed admissible family of distinct affine-linear forms;
 - **Schinzel H:** every fixed admissible finite family of distinct
   irreducible integer polynomials with positive leading coefficients takes
   simultaneous prime values infinitely often; and
@@ -56,8 +56,8 @@ denotes logical disjunction.
 | **4** | $H_1\le4$ **or** full GEH. |
 | **5** | **Twin primes:** $H_1=2$. |
 | **6** | $\pi_2(X)\gg X/(\log X)^2$ for all sufficiently large $X$ **or** de Polignac's conjecture. |
-| **7** | The Hardy--Littlewood asymptotic for twin primes **or** Dickson's conjecture for every fixed admissible affine-linear family. |
-| **8** | The Hardy--Littlewood asymptotic for every fixed admissible affine-linear family **or** Schinzel's hypothesis H. |
+| **7** | The Hardy--Littlewood asymptotic for twin primes **or** Dickson's conjecture for every fixed admissible family of distinct affine-linear forms. |
+| **8** | The Hardy--Littlewood asymptotic for every fixed admissible family of distinct affine-linear forms **or** Schinzel's hypothesis H. |
 | **9** | **Bateman--Horn** for every fixed admissible finite family of distinct irreducible integer polynomials with positive leading coefficients. |
 
 The decimal rung at `0.3` is deliberately the only conjecture called

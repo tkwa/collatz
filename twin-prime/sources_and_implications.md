@@ -87,9 +87,9 @@ Bateman--Horn predicts the singular-series asymptotic for
 
 The singular series is positive under the stated local condition.  Hence the
 asymptotic implies infinitely many simultaneous prime values: Schinzel H.
-When all $f_i$ are affine linear, the same formula is the prime-tuples
-Hardy--Littlewood asymptotic.  Thus both alternatives at score `8` are
-genuine consequences of Bateman--Horn.
+When all $f_i$ are distinct affine-linear forms, the same formula is the
+prime-tuples Hardy--Littlewood asymptotic.  Thus both alternatives at score
+`8` are genuine consequences of Bateman--Horn.
 
 Schinzel H is the conjecture of Schinzel and Sierpiński,
 [“Sur certaines hypothèses concernant les nombres
