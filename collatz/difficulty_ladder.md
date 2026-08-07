@@ -50,7 +50,7 @@ These subjective estimates use the scope and interpretation summarized in the
 | Score | Expected $\log_{10}$ cumulative human-expert-years from the current frontier | $P(n\text{-skip})$, if applicable | Calibration note |
 |---:|---:|---:|---|
 | 0 | -- | n/a | Current proved frontier; future effort is zero, so its logarithm is undefined. |
-| 0.2 | 2.15 | -- | Exceptionally weak infinite-subray statement; the large gap to score `1` is intentional. |
+| 0.2 | 2.15 | -- | Exceptionally weak infinite-subset-of-a-ray statement; the large gap to score `1` is intentional. |
 | 1 | 2.99 | 30% | One diagonal all-start, map-family, and rate milestone replaces several highly coupled micro-rungs. |
 | 1.6 | 3.27 | -- | First two-route join: designed-map density or classical fixed-power contraction. |
 | 2 | 3.38 | 40% | Second join: designed-map periodicity with division or classical positive density. |
