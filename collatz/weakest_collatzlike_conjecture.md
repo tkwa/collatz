@@ -63,25 +63,28 @@ u^s\ne B^t
 \qquad\text{for all integers }s,t\ge1,
 ```
 
-and an exponent $k_0\ge0$ such that
+and the set
 
 ```math
-\forall k\ge k_0:
+G=\lbrace k\in\mathbb N_0:
+\lim_{K\to\infty}\frac{D_K(d u^k)}{\log K}=+\infty
+\rbrace
+\qquad\text{is infinite.}
+```
+
+Equivalently,
+
+```math
+\forall m\in\mathbb N_0\ \exists k\ge m:
 \qquad
 D_K(d u^k)=\omega(\log K)
 \quad\text{as }K\to\infty.
 ```
 
-Equivalently, for every fixed $k\ge k_0$,
-
-```math
-\lim_{K\to\infty}\frac{D_K(d u^k)}{\log K}=+\infty.
-```
-
-The exponent $k$ is fixed before the orbit-time limit is taken.  No rate
-uniform in $k$ is asserted.  Allowing finitely many exceptional exponents
-prevents the statement from depending on accidental behavior at a few small
-states.
+Each witnessing exponent $k$ is fixed before the orbit-time limit is taken.
+No rate uniform across the good exponents is asserted.  Requiring infinitely
+many good exponents retains an unbounded family of starting values while
+allowing the remaining exponents to be exceptional.
 
 ## Why multiplicative independence is retained
 
@@ -138,12 +141,12 @@ large exponents $k$.  In particular, one such ray already contains arbitrarily
 long expansion-only finite blocks among its members.
 
 This local fullness does not refute the conjecture: the exponent producing a
-long bad prefix may change with the requested prefix length, whereas the
-conclusion is pointwise in each fixed exponent.  In the certified subcase it
-shows that a second ray does not repair a local weakness of the first.  The
-full conjecture also permits $d$ not coprime to $B$ and shared-prime $u$;
-retaining those cases is a provisional weakening, not a claim that the
-local-fullness argument extends to them.
+long bad prefix may change with the requested prefix length, whereas every
+good exponent in the conclusion is fixed before the orbit-time limit.  In the
+certified subcase it shows that a second ray does not repair a local weakness
+of the first.  The full conjecture also permits $d$ not coprime to $B$ and
+shared-prime $u$; retaining those cases is a provisional weakening, not a
+claim that the local-fullness argument extends to them.
 
 The consolidated [research state](progress/research_state.md) records the
 finite-itinerary obstruction and the fixed-start distinction that also govern
@@ -171,7 +174,7 @@ density.  Hence the classical Collatz conjecture implies the present
 statement.  No converse is claimed.
 
 Natural-density-one and logarithmic-density-almost-all theorems do not settle
-the restriction to one power ray.  The set
+even this infinitely-often restriction.  A single ray
 
 ```math
 \lbrace d u^k:k\ge0\rbrace
@@ -179,6 +182,20 @@ the restriction to one power ray.  The set
 
 has only $O(\log X)$ elements below $X$ and has finite reciprocal sum, so it
 may lie entirely inside the exceptional sets allowed by those theorems.
+More strongly, enumerate all integer scaled rays $R_i$ and choose a late tail
+$R_i'$ of each one.  The tails can be delayed so that their first terms are at
+least $2^{i^2}$ and
+
+```math
+\sum_{n\in R_i'}\frac1n\le2^{-i}.
+```
+
+Then $E=\bigcup_iR_i'$ contains a tail of every ray, while
+$\#\lbrace n\le X:n\in E\rbrace=O((\log X)^{3/2})$ and
+$\sum_{n\in E}1/n$ is finite.  Thus even the complement of an exceptional set
+with natural density zero and logarithmic density zero can meet every exact
+ray only finitely often.  Almost-all information needs an additional theorem
+that is sensitive to exact rays before it can imply the present conjecture.
 
 ## What “weakest” means here
 
@@ -188,21 +205,25 @@ following working convention:
 
 1. the map is fixed and belongs to the signed unit family above;
 2. the orbit target remains $D_K(n)=\omega(\log K)$;
-3. every sufficiently large member of an exact scaled geometric ray is required
-   to be good; and
-4. arbitrary subsequences, starting-dependent maps, and existentially chosen
-   isolated good starts are not counted as meaningful further weakenings.
+3. infinitely many members of one exact scaled geometric ray are required to
+   be good; and
+4. the ambient starting family is the full ray determined by fixed $d$ and
+   $u$, rather than a separately chosen arbitrary set or a collection with a
+   starting-dependent map.
 
 Under that convention, one exact scaled power ray not multiplicatively
-aligned with the map base is the current weakest candidate.  A future proof,
-trivialization, or comparably natural thinner family should trigger another
-revision.
+aligned with the map base, with infinitely many good exponents, is the current
+weakest candidate.  A future proof, trivialization, or comparably natural
+thinner family should trigger another revision.
 
 ## Status
 
-Provisional and not literature-certified as open.  No admissible witness is
-known to satisfy the scaled-ray conclusion, and no reduction proves that a
-witness cannot exist.  The subcase $d=1$ with $u$ coprime to $B$ has a
-local-fullness obstruction.  Values of $d$ not coprime to $B$ and
-shared-prime values of $u$ are retained because no elementary mechanism is
-known, not because that obstruction has been proved for them.
+Provisional and not literature-certified as open.  Existing almost-all
+theorems do not imply the statement, and no admissible witness is known to
+satisfy it.  The remaining elementary-construction risk is that the reverse
+tree of a periodic basin might meet an independent scaled ray infinitely
+often; the fixed-word argument above excludes only the simplest such
+mechanism.  The subcase $d=1$ with $u$ coprime to $B$ has a local-fullness
+obstruction.  Values of $d$ not coprime to $B$ and shared-prime values of $u$
+are retained because no elementary mechanism is known, not because that
+obstruction has been proved for them.

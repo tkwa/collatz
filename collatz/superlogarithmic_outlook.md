@@ -19,8 +19,9 @@ pure-division subfamily.
 
 It does not assess the repository's moving
 [Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md), which
-requires the same asymptotic only along one existentially chosen exact scaled
-ray whose base is multiplicatively independent of the map base.  The
+requires the same asymptotic for only infinitely many members of one
+existentially chosen exact scaled ray whose base is multiplicatively
+independent of the map base.  The
 [difficulty ladder](difficulty_ladder.md) places that sparse-ray statement at
 score `0.2` and a stronger pure-division polylogarithmic statement at score
 `1`.  The all-start superlogarithmic target here is a descriptive lattice
