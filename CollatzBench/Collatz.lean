@@ -52,14 +52,14 @@ def MultiplicativelyIndependent (u B : ℕ) : Prop :=
 
 /--
 The current Weakest Collatz-like conjecture: one fixed signed unit map works
-pointwise on every sufficiently large member of one exact scaled,
-multiplicatively independent ray `d * u^k`.
+pointwise on infinitely many members of one exact scaled, multiplicatively
+independent ray `d * u^k`.
 -/
 def WeakestScaledRay : Prop :=
-  ∃ M : IntResidueAffineMap, ∃ d u k₀ : ℕ,
+  ∃ M : IntResidueAffineMap, ∃ d u : ℕ,
     M.HasUnitMultipliers ∧ M.HasMixedSlopes ∧
     1 ≤ d ∧ 2 ≤ u ∧ MultiplicativelyIndependent u M.base ∧
-    ∀ k : ℕ, k₀ ≤ k → Superlogarithmic (M.contractingCount (d * u ^ k))
+    Set.Infinite {k : ℕ | Superlogarithmic (M.contractingCount (d * u ^ k))}
 
 /-- Shortcut Collatz: `C(2q)=q`, `C(2q+1)=3q+2`. -/
 def shortcut (n : ℕ) : ℕ :=

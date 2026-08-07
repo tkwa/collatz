@@ -9,7 +9,7 @@ starting-set quantifiers, map families, and orbit conclusions.
 - [Power-or-Density Contraction](power_or_density_contraction.md) and [Periodicity-or-Classical-Density](periodicity_or_classical_density.md) are the two deliberate joins between the designed-map and shortcut-Collatz routes.
 - [The All-Start Nonnegative Superlogarithmic Contraction Conjecture](nonnegative_superlogarithmic_contraction.md) asks whether some fixed coprime self-map of $\mathbb N_0$ gives every orbit a contraction count satisfying $D_K(n)=\omega(\log K)$.
 - [The All-Start Signed Superlogarithmic Contraction Conjecture](signed_superlogarithmic_contraction.md) provisionally allows signed unit multipliers, integer offsets, and integer-valued orbits while retaining the same target for every nonnegative start.
-- [The Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md) asks only that one signed unit map satisfy the superlogarithmic target on every sufficiently large member of one existentially chosen exact scaled ray $d u^k$, where $u$ is multiplicatively independent of the map base.
+- [The Weakest Collatz-like Conjecture](weakest_collatzlike_conjecture.md) asks only that one signed unit map satisfy the superlogarithmic target for infinitely many members of one existentially chosen exact scaled ray $d u^k$, where $u$ is multiplicatively independent of the map base.
 - [The Exact Maximum Stopping-Constant
   Conjecture](scaled_stopping_constant.md) identifies the limiting maximum
   stopping-time ratio with the Kontorovich--Lagarias stochastic-model
